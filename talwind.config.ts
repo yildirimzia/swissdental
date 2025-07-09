@@ -125,12 +125,6 @@ module.exports = {
     
     extend: {
       // Typography
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Poppins', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
-      },
-      
       // Spacing
       spacing: {
         '18': '4.5rem',

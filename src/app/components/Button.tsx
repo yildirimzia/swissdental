@@ -3,7 +3,7 @@ import React from 'react'
 
 // Button variant tipleri
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
-export type ButtonSize = 'sm' | 'md' | 'lg' | 'xl'
+export type ButtonSize = 'sm' | 'md' | 'lg' | 'xl' | 'custom16'
 
 // Button props interface
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -14,6 +14,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   icon?: React.ReactNode
   iconPosition?: 'left' | 'right'
   children: React.ReactNode
+  rounded?: string // Custom border radius için
 }
 
 // Variant sınıfları
@@ -31,10 +32,11 @@ const sizeClasses = {
   md: 'px-4 py-2 text-base',
   lg: 'px-6 py-3 text-lg',
   xl: 'px-8 py-4 text-xl',
+  custom16: 'px-6 py-3 text-[16px]', // 16px font size
 }
 
-// Base button sınıfları
-const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
+// Base button sınıfları (rounded-lg kaldırıldı)
+const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
 
 const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
@@ -45,19 +47,21 @@ const Button: React.FC<ButtonProps> = ({
   iconPosition = 'left',
   children,
   className = '',
+  rounded = 'rounded-lg', // Default rounded
   disabled,
   ...props
 }) => {
   // Loading durumunda disabled yap
   const isDisabled = disabled || loading
 
-  // Sınıfları birleştir
+  // Sınıfları birleştir - className en sona koyuyoruz ki override edebilsin
   const buttonClasses = [
     baseClasses,
     variantClasses[variant],
-    sizeClasses[size],
+    rounded, // Custom rounded sınıfı
     fullWidth ? 'w-full' : '',
-    className,
+    sizeClasses[size], // Size'ı className'den önce koy
+    className, // className en sonda olsun ki override edebilsin
   ].filter(Boolean).join(' ')
 
   // Loading spinner
