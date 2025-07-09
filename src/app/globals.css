@@ -1,26 +1,354 @@
+/* Tailwind CSS v4 Import */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Gotham Font Import */
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+/* Gotham Font Definitions - CDN ile yedek olarak lokal */
+
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 200;
+    src: url('https://fonts.cdnfonts.com/s/14898/GothamLight.woff') format('woff'),
+         url('/fonts/GothamLight.woff') format('woff');
+    font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://fonts.cdnfonts.com/s/14898/GothamLight.woff') format('woff'),
+         url('/fonts/GothamLight.woff') format('woff');
+    font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.cdnfonts.com/s/14898/GothamBook.woff') format('woff'),
+         url('/fonts/GothamBook.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.cdnfonts.com/s/14898/GothamBookItalic.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    src: url('https://fonts.cdnfonts.com/s/14898/GothamMedium.woff') format('woff'),
+         url('/fonts/GothamMedium.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.cdnfonts.com/s/14898/GothamBold.woff') format('woff'),
+         url('/fonts/GothamBold.woff') format('woff');
+    font-display: swap;
+}
+@layer base {
+  body {
+    font-family: var(--font-body);
+  }
+}
+/* Tailwind v4 CSS-First Configuration */
+@theme {
+  /* Primary Colors - Swiss Dental Mint */
+  --color-primary-50: #f0fdf9;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-300: #5eead4;
+  --color-primary-400: #2dd4bf;
+  --color-primary-500: #3aa194;
+  --color-primary-600: #005752;
+  --color-primary-700: #0f766e;
+  --color-primary-800: #115e59;
+  --color-primary-900: #134e4a;
+  
+  /* Secondary Colors */
+  --color-secondary-50: #f8fafc;
+  --color-secondary-100: #f1f5f9;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e1;
+  --color-secondary-400: #94a3b8;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #475569;
+  --color-secondary-700: #334155;
+  --color-secondary-800: #1e293b;
+  --color-secondary-900: #0f172a;
+  
+  /* Success Colors */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+  
+  /* Warning Colors */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+  
+  /* Error Colors */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  
+  /* Info Colors */
+  --color-info-50: #f0f9ff;
+  --color-info-100: #e0f2fe;
+  --color-info-200: #bae6fd;
+  --color-info-300: #7dd3fc;
+  --color-info-400: #38bdf8;
+  --color-info-500: #0ea5e9;
+  --color-info-600: #0284c7;
+  --color-info-700: #0369a1;
+  --color-info-800: #075985;
+  --color-info-900: #0c4a6e;
+  
+  /* Swiss Dental Specific Colors */
+  --color-mint: #3aa194;
+  --color-mint-dark: #005752;
+  --color-mint-light: #58b3a6;
+  --color-mint-pale: #e5f5f3;
+  --color-cream: #f8f9fa;
+  --color-charcoal: #2c3e50;
+  --color-charcoal-light: #34495e;
+  --color-charcoal-dark: #1a252f;
+  
+  /* Custom Shadows */
+  --shadow-hover: 0 0 #00000014, 3px 3px 11px #00000014, 14px 14px 19px #00000012, 31px 31px 26px #0000000a, 54px 54px 31px #00000003, 85px 85px 34px 0 transparent;
+  --shadow-hover-contained: inset 0 0 #00000014, inset 3px 3px 11px #00000014, inset 14px 14px 19px #00000012, inset 31px 31px 26px #0000000a;
+  --shadow-hover-small: 0 0 #00000014, 2px 2px 6px #00000014, 8px 8px 12px #00000012, 16px 16px 18px #0000000a;
+  --shadow-dental: 0 4px 20px rgba(58, 161, 148, 0.15);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  
+  /* Custom Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  --spacing-128: 32rem;
+  
+  /* Custom Font Families */
+  --font-heading: "Gotham",  sans-serif;
+  --font-body: "Gotham",  sans-serif;
+  --font-gotham: "Gotham",  sans-serif;
+  
+  /* Custom Breakpoints */
+  --breakpoint-3xl: 1920px;
+  
+  /* Custom Border Radius */
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  
+  /* Custom Animations */
+  --ease-dental: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Custom Component Classes using @apply */
+@layer components {
+  .btn-dental-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md;
+  }
+  
+  .btn-dental-primary:hover {
+    box-shadow: var(--shadow-hover-small);
+  }
+  
+  .btn-dental-secondary {
+    @apply bg-secondary-600 hover:bg-secondary-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md;
+  }
+  
+  .btn-dental-secondary:hover {
+    box-shadow: var(--shadow-hover-small);
+  }
+  
+  .btn-dental-outline {
+    @apply bg-transparent border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+  }
+  
+  /* Card with contained shadow - taşmaz */
+  .card-dental {
+    @apply bg-white rounded-xl shadow-md p-6 border border-gray-200 transition-all duration-300;
+    /* Extra padding to contain shadow */
+    margin: 8px;
+  }
+  
+  .card-dental:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+  
+  /* Card with inner shadow - kesinlikle taşmaz */
+  .card-dental-contained {
+    @apply bg-white rounded-xl shadow-md p-6 border border-gray-200 transition-all duration-300 overflow-hidden;
+  }
+  
+  .card-dental-contained:hover {
+    box-shadow: var(--shadow-hover-contained);
+    transform: translateY(-2px);
+  }
+  
+  .hero-dental {
+    @apply bg-gradient-to-br from-primary-500 to-primary-600 text-white py-16 px-8 rounded-2xl text-center;
+  }
+  
+  .text-gradient-dental {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  .feature-card {
+    @apply bg-white rounded-lg p-6 shadow-md transition-all duration-300 text-center;
+    margin: 8px; /* Shadow için extra alan */
+  }
+  
+  .feature-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+  
+  /* Contained version - hiç taşmaz */
+  .feature-card-contained {
+    @apply bg-white rounded-lg p-6 shadow-md transition-all duration-300 text-center overflow-hidden;
+  }
+  
+  .feature-card-contained:hover {
+    box-shadow: var(--shadow-hover-contained);
+    transform: translateY(-4px);
+  }
+  
+  .section-spacing {
+    @apply py-16 px-4;
+  }
+  
+  .container-dental {
+    max-width: 1320px !important;
+    margin: 0 auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  @media (min-width: 640px) {
+    .container-dental {
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-dental {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Utility Classes */
+@layer utilities {
+  /* Orijinal Swiss Dental hover shadow */
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Küçültülmüş versiyon - daha az taşar */
+  .shadow-hover-small {
+    box-shadow: var(--shadow-hover-small);
+  }
+  
+  /* İçeride kalan versiyon - hiç taşmaz */
+  .shadow-hover-contained {
+    box-shadow: var(--shadow-hover-contained);
+  }
+  
+  .shadow-dental {
+    box-shadow: var(--shadow-dental);
+  }
+  
+  .shadow-inner {
+    box-shadow: var(--shadow-inner);
+  }
+  
+  .shadow-subtle {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+  
+  /* Container with padding for shadows */
+  .shadow-container {
+    padding: 8px;
+  }
+  
+  /* Container with more padding for large shadows */
+  .shadow-container-lg {
+    padding: 16px;
+  }
+  
+  /* Hover effects with controlled overflow */
+  .hover-with-shadow {
+    margin: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .hover-with-shadow:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+  
+  /* Completely contained hover effect */
+  .hover-contained-shadow {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .hover-contained-shadow:hover {
+    box-shadow: var(--shadow-hover-contained);
+    transform: translateY(-2px);
+  }
+
+    *, :after, :before {
+    box-sizing: border-box;
+}
+
+  body{
+   background: linear-gradient(90deg,#fafafa,#f4f4f4 62.5%,#f4f4f4)!important
+  }
 }
