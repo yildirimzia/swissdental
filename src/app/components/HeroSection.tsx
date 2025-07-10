@@ -15,10 +15,14 @@ if (typeof window !== 'undefined') {
 const HeroSection: React.FC = () => {
   const [scrollY, setScrollY] = useState(0)
   const [shouldDetach, setShouldDetach] = useState(false)
+  const [removeHidden, setRemoveHidden] = useState(false)
   
   // GSAP animasyonları için ref
   const implantRef = useRef<HTMLDivElement>(null)
   const secondImplantRef = useRef<HTMLImageElement>(null)
+  const brightImageRef = useRef<HTMLDivElement>(null) 
+  const brightScale = useRef<HTMLDivElement>(null) 
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +39,7 @@ const HeroSection: React.FC = () => {
   }, [])
 
     useEffect(() => {
+         
         if (implantRef.current) {
             // Başlangıç değerlerini ayarla
             gsap.set(implantRef.current, {
@@ -58,7 +63,7 @@ const HeroSection: React.FC = () => {
                 anticipatePin: 1,
                 toggleActions: "play none none reverse",
                 invalidateOnRefresh: true,
-                markers: true
+
             }
             })
 
@@ -78,23 +83,9 @@ const HeroSection: React.FC = () => {
             ease: "linear"
             }, "-=1") // Aynı anda başla
 
-            // İkinci bölümde resmi değiştir
-        //   gsap.timeline({
-        //     scrollTrigger: {
-        //       trigger: ".grid.grid-cols-1.lg\\:grid-cols-2:nth-child(2)", // İkinci section
-        //       start: "top top",
-        //       end: "top top",
-        //       toggleActions: "play none none reverse",
-        //       invalidateOnRefresh: true,
-        //       onEnter: () => {
-        //         console.log("İkinci bölüme geçildi")
-        //       },
-        //       onLeaveBack: () => {
-        //         console.log("İlk bölüme geri dönüldü")
-        //       }
-        //     }
-        //   })
+        }
 
+                
         if (secondImplantRef.current) {
             // Başlangıçta opaklığını 0 yap
             gsap.set(secondImplantRef.current, { opacity: 0 });
@@ -115,7 +106,69 @@ const HeroSection: React.FC = () => {
                 ease: "power2.inOut"
             });
         }
+
+        if(brightImageRef.current) {
+          const heroTimeline =  gsap.timeline({
+            scrollTrigger: {
+              trigger: brightImageRef.current, // İkinci section
+              start: "top 10%",
+              end: "top top",
+              toggleActions: "play none none reverse",
+              invalidateOnRefresh: true,
+              markers: true,
+              onEnter: () => {
+    
+                setRemoveHidden(true)
+               
+                console.log("2 bölüme geçildi")
+              },
+              onLeaveBack: () => {
+                setRemoveHidden(false)
+
+
+                           
+                console.log("1 bölüme geçildi")
+              }
+            }
+          })
+
+
+            // Asıl Bright Image etiketini yakalıyoruz
+            const actualBrightImageElement = brightImageRef.current.querySelector('img');
+            if (!actualBrightImageElement) { // img etiketi bulunamazsa bu bloğu çalıştırma
+                console.warn("GSAP: brightImageRef içinde img etiketi bulunamadı! BRIGHT animasyonu başlatılamıyor.");
+                return;
+            }
+
+
+            // Container'ı hareket ettir
+            heroTimeline.to(actualBrightImageElement, {
+            duration: 1,
+            // y: 490 * 0.3, // scroll mesafesinin %30'i kadar
+            yPercent: 25,
+            x: -200, // Sağa doğru hareket
+            ease: "linear"
+            })
+
+            // Rotation animasyonu paralel olarak
+            heroTimeline.to(actualBrightImageElement, {
+            duration: 1,
+            rotation: 0, // 16.9998'den 0'a
+            ease: "linear",
+            scale:1.5
+            }, "-=1") // Aynı anda başla
+
+            // Asıl Bright Image etiketinin kendisi için başlangıç transform ayarları
+            gsap.set(actualBrightImageElement, {
+                scale: 1.5, rotation: -14.223, x: 0, y: 0,
+            });
+
+
         }
+
+
+
+
 
         // Cleanup function
         return () => {
@@ -196,10 +249,11 @@ const HeroSection: React.FC = () => {
               <div ref={implantRef}  className="relative w-full max-w-md lg:max-w-lg transform ">
                 <Image
                   src="/images/implant-img.png"
-                  alt="Ceramic Dental Implant"
+                  alt="Ceramic Dental Implant 1"
                   width={381}
                   height={600}
                   className="object-contain "
+                   {...(removeHidden && { hidden: true })}
                   priority
                 />
               </div>
@@ -257,15 +311,25 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Right Content - Implant Image */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end relative">
               <div ref={secondImplantRef} className="relative w-full max-w-md lg:max-w-lg">
-                            <Image
-                   // Bu ref'i buraya ekledik!
+                <Image
                   src="/images/Bright2-2-4555.png"
-                  alt="Ceramic Dental Implant"
+                  alt="Ceramic Dental Implant 2"
                   width={381}
                   height={600}
                   className="object-contain transform translate-x-[30%] translate-y-[16.9%] "
+                  priority
+                />
+              </div>
+            <div ref={brightImageRef} className="absolute top-[17%] left-[-18%] w-full max-w-md lg:max-w-lg transform ">
+                <Image
+                  src="/images/Bright1-2-2560.png"
+                  alt="Ceramic Dental Implant 3"
+                  width={381}
+                  {...(!removeHidden && { hidden: true })}
+                  height={600}
+                  className="object-contain"
                   priority
                 />
               </div>
