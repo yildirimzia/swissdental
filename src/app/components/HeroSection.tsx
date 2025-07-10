@@ -108,11 +108,14 @@ const HeroSection: React.FC = () => {
         }
 
         if(brightImageRef.current) {
-          const heroTimeline =  gsap.timeline({
+         const brightImageTimeline = gsap.timeline({
             scrollTrigger: {
               trigger: brightImageRef.current, // İkinci section
               start: "top 10%",
-              end: "top top",
+              end: "+=1500",
+              scrub: true,
+              pin: brightImageRef.current, // BRIGHT resminin kapsayıcı div'ini sabitle
+              pinSpacing: false,
               toggleActions: "play none none reverse",
               invalidateOnRefresh: true,
               markers: true,
@@ -140,29 +143,37 @@ const HeroSection: React.FC = () => {
                 return;
             }
 
-
-            // Container'ı hareket ettir
-            heroTimeline.to(actualBrightImageElement, {
-            duration: 1,
-            // y: 490 * 0.3, // scroll mesafesinin %30'i kadar
-            yPercent: 25,
-            x: -200, // Sağa doğru hareket
-            ease: "linear"
-            })
-
-            // Rotation animasyonu paralel olarak
-            heroTimeline.to(actualBrightImageElement, {
-            duration: 1,
-            rotation: 0, // 16.9998'den 0'a
-            ease: "linear",
-            scale:1.5
-            }, "-=1") // Aynı anda başla
-
-            // Asıl Bright Image etiketinin kendisi için başlangıç transform ayarları
-            gsap.set(actualBrightImageElement, {
-                scale: 1.5, rotation: -14.223, x: 0, y: 0,
+            brightImageTimeline.to(actualBrightImageElement, {
+                duration: 1, // scrub olduğu için göreceli süre
+                opacity: 1, // Görünür hale getir
+                scale: 6.5, // Hedef ölçek (4 kat büyüt)
+                rotation: -30, // Hedef rotasyon (-18 derece)
+                // Bu translate değerleri sizin verdiğiniz son duruma göre ayarlanmıştır.
+                // brightImageRef'in (parent div) başlangıç CSS'indeki absolute konumlandırmasını (top:17% left:-18%) hesaba katın.
+                x: 690.5, // Hedef X translate
+                y: 0, // Hedef Y translate
+                ease: "linear"
             });
 
+            // // Container'ı hareket ettir
+            // heroTimeline.to(actualBrightImageElement, {
+            // duration: 1,
+            // // y: 490 * 0.3, // scroll mesafesinin %30'i kadar
+            // yPercent: 25,
+            // x: -200, // Sağa doğru hareket
+            // ease: "linear"
+            // })
+
+            // // Rotation animasyonu paralel olarak
+            // heroTimeline.to(actualBrightImageElement, {
+            // duration: 1,
+            // rotation: 0, // 16.9998'den 0'a
+            // ease: "linear",
+            // scale:1.5
+            // }, "-=1") // Aynı anda başla
+
+            // Asıl Bright Image etiketinin kendisi için başlangıç transform ayarları
+      
 
         }
 
