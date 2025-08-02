@@ -97,7 +97,6 @@ const HeroSection: React.FC = () => {
                     end: "center center", // Görselin ortası viewport'un ortasına geldiğinde bitir
                     scrub: true, // Kaydırma ile senkronize et
                     toggleActions: "play none none reverse",
-                    markers: true // Debug için açık bırakabilirsiniz
                 }
             })
             .to(secondImplantRef.current, {
@@ -118,7 +117,6 @@ const HeroSection: React.FC = () => {
               pinSpacing: false,
               toggleActions: "play none none reverse",
               invalidateOnRefresh: true,
-              markers: true,
               onEnter: () => {
     
                 setRemoveHidden(true)
@@ -151,7 +149,7 @@ const HeroSection: React.FC = () => {
                 // brightImageRef'in (parent div) başlangıç CSS'indeki absolute konumlandırmasını (top:17% left:-18%) hesaba katın.
                 x: 330.5, // Hedef X translate
                 y: 0, // Hedef Y translate
-                ease: "linear"
+                ease: "linear",
             });
 
         }
@@ -173,11 +171,12 @@ const HeroSection: React.FC = () => {
           shouldDetach ? 'bg-scroll absolute' : 'bg-fixed fixed'
         }`}
         style={{
-          backgroundImage: 'url(/images/mesh.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          zIndex: 1
+    backgroundImage: 'url(/images/mesh.png)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    zIndex: 1,
+          
         }}
       >
         {/* Gradient Overlay */}
@@ -316,9 +315,9 @@ const HeroSection: React.FC = () => {
                 <Image
                   src="/images/Bright1-2-2560.png"
                   alt="Ceramic Dental Implant 3"
-                  width={381}
+                  width={1200}
                   {...(!removeHidden && { hidden: true })}
-                  height={600}
+                  height={1200}
                   className="object-contain"
                   priority
                 />
@@ -330,86 +329,58 @@ const HeroSection: React.FC = () => {
 
       </div>
       
-      <div className="relative z-20 flex items-center justify-center min-h-screen">
+      <div className="relative z-20 flex items-end  min-h-[930px]">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Content */}
-            <div className="text-white space-y-6">
+            <div className="text-white space-x-6 ">
               <div className="space-y-2">
-                <p className="text-lg lg:text-xl font-light tracking-wide uppercase text-teal-300">
-                  PROFESSIONAL SUPPORT
+                <p
+                className={`relative
+                    pl-[124px]
+                    font-[500]
+                    text-[16px]
+                    tracking-wide 
+                    uppercase
+                    text-mint
+                    before:content-[""]
+                    before:absolute
+                    before:left-0
+                    before:top-1/2
+                    before:-translate-y-1/2
+                    before:w-[100px]
+                    before:h-[1px]
+                    before:bg-[#3aa194]
+                `}
+                >
+                Why SDS?
                 </p>
-                <h2 className="text-4xl lg:text-6xl xl:text-7xl font-light leading-tight">
-                  Comprehensive
-                  <br />
-                  <span className="text-teal-300">training</span> &
-                  <br />
-                  support
-                </h2>
+                <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125]  tracking-[-0.03em]  text-primary-600  font-light">
+                 Highest standards 
+                   <br />
+                  in compatibility, <br />health, and<br /> aesthetics!
+                </h1>
               </div>
               
-              <p className="text-lg lg:text-xl font-light leading-relaxed max-w-2xl">
-                We provide comprehensive training programs and ongoing support to ensure successful implant procedures and optimal patient outcomes.
-              </p>
               
-              <div className="pt-6">
+              <ul className="list-decimal	 text-[20px] font-[400] w-[80%] text-primary-600 transform translate-x-[120px] leading-8  mt-[2.875rem] max-w-[42rem]">
+                <li className="mb-2">Highly biocompatible in the highest degree</li>
+                <li className="mb-2">Durable and robust</li>
+                <li className="mb-2">Possibility of immediate implantation</li>
+              </ul>
+              
+              <div className="pt-6 translate-x-[120px] mt-[1.2rem]">
                 <Link
-                  href="/training"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-full transition-colors duration-200 text-lg"
+                  href="/implants"
+                  className=""
                 >
-                  Training Programs
+                <Button variant="primary" size="lg" rounded="rounded-[100px]" className="text-[16px]">
+                    Discover Benefits
+                  </Button>
                 </Link>
               </div>
             </div>
 
-            {/* Right Content */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md lg:max-w-lg">
-        
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-            <div className="relative z-20 flex items-center justify-center min-h-screen">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="text-white space-y-6">
-              <div className="space-y-2">
-                <p className="text-lg lg:text-xl font-light tracking-wide uppercase text-teal-300">
-                  PROFESSIONAL SUPPORT
-                </p>
-                <h2 className="text-4xl lg:text-6xl xl:text-7xl font-light leading-tight">
-                  Comprehensive
-                  <br />
-                  <span className="text-teal-300">training</span> &
-                  <br />
-                  support
-                </h2>
-              </div>
-              
-              <p className="text-lg lg:text-xl font-light leading-relaxed max-w-2xl">
-                We provide comprehensive training programs and ongoing support to ensure successful implant procedures and optimal patient outcomes.
-              </p>
-              
-              <div className="pt-6">
-                <Link
-                  href="/training"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-full transition-colors duration-200 text-lg"
-                >
-                  Training Programs
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Content */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md lg:max-w-lg">
-        
-              </div>
-            </div>
           </div>
         </div>
       </div>
