@@ -21,8 +21,19 @@ const HeroSection: React.FC = () => {
   const implantRef = useRef<HTMLDivElement>(null)
   const secondImplantRef = useRef<HTMLImageElement>(null)
   const brightImageRef = useRef<HTMLDivElement>(null) 
-  const brightScale = useRef<HTMLDivElement>(null) 
+  const [isMobile, setIsMobile] = useState(false)
 
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
+    
+    
+    return () => window.removeEventListener('resize', checkScreenSize)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +68,7 @@ const HeroSection: React.FC = () => {
             scrollTrigger: {
                 trigger: document.body,
                 start: "top top",
-                end: "+=850", // 800px scroll boyunca
+                end: isMobile ? "+=1047" : "+=870", // 850px scroll boyunca
                 scrub: true,
                 pin: implantRef.current,
                 anticipatePin: 1,
@@ -72,7 +83,7 @@ const HeroSection: React.FC = () => {
             duration: 1,
             // y: 490 * 0.3, // scroll mesafesinin %30'i kadar
             yPercent: 25,
-            x: -200, // Sağa doğru hareket
+            x: isMobile ? -100 : -200, // Sağa doğru hareket
             ease: "linear"
             })
 
@@ -111,7 +122,7 @@ const HeroSection: React.FC = () => {
             scrollTrigger: {
               trigger: brightImageRef.current, // İkinci section
               start: "top 10%",
-              end: "+=700",
+              end: isMobile ? "+=1200": "+=700",
               scrub: true,
               pin: brightImageRef.current, // BRIGHT resminin kapsayıcı div'ini sabitle
               pinSpacing: false,
@@ -143,11 +154,11 @@ const HeroSection: React.FC = () => {
 
             brightImageTimeline.to(actualBrightImageElement, {
                 duration: 1, // scrub olduğu için göreceli süre
-                scale: 3, // Hedef ölçek (4 kat büyüt)
-                rotation: -14, // Hedef rotasyon (-18 derece)
+                scale: isMobile ? 1.5 : 3, // Hedef ölçek (4 kat büyüt)
+                rotation: isMobile ? -42 : -14, // Hedef rotasyon (-18 derece)
                 // Bu translate değerleri sizin verdiğiniz son duruma göre ayarlanmıştır.
                 // brightImageRef'in (parent div) başlangıç CSS'indeki absolute konumlandırmasını (top:17% left:-18%) hesaba katın.
-                x: 330.5, // Hedef X translate
+                x: isMobile ? 100.5 : 330.5, // Hedef X translate
                 y: 0, // Hedef Y translate
                 ease: "linear",
             });
@@ -162,7 +173,7 @@ const HeroSection: React.FC = () => {
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill())
         }
-    }, [])
+    }, [isMobile])
   return (
     <section className="relative min-h-screen overflow-hidden pb-[275px]">
       {/* Background with CSS background-attachment */}
@@ -328,9 +339,9 @@ const HeroSection: React.FC = () => {
 
       </div>
       
-      <div className="relative z-20 flex items-end  min-h-[930px]">
+      <div className="relative z-20 flex items-end  min-h-[930px] mt-40 lg:mt-0">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-[50px] lg:p-0 backdrop-blur-sm bg-white/50 lg:backdrop-blur-none lg:bg-transparent">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-[50px] lg:p-0 backdrop-blur-sm bg-white/50 lg:backdrop-blur-none lg:bg-transparent ">
             {/* Left Content */}
             <div className="text-white space-x-6 ">
               <div className="space-y-2">
