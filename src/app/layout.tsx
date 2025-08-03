@@ -18,7 +18,7 @@ export default function RootLayout({
       <body
         className=" antialiased"
       >
-        <div className="container-dental">
+        <div className="">
         <Header/>
         {children}
         </div>

@@ -164,19 +164,18 @@ const HeroSection: React.FC = () => {
         }
     }, [])
   return (
-    <section className="relative min-h-screen">
+    <section className="relative min-h-screen overflow-hidden pb-[275px]">
       {/* Background with CSS background-attachment */}
       <div 
-        className={`fixed inset-0 w-full h-full transition-all duration-500 ${
+        className={`lg:block hidden fixed inset-0 w-full h-full transition-all duration-500 ${
           shouldDetach ? 'bg-scroll absolute' : 'bg-fixed fixed'
         }`}
         style={{
-    backgroundImage: 'url(/images/mesh.png)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    zIndex: 1,
-          
+        backgroundImage: 'url(/images/mesh.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        zIndex: 1,
         }}
       >
         {/* Gradient Overlay */}
@@ -187,17 +186,17 @@ const HeroSection: React.FC = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-[125px] mt-[160px]">
             {/* Left Content */}
-            <div className="text-white space-x-6">
+            <div className="text-white space-x-6 order-2 lg:order-1 backdrop-blur-sm bg-white/50 lg:backdrop-blur-none lg:bg-transparent p-[50px] lg:p-0 z-10">
               <div className="space-y-2">
                 <p
                 className={`relative
-                    pl-[124px]
+                    lg:pl-[124px] pl-[0] 
                     font-[500]
                     text-[16px]
                     tracking-wide 
                     uppercase
                     text-mint
-                    before:content-[""]
+                    before:content-none lg:before:content-[""]
                     before:absolute
                     before:left-0
                     before:top-1/2
@@ -217,11 +216,11 @@ const HeroSection: React.FC = () => {
                 </h1>
               </div>
               
-              <p className="text-[20px] font-[400] w-[80%] text-primary-600 transform translate-x-[120px] leading-8  mt-[2.875rem] max-w-[42rem]">
+              <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-[0] leading-8  mt-[2.875rem] max-w-[42rem]">
                 SDS ceramic dental implants made from white zirconium dioxide meet the highest standards in terms of biocompatibility, tolerance, health, and aesthetics.
               </p>
               
-              <div className="pt-6 translate-x-[120px] mt-[1.2rem]">
+              <div className="pt-6 lg:translate-x-[120px] translate-x-0 mt-[1.2rem]">
                 <Link
                   href="/implants"
                   className=""
@@ -234,8 +233,8 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Right Content - Implant Image */}
-            <div  className="flex justify-center lg:justify-end">
-              <div ref={implantRef}  className="relative w-full max-w-md lg:max-w-lg transform ">
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+              <div ref={implantRef} className="relative w-[182px] h-[310px] lg:w-full  lg:max-w-lg lg:h-auto transform">
                 <Image
                   src="/images/implant-img.png"
                   alt="Ceramic Dental Implant 1"
@@ -256,17 +255,17 @@ const HeroSection: React.FC = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Content */}
-            <div className="text-white space-x-6 z-[100] flex flex-col self-center mt-[245px]">
+            <div className="text-white space-x-6 z-[100] backdrop-blur-sm bg-white/50 lg:backdrop-blur-none lg:bg-transparent order-2 lg:order-1 flex flex-col self-center mt-[245px] p-[50px] lg:p-0">
               <div className="space-y-2">
                 <p
                 className={`relative
-                    pl-[124px]
+                    lg:pl-[124px] pl-[0] 
                     font-[500]
                     text-[16px]
                     tracking-wide 
                     uppercase
                     text-mint
-                    before:content-[""]
+                    before:content-none lg:before:content-[""]
                     before:absolute
                     before:left-0
                     before:top-1/2
@@ -282,12 +281,12 @@ const HeroSection: React.FC = () => {
                 Bright
                 </h1>
               </div>
-              
-              <p className="text-[20px] font-[400] w-[80%] text-primary-600  leading-8  mt-[2.875rem] max-w-[42rem]">
+
+              <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600  leading-8  mt-[2.875rem] max-w-[42rem]">
                 With the BRIGHT premium implant series, you have an ideal implant system for immediate placement, designed with optimal material and shape considerations.
               </p>
               
-              <div className="pt-6  mt-[1.2rem]">
+              <div className="pt-6  lg:mt-[1.2rem] mt-0">
                 <Link
                   href="/implants"
                   className=""
@@ -300,8 +299,8 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Right Content - Implant Image */}
-            <div className="flex justify-center lg:justify-end relative">
-              <div ref={secondImplantRef} className="relative w-full max-w-md lg:max-w-lg">
+            <div className="flex justify-center lg:justify-end relative order-1 lg:order-2">
+              <div ref={secondImplantRef} className="relative w-[182px] h-[310px] lg:w-full max-w-md lg:max-w-lg lg:ml-0 ml-24">
                 <Image
                   src="/images/Bright2-2-4555.png"
                   alt="Ceramic Dental Implant 2"
@@ -311,7 +310,7 @@ const HeroSection: React.FC = () => {
                   priority
                 />
               </div>
-            <div ref={brightImageRef} className="absolute top-[17%] left-[-18%] w-full max-w-md lg:max-w-lg transform ">
+            <div ref={brightImageRef} className="absolute  top-[17%] left-[-18%] w-full max-w-md lg:max-w-lg transform ">
                 <Image
                   src="/images/Bright1-2-2560.png"
                   alt="Ceramic Dental Implant 3"
@@ -324,26 +323,26 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 bottom-0 w-[870px] bg-white z-10 h-[119vh] transform translate-x-[-40%] translate-y-[0px]'></div>
+          <div className='lg:block hidden absolute  top-0 left-0 bottom-0 w-[1020px] bg-white z-10 h-[119vh] transform translate-x-[-40%] translate-y-[0px]'></div>
         </div>
 
       </div>
       
       <div className="relative z-20 flex items-end  min-h-[930px]">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-[50px] lg:p-0 backdrop-blur-sm bg-white/50 lg:backdrop-blur-none lg:bg-transparent">
             {/* Left Content */}
             <div className="text-white space-x-6 ">
               <div className="space-y-2">
                 <p
                 className={`relative
-                    pl-[124px]
+                    lg:pl-[124px] pl-[0] 
                     font-[500]
                     text-[16px]
                     tracking-wide 
                     uppercase
                     text-mint
-                    before:content-[""]
+                    before:content-none lg:before:content-[""]
                     before:absolute
                     before:left-0
                     before:top-1/2
@@ -363,13 +362,13 @@ const HeroSection: React.FC = () => {
               </div>
               
               
-              <ul className="list-decimal	 text-[20px] font-[400] w-[80%] text-primary-600 transform translate-x-[120px] leading-8  mt-[2.875rem] max-w-[42rem]">
+              <ul className="list-decimal text-[18px] ml-[10px] lg:ml-0	 lg:text-[20px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-0 leading-8  mt-[2.875rem] max-w-[42rem]">
                 <li className="mb-2">Highly biocompatible in the highest degree</li>
                 <li className="mb-2">Durable and robust</li>
                 <li className="mb-2">Possibility of immediate implantation</li>
               </ul>
               
-              <div className="pt-6 translate-x-[120px] mt-[1.2rem]">
+              <div className="pt-6 lg:translate-x-[120px] translate-x-0 lg:mt-[1.2rem]">
                 <Link
                   href="/implants"
                   className=""

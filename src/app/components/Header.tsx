@@ -243,7 +243,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Fixed Navigation Section */}
-      <header className="relative z-50 bg-transparent">
+      <header className="relative z-50 bg-transparent container-dental">
         <div className="header-logo h-[75px] lg:h-31 flex items-center">
           <div className="">
             <Link href="/">
