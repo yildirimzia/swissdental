@@ -1,192 +1,186 @@
-'use client'
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import Button from './Button'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import Button from "./Button";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // GSAP plugin'ini register et
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 const HeroSection: React.FC = () => {
-  const [scrollY, setScrollY] = useState(0)
-  const [shouldDetach, setShouldDetach] = useState(false)
-  const [removeHidden, setRemoveHidden] = useState(false)
-  
+  const [scrollY, setScrollY] = useState(0);
+  const [shouldDetach, setShouldDetach] = useState(false);
+  const [removeHidden, setRemoveHidden] = useState(false);
+
   // GSAP animasyonları için ref
-  const implantRef = useRef<HTMLDivElement>(null)
-  const secondImplantRef = useRef<HTMLImageElement>(null)
-  const brightImageRef = useRef<HTMLDivElement>(null) 
-  const [isMobile, setIsMobile] = useState(false)
+  const implantRef = useRef<HTMLDivElement>(null);
+  const secondImplantRef = useRef<HTMLImageElement>(null);
+  const brightImageRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 1024)
-    }
-    
-    checkScreenSize()
-    window.addEventListener('resize', checkScreenSize)
-    
-    
-    return () => window.removeEventListener('resize', checkScreenSize)
-  }, [])
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
-      setScrollY(currentScrollY)
-      
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+
       // Background attachment'ın kalkması gereken nokta
-      const detachPoint = 1800
-      setShouldDetach(currentScrollY > detachPoint)
+      const detachPoint = 1800;
+      setShouldDetach(currentScrollY > detachPoint);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (implantRef.current) {
+      // Başlangıç değerlerini ayarla
+      gsap.set(implantRef.current, {
+        rotation: 15.2201,
+        xPercent: -8, // translate-x-[2%]
+        yPercent: -10, // translate-y-[-29%]
+        x: -0.0002, // translate3d x değeri
+        y: 0.0003, // translate3d y değeri
+        z: 0, // translate3d z değeri
+      });
+
+      // İlk timeline - Hero'dan BRIGHT'a kadar
+      const heroTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top",
+          end: isMobile ? "+=1047" : "+=870", // 850px scroll boyunca
+          scrub: true,
+          pin: implantRef.current,
+          anticipatePin: 1,
+          toggleActions: "play none none reverse",
+          invalidateOnRefresh: true,
+        },
+      });
+
+      // Container'ı hareket ettir
+      heroTimeline.to(implantRef.current, {
+        duration: 1,
+        // y: 490 * 0.3, // scroll mesafesinin %30'i kadar
+        yPercent: 25,
+        x: isMobile ? -100 : -200, // Sağa doğru hareket
+        ease: "linear",
+      });
+
+      // Rotation animasyonu paralel olarak
+      heroTimeline.to(
+        implantRef.current,
+        {
+          duration: 1,
+          rotation: 0, // 16.9998'den 0'a
+          ease: "linear",
+        },
+        "-=1"
+      ); // Aynı anda başla
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    if (secondImplantRef.current) {
+      // Başlangıçta opaklığını 0 yap
+      gsap.set(secondImplantRef.current, { opacity: 0 });
 
-    useEffect(() => {
-         
-        if (implantRef.current) {
-            // Başlangıç değerlerini ayarla
-            gsap.set(implantRef.current, {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: secondImplantRef.current, // Bu görselin kendisi tetikleyici olsun
+            start: "top center", // Görselin üst kısmı viewport'un ortasına geldiğinde başla
+            end: "center center", // Görselin ortası viewport'un ortasına geldiğinde bitir
+            scrub: true, // Kaydırma ile senkronize et
+            toggleActions: "play none none reverse",
+          },
+        })
+        .to(secondImplantRef.current, {
+          opacity: 1,
+          duration: 0.5, // Opaklık animasyonunun süresi (scrub true olduğu için bu süre görecelidir)
+          ease: "power2.inOut",
+        });
+    }
 
-            rotation: 15.2201,
-            xPercent: -8,  // translate-x-[2%]
-            yPercent: -10, // translate-y-[-29%]
-            x: -0.0002,   // translate3d x değeri
-            y: 0.0003,    // translate3d y değeri
-            z: 0          // translate3d z değeri
-            })
+    if (brightImageRef.current) {
+      const brightImageTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: brightImageRef.current, // İkinci section
+          start: "top 10%",
+          end: isMobile ? "+=1200" : "+=700",
+          scrub: true,
+          pin: brightImageRef.current, // BRIGHT resminin kapsayıcı div'ini sabitle
+          pinSpacing: false,
+          toggleActions: "play none none reverse",
+          invalidateOnRefresh: true,
+          onEnter: () => {
+            setRemoveHidden(true);
 
-            // İlk timeline - Hero'dan BRIGHT'a kadar
-            const heroTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: document.body,
-                start: "top top",
-                end: isMobile ? "+=1047" : "+=870", // 850px scroll boyunca
-                scrub: true,
-                pin: implantRef.current,
-                anticipatePin: 1,
-                toggleActions: "play none none reverse",
-                invalidateOnRefresh: true,
+            console.log("2 bölüme geçildi");
+          },
+          onLeaveBack: () => {
+            setRemoveHidden(false);
 
-            }
-            })
+            console.log("1 bölüme geçildi");
+          },
+        },
+      });
 
-            // Container'ı hareket ettir
-            heroTimeline.to(implantRef.current, {
-            duration: 1,
-            // y: 490 * 0.3, // scroll mesafesinin %30'i kadar
-            yPercent: 25,
-            x: isMobile ? -100 : -200, // Sağa doğru hareket
-            ease: "linear"
-            })
+      // Asıl Bright Image etiketini yakalıyoruz
+      const actualBrightImageElement =
+        brightImageRef.current.querySelector("img");
+      if (!actualBrightImageElement) {
+        // img etiketi bulunamazsa bu bloğu çalıştırma
+        console.warn(
+          "GSAP: brightImageRef içinde img etiketi bulunamadı! BRIGHT animasyonu başlatılamıyor."
+        );
+        return;
+      }
 
-            // Rotation animasyonu paralel olarak
-            heroTimeline.to(implantRef.current, {
-            duration: 1,
-            rotation: 0, // 16.9998'den 0'a
-            ease: "linear"
-            }, "-=1") // Aynı anda başla
+      brightImageTimeline.to(actualBrightImageElement, {
+        duration: 1, // scrub olduğu için göreceli süre
+        scale: isMobile ? 1.8 : 3, // Hedef ölçek (4 kat büyüt)
+        rotation: isMobile ? -42 : -14, // Hedef rotasyon (-18 derece)
+        // Bu translate değerleri sizin verdiğiniz son duruma göre ayarlanmıştır.
+        // brightImageRef'in (parent div) başlangıç CSS'indeki absolute konumlandırmasını (top:17% left:-18%) hesaba katın.
+        x: isMobile ? 100.5 : 330.5, // Hedef X translate
+        y: 0, // Hedef Y translate
+        ease: "linear",
+      });
+    }
 
-        }
-
-                
-        if (secondImplantRef.current) {
-            // Başlangıçta opaklığını 0 yap
-            gsap.set(secondImplantRef.current, { opacity: 0 });
-
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: secondImplantRef.current, // Bu görselin kendisi tetikleyici olsun
-                    start: "top center", // Görselin üst kısmı viewport'un ortasına geldiğinde başla
-                    end: "center center", // Görselin ortası viewport'un ortasına geldiğinde bitir
-                    scrub: true, // Kaydırma ile senkronize et
-                    toggleActions: "play none none reverse",
-                }
-            })
-            .to(secondImplantRef.current, {
-                opacity: 1,
-                duration: 0.5, // Opaklık animasyonunun süresi (scrub true olduğu için bu süre görecelidir)
-                ease: "power2.inOut"
-            });
-        }
-
-        if(brightImageRef.current) {
-         const brightImageTimeline = gsap.timeline({
-            scrollTrigger: {
-              trigger: brightImageRef.current, // İkinci section
-              start: "top 10%",
-              end: isMobile ? "+=1200": "+=700",
-              scrub: true,
-              pin: brightImageRef.current, // BRIGHT resminin kapsayıcı div'ini sabitle
-              pinSpacing: false,
-              toggleActions: "play none none reverse",
-              invalidateOnRefresh: true,
-              onEnter: () => {
-    
-                setRemoveHidden(true)
-               
-                console.log("2 bölüme geçildi")
-              },
-              onLeaveBack: () => {
-                setRemoveHidden(false)
-
-
-                           
-                console.log("1 bölüme geçildi")
-              }
-            }
-          })
-
-
-            // Asıl Bright Image etiketini yakalıyoruz
-            const actualBrightImageElement = brightImageRef.current.querySelector('img');
-            if (!actualBrightImageElement) { // img etiketi bulunamazsa bu bloğu çalıştırma
-                console.warn("GSAP: brightImageRef içinde img etiketi bulunamadı! BRIGHT animasyonu başlatılamıyor.");
-                return;
-            }
-
-            brightImageTimeline.to(actualBrightImageElement, {
-                duration: 1, // scrub olduğu için göreceli süre
-                scale: isMobile ? 1.5 : 3, // Hedef ölçek (4 kat büyüt)
-                rotation: isMobile ? -42 : -14, // Hedef rotasyon (-18 derece)
-                // Bu translate değerleri sizin verdiğiniz son duruma göre ayarlanmıştır.
-                // brightImageRef'in (parent div) başlangıç CSS'indeki absolute konumlandırmasını (top:17% left:-18%) hesaba katın.
-                x: isMobile ? 100.5 : 330.5, // Hedef X translate
-                y: 0, // Hedef Y translate
-                ease: "linear",
-            });
-
-        }
-
-
-
-
-
-        // Cleanup function
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-        }
-    }, [isMobile])
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [isMobile]);
   return (
     <section className="relative min-h-screen overflow-hidden pb-[275px]">
       {/* Background with CSS background-attachment */}
-      <div 
+      <div
         className={`lg:block hidden fixed inset-0 w-full h-full transition-all duration-500 ${
-          shouldDetach ? 'bg-scroll absolute' : 'bg-fixed fixed'
+          shouldDetach ? "bg-scroll absolute" : "bg-fixed fixed"
         }`}
         style={{
-        backgroundImage: 'url(/images/mesh.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        zIndex: 1,
+          backgroundImage: "url(/images/mesh.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          zIndex: 1,
         }}
       >
         {/* Gradient Overlay */}
@@ -200,7 +194,7 @@ const HeroSection: React.FC = () => {
             <div className="text-white space-x-6 order-2 lg:order-1 backdrop-blur-sm bg-white/50 lg:backdrop-blur-none lg:bg-transparent p-[50px] lg:p-0 z-10">
               <div className="space-y-2">
                 <p
-                className={`relative
+                  className={`relative
                     lg:pl-[124px] pl-[0] 
                     font-[500]
                     text-[16px]
@@ -217,26 +211,29 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                SDS SWISS DENTAL SOLUTIONS
+                  SDS SWISS DENTAL SOLUTIONS
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125]  tracking-[-0.03em]  text-primary-600  font-light">
                   World market
-                   <br />
-                  leader in ceramic
-                  dental implants
+                  <br />
+                  leader in ceramic dental implants
                 </h1>
               </div>
-              
+
               <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-[0] leading-8  mt-[2.875rem] max-w-[42rem]">
-                SDS ceramic dental implants made from white zirconium dioxide meet the highest standards in terms of biocompatibility, tolerance, health, and aesthetics.
+                SDS ceramic dental implants made from white zirconium dioxide
+                meet the highest standards in terms of biocompatibility,
+                tolerance, health, and aesthetics.
               </p>
-              
+
               <div className="pt-6 lg:translate-x-[120px] translate-x-0 mt-[1.2rem]">
-                <Link
-                  href="/implants"
-                  className=""
-                >
-                <Button variant="primary" size="lg" rounded="rounded-[100px]" className="text-[16px]">
+                <Link href="/implants" className="">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    rounded="rounded-[100px]"
+                    className="text-[16px]"
+                  >
                     To the Implants
                   </Button>
                 </Link>
@@ -245,14 +242,17 @@ const HeroSection: React.FC = () => {
 
             {/* Right Content - Implant Image */}
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-              <div ref={implantRef} className="relative w-[182px] h-[310px] lg:w-full  lg:max-w-lg lg:h-auto transform">
+              <div
+                ref={implantRef}
+                className="relative w-[182px] h-[310px] lg:w-full  lg:max-w-lg lg:h-auto transform"
+              >
                 <Image
                   src="/images/implant-img.png"
                   alt="Ceramic Dental Implant 1"
                   width={381}
                   height={600}
                   className="object-contain "
-                   {...(removeHidden && { hidden: true })}
+                  {...(removeHidden && { hidden: true })}
                   priority
                 />
               </div>
@@ -269,7 +269,7 @@ const HeroSection: React.FC = () => {
             <div className="text-white space-x-6 z-[100] backdrop-blur-sm bg-white/50 lg:backdrop-blur-none lg:bg-transparent order-2 lg:order-1 flex flex-col self-center mt-[245px] p-[50px] lg:p-0">
               <div className="space-y-2">
                 <p
-                className={`relative
+                  className={`relative
                     lg:pl-[124px] pl-[0] 
                     font-[500]
                     text-[16px]
@@ -286,23 +286,27 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                Product
+                  Product
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125] uppercase  tracking-[-0.03em] font-[700]  text-primary-600  ">
-                Bright
+                  Bright
                 </h1>
               </div>
 
               <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600  leading-8  mt-[2.875rem] max-w-[42rem]">
-                With the BRIGHT premium implant series, you have an ideal implant system for immediate placement, designed with optimal material and shape considerations.
+                With the BRIGHT premium implant series, you have an ideal
+                implant system for immediate placement, designed with optimal
+                material and shape considerations.
               </p>
-              
+
               <div className="pt-6  lg:mt-[1.2rem] mt-0">
-                <Link
-                  href="/implants"
-                  className=""
-                >
-                <Button variant="primary" size="lg" rounded="rounded-[100px]" className="text-[16px]">
+                <Link href="/implants" className="">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    rounded="rounded-[100px]"
+                    className="text-[16px]"
+                  >
                     To the BRIGHT Product Line
                   </Button>
                 </Link>
@@ -311,7 +315,10 @@ const HeroSection: React.FC = () => {
 
             {/* Right Content - Implant Image */}
             <div className="flex justify-center lg:justify-end relative order-1 lg:order-2">
-              <div ref={secondImplantRef} className="relative w-[182px] h-[310px] lg:w-full max-w-md lg:max-w-lg lg:ml-0 ml-24">
+              <div
+                ref={secondImplantRef}
+                className="relative w-[182px] h-[310px] lg:w-full max-w-md lg:max-w-lg lg:ml-0 ml-24"
+              >
                 <Image
                   src="/images/Bright2-2-4555.png"
                   alt="Ceramic Dental Implant 2"
@@ -321,7 +328,10 @@ const HeroSection: React.FC = () => {
                   priority
                 />
               </div>
-            <div ref={brightImageRef} className="absolute  top-[17%] left-[-18%] w-full max-w-md lg:max-w-lg transform ">
+              <div
+                ref={brightImageRef}
+                className="absolute  top-[17%] left-[-18%] w-full max-w-md lg:max-w-lg transform "
+              >
                 <Image
                   src="/images/Bright1-2-2560.png"
                   alt="Ceramic Dental Implant 3"
@@ -334,11 +344,10 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className='lg:block hidden absolute  top-0 left-0 bottom-0 w-[1020px] bg-white z-10 h-[119vh] transform translate-x-[-40%] translate-y-[0px]'></div>
+          <div className="lg:block hidden absolute  top-0 left-0 bottom-0 w-[1020px] bg-white z-10 h-[119vh] transform translate-x-[-40%] translate-y-[0px]"></div>
         </div>
-
       </div>
-      
+
       <div className="relative z-20 flex items-end  min-h-[930px] mt-40 lg:mt-0">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-[50px] lg:p-0 backdrop-blur-sm bg-white/50 lg:backdrop-blur-none lg:bg-transparent ">
@@ -346,7 +355,7 @@ const HeroSection: React.FC = () => {
             <div className="text-white space-x-6 ">
               <div className="space-y-2">
                 <p
-                className={`relative
+                  className={`relative
                     lg:pl-[124px] pl-[0] 
                     font-[500]
                     text-[16px]
@@ -363,34 +372,38 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                Why SDS?
+                  Why SDS?
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125]  tracking-[-0.03em]  text-primary-600  font-light">
-                 Highest standards 
-                   <br />
-                  in compatibility, <br />health, and<br /> aesthetics!
+                  Highest standards
+                  <br />
+                  in compatibility, <br />
+                  health, and
+                  <br /> aesthetics!
                 </h1>
               </div>
-              
-              
+
               <ul className="list-decimal text-[18px] ml-[10px] lg:ml-0	 lg:text-[20px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-0 leading-8  mt-[2.875rem] max-w-[42rem]">
-                <li className="mb-2">Highly biocompatible in the highest degree</li>
+                <li className="mb-2">
+                  Highly biocompatible in the highest degree
+                </li>
                 <li className="mb-2">Durable and robust</li>
                 <li className="mb-2">Possibility of immediate implantation</li>
               </ul>
-              
+
               <div className="pt-6 lg:translate-x-[120px] translate-x-0 lg:mt-[1.2rem]">
-                <Link
-                  href="/implants"
-                  className=""
-                >
-                <Button variant="primary" size="lg" rounded="rounded-[100px]" className="text-[16px]">
+                <Link href="/implants" className="">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    rounded="rounded-[100px]"
+                    className="text-[16px]"
+                  >
                     Discover Benefits
                   </Button>
                 </Link>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -408,13 +421,13 @@ const HeroSection: React.FC = () => {
           writing-mode: vertical-rl;
           text-orientation: mixed;
         }
-        
+
         @media (max-width: 768px) {
           .writing-vertical {
             writing-mode: horizontal-tb;
             text-orientation: initial;
           }
-          
+
           /* Mobile'da background-attachment: fixed sorun yaratabilir */
           .bg-fixed {
             background-attachment: scroll !important;
@@ -422,7 +435,7 @@ const HeroSection: React.FC = () => {
         }
       `}</style>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
