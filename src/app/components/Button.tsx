@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 
-// Button variant tipleri
-export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
+// Button variant tipleri - yeni customOutline eklendi
+export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'customOutline'
 export type ButtonSize = 'sm' | 'md' | 'lg' | 'xl' | 'custom16'
 
 // Button props interface
@@ -17,13 +17,33 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   rounded?: string // Custom border radius için
 }
 
-// Variant sınıfları
+// Variant sınıfları - yeni customOutline stili eklendi
 const variantClasses = {
   primary: 'bg-primary-500 hover:bg-primary-600 text-white shadow-md hover:shadow-hover-small',
   secondary: 'bg-secondary-600 hover:bg-secondary-700 text-white shadow-md hover:shadow-hover-small',
   outline: 'bg-transparent border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white',
   ghost: 'bg-transparent text-primary-500 hover:bg-primary-50',
   danger: 'bg-error-500 hover:bg-error-600 text-white shadow-md hover:shadow-hover-small',
+  customOutline: `
+    bg-[#f9f9f9] 
+    text-[#005752] 
+    border 
+    border-[#e0e0e0] 
+    hover:bg-[#005752] 
+    hover:text-white 
+    hover:border-[#005752]
+    focus:ring-2 
+    focus:ring-[rgba(190,203,203,0.5)]
+    active:bg-[#005752] 
+    active:text-white 
+    active:border-[#005752]
+    active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)]
+    disabled:text-[#005752] 
+    disabled:bg-white 
+    disabled:border-white
+    transition-all 
+    duration-200
+  `.replace(/\s+/g, ' ').trim()
 }
 
 // Size sınıfları

@@ -1,6 +1,7 @@
 
 // Relative import kullanın (path alias çalışmıyorsa)
 import HeroSection from './components/HeroSection'
+import HeroSectionThree from './components/HeroSectionThree'
 import HeroSectionTwo from './components/HeroSectionTwo'
 
 // Veya path alias çalışıyorsa:
@@ -14,6 +15,7 @@ export default function Home() {
         
     <HeroSection/>
     <HeroSectionTwo/>
+    <HeroSectionThree/>
     </div>
   )
 }
