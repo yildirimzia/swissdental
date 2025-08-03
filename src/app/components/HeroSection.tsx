@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
       setScrollY(currentScrollY);
 
       // Background attachment'ın kalkması gereken nokta
-      const detachPoint = 1800;
+      const detachPoint = 2200;
       setShouldDetach(currentScrollY > detachPoint);
     };
 
@@ -169,10 +169,10 @@ const HeroSection: React.FC = () => {
     };
   }, [isMobile]);
   return (
-    <section className="relative min-h-screen overflow-hidden pb-[275px]">
+    <section className="relative min-h-screen overflow-hidden lg:pb-[275px] pb-[0]">
       {/* Background with CSS background-attachment */}
       <div
-        className={`lg:block hidden fixed inset-0 w-full h-full transition-all duration-500 ${
+        className={`lg:block hidden  inset-0 w-full h-full transition-all duration-500 ${
           shouldDetach ? "bg-scroll absolute" : "bg-fixed fixed"
         }`}
         style={{
