@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection'
 import HeroSectionThree from './components/HeroSectionThree'
 import HeroSectionTwo from './components/HeroSectionTwo'
 import HeroSectionFour from './components/HeroSectionFour'
+import HeroSectionFive from './components/HeroSectionFive'
 
 // Veya path alias çalışıyorsa:
 // import Button from '@/components/Button'
@@ -18,6 +19,7 @@ export default function Home() {
     <HeroSectionTwo/>
     <HeroSectionThree/>
     <HeroSectionFour/>
+    <HeroSectionFive/>
     </div>
   )
 }

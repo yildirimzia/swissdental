@@ -277,7 +277,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-gray-50 py-20 relative overflow-hidden"
+      className="bg-[#f6f6f6] py-20 relative overflow-hidden"
     >
       <div className="max-w-[1320px] mx-auto bg-white">
         <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center min-h-[600px]">
