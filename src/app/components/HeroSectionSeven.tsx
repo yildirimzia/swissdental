@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
@@ -10,7 +10,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const timelineData = [
-  // ... (verileriniz burada)
   {
     year: "2014",
     title: "Development of the SCC Short Cut Concept according to Dr. Karl Karl Ulrich Volz",
@@ -103,10 +102,23 @@ const timelineData = [
   }
 ];
 
-
 const CeramicTimeline = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
+  // Navigation fonksiyonları
+  const handlePrevClick = () => {
+    if (swiperInstance) {
+      swiperInstance.slidePrev();
+    }
+  };
+
+  const handleNextClick = () => {
+    if (swiperInstance) {
+      swiperInstance.slideNext();
+    }
+  };
 
   const LeftArrow = () => (
     <svg
@@ -119,7 +131,7 @@ const CeramicTimeline = () => {
       strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="inline-block ms-lg-1 "
+      className="inline-block ms-lg-1"
     >
       <path d="M15 6l-6 6l6 6" />
     </svg>
@@ -136,7 +148,7 @@ const CeramicTimeline = () => {
       strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="inline-block ms-lg-1 -mt-1.4"
+      className="inline-block ms-lg-1"
     >
       <path d="M9 6l6 6l-6 6"></path>
     </svg>
@@ -162,36 +174,31 @@ const CeramicTimeline = () => {
             slidesPerView={1}
             slidesPerGroup={1}
             speed={700}
+            onSwiper={setSwiperInstance}
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
-            }}
-            onBeforeInit={(swiper) => {
-              if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-              }
             }}
             breakpoints={{
               640: {
                 slidesPerView: 2,
                 spaceBetween: 24,
-                slidesOffsetBefore: 16 // 1rem
+                slidesOffsetBefore: 16
               },
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 32,
-                slidesOffsetBefore: 32 // 2rem
+                slidesOffsetBefore: 32
               },
               1280: {
                 slidesPerView: 3.5,
                 spaceBetween: 32,
-                slidesOffsetBefore: 64 // 4rem
+                slidesOffsetBefore: 64
               },
               1536: {
                 slidesPerView: 4.5,
                 spaceBetween: 32,
-                slidesOffsetBefore: 96 // 6rem
+                slidesOffsetBefore: 96
               },
             }}
             className="timeline-swiper"
@@ -201,39 +208,41 @@ const CeramicTimeline = () => {
                 <div className="relative h-full bg-white">
                   
                   {/* Individual Card */}
-                  <div className=" bg-white p-[42px] min-h-[530px] flex flex-col">
+                  <div className="bg-white p-[42px] min-h-[530px] flex flex-col">
                     {/* Yıl ve çizgi buraya taşındı */}
                     <div className="flex items-center gap-3 h-[128px] min-h-[120px]">
                       {/* Vertical line (çizgi) */}
-                      <div  className={`relative 
-                    text-[24px]
-                    pl-[65px]
-                    ml-[24px] pl:ml-[0]
-                    font-[500]
-                    tracking-wide 
-                    rotate-[-90deg] translate-x-[-24px]
-                    uppercase
-                    text-mint
-                    before:content-[""]
-                    before:absolute
-                    before:left-0
-                    before:top-1/2
-                    before:-translate-y-1/2
-                    before:w-[48px]
-                    before:h-[2px]
-                    before:bg-[#3aa194]
-                    
-                `}
-                      
-                      >{item.year}</div>
-                      
-                     
+                      <div className={`relative 
+                        text-[24px]
+                        pl-[65px]
+                        ml-[24px] pl:ml-[0]
+                        font-[500]
+                        tracking-wide 
+                        rotate-[-90deg] translate-x-[-24px]
+                        uppercase
+                        text-[#3aa194]
+                        before:content-[""]
+                        before:absolute
+                        before:left-0
+                        before:top-1/2
+                        before:-translate-y-1/2
+                        before:w-[48px]
+                        before:h-[2px]
+                        before:bg-[#3aa194]
+                      `}>
+                        {item.year}
+                      </div>
                     </div>
 
-                    <h3 className="text-primary-600 mt-[42px] font-bold text-[32px] leading-tight mb-6">
+                    <h3 className="text-[#3aa194] mt-[42px] font-bold text-[32px] leading-tight mb-6">
                       {item.title}
                     </h3>
                     
+                    {item.description && (
+                      <p className="text-gray-600 text-base leading-relaxed">
+                        {item.description}
+                      </p>
+                    )}
                   </div>
                 </div>
               </SwiperSlide>
@@ -241,17 +250,21 @@ const CeramicTimeline = () => {
           </Swiper>
 
           {/* Custom Navigation Arrows */}
-          <div className="absolute hidden md:flex bottom-[-40px] right-[80px] flex gap-3 z-10">
+          <div className="absolute hidden md:flex bottom-[-40px] right-[80px] gap-3 z-10">
             <button
               ref={prevRef}
-              className="cursor-pointer"
+              onClick={handlePrevClick}
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+              type="button"
             >
               <LeftArrow />
             </button>
 
             <button
               ref={nextRef}
-              className="cursor-pointer"
+              onClick={handleNextClick}
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+              type="button"
             >
               <RightArrow />
             </button>
@@ -271,6 +284,16 @@ const CeramicTimeline = () => {
         
         .timeline-swiper .swiper-slide {
           height: auto;
+        }
+
+        .timeline-swiper .swiper-wrapper {
+          align-items: stretch;
+        }
+
+        /* Swiper navigation tuşlarını gizle */
+        .timeline-swiper .swiper-button-next,
+        .timeline-swiper .swiper-button-prev {
+          display: none;
         }
       `}</style>
     </div>

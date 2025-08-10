@@ -7,11 +7,6 @@ import Button from './Button'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// GSAP plugin'ini register et
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
-}
-
 const HeroSection: React.FC = () => {
   // Animation refs
   const sectionRef = useRef<HTMLDivElement>(null)
