@@ -7,7 +7,7 @@ export default function ProductLinesPage() {
     <>
     <main className="pb-[150px] bg-[linear-gradient(180deg,#EAF4F3_58.33%,rgba(255,255,255,0)_100%)]">
       <div className="pb-[100px] pt-[110px]">
-            <p className="pt-[100px] text-[100px] whitespace-nowrap inline-block text-[#3aa194] font-bold left-0 tracking-[1.1em] leading-[0.9]  opacity-10 relative text-center uppercase top-0 w-[calc(100%+0.8em)]">MODELL<br />SERIES</p>
+        <p className="pt-[100px] text-[61px] sm:text-[100px] whitespace-nowrap inline-block text-[#3aa194] font-bold left-0 sm:tracking-[1.1em] sm:leading-[0.9] tracking-[0.05em] leading-[inherit]  opacity-10 relative text-center uppercase top-0 sm:w-[calc(100%+0.8em)] w-full">MODELL<br />SERIES</p>
       </div>
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 pb-[100px]">
         <div className="relative">
@@ -43,13 +43,7 @@ export default function ProductLinesPage() {
             alt="Product Image"
             width={160}
             height={500}
-            className="absolute bottom-[-93px] left-[0%] w-[160px] z-[0]
-                        transition-all duration-700 ease-in-out 
-                        transform scale-100 
-                        filter drop-shadow-[10px_10px_10px_rgba(0,0,0,0.2)] 
-                        hover:scale-110 
-                        hover:drop-shadow-[30px_30px_30px_rgba(0,0,0,0.2)] 
-                        text-transparent"
+            className="absolute rotate-[10deg] bottom-[-30px] left-[38%] w-[90px] z-[0] text-transparent"
             />
         </div>
             <div className="mt-[106px] ml-[25%]">
@@ -71,6 +65,6 @@ export default function ProductLinesPage() {
             </div>
       </div>
     </main>
-    </>
+    </> 
   )
 }
