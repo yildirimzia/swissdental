@@ -102,7 +102,7 @@ const Header: React.FC = () => {
             <div className="space-y-4 mt-[26px] ml-[11px]">
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">Benefits for patients</Link>
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">Benefits for dentists</Link>
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">Product lines</Link>
+              <Link href="/product-lines" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">Product lines</Link>
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">Science</Link>
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">User</Link>
             </div>

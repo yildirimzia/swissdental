@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ComingSoon from "./components/ComingSoon";
 
 
 export const metadata: Metadata = {
@@ -14,6 +15,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const isProduction = process.env.NEXT_PUBLIC_ENV === "production";
+
   return (
     <html lang="en">
       <body
@@ -21,9 +25,18 @@ export default function RootLayout({
         cz-shortcut-listen="true"
       >
         <div className="">
-        <Header/>
-        {children}
-        <Footer/>
+
+       {isProduction ?
+        <ComingSoon /> 
+        : 
+        <>
+          <Header/>
+          {children}
+          <Footer/>
+        </>
+        }
+
+       
         </div>
       </body>
     </html>
