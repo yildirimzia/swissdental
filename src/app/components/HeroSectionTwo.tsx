@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Button from './Button'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useHomeTranslation } from '@/contexts/LanguageContext'
 
 const HeroSection: React.FC = () => {
   // Animation refs
@@ -13,6 +14,9 @@ const HeroSection: React.FC = () => {
   const imageRef = useRef<HTMLDivElement>(null) // Sol taraftaki background image
   const textRef = useRef<HTMLDivElement>(null) // Sağ taraftaki text content
   const [isMobile, setIsMobile] = useState(false)
+
+  // Translation hook - home namespace kullanıyoruz çünkü service_hero orada
+  const { t } = useHomeTranslation()
 
   // Mobil kontrol
   useEffect(() => {
@@ -145,16 +149,19 @@ const HeroSection: React.FC = () => {
                   before:bg-[#3aa194]
                 `}
               >
-                SDS Support
+                {t('service_hero.category')}
               </p>
-              <strong className='font-bold text-[26px] lg:text-[40px] text-primary-600'>Service –</strong>
               <h1 className="lg:text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),40px)] text-[clamp(26px,calc(-49.8461538462px+0.0865384615*100vw),26px)]  leading-[1.125] tracking-[-0.03em] text-primary-600 font-medium">
-                As special as our products
+                
+              <strong className='font-bold text-[26px] lg:text-[40px] text-primary-600'>
+                {t('service_hero.title_highlight')}
+              </strong>
+                {t('service_hero.title_text')}
               </h1>
             </div>
 
             <p className="lg:text-[20px] text-[15px] font-[400] lg:w-[80%] w-full text-primary-600 mt-[2.875rem] max-w-[42rem]">
-              SDS is much more than just a product provider. We are your continuous point of contact, offering valuable knowledge, organizing further education events, and actively supporting you in planning your cases
+              {t('service_hero.description')}
             </p>
 
             <div className="pt-6 mt-[1.2rem]">
@@ -183,7 +190,7 @@ const HeroSection: React.FC = () => {
                   }
                   iconPosition="right"
                 >
-                  SDS Support
+                  {t('service_hero.button')}
                 </Button>
               </Link>
             </div>

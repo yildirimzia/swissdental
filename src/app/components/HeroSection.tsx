@@ -6,6 +6,7 @@ import Image from "next/image";
 import Button from "./Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useHomeTranslation } from "@/hooks/useTranslation";
 
 // GSAP plugin'ini register et
 if (typeof window !== "undefined") {
@@ -17,11 +18,21 @@ const HeroSection: React.FC = () => {
   const [shouldDetach, setShouldDetach] = useState(false);
   const [removeHidden, setRemoveHidden] = useState(false);
 
+  // Translation hook
+  const { t, isLoaded } = useHomeTranslation();
+
   // GSAP animasyonları için ref
   const implantRef = useRef<HTMLDivElement>(null);
   const secondImplantRef = useRef<HTMLImageElement>(null);
   const brightImageRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+
+  // Benefits array'ini çeviri dosyasından al
+  const benefits = [
+    t('standards_section.benefits.0'),
+    t('standards_section.benefits.1'), 
+    t('standards_section.benefits.2')
+  ];
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -129,12 +140,10 @@ const HeroSection: React.FC = () => {
           invalidateOnRefresh: true,
           onEnter: () => {
             setRemoveHidden(true);
-
             console.log("2 bölüme geçildi");
           },
           onLeaveBack: () => {
             setRemoveHidden(false);
-
             console.log("1 bölüme geçildi");
           },
         },
@@ -155,8 +164,6 @@ const HeroSection: React.FC = () => {
         duration: 1, // scrub olduğu için göreceli süre
         scale: isMobile ? 1.8 : 3, // Hedef ölçek (4 kat büyüt)
         rotation: isMobile ? -42 : -14, // Hedef rotasyon (-18 derece)
-        // Bu translate değerleri sizin verdiğiniz son duruma göre ayarlanmıştır.
-        // brightImageRef'in (parent div) başlangıç CSS'indeki absolute konumlandırmasını (top:17% left:-18%) hesaba katın.
         x: isMobile ? 100.5 : 330.5, // Hedef X translate
         y: 0, // Hedef Y translate
         ease: "linear",
@@ -168,6 +175,9 @@ const HeroSection: React.FC = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, [isMobile]);
+
+ 
+
   return (
     <section className="relative min-h-screen overflow-hidden lg:pb-[275px] pb-[0]">
       {/* Background with CSS background-attachment */}
@@ -211,19 +221,15 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                  SDS SWISS DENTAL SOLUTIONS
+                  {t('hero.company_name')}
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125]  tracking-[-0.03em]  text-primary-600  font-light">
-                  World market
-                  <br />
-                  leader in ceramic dental implants
+                  {t('hero.main_title')}
                 </h1>
               </div>
 
               <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-[0] leading-8  mt-[2.875rem] max-w-[42rem]">
-                SDS ceramic dental implants made from white zirconium dioxide
-                meet the highest standards in terms of biocompatibility,
-                tolerance, health, and aesthetics.
+                {t('hero.main_description')}
               </p>
 
               <div className="pt-6 lg:translate-x-[120px] translate-x-0 mt-[1.2rem]">
@@ -234,7 +240,7 @@ const HeroSection: React.FC = () => {
                     rounded="rounded-[100px]"
                     className="text-[16px]"
                   >
-                    To the Implants
+                    {t('hero.main_button')}
                   </Button>
                 </Link>
               </div>
@@ -286,17 +292,15 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                  Product
+                  {t('bright_section.category')}
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125] uppercase  tracking-[-0.03em] font-[700]  text-primary-600  ">
-                  Bright
+                  {t('bright_section.title')}
                 </h1>
               </div>
 
               <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600  leading-8  mt-[2.875rem] max-w-[42rem]">
-                With the BRIGHT premium implant series, you have an ideal
-                implant system for immediate placement, designed with optimal
-                material and shape considerations.
+                {t('bright_section.description')}
               </p>
 
               <div className="pt-6  lg:mt-[1.2rem] mt-0">
@@ -307,7 +311,7 @@ const HeroSection: React.FC = () => {
                     rounded="rounded-[100px]"
                     className="text-[16px]"
                   >
-                    To the BRIGHT Product Line
+                    {t('bright_section.button')}
                   </Button>
                 </Link>
               </div>
@@ -372,23 +376,19 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                  Why SDS?
+                  {t('standards_section.category')}
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125]  tracking-[-0.03em]  text-primary-600  font-light">
-                  Highest standards
-                  <br />
-                  in compatibility, <br />
-                  health, and
-                  <br /> aesthetics!
+                  {t('standards_section.title')}
                 </h1>
               </div>
 
               <ul className="list-decimal text-[18px] ml-[10px] lg:ml-0	 lg:text-[20px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-0 leading-8  mt-[2.875rem] max-w-[42rem]">
-                <li className="mb-2">
-                  Highly biocompatible in the highest degree
-                </li>
-                <li className="mb-2">Durable and robust</li>
-                <li className="mb-2">Possibility of immediate implantation</li>
+                {benefits.map((benefit: string, index: number) => (
+                  <li key={index} className="mb-2">
+                    {benefit}
+                  </li>
+                ))}
               </ul>
 
               <div className="pt-6 lg:translate-x-[120px] translate-x-0 lg:mt-[1.2rem]">
@@ -399,7 +399,7 @@ const HeroSection: React.FC = () => {
                     rounded="rounded-[100px]"
                     className="text-[16px]"
                   >
-                    Discover Benefits
+                    {t('standards_section.button')}
                   </Button>
                 </Link>
               </div>
@@ -411,7 +411,7 @@ const HeroSection: React.FC = () => {
       {/* Scroll Indicator */}
       <div className="fixed bottom-8 right-8 z-30">
         <div className="writing-vertical text-white/70 text-sm font-light tracking-wider">
-          Scroll
+          {t('scroll_indicator')}
         </div>
       </div>
 

@@ -3,109 +3,20 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import { useHomeTranslation } from '@/hooks/useTranslation';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const timelineData = [
-  {
-    year: "2014",
-    title: "Development of the SCC Short Cut Concept according to Dr. Karl Karl Ulrich Volz",
-    description: ""
-  },
-  {
-    year: "2015",
-    title: "Formulation of Dr. Volz Biological Dentistry concept",
-    description: ""
-  },
-  {
-    year: "2016",
-    title: "Founding of the SWISS BIOHEALTH CLINIC and development of the ALL IN ONE concept",
-    description: ""
-  },
-  {
-    year: "2017",
-    title: "Foundation of SDS SWISS DENTAL SOLUTIONS AG EDUCATION CENTER",
-    description: ""
-  },
-  {
-    year: "2004",
-    title: "First CE certification for a ceramic implant",
-    description: "Revolutionary ceramic materials receive regulatory approval for medical implants"
-  },
-  {
-    year: "2004-2012", 
-    title: "Development of the first two-part reversibly screwed ceramic implant SDS2.0",
-    description: "Advanced engineering creates modular ceramic implant systems"
-  },
-  {
-    year: "2006",
-    title: "Insertion of the first implants with ultrasound under polylactide welding", 
-    description: "Innovative surgical techniques improve implant integration"
-  },
-  {
-    year: "2007",
-    title: "Foundation of Swiss Oral Implants (SOI)",
-    description: "Establishment of leading ceramic implant manufacturer"
-  },
-  {
-    year: "2009",
-    title: "Launch of PURE Ceramic Implant System",
-    description: "First commercially available one-piece ceramic implant system"
-  },
-  {
-    year: "2011", 
-    title: "Introduction of tissue-level ceramic implants",
-    description: "Development of implants designed for soft tissue integration"
-  },
-  {
-    year: "2013",
-    title: "FDA approval for ceramic dental implants",
-    description: "US regulatory approval opens American market"
-  },
-  {
-    year: "2015",
-    title: "Advanced surface treatment technologies", 
-    description: "Enhanced surface modifications improve osseointegration"
-  },
-  {
-    year: "2016",
-    title: "Founding of the SWISS BIOHEALTH CLINIC and development of the ALL IN ONE concept",
-    description: "Comprehensive approach to ceramic implant treatment and patient care"
-  },
-  {
-    year: "2017",
-    title: "Foundation of SDS SWISS DENTAL SOLUTIONS AG EDUCATION CENTER",
-    description: "Educational initiatives and training programs for ceramic implant procedures"
-  },
-  {
-    year: "2019",
-    title: "Immediate loading protocols established",
-    description: "Clinical protocols enable same-day implant placement and loading"
-  },
-  {
-    year: "2021",
-    title: "AI-assisted implant design",
-    description: "Artificial intelligence optimizes implant geometry and placement"
-  },
-  {
-    year: "2022",
-    title: "Bioactive ceramic coatings", 
-    description: "New coating technologies accelerate healing and integration"
-  },
-  {
-    year: "2024",
-    title: "Smart implant monitoring systems",
-    description: "IoT integration allows real-time monitoring of implant health"
-  }
-];
-
 const CeramicTimeline = () => {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
+  // Translation hook
+  const { t, isLoaded } = useHomeTranslation();
 
   // Navigation fonksiyonları
   const handlePrevClick = () => {
@@ -154,6 +65,49 @@ const CeramicTimeline = () => {
     </svg>
   );
 
+  // Timeline data tipini tanımla
+  interface TimelineEvent {
+    year: string;
+    title: string;
+    description: string;
+  }
+
+  // Timeline data tipini tanımla
+  interface TimelineEvent {
+    year: string;
+    title: string;
+    description: string;
+  }
+
+  // Timeline data'yı çevirilerden al - her event'i ayrı ayrı çek
+  const getTimelineData = (): TimelineEvent[] => {
+    const events: TimelineEvent[] = [];
+    
+    // JSON dosyanızda 16 event var, onları tek tek çekelim
+    for (let i = 0; i < 16; i++) {
+      try {
+        const year = t(`timeline.events.${i}.year`);
+        const title = t(`timeline.events.${i}.title`);
+        const description = t(`timeline.events.${i}.description`);
+        
+        // Eğer çeviri bulunamadıysa (key'in kendisi dönerse) dur
+        if (year === `timeline.events.${i}.year` || !year) {
+          break;
+        }
+        
+        events.push({ year, title, description });
+      } catch (error) {
+        console.log(`Event ${i} could not be loaded`);
+        break;
+      }
+    }
+    
+    console.log(`Loaded ${events.length} timeline events from translations`);
+    return events;
+  };
+
+  const timelineData = getTimelineData();
+
   return (
     <div className="bg-[#f6f6f6] pb-[100px] min-h-screen relative w-full overflow-hidden">
       <div className="w-full">
@@ -161,7 +115,7 @@ const CeramicTimeline = () => {
         {/* Header - başlık merkezde kalabilir */}
         <div className="text-center mt-[200px] lg:mt-[100px] lg:mb-24 px-4 md:px-8">
           <h2 className="text-teal-600 text-sm font-medium tracking-widest uppercase mb-4">
-            HISTORY
+            {t('timeline.category')}
           </h2>
         </div>
 

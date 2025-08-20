@@ -1,0 +1,26 @@
+{
+  "main": {
+    "products": "Products",
+    "service": "Service",
+    "about": "About SDS"
+  },
+  "products": {
+    "benefits_patients": "Benefits for patients",
+    "benefits_dentists": "Benefits for dentists", 
+    "product_lines": "Product lines",
+    "science": "Science",
+    "user": "User",
+    "top_user": "Top user",
+    "sscp": "SSCP"
+  },
+  "service": {
+    "technical_support": "Technical Support",
+    "customer_service": "Customer Service",
+    "documentation": "Documentation"
+  },
+  "about": {
+    "our_story": "Our Story", 
+    "leadership_team": "Leadership Team",
+    "careers": "Careers"
+  }
+}

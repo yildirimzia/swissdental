@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useHomeTranslation } from "@/hooks/useTranslation";
 
 // GSAP plugin'ini register et
 if (typeof window !== "undefined") {
@@ -11,7 +12,6 @@ if (typeof window !== "undefined") {
 }
 
 interface Testimonial {
-  id: number;
   name: string;
   location: string;
   text: string;
@@ -24,25 +24,26 @@ const HeroSection: React.FC = () => {
   const [activate, setActivate] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  // Translation hook
+  const { t, isLoaded } = useHomeTranslation();
+
   // Refs for GSAP animations
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
-  // Testimonials data
+  // Testimonials data with images - çeviriler JSON'dan gelecek
   const testimonials: Testimonial[] = [
     {
-      id: 1,
-      name: "Jacqueline Bussard",
-      location: "Germany",
-      text: "I'm glad i made this investment toward my health and feel much better now. I will continue to take the many advices received during my treatment.",
+      name: t('testimonials.data.0.name'),
+      location: t('testimonials.data.0.location'),
+      text: t('testimonials.data.0.text'),
       image: "/images/testimonial-1.jpg",
     },
     {
-      id: 2,
-      name: "Catherine Stewart",
-      location: "USA",
-      text: "My new teeth and smile are absolutely beautiful. The precision are care that went into creating this perfect smile were nothing short of AMAZING!",
+      name: t('testimonials.data.1.name'),
+      location: t('testimonials.data.1.location'),
+      text: t('testimonials.data.1.text'),
       image: "/images/testimonial-2.jpg",
     },
   ];
@@ -61,7 +62,7 @@ const HeroSection: React.FC = () => {
 
   // GSAP Scroll Animation - İlk yüklenme
   useEffect(() => {
-    if (!sectionRef.current || !imageRef.current || !textRef.current) return;
+    if (!sectionRef.current || !imageRef.current || !textRef.current || !isLoaded) return;
 
     // Başlangıç pozisyonları
     gsap.set(imageRef.current, {
@@ -108,7 +109,7 @@ const HeroSection: React.FC = () => {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [isMobile]);
+  }, [isMobile, isLoaded]);
 
   // Slide transition animation
   const slideTransition = (direction: "next" | "prev") => {
@@ -238,6 +239,7 @@ const HeroSection: React.FC = () => {
     }
   };
 
+
   const currentTestimonial = testimonials[currentSlide];
 
   const LeftArrow = () => (
@@ -307,14 +309,14 @@ const HeroSection: React.FC = () => {
                       ? "bg-primary-500 scale-125"
                       : "bg-gray-300 hover:bg-gray-400"
                   } ${isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
-                  aria-label={`Go to slide ${index + 1}`}
+                  aria-label={`${t('testimonials.navigation.slide')} ${index + 1}`}
                 />
               ))}
             </div>
             {/* Author Info */}
             <div className="lg:pt-8 flex items-center lg:absolute lg:top-[205px] lg:right-[265px] pr-[2.875rem] pl-[2.875rem] lg:*:pl-0 lg:pr-0 pt-0">
               <h3 className="text-[72px] lg:hidden block text-primary-500 mt-[25px]">
-                “
+                "
               </h3>
               <p className="text-primary-500 tracking-[-0.05em] font-medium text-[12px] lg:text-[14px] uppercase  ml-[10px]">
                 {currentTestimonial.name}, {currentTestimonial.location}
@@ -340,9 +342,9 @@ const HeroSection: React.FC = () => {
 
             {/* TESTIMONIALS Label */}
             <div className="lg:flex hidden items-center">
-              <h3 className="text-[72px] text-primary-500 mt-[25px]">“</h3>
+              <h3 className="text-[72px] text-primary-500 mt-[25px]">"</h3>
               <span className="text-primary-500 font-medium text-sm tracking-wide uppercase ml-[36px]">
-                TESTIMONIALS
+                {t('testimonials.title')}
               </span>
             </div>
 
@@ -361,7 +363,7 @@ const HeroSection: React.FC = () => {
                     ? "opacity-50 cursor-not-allowed"
                     : "cursor-pointer hover:opacity-70"
                 } transition-opacity duration-200`}
-                aria-label="Previous testimonial"
+                aria-label={t('testimonials.navigation.previous')}
               >
                 <LeftArrow />
               </button>
@@ -376,7 +378,7 @@ const HeroSection: React.FC = () => {
                     ? "opacity-50 cursor-not-allowed"
                     : "cursor-pointer hover:opacity-70"
                 } transition-opacity duration-200`}
-                aria-label="Next testimonial"
+                aria-label={t('testimonials.navigation.next')}
               >
                 <RightArrow />
               </button>

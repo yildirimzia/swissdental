@@ -6,9 +6,13 @@ import Link from "next/link";
 import Button from './Button'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useHomeTranslation } from '@/hooks/useTranslation';
 
 const HeroSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
+
+  // Translation hook
+  const { t, isLoaded } = useHomeTranslation();
 
   // Refs for GSAP animations
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -29,7 +33,7 @@ const HeroSection: React.FC = () => {
 
   // GSAP Scroll Animation
   useEffect(() => {
-    if (!sectionRef.current || !imageRef.current || !textRef.current) return
+    if (!sectionRef.current || !imageRef.current || !textRef.current || !isLoaded) return
 
     // Başlangıç pozisyonları
     gsap.set(imageRef.current, {
@@ -72,7 +76,8 @@ const HeroSection: React.FC = () => {
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
-  }, [isMobile])
+  }, [isMobile, isLoaded])
+
 
   // External Link Icon
   const ExternalLinkIcon = () => (
@@ -110,25 +115,24 @@ const HeroSection: React.FC = () => {
             {/* Header */}
             <div className="space-y-4">
               <div>
-                  <Image
-                src="/images/SDSEducationLogo.png"
-                alt="SDS Education - Training Session"
-                width={422}
-                height={32}
-                className="object-cover "
-                priority
-              />
+                <Image
+                  src="/images/SDSEducationLogo.png"
+                  alt={t('education.logo_alt')}
+                  width={422}
+                  height={32}
+                  className="object-cover "
+                  priority
+                />
               </div>
               
               <h3 className="lg:text-[40px] text-[26px] tracking-[-0.03em] leading-[1.2]  text-primary-600">
-                Become an expert<br />
-                with SDS Education
+                {t('education.title')}
               </h3>
             </div>
 
             {/* Description */}
             <p className="text-lg leading-relaxed max-w-lg text-primary-600">
-              In our SDS Education courses, you have the opportunity to directly benefit from the knowledge of our experienced dentists. Become an expert and refine your skills with our specialized on-site or online training sessions.
+              {t('education.description')}
             </p>
 
             {/* CTA Button */}
@@ -142,7 +146,7 @@ const HeroSection: React.FC = () => {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  To the SDS Education website
+                  {t('education.button')}
                 </Button>
               </Link>
             </div>
@@ -156,15 +160,12 @@ const HeroSection: React.FC = () => {
             <div className="relative">
               <Image
                 src="/images/SDSEducation.jpg"
-                alt="SDS Education - Training Session"
+                alt={t('education.logo_alt')}
                 width={830}
                 height={996}
                 className="object-cover lg:w-[830px] lg:h-[996px] w-[430px] h-[546px]"
                 priority
               />
-              
-              {/* Decorative overlay */}
-             
             </div>
           </div>
 

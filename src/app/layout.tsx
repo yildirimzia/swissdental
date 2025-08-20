@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ComingSoon from "./components/ComingSoon";
+import GlobalLoading from "./components/GlobalLoading";
+import { LanguageProvider } from '@/contexts/LanguageContext';
+import { LoadingProvider } from '@/contexts/LoadingContext';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,17 +32,24 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <div>
-          {showComingSoon ? (
-            <ComingSoon />
-          ) : (
-            <>
-              <Header />
-              {children}
-              <Footer />
-            </>
-          )}
-        </div>
+        <LanguageProvider>
+          <LoadingProvider>
+            <div>
+              {/* Global Loading - Her zaman render et */}
+              <GlobalLoading />
+              
+              {showComingSoon ? (
+                <ComingSoon />
+              ) : (
+                <>
+                  <Header />
+                  {children}
+                  <Footer />
+                </>
+              )}
+            </div>
+          </LoadingProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

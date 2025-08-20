@@ -3,44 +3,61 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useFooterTranslation } from '@/hooks/useTranslation';
 
 const Footer: React.FC = () => {
+  // Translation hook - footer namespace kullanıyoruz
+  const { t } = useFooterTranslation();
 
-  const navSections = [
-    {
-      title: 'PRODUCTS',
+
+
+  // Navigation sections - çevirilerden al
+  const getNavSections = () => {
+    const sections = [];
+    
+    // PRODUCTS section
+    sections.push({
+      title: t('navigation.products.title'),
       links: [
-        { href: '/benefits-patients', label: 'Benefits for patients' },
-        { href: '/benefits-dentists', label: 'Benefits for dentists' },
-        { href: '/product-lines', label: 'Product lines' },
-        { href: '/science', label: 'Science' },
-        { href: '/top-user', label: 'Top user' },
-        { href: '/sscp', label: 'SSCP' },
+        { href: '/benefits-patients', label: t('navigation.products.links.benefits_patients') },
+        { href: '/benefits-dentists', label: t('navigation.products.links.benefits_dentists') },
+        { href: '/product-lines', label: t('navigation.products.links.product_lines') },
+        { href: '/science', label: t('navigation.products.links.science') },
+        { href: '/top-user', label: t('navigation.products.links.top_user') },
+        { href: '/sscp', label: t('navigation.products.links.sscp') },
       ]
-    },
-    {
-      title: 'SERVICE',
+    });
+
+    // SERVICE section
+    sections.push({
+      title: t('navigation.service.title'),
       links: [
-        { href: '/service-support', label: 'Service & support' },
-        { href: '/documents', label: 'Documents' },
-        { href: '/podcast', label: 'SDS podcast' },
-        { href: '/contact', label: 'Contact' },
+        { href: '/service-support', label: t('navigation.service.links.service_support') },
+        { href: '/documents', label: t('navigation.service.links.documents') },
+        { href: '/podcast', label: t('navigation.service.links.podcast') },
+        { href: '/contact', label: t('navigation.service.links.contact') },
       ]
-    },
-    {
-      title: 'ABOUT SDS',
+    });
+
+    // ABOUT SDS section
+    sections.push({
+      title: t('navigation.about.title'),
       links: [
-        { href: '/company', label: 'Company' },
-        { href: '/career', label: 'Career' },
-        { href: '/history', label: 'History' },
+        { href: '/company', label: t('navigation.about.links.company') },
+        { href: '/career', label: t('navigation.about.links.career') },
+        { href: '/history', label: t('navigation.about.links.history') },
       ]
-    }
-  ];
+    });
+
+    return sections;
+  };
+
+  const navSections = getNavSections();
 
   const footerLinks = [
-    { href: '/imprint', label: 'Imprint' },
-    { href: '/data-policy', label: 'Data Policy' },
-    { href: '/gtc', label: 'Terms & Conditions' },
+    { href: '/imprint', label: t('footer_links.imprint') },
+    { href: '/data-policy', label: t('footer_links.data_policy') },
+    { href: '/gtc', label: t('footer_links.terms_conditions') },
   ];
   
   const socialIcons = [
@@ -50,7 +67,6 @@ const Footer: React.FC = () => {
     { href: '#', label: 'Spotify', icon: '/Spotify-Logo.svg' },
     { href: '#', label: 'Apple', icon: '/Apple-Logo.svg' },
   ];
-
 
   return (
     <footer className="bg-white shadow-lg">
@@ -81,7 +97,7 @@ const Footer: React.FC = () => {
                 <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
                 <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
               </svg>
-              Education
+              {t('header_buttons.education')}
             </Link>
             <Link 
               href="/clinic" 
@@ -94,7 +110,7 @@ const Footer: React.FC = () => {
                 <path d="M10 9l4 0"></path>
                 <path d="M12 7l0 4"></path>
               </svg>
-              Swiss Biohealth Clinic
+              {t('header_buttons.clinic')}
             </Link>
           </div>
         </div>

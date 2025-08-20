@@ -1,0 +1,20 @@
+{
+  "buttons": {
+    "back": "Geri",
+    "close": "Kapat",
+    "menu": "Menü", 
+    "learn_more": "Daha Fazla Bilgi",
+    "contact_us": "İletişime Geçin",
+    "get_started": "Başlayın"
+  },
+  "language": {
+    "switch_to_turkish": "TR/Türkçe",
+    "switch_to_english": "EN/İngilizce",
+    "current": "TR"
+  },
+  "status": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu", 
+    "success": "Başarılı"
+  }
+}
