@@ -3,13 +3,15 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-
+import Button from './Button'
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<string | null>(null)
   const [activeDesktopSubmenu, setActiveDesktopSubmenu] = useState<string | null>(null)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [currentLanguage, setCurrentLanguage] = useState<'EN' | 'TR'>('EN') // Dil state'i
+
 
   // Scroll effect
   useEffect(() => {
@@ -69,6 +71,18 @@ const Header: React.FC = () => {
       <path d="M12 19l-7-7 7-7"></path>
     </svg>
   )
+
+  const WordIcon = () => {
+      return (
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mt-n1-4">
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+              <path d="M3.6 9h16.8"></path>
+              <path d="M3.6 15h16.8"></path>
+              <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+              <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+          </svg>
+      ) 
+  }
 
   const toggleMobileSubmenu = (menu: string) => {
     setActiveMobileSubmenu(activeMobileSubmenu === menu ? null : menu)
@@ -240,6 +254,32 @@ const Header: React.FC = () => {
     }
   }
 
+  const renderLanguageToggle = () => {
+    return (
+      <Button
+        variant="customOutline" // Yeni variant
+        size="custom16"
+        rounded="rounded-full"
+        className="!shadow-none mt-8 !font-[400] flex" // Shadow'u kaldır
+        iconPosition="right"
+      >
+        <div className='flex items-center gap-0.5'>
+           <WordIcon />
+          <div>
+            
+            {currentLanguage === 'EN' ? (
+              <>TR/Turkish</>
+            ) : (
+              <>EN/English</>
+            )}
+          </div>
+        </div>
+       
+
+      </Button>
+    )
+  }
+
   return (
     <>
       {/* Fixed Navigation Section */}
@@ -333,6 +373,7 @@ const Header: React.FC = () => {
                   : 'opacity-100 transform translate-y-0'
               }`}>
                 {!isTransitioning && renderMenuContent()}
+                {renderLanguageToggle()}
               </div>
             </div>
           </div>
