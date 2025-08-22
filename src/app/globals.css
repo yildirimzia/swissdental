@@ -258,6 +258,11 @@
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+
+  .product-lines {
+    max-width: 1320px !important;
+    margin: 0 auto !important;
+  }
   
   @media (min-width: 640px) {
     .container-dental {
