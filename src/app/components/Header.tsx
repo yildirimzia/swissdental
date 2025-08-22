@@ -21,6 +21,34 @@ const Header: React.FC = () => {
   // Loading context
   const { setLanguageLoading } = useLoading()
 
+  // Body scroll lock effect - mobile menü açıldığında
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      // Scroll'u engelle
+      document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.top = '0'
+      document.body.style.left = '0'
+      document.body.style.right = '0'
+    } else {
+      // Scroll'u geri aç
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+    }
+
+    // Cleanup - component unmount edildiğinde
+    return () => {
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+    }
+  }, [isMobileMenuOpen])
+
   // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -55,10 +83,27 @@ const Header: React.FC = () => {
     // Dil değiştir
     changeLanguage(newLanguage)
     
+    // Mobile menüyü kapat (eğer açıksa)
+    if (isMobileMenuOpen) {
+      toggleMobileMenu()
+    }
+    
     // Loading'i bitir (çeviriler yüklendikten sonra)
     setTimeout(() => {
       setLanguageLoading(false)
     }, 800) // Çevirilerin yüklenmesi için yeterli süre
+  }
+
+  // Mobile menu toggle function
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+    // Submenu'yu da kapat
+    setActiveMobileSubmenu(null)
+  }
+
+  // Mobile submenu toggle - mobile menü kapatılmasın
+  const toggleMobileSubmenu = (menu: string) => {
+    setActiveMobileSubmenu(activeMobileSubmenu === menu ? null : menu)
   }
 
   // Icons
@@ -105,10 +150,6 @@ const Header: React.FC = () => {
       <path d="M12.5 3a17 17 0 0 1 0 18"></path>
     </svg>
   )
-
-  const toggleMobileSubmenu = (menu: string) => {
-    setActiveMobileSubmenu(activeMobileSubmenu === menu ? null : menu)
-  }
 
   const toggleDesktopSubmenu = (menu: string) => {
     if (activeDesktopSubmenu === menu) {
@@ -204,42 +245,42 @@ const Header: React.FC = () => {
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('products.benefits_patients')}
             </Link>
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('products.benefits_dentists')}
             </Link>
             <Link 
               href="/product-lines" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('products.product_lines')}
             </Link>
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('products.science')}
             </Link>
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('products.top_user')}
             </Link>
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('products.sscp')}
             </Link>
@@ -251,21 +292,21 @@ const Header: React.FC = () => {
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('service.technical_support')}
             </Link>
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('service.customer_service')}
             </Link>
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('service.documentation')}
             </Link>
@@ -277,21 +318,21 @@ const Header: React.FC = () => {
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('about.our_story')}
             </Link>
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('about.leadership_team')}
             </Link>
             <Link 
               href="#" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => toggleMobileMenu()}
             >
               {tNav('about.careers')}
             </Link>
@@ -458,7 +499,7 @@ const Header: React.FC = () => {
           <div className="lg:hidden fixed top-0 right-0 z-50 bg-white lg:h-31 h-[75px] flex items-center">
             <div className="px-4">
               <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                onClick={toggleMobileMenu}
                 className="p-2 text-primary-600 hover:text-primary-500 transition-colors mobile-menu-container"
                 aria-label={tCommon('buttons.menu')}
               >
