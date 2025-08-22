@@ -8,6 +8,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SdsAim from './SdsAim'
+import SdsEducation from "./SdsEducation";
+import TrainingCards from "./TrainingCards";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function ProductLinesPage() {
@@ -965,6 +967,8 @@ export default function ProductLinesPage() {
     </section>
 
     <SdsAim />
+    <SdsEducation />
+    <TrainingCards />
 
   </>
   );
