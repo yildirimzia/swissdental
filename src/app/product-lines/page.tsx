@@ -735,7 +735,7 @@ export default function ProductLinesPage() {
         `}
         >
           <Image
-            src="/images/product-lines/lifetime-warranty.png"
+            src="/images/product-lines/Lifetime-Warranty.png"
             alt="Lifetime Warranty Logo"
             width={851}
             height={800}

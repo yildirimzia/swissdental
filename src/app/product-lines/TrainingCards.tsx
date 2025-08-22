@@ -18,7 +18,7 @@ export default function TrainingCards() {
               {/* Icon */}
               <div className="mb-8">
                 <Image
-                  src="/images/product-lines/hat.svg"
+                  src="/images/product-lines/Hat.svg"
                   alt="First steps"
                   width={44}
                   height={44}
