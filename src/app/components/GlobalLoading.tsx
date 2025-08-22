@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLoading } from '@/contexts/LoadingContext';
+import { useCommonTranslation } from '@/hooks/useTranslation';
 
 const GlobalLoading = () => {
   const [isPageLoading, setIsPageLoading] = useState(true);
   const pathname = usePathname();
   const { isLanguageLoading } = useLoading();
+  const { t: tCommon, isLoaded } = useCommonTranslation();
 
   // Sayfa yüklenme loading'i
   useEffect(() => {
@@ -34,6 +36,19 @@ const GlobalLoading = () => {
   // Herhangi bir loading aktifse göster
   const showLoading = isPageLoading || isLanguageLoading;
 
+  // Fallback text fonksiyonu
+  const getLoadingText = () => {
+    if (!isLoaded) {
+      // Çeviriler yüklenmemişse fallback text
+      return isLanguageLoading ? "Changing Language..." : "Loading...";
+    }
+    
+    // Çeviriler yüklenmişse çeviri kullan
+    return isLanguageLoading 
+      ? tCommon("changeLanguage.language_one") 
+      : tCommon("changeLanguage.loading");
+  };
+
   if (!showLoading) return null;
 
   return (
@@ -41,7 +56,7 @@ const GlobalLoading = () => {
       <div className="text-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-600 mx-auto"></div>
         <p className="mt-4 text-primary-600">
-          {isLanguageLoading ? 'Dil değiştiriliyor...' : 'Yükleniyor...'}
+          {getLoadingText()}
         </p>
         
         {/* Loading dots animation */}

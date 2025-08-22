@@ -16,5 +16,9 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "success": "Success"
+  },
+  "changeLanguage": {
+    "language_one": "Language is changing...",
+    "loading": "Loading..."
   }
 }

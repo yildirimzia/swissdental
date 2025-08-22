@@ -16,5 +16,9 @@
     "loading": "Yükleniyor...",
     "error": "Bir hata oluştu", 
     "success": "Başarılı"
+  },
+  "changeLanguage": {
+    "language_one": "Dil değiştiriliyor...",
+    "loading": "Yükleniyor..."
   }
 }
