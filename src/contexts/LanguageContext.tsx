@@ -43,8 +43,8 @@ const initI18n = (initialLang: Language = 'en') => {
       lng: initialLang,
       fallbackLng: 'en',
       debug: false, // Debug'ı kapat performans için
-      
-      ns: ['home', 'footer', 'common', 'navigation'],
+
+      ns: ['home', 'footer', 'common', 'navigation', 'productlines'],
       defaultNS: 'home',
       
       preload: ['en', 'tr'],
@@ -202,3 +202,4 @@ export const useServiceTranslation = () => useTranslation('service')
 export const useAboutTranslation = () => useTranslation('about')
 export const useContactTranslation = () => useTranslation('contact')
 export const useFooterTranslation = () => useTranslation('footer')
+export const useProductLinesTranslation = () => useTranslation('productlines')

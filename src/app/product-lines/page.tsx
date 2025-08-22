@@ -1,16 +1,20 @@
+"use client"
 import Image from "next/image";
 import Button from "../components/Button";
 import Link from "next/link";
+import { useProductLinesTranslation } from '@/hooks/useTranslation';
 
 export default function ProductLinesPage() {
+  const { t: tProductLines } = useProductLinesTranslation();
+
   return (
     <>
       <main className="pb-[150px] p-[10px] bg-[linear-gradient(180deg,#EAF4F3_58.33%,rgba(255,255,255,0)_100%)]">
         <div className="pb-[100px] pt-[110px] w-full flex">
-          <p className="pt-[100px] text-[61px] sm:text-[100px] whitespace-nowrap inline-block text-[#3aa194] font-bold left-0 sm:tracking-[1.1em] sm:leading-[0.9] tracking-[0.3em] leading-[.9]  opacity-10 relative text-center uppercase top-0 sm:w-[calc(100%+0.8em)] w-[100%]">
-            MODELL
+          <p className="pt-[100px] text-[44px] sm:text-[100px] whitespace-nowrap inline-block text-[#3aa194] font-bold left-0 sm:tracking-[1.1em] sm:leading-[0.9] tracking-[0.3em] leading-[.9]  opacity-10 relative text-center uppercase top-0 sm:w-[calc(100%+0.8em)] w-[100%]">
+            {tProductLines("product_lines.line_1.modelsInfo_1")}
             <br />
-            SERIES
+            {tProductLines("product_lines.line_1.modelsInfo_2")}
           </p>
         </div>
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 pb-[100px]">
@@ -55,7 +59,7 @@ export default function ProductLinesPage() {
               BRIGHT
             </div>
             <p className="text-primary-600 text-[16px] font-[200]">
-              Premium ceramic implants
+              {tProductLines("product_lines.line_1.title")}
             </p>
             <Link href="/supplements-ch">
               <Button
@@ -65,7 +69,7 @@ export default function ProductLinesPage() {
                 className="!shadow-none mt-8 !font-[500]"
                 iconPosition="right"
               >
-                Go to BRIGHT
+                {tProductLines("product_lines.line_1.button")}
               </Button>
             </Link>
           </div>
@@ -83,16 +87,11 @@ export default function ProductLinesPage() {
       before:bg-[#3aa194] lg:before:block before:hidden
     `}
           >
-            SDS Model Lines
+            {tProductLines("product_lines.line_1.modelLines")}
           </p>
 
           <p className="leading-[1.4] tracking-[-.96px] font-extralight text-primary-600  mx-auto max-w-prose text-[clamp(20px,calc(-37.2307692308px_+_.0576923077_*_100vw),32px)]">
-            Our ceramic implants are equipped with the proven Dynamic Thread®
-            thread suitable for all bone classes. The abutment post allows
-            optimal healing of one-piece SDS1.2 implants. Our two-part implant
-            system is based on over 18 years of experience and offers a robust
-            construction even for heavy loads. The secure implant-abutment
-            connection is located in the tulip, not in the implant itself.
+            {tProductLines("product_lines.line_1.modelLinesDescription")}
           </p>
         </div>
       </div>
@@ -106,7 +105,7 @@ export default function ProductLinesPage() {
         <div className="container-dental text-center bg-[linear-gradient(180deg,#fff_58.33%,#fff0)] pb-[200px] pt-[200px]">
           {/* Eyebrow */}
           <p className="text-mint tracking-wide font-[400] text-sm sm:text-base">
-            Premium ceramic implants
+            {tProductLines("product_lines.line_1.premiumCeramicImplants")}
           </p>
 
           {/* Heading */}
@@ -131,9 +130,7 @@ export default function ProductLinesPage() {
           mt-6 px-[32px]
         "
           >
-            BRIGHT, the premium model range, is equipped with the latest
-            technology and an extensive range of features so that you are
-            prepared for any situation.
+            {tProductLines("product_lines.line_1.premiumCeramicImplantsDescription")}
           </p>
 
           {/* CTA buttons */}
@@ -146,7 +143,7 @@ export default function ProductLinesPage() {
                 className="!font-[400]"
                 iconPosition="right"
               >
-                BRIGHT product catalogue
+                {tProductLines("product_lines.line_1.brightCatalog")}
               </Button>
             </Link>
 
@@ -157,7 +154,7 @@ export default function ProductLinesPage() {
                 rounded="rounded-full"
                 className="!font-[400]"
               >
-                Implant shop
+                {tProductLines("product_lines.line_1.implantShop")}
               </Button>
             </Link>
           </div>

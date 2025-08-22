@@ -1,0 +1,16 @@
+{
+  "product_lines": {
+    "line_1": {
+      "title": "Premium ceramic implants",
+      "button": "Go to BRIGHT",
+      "modelsInfo_1": "MODELL",
+      "modelsInfo_2": "SERIES",
+      "modelLines": "SDS Model Lines",
+      "modelLinesDescription": "Our ceramic implants are equipped with the proven Dynamic Thread® thread suitable for all bone classes. The abutment post allows optimal healing of one-piece SDS1.2 implants. Our two-part implant system is based on over 18 years of experience and offers a robust construction even for heavy loads. The secure implant-abutment connection is located in the tulip, not in the implant itself.",
+      "premiumCeramicImplants": "Premium ceramic implants",
+      "premiumCeramicImplantsDescription": "BRIGHT, the premium model range, is equipped with the latest technology and an extensive range of features so that you are prepared for any situation.",
+      "brightCatalog": "BRIGHT product catalogue",
+      "implantShop": "Implant shop"
+    }
+  }
+}
