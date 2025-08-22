@@ -102,7 +102,7 @@ const HeroSection: React.FC = () => {
   return (
     <section 
       ref={sectionRef}
-      className="bg-[#fff] relative overflow-hidden max-w-[1440px]"
+      className="bg-[#fff] relative overflow-hidden max-w-[1440px] mx-auto"
     >
       <div className=" ">
         <div className="flex flex-col lg:flex-row  items-center">

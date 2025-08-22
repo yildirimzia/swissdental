@@ -97,7 +97,7 @@ const HeroSection: React.FC = () => {
   );
 
   return (
-    <section className="bg-[#f6f6f6] pt-20 pb-[200px] relative overflow-hidden max-w-[1440px]">
+    <section className="bg-[#f6f6f6] pt-20 pb-[200px] relative overflow-hidden max-w-[1440px] mx-auto">
       <div className="px-4">
         
         {/* Header */}
