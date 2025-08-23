@@ -10,6 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SdsAim from './SdsAim'
 import SdsEducation from "./SdsEducation";
 import TrainingCards from "./TrainingCards";
+import SdsBiologicalProtocol from "./BiologicalProtocol";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function ProductLinesPage() {
@@ -969,6 +970,7 @@ export default function ProductLinesPage() {
     <SdsAim />
     <SdsEducation />
     <TrainingCards />
+    <SdsBiologicalProtocol />
 
   </>
   );

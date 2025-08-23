@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 80%",
+        start: "top 85%",
         end: "center 50%",
         scrub: 1,
         toggleActions: "play none none reverse",
