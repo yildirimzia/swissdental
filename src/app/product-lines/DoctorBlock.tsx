@@ -5,7 +5,6 @@ export default function DoctorBlock() {
     <section className="bg-[#f6f7f7] py-16 mt-[194px] sm:p-0 p-6">
       <div className="mx-auto max-w-[1272px]">
         <div className="grid grid-cols-1 lg:grid-cols-[424px_1fr] gap-10 items-start bg-white">
-
           {/* SOL: Görsel (üstten biraz taşıyor) */}
           <div className="sm:h-[calc(100%+123px)] mt-[-123px]">
             <div className="relative w-full h-[548px] sm:h-[460px] lg:h-[535px] ">
@@ -30,13 +29,12 @@ export default function DoctorBlock() {
 
             <p className="mt-8 text-primary-600/90 text-[16px] leading-7 font-[300] max-w-[780px]">
               As the founder and owner of SDS SWISS DENTAL SOLUTIONS AG and the
-              SWISS BIOHEALTH CLINIC in Kreuzlingen, he is recognized as a global
-              leader in ceramic implantology and biological dentistry, with
-              approximately 30,000 ceramic implants placed, showcasing his
+              SWISS BIOHEALTH CLINIC in Kreuzlingen, he is recognized as a
+              global leader in ceramic implantology and biological dentistry,
+              with approximately 30,000 ceramic implants placed, showcasing his
               pioneering contributions in the field.
             </p>
           </article>
-
         </div>
       </div>
     </section>
