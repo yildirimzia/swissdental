@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
           >
             {/* Header */}
             <div className="space-y-4">
-              <div>
+              <div className="mb-3.5">
                 <Image
                   src="/images/SDSEducationLogo.png"
                   alt={t('education.logo_alt')}

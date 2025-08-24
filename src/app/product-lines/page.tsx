@@ -22,7 +22,9 @@ export default function ProductLinesPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null); // Sol taraftaki background image
   const textRef = useRef<HTMLDivElement>(null); // Sağ taraftaki text content
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth < 1024 : false
+  );
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const videoSectionRef = useRef<HTMLDivElement>(null);
@@ -42,7 +44,7 @@ export default function ProductLinesPage() {
     if (isMobile) {
       // MOBİLDE: Her iki element de aşağıdan yukarı
       gsap.set(videoImageRef.current, {
-        y: 150, // Video daha aşağıdan başla
+        y: 100, // Video daha aşağıdan başla
         opacity: 0,
       });
 
