@@ -1,4 +1,6 @@
 "use client";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SdsAim from "./SdsAim";
 import SdsEducation from "./SdsEducation";
 import TrainingCards from "./TrainingCards";
@@ -13,6 +15,7 @@ import Piece from "./Piece";
 import Bright from "./Bright";
 import Main from "./Main";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function ProductLinesPage() {
   return (
     <>
