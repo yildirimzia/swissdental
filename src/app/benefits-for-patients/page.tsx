@@ -7,6 +7,9 @@ import WhyCeramixText from "./WhyCeramixText";
 import SectionImage from "./SectionImage";
 import CeramicAdvantages from "./CeramicAdvantages";
 import ServiceBlock from "./ServiceBlock";
+import SliderContent from "./SliderContent";
+import PioneeringWork from "./PioneeringWork";
+import DoctorBlock from "./DoctorBlock";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,6 +22,9 @@ export default function ProductLinesPage() {
     <SectionImage />
     <CeramicAdvantages />
     <ServiceBlock />
+    <SliderContent />
+    <PioneeringWork />
+    <DoctorBlock />
     </>
   );
 }
