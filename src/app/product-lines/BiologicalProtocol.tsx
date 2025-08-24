@@ -72,7 +72,6 @@ export default function AimBlock() {
             HOW TO ...
           </p>
 
-
           <h2 className="text-primary-600 sm:pl-0 pl-[24px] pr-[24px] mt-2 text-[26px] sm:text-[40px] font-[700] leading-[1.2] tracking-[-0.01em]">
             All ceramic <br /> throughout
           </h2>
@@ -81,12 +80,20 @@ export default function AimBlock() {
           </h2>
 
           <p className="text-[16px] font-[200] leading-[1.6] text-primary-600 p-6 sm:p-0">
-            Metal-free implantation using fully ceramic drills made of high-performance ceramic ATZ.
-
-All instruments that come into contact with the patient are always made of ceramic. The rotating instruments made of ATZ ceramic are characterised by very high durability with consistently sharp cutting edges. The clearly designed OP tray is structured according to bone classes (IV-III-II-I), simplifying adherence to the different drilling protocols. The tray is backward and forward compatible, for all implants ever sold by SDS as well as for implants currently being newly developed by SDS. The drills are laser-engraved (type and diameter) and additionally color-coded, allowing you to easily track the drilling sequences at any time.
+            Metal-free implantation using fully ceramic drills made of
+            high-performance ceramic ATZ. All instruments that come into contact
+            with the patient are always made of ceramic. The rotating
+            instruments made of ATZ ceramic are characterised by very high
+            durability with consistently sharp cutting edges. The clearly
+            designed OP tray is structured according to bone classes
+            (IV-III-II-I), simplifying adherence to the different drilling
+            protocols. The tray is backward and forward compatible, for all
+            implants ever sold by SDS as well as for implants currently being
+            newly developed by SDS. The drills are laser-engraved (type and
+            diameter) and additionally color-coded, allowing you to easily track
+            the drilling sequences at any time.
           </p>
         </div>
-    
 
         {/* Sağ görsel + Play butonu (tasarımdaki kart görünümü) */}
         <div className="relative">
@@ -125,8 +132,12 @@ All instruments that come into contact with the patient are always made of ceram
                 </svg>
               </span>
               <span className="text-left">
-                <span className="block font-semibold">Biological drilling protocol</span>
-                <span className="block text-sm opacity-70">according to Dr. Ulrich Volz</span>
+                <span className="block font-semibold">
+                  Biological drilling protocol
+                </span>
+                <span className="block text-sm opacity-70">
+                  according to Dr. Ulrich Volz
+                </span>
               </span>
             </button>
           </div>
@@ -134,11 +145,7 @@ All instruments that come into contact with the patient are always made of ceram
       </div>
 
       {/* Modal */}
-      <VideoModal
-        open={open}
-        onClose={closeModal}
-        youtubeId="hqMv97ACkwU"
-      />
+      <VideoModal open={open} onClose={closeModal} youtubeId="hqMv97ACkwU" />
     </section>
   );
 }
