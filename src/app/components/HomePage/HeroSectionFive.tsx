@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from '../components/Button'
+import Button from '../Button'
 import { useHomeTranslation } from '@/hooks/useTranslation';
 
 interface Doctor {

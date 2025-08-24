@@ -1,12 +1,12 @@
 
 // Relative import kullanın (path alias çalışmıyorsa)
-import HeroSection from './HomePage/HeroSection'
-import HeroSectionThree from './HomePage/HeroSectionThree'
-import HeroSectionTwo from './HomePage/HeroSectionTwo'
-import HeroSectionFour from './HomePage/HeroSectionFour'
-import HeroSectionFive from './HomePage/HeroSectionFive'
-import HeroSectionSix from './HomePage/HeroSectionSix'
-import HeroSectionSeven from './HomePage/HeroSectionSeven'
+import HeroSection from './components/HomePage/HeroSection'
+import HeroSectionThree from './components/HomePage/HeroSectionThree'
+import HeroSectionTwo from './components/HomePage/HeroSectionTwo'
+import HeroSectionFour from './components/HomePage/HeroSectionFour'
+import HeroSectionFive from './components/HomePage/HeroSectionFive'
+import HeroSectionSix from './components/HomePage/HeroSectionSix'
+import HeroSectionSeven from './components/HomePage/HeroSectionSeven'
 import ScrollProgress from './components/ScrollProgress'
 // Veya path alias çalışıyorsa:
 // import Button from '@/components/Button'

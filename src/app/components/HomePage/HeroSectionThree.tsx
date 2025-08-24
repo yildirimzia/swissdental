@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Button from '../components/Button'
+import Button from '../Button'
 import Image from 'next/image'
 import { useHomeTranslation } from '@/hooks/useTranslation'
 
