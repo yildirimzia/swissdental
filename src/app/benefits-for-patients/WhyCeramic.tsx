@@ -27,7 +27,7 @@ export default function WhyCeramic() {
 
   const items = [
     {
-      icon: "/images/benefits-for-patients/heart.svg",
+      icon: "/images/benefits-for-patients/Heart.svg",
       title: "Biocompatible",
       desc: "SDS implants are very easily tolerated and integrate securely into the bone.",
       href: "/studies/biocompatible",

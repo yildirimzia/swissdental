@@ -179,10 +179,10 @@ const Header: React.FC = () => {
         return (
           <div className="grid grid-cols-1 gap-8">
             <div className="space-y-4 mt-[26px] ml-[11px]">
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+              <Link href="benefits-for-patients" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('products.benefits_patients')}
               </Link>
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+              <Link href="benefits-for-dentists" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('products.benefits_dentists')}
               </Link>
               <Link href="/product-lines" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
