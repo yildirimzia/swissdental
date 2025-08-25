@@ -23,7 +23,7 @@ export default function BenefitsForDentistsHero() {
               </h1>
 
               {/* Supporting copy */}
-              <p className="mx-auto mt-10 max-w-3xl text-center text-base sm:text-lg leading-relaxed text-primary-600">
+              <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-600">
                 Opt for ceramic implants for your implantology needs. Our
                 selection of full ceramic implants covers a variety of dental
                 applications, providing optimal care for your patients.
