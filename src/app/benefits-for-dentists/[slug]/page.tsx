@@ -1,18 +1,18 @@
 "use client"
 import { notFound } from "next/navigation";
-import { DETAIL_CONTENT } from "../data/detailContent"; // Path düzelt
-import Image from "next/image";
+import { DETAIL_CONTENT } from "../data/detailContent"; 
 import Link from "next/link";
-import Button from "../../components/Button"; // Path düzelt
+import Button from "../../components/Button"; 
 import LevelSection from "./LevelSection";
-import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import ScrollHandler from '../../components/ScrollHandler';
 import SdsEdutaciton from "../../components/SdsEdutaciton";
 import DoctorBlock from "@/app/components/DoctorBlock";
+import { use } from "react"; // Next.js 15 için gerekli
+
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const CARD_INFO = {
@@ -43,39 +43,18 @@ const CARD_INFO = {
 } as const;
 
 export default function CardDetailPage({ params }: PageProps) {
-  const { slug } = params;
-  const searchParams = useSearchParams();
-  const scrollTo = searchParams.get('scrollTo');
+  const { slug } = use(params); // Next.js 15 için use() hook'u kullan
 
   if (!DETAIL_CONTENT[slug as keyof typeof DETAIL_CONTENT]) {
     notFound();
   }
 
-  useEffect(() => {
-    if (scrollTo) {
-      // Sayfa yüklendikten sonra biraz bekle
-      const timer = setTimeout(() => {
-        // Title'ı ID'ye çevir
-        const targetId = scrollTo.toLowerCase().replace(/\s+/g, '-');
-        const element = document.getElementById(targetId);
-        
-        if (element) {
-          element.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start' 
-          });
-        }
-      }, 500); // 500ms bekle
-
-      return () => clearTimeout(timer);
-    }
-  }, [scrollTo]);
-
   const content = DETAIL_CONTENT[slug as keyof typeof DETAIL_CONTENT];
   const cardInfo = CARD_INFO[slug as keyof typeof CARD_INFO];
 
   return (
-    <div className="min-h-scree">
+    <div className="">
+        <ScrollHandler /> 
       {/* Hero Section */}
       <section className="relative isolate">
         {/* Outer background (very light grey -> transparent) */}
@@ -138,7 +117,7 @@ export default function CardDetailPage({ params }: PageProps) {
           {/* Sayılar */}
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-6 items-start">
             {content.confirm.map((it, i) => (
-              <div className="flex flex-col items-center text-center">
+              <div key={i} className="flex flex-col items-center text-center">
                 <div className="leading-none font-[300] text-primary-500 text-[80px]">
                   {it.number}
                 </div>
