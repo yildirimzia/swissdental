@@ -12,7 +12,7 @@ const CARDS = [
     title: "Tissue level",
     bullets: [
       "zirconia-epithelial connection",
-      "customizable tulip", 
+      "customizable tulip",
       "time savings for patient and practitioner",
       "perfect for digital impressions and workflow",
       "hardly any/no prosthetic parts",
@@ -25,7 +25,7 @@ const CARDS = [
     bullets: [
       'biologically/immunologically neutral "biomaterial"',
       "metal-free",
-      "extremely good aesthetics even in difficult situations", 
+      "extremely good aesthetics even in difficult situations",
       "no peri-implantitis",
     ],
   },
@@ -37,7 +37,7 @@ const CARDS = [
       "implant system developed by surgeons for surgeons",
       "optimal shape for immediate implantation",
       "socket preservation 2.0",
-      "healing chambers in bone AI. I"
+      "healing chambers in bone AI. I",
     ],
   },
   {
@@ -45,45 +45,59 @@ const CARDS = [
     icon: "/images/benefits-for-patients/CleanImplant.png",
     title: "Clean & sterile",
     bullets: [
-      "implant double certified", 
-      "only two accredited navigation systems"
+      "implant double certified",
+      "only two accredited navigation systems",
     ],
   },
   {
-    id: "implant-design", 
+    id: "implant-design",
     icon: "/images/benefits-for-patients/ImplantDesign.svg",
     title: "Implant design",
     bullets: [
-      "immediate implantation in all alveoli while preserving the anatomy", 
-      "special shapes such as balcony, oval, sinus implant"
+      "immediate implantation in all alveoli while preserving the anatomy",
+      "special shapes such as balcony, oval, sinus implant",
     ],
   },
   {
     id: "concept",
-    icon: "/images/benefits-for-patients/Group.svg", 
+    icon: "/images/benefits-for-patients/Group.svg",
     title: "Concept",
     bullets: [
       "professional education center with attached clinic",
-      "biological drilling protocol", 
+      "biological drilling protocol",
       "clear algorithms for safe use",
       "biological-immunological approach",
       "optimized supplements",
-      "constant innovation and user training"
+      "constant innovation and user training",
     ],
   },
 ] as const;
 
-function Card({ id, icon, title, bullets, i }: (typeof CARDS)[number] & { i: number }) {
+function Card({
+  id,
+  icon,
+  title,
+  bullets,
+  i,
+}: (typeof CARDS)[number] & { i: number }) {
   return (
     <article
       aria-label={title}
       className={`group relative flex min-h-[530px] flex-col bg-white ${
-        [1, 3, 5].includes(i) ? "sm:mt-[5.375rem] mt-0 mb-0 sm:mb-[-5.375rem]" : ""
+        [1, 3, 5].includes(i)
+          ? "sm:mt-[5.375rem] mt-0 mb-0 sm:mb-[-5.375rem]"
+          : ""
       }`}
     >
       <div className="p-8 md:p-12">
         <div className="mb-8">
-          <Image src={icon} alt="" width={67} height={67} className="h-[67px] w-[67px] object-contain" />
+          <Image
+            src={icon}
+            alt=""
+            width={67}
+            height={67}
+            className="h-[67px] w-[67px] object-contain"
+          />
         </div>
 
         <h3 className="mb-5 text-[32px] leading-[1.15] font-semibold text-primary-600">
@@ -92,10 +106,12 @@ function Card({ id, icon, title, bullets, i }: (typeof CARDS)[number] & { i: num
 
         <ul
           className="list-disc pl-5 text-[15px] leading-[1.7] space-y-[6px] min-h-[157px]"
-          style={{
-            color: `${TEAL}CC`,
-            ["--tw-marker-color" as any]: TEAL,
-          } as React.CSSProperties}
+          style={
+            {
+              color: `${TEAL}CC`,
+              ["--tw-marker-color" as any]: TEAL,
+            } as React.CSSProperties
+          }
         >
           {bullets.map((b, i) => (
             <li key={i} className="text-primary-600">
@@ -106,7 +122,11 @@ function Card({ id, icon, title, bullets, i }: (typeof CARDS)[number] & { i: num
 
         <div className="mt-10 flex justify-end">
           {/* Path'i düzelt - benefits-for-dentists kullan */}
-          <Link href={`/benefits-for-dentists/${id}`}>
+          <Link
+            href={`/benefits-for-dentists/${id}?scrollTo=${encodeURIComponent(
+              title
+            )}`}
+          >
             <Button
               variant="customOutline"
               size="custom16"

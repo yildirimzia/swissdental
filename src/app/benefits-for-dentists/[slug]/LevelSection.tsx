@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+import { useEffect } from "react";
 
 interface LevelItem {
   listTitle: string;
@@ -37,8 +39,12 @@ export default function LevelSection({
   list, 
   className = "" 
 }: LevelSectionProps) {
+  // Title'ı ID için slug'a çevir
+  const titleId = title.toLowerCase().replace(/\s+/g, '-');
+
   return (
     <section
+      id={titleId}  // ID ekle
       className={`lg:max-w-[1380px] 2xl:max-w-[1620px] grid grid-cols-1 lg:grid-cols-[50%_50%] items-center mx-auto gap-12 lg:gap-16 px-4 sm:px-6 py-16 lg:py-20 ${className}`}
     >
       {/* Sol taraf - Görsel */}

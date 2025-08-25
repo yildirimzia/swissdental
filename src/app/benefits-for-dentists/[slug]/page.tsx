@@ -1,9 +1,12 @@
+"use client"
 import { notFound } from "next/navigation";
 import { DETAIL_CONTENT } from "../data/detailContent"; // Path düzelt
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../components/Button"; // Path düzelt
 import LevelSection from "./LevelSection";
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 interface PageProps {
   params: {
@@ -40,10 +43,32 @@ const CARD_INFO = {
 
 export default function CardDetailPage({ params }: PageProps) {
   const { slug } = params;
+  const searchParams = useSearchParams();
+  const scrollTo = searchParams.get('scrollTo');
 
   if (!DETAIL_CONTENT[slug as keyof typeof DETAIL_CONTENT]) {
     notFound();
   }
+
+  useEffect(() => {
+    if (scrollTo) {
+      // Sayfa yüklendikten sonra biraz bekle
+      const timer = setTimeout(() => {
+        // Title'ı ID'ye çevir
+        const targetId = scrollTo.toLowerCase().replace(/\s+/g, '-');
+        const element = document.getElementById(targetId);
+        
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start' 
+          });
+        }
+      }, 500); // 500ms bekle
+
+      return () => clearTimeout(timer);
+    }
+  }, [scrollTo]);
 
   const content = DETAIL_CONTENT[slug as keyof typeof DETAIL_CONTENT];
   const cardInfo = CARD_INFO[slug as keyof typeof CARD_INFO];
@@ -128,12 +153,9 @@ export default function CardDetailPage({ params }: PageProps) {
         </div>
       </section>
 
-      {Object.values(DETAIL_CONTENT)
-        .filter(
-          (categoryContent) =>
-            categoryContent.level && categoryContent.level.length > 0
-        )
-        .flatMap((categoryContent) => categoryContent.level)
+          {Object.values(DETAIL_CONTENT)
+        .filter(categoryContent => categoryContent.level && categoryContent.level.length > 0)
+        .flatMap(categoryContent => categoryContent.level)
         .map((lvl, idx) => (
           <LevelSection
             key={idx}
