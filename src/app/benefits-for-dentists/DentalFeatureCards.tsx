@@ -78,7 +78,7 @@ function Card({ id, icon, title, bullets, i }: (typeof CARDS)[number] & { i: num
     <article
       aria-label={title}
       className={`group relative flex min-h-[530px] flex-col bg-white ${
-        [1, 3, 5].includes(i) ? "mt-[5.375rem] mb-[-5.375rem]" : ""
+        [1, 3, 5].includes(i) ? "sm:mt-[5.375rem] mt-0 mb-0 sm:mb-[-5.375rem]" : ""
       }`}
     >
       <div className="p-8 md:p-12">
