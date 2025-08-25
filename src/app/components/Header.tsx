@@ -194,6 +194,12 @@ const Header: React.FC = () => {
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('products.user')}
               </Link>
+              <Link 
+              href="/sscp" 
+              className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+              {tNav('products.sscp')}
+            </Link>
             </div>
           </div>
         )
