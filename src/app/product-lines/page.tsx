@@ -5,7 +5,7 @@ import SdsAim from "./SdsAim";
 import SdsEducation from "./SdsEducation";
 import TrainingCards from "./TrainingCards";
 import SdsBiologicalProtocol from "./BiologicalProtocol";
-import DoctorBlock from "./DoctorBlock";
+import DoctorBlock from "../components/DoctorBlock";
 import VideoContent from "./VideoContent";
 import SimpleFast from "./SimpleFast";
 import CleanestImplant from "./CleanestImplant";

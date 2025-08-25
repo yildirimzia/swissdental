@@ -45,7 +45,7 @@ export default function LevelSection({
   return (
     <section
       id={titleId}  // ID ekle
-      className={`lg:max-w-[1380px] 2xl:max-w-[1620px] grid grid-cols-1 lg:grid-cols-[50%_50%] items-center mx-auto gap-12 lg:gap-16 px-4 sm:px-6 py-16 lg:py-20 ${className}`}
+      className={`lg:max-w-[1380px] 2xl:max-w-[1620px] grid grid-cols-1 lg:grid-cols-[50%_50%] items-center mx-auto gap-12 lg:gap-8 px-4 sm:px-6 py-16 lg:py-20 ${className}`}
     >
       {/* Sol taraf - Görsel */}
       <div

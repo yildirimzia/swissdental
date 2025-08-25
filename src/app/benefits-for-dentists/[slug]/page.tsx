@@ -7,7 +7,8 @@ import Button from "../../components/Button"; // Path düzelt
 import LevelSection from "./LevelSection";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
-
+import SdsEdutaciton from "../../components/SdsEdutaciton";
+import DoctorBlock from "@/app/components/DoctorBlock";
 interface PageProps {
   params: {
     slug: string;
@@ -153,7 +154,7 @@ export default function CardDetailPage({ params }: PageProps) {
         </div>
       </section>
 
-          {Object.values(DETAIL_CONTENT)
+        {Object.values(DETAIL_CONTENT)
         .filter(categoryContent => categoryContent.level && categoryContent.level.length > 0)
         .flatMap(categoryContent => categoryContent.level)
         .map((lvl, idx) => (
@@ -166,94 +167,8 @@ export default function CardDetailPage({ params }: PageProps) {
           />
         ))}
 
-      {/* Content Sections */}
-      <section className="py-16">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-16">
-          {content.sections.map((section, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-sm p-8">
-              <h2 className="text-3xl font-bold text-primary-600 mb-6">
-                {section.title}
-              </h2>
-
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                {section.content}
-              </p>
-
-              {/* Features */}
-              {section.features && (
-                <div className="mb-8">
-                  <h3 className="text-xl font-semibold text-primary-600 mb-4">
-                    Key Features
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {section.features.map((feature, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center gap-3 bg-gray-50 p-4 rounded-lg"
-                      >
-                        <div className="w-2 h-2 rounded-full bg-primary-500 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Image */}
-              {section.image && (
-                <div className="mb-8">
-                  <Image
-                    src={section.image}
-                    alt={section.title}
-                    width={800}
-                    height={400}
-                    className="w-full rounded-xl"
-                  />
-                </div>
-              )}
-
-              {/* Stats */}
-              {section.stats && (
-                <div className="grid md:grid-cols-3 gap-6">
-                  {section.stats.map((stat, i) => (
-                    <div
-                      key={i}
-                      className="text-center bg-primary-50 p-6 rounded-xl"
-                    >
-                      <div className="text-3xl font-bold text-primary-600 mb-2">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-gray-600">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-primary-600 py-16">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Learn More?
-          </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            Contact our team for detailed information about{" "}
-            {cardInfo.title.toLowerCase()} solutions.
-          </p>
-          <Link href="/contact">
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-white border-white hover:bg-white hover:text-primary-600"
-            >
-              Get In Touch
-            </Button>
-          </Link>
-        </div>
-      </section>
+        <SdsEdutaciton/>
+        <DoctorBlock />
     </div>
   );
 }

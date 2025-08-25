@@ -9,7 +9,7 @@ import CeramicAdvantages from "./CeramicAdvantages";
 import ServiceBlock from "./ServiceBlock";
 import SliderContent from "./SliderContent";
 import PioneeringWork from "./PioneeringWork";
-import DoctorBlock from "./DoctorBlock";
+import DoctorBlock from "../components/DoctorBlock";
 
 
 gsap.registerPlugin(ScrollTrigger);
