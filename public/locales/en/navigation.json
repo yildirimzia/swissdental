@@ -14,9 +14,10 @@
     "sscp": "SSCP"
   },
   "service": {
-    "technical_support": "Technical Support",
-    "customer_service": "Customer Service",
-    "documentation": "Documentation"
+    "technical_support": "Service & support",
+    "customer_service": "Documents",
+    "sds_podcast": "SDS podcast",
+    "contact": "Contact"
   },
   "about": {
     "our_story": "Our Story", 

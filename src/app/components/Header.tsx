@@ -207,14 +207,14 @@ const Header: React.FC = () => {
         return (
           <div className="grid grid-cols-1 gap-8">
             <div className="space-y-4 mt-[26px] ml-[11px]">
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+              <Link href="/service" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('service.technical_support')}
               </Link>
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('service.customer_service')}
               </Link>
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('service.documentation')}
+                {tNav('service.sds_podcast')}
               </Link>
             </div>
           </div>
@@ -314,7 +314,7 @@ const Header: React.FC = () => {
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('service.documentation')}
+              {tNav('service.sds_podcast')}
             </Link>
           </div>
         )

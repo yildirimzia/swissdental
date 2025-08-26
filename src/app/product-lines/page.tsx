@@ -6,7 +6,7 @@ import SdsEducation from "./SdsEducation";
 import TrainingCards from "./TrainingCards";
 import SdsBiologicalProtocol from "./BiologicalProtocol";
 import DoctorBlock from "../components/DoctorBlock";
-import VideoContent from "./VideoContent";
+import VideoContent from "../components/VideoContent";
 import SimpleFast from "./SimpleFast";
 import CleanestImplant from "./CleanestImplant";
 import LifetimeWarranty from "./LifetimeWarranty";

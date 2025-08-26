@@ -14,9 +14,10 @@
     "sscp": "SSCP"
   },
   "service": {
-    "technical_support": "Teknik Destek",
+    "technical_support": "Servis ve destek",
     "customer_service": "Müşteri Hizmetleri",
-    "documentation": "Dokümantasyon"
+    "documentation": "Dokümantasyon",
+    "contact": "İletişim"
   },
   "about": {
     "our_story": "Hikayemiz",
