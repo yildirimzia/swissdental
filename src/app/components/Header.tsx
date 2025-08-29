@@ -226,14 +226,14 @@ const Header: React.FC = () => {
         return (
           <div className="grid grid-cols-1 gap-8">
             <div className="space-y-4 mt-[26px] ml-[11px]">
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('about.our_story')}
+              <Link href="/company" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+                {tNav('about.company')}
               </Link>
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('about.leadership_team')}
+              <Link href="/career" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+                {tNav('about.career')}
               </Link>
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('about.careers')}
+              <Link href="/history" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+                {tNav('about.history')}
               </Link>
             </div>
           </div>
@@ -332,25 +332,25 @@ const Header: React.FC = () => {
         return (
           <div className="space-y-4">
             <Link 
-              href="#" 
+              href="/company" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('about.our_story')}
+              {tNav('about.company')}
             </Link>
             <Link 
-              href="#" 
+              href="/career" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('about.leadership_team')}
+              {tNav('about.career')}
             </Link>
             <Link 
-              href="#" 
+              href="/history" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('about.careers')}
+              {tNav('about.history')}
             </Link>
           </div>
         )

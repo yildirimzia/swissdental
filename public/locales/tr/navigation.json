@@ -20,8 +20,8 @@
     "contact": "İletişim"
   },
   "about": {
-    "our_story": "Hikayemiz",
-    "leadership_team": "Yönetim Ekibi", 
-    "careers": "Kariyer"
+    "company": "Şirket",
+    "career": "Kariyer",
+    "history": "Tarih"
   }
 }

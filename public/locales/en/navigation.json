@@ -20,8 +20,8 @@
     "contact": "Contact"
   },
   "about": {
-    "our_story": "Our Story", 
-    "leadership_team": "Leadership Team",
-    "careers": "Careers"
+    "company": "Company", 
+    "career": "Career",
+    "history": "History"
   }
 }
