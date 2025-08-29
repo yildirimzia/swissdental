@@ -216,6 +216,9 @@ const Header: React.FC = () => {
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('service.sds_podcast')}
               </Link>
+              <Link href="/contact" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+                {tNav('service.contact')}
+              </Link>
             </div>
           </div>
         )
@@ -249,14 +252,14 @@ const Header: React.FC = () => {
         return (
           <div className="space-y-4">
             <Link 
-              href="#" 
+              href="/benefits-for-patients" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
               {tNav('products.benefits_patients')}
             </Link>
             <Link 
-              href="#" 
+              href="/benefits-for-dentists" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
@@ -296,25 +299,32 @@ const Header: React.FC = () => {
         return (
           <div className="space-y-4">
             <Link 
-              href="#" 
+              href="/service" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
               {tNav('service.technical_support')}
             </Link>
             <Link 
-              href="#" 
+              href="/documents" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
               {tNav('service.customer_service')}
             </Link>
             <Link 
-              href="#" 
+              href="/podcast" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
               {tNav('service.sds_podcast')}
+            </Link>
+            <Link 
+              href="/contact" 
+              className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
+              onClick={() => toggleMobileMenu()}
+            >
+              {tNav('service.contact')}
             </Link>
           </div>
         )

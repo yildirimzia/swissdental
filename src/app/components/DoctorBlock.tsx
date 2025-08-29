@@ -5,11 +5,11 @@ export default function DoctorBlock() {
     <section className="bg-[#f6f7f7] py-16 mt-[194px] mb-8 sm:p-0 p-6">
       <div className="mx-auto max-w-[1272px]">
         <div className="grid grid-cols-1 lg:grid-cols-[424px_1fr] gap-10 items-start bg-white">
-          {/* SOL: Görsel (üstten biraz taşıyor) */}
+          {/* SOL: Görsel  */}
           <div className="sm:h-[calc(100%+123px)] mt-[-123px]">
             <div className="relative w-full h-[548px] sm:h-[460px] lg:h-[535px] ">
               <Image
-                src="/images/product-lines/Dr-Ulrich-Volz.jpg" // kendi görselin
+                src="/images/product-lines/Dr-Ulrich-Volz.jpg"
                 alt="Dr. med. dent. Karl Ulrich Volz"
                 fill
                 className="object-cover "
@@ -18,7 +18,7 @@ export default function DoctorBlock() {
             </div>
           </div>
 
-          {/* SAĞ: Beyaz panel */}
+          {/* SAĞ */}
           <article className="px-6 sm:px-12 lg:px-20 py-10 lg:py-16 ">
             <h2 className="text-primary-600 font-bold tracking-[-0.02em] leading-[1.05] text-[34px] sm:text-[42px] lg:text-[48px]">
               Dr. med. dent.
