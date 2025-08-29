@@ -213,7 +213,7 @@ const Header: React.FC = () => {
               <Link href="/documents" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('service.customer_service')}
               </Link>
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+              <Link href="/sds-podcast" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('service.sds_podcast')}
               </Link>
               <Link href="/contact" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
@@ -313,7 +313,7 @@ const Header: React.FC = () => {
               {tNav('service.customer_service')}
             </Link>
             <Link 
-              href="/podcast" 
+              href="/sds-podcast" 
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
