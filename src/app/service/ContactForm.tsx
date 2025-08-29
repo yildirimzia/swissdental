@@ -313,7 +313,7 @@ function ContactForm() {
                 {/* Copyright */}
                 <div className="text-center pt-6">
                   <p className="text-xs text-secondary-500 font-gotham">
-                    © 2024 - All rights reserved.
+                    © {new Date().getFullYear()} - All rights reserved.
                   </p>
                 </div>
               </form>

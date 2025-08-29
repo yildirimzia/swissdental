@@ -146,7 +146,7 @@ function Questions() {
         <div className="bg-[linear-gradient(180deg,#fff_58.33%,#fff0_100%)] min-h-screen py-16rounded-2xl  p-8 lg:p-12">
         {/* Header Section */}
         <div className="mb-12">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center flex-col sm:flex-row justify-between mb-8">
             <div className='mb-[46px]'>
               <p className="flex items-center text-[16px] text-primary-500 mb-2font-[300] tracking-wider uppercase">
                             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
