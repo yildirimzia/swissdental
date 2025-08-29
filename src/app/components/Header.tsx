@@ -210,7 +210,7 @@ const Header: React.FC = () => {
               <Link href="/service" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('service.technical_support')}
               </Link>
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
+              <Link href="/documents" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
                 {tNav('service.customer_service')}
               </Link>
               <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
