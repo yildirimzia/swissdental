@@ -1,366 +1,475 @@
-'use client'
+"use client";
 
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import Button from './Button'
-import { useNavigationTranslation, useCommonTranslation } from '@/hooks/useTranslation'
-import { useLoading } from '@/contexts/LoadingContext'
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import Button from "./Button";
+import {
+  useNavigationTranslation,
+  useCommonTranslation,
+} from "@/hooks/useTranslation";
+import { useLoading } from "@/contexts/LoadingContext";
 
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<string | null>(null)
-  const [activeDesktopSubmenu, setActiveDesktopSubmenu] = useState<string | null>(null)
-  const [isTransitioning, setIsTransitioning] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<string | null>(
+    null
+  );
+  const [activeDesktopSubmenu, setActiveDesktopSubmenu] = useState<
+    string | null
+  >(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Translation hooks for different namespaces
-  const { t: tNav, currentLanguage, changeLanguage, isLoaded } = useNavigationTranslation()
-  const { t: tCommon } = useCommonTranslation()
-  
+  const {
+    t: tNav,
+    currentLanguage,
+    changeLanguage,
+    isLoaded,
+  } = useNavigationTranslation();
+  const { t: tCommon } = useCommonTranslation();
+
   // Loading context
-  const { setLanguageLoading } = useLoading()
+  const { setLanguageLoading } = useLoading();
 
   // Body scroll lock effect - mobile menü açıldığında
   useEffect(() => {
     if (isMobileMenuOpen) {
       // Scroll'u engelle
-      document.body.style.overflow = 'hidden'
-      document.body.style.position = 'fixed'
-      document.body.style.top = '0'
-      document.body.style.left = '0'
-      document.body.style.right = '0'
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = "0";
+      document.body.style.left = "0";
+      document.body.style.right = "0";
     } else {
       // Scroll'u geri aç
-      document.body.style.overflow = ''
-      document.body.style.position = ''
-      document.body.style.top = ''
-      document.body.style.left = ''
-      document.body.style.right = ''
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
     }
 
     // Cleanup - component unmount edildiğinde
     return () => {
-      document.body.style.overflow = ''
-      document.body.style.position = ''
-      document.body.style.top = ''
-      document.body.style.left = ''
-      document.body.style.right = ''
-    }
-  }, [isMobileMenuOpen])
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+    };
+  }, [isMobileMenuOpen]);
 
   // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Close desktop menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Element
+      const target = event.target as Element;
       // Sadece desktop menü için dış tıklama kontrolü
-      if (activeDesktopSubmenu && !target.closest('.desktop-menu-item')) {
-        setActiveDesktopSubmenu(null)
+      if (activeDesktopSubmenu && !target.closest(".desktop-menu-item")) {
+        setActiveDesktopSubmenu(null);
       }
-    }
+    };
 
-    document.addEventListener('click', handleClickOutside)
-    return () => document.removeEventListener('click', handleClickOutside)
-  }, [activeDesktopSubmenu])
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [activeDesktopSubmenu]);
 
   // Language switch handler with loading
   const handleLanguageSwitch = () => {
-    const newLanguage = currentLanguage === 'en' ? 'tr' : 'en'
-    
+    const newLanguage = currentLanguage === "en" ? "tr" : "en";
+
     // Loading'i başlat
-    setLanguageLoading(true)
-    
+    setLanguageLoading(true);
+
     // Dil değiştir
-    changeLanguage(newLanguage)
-    
+    changeLanguage(newLanguage);
+
     // Mobile menüyü kapat (eğer açıksa)
     if (isMobileMenuOpen) {
-      toggleMobileMenu()
+      toggleMobileMenu();
     }
-    
+
     // Loading'i bitir (çeviriler yüklendikten sonra)
     setTimeout(() => {
-      setLanguageLoading(false)
-    }, 800) // Çevirilerin yüklenmesi için yeterli süre
-  }
+      setLanguageLoading(false);
+    }, 800); // Çevirilerin yüklenmesi için yeterli süre
+  };
 
   // Mobile menu toggle function
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
+    setIsMobileMenuOpen(!isMobileMenuOpen);
     // Submenu'yu da kapat
-    setActiveMobileSubmenu(null)
-  }
+    setActiveMobileSubmenu(null);
+  };
 
   // Mobile submenu toggle - mobile menü kapatılmasın
   const toggleMobileSubmenu = (menu: string) => {
-    setActiveMobileSubmenu(activeMobileSubmenu === menu ? null : menu)
-  }
+    setActiveMobileSubmenu(activeMobileSubmenu === menu ? null : menu);
+  };
 
   // Icons
   const ChevronDownIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M6 9l6 6l6 -6"></path>
     </svg>
-  )
+  );
 
   const ChevronLeftIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M9 6l6 6l-6 6"></path>
     </svg>
-  )
+  );
 
   const MenuIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <line x1="3" y1="6" x2="21" y2="6"></line>
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="18" x2="21" y2="18"></line>
     </svg>
-  )
+  );
 
   const CloseIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <line x1="18" y1="6" x2="6" y2="18"></line>
       <line x1="6" y1="6" x2="18" y2="18"></line>
     </svg>
-  )
+  );
 
   const BackIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M19 12H5"></path>
       <path d="M12 19l-7-7 7-7"></path>
     </svg>
-  )
+  );
 
   const WordIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mt-n1-4">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mt-n1-4"
+    >
       <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
       <path d="M3.6 9h16.8"></path>
       <path d="M3.6 15h16.8"></path>
       <path d="M11.5 3a17 17 0 0 0 0 18"></path>
       <path d="M12.5 3a17 17 0 0 1 0 18"></path>
     </svg>
-  )
+  );
 
   const toggleDesktopSubmenu = (menu: string) => {
     if (activeDesktopSubmenu === menu) {
       // Aynı menüye tıklandıysa kapat
-      setActiveDesktopSubmenu(null)
+      setActiveDesktopSubmenu(null);
     } else if (activeDesktopSubmenu) {
       // Farklı menüye tıklandıysa animasyon ile değiştir
-      setIsTransitioning(true)
+      setIsTransitioning(true);
       setTimeout(() => {
-        setActiveDesktopSubmenu(menu)
+        setActiveDesktopSubmenu(menu);
         setTimeout(() => {
-          setIsTransitioning(false)
-        }, 50) // Yeni içerik için kısa delay
-      }, 200) // Eski içeriğin kaybolma süresi
+          setIsTransitioning(false);
+        }, 50); // Yeni içerik için kısa delay
+      }, 200); // Eski içeriğin kaybolma süresi
     } else {
       // Hiç menü açık değilse direkt aç
-      setActiveDesktopSubmenu(menu)
+      setActiveDesktopSubmenu(menu);
     }
-  }
+  };
 
   // Menu content renderer
   const renderMenuContent = () => {
-    if (!isLoaded) return null
+    if (!isLoaded) return null;
 
     switch (activeDesktopSubmenu) {
-      case 'products':
+      case "products":
         return (
           <div className="grid grid-cols-1 gap-8">
             <div className="space-y-4 mt-[26px] ml-[11px]">
-              <Link href="benefits-for-patients" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('products.benefits_patients')}
-              </Link>
-              <Link href="/benefits-for-dentists" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('products.benefits_dentists')}
-              </Link>
-              <Link href="/product-lines" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('products.product_lines')}
-              </Link>
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('products.science')}
-              </Link>
-              <Link href="#" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('products.user')}
-              </Link>
-              <Link 
-              href="/sscp" 
-              className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              <Link
+                href="benefits-for-patients"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-              {tNav('products.sscp')}
-            </Link>
+                {tNav("products.benefits_patients")}
+              </Link>
+              <Link
+                href="/benefits-for-dentists"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("products.benefits_dentists")}
+              </Link>
+              <Link
+                href="/product-lines"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("products.product_lines")}
+              </Link>
+              <Link
+                href="#"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("products.science")}
+              </Link>
+              <Link
+                href="#"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("products.user")}
+              </Link>
+              <Link
+                href="/sscp"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("products.sscp")}
+              </Link>
             </div>
           </div>
-        )
-      case 'service':
+        );
+      case "service":
         return (
           <div className="grid grid-cols-1 gap-8">
             <div className="space-y-4 mt-[26px] ml-[11px]">
-              <Link href="/service" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('service.technical_support')}
+              <Link
+                href="/service"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("service.technical_support")}
               </Link>
-              <Link href="/documents" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('service.customer_service')}
+              <Link
+                href="/documents"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("service.customer_service")}
               </Link>
-              <Link href="/sds-podcast" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('service.sds_podcast')}
+              <Link
+                href="/sds-podcast"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("service.sds_podcast")}
               </Link>
-              <Link href="/contact" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('service.contact')}
+              <Link
+                href="/contact"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("service.contact")}
               </Link>
             </div>
           </div>
-        )
-      case 'about':
+        );
+      case "about":
         return (
           <div className="grid grid-cols-1 gap-8">
             <div className="space-y-4 mt-[26px] ml-[11px]">
-              <Link href="/company" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('about.company')}
+              <Link
+                href="/company"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("about.company")}
               </Link>
-              <Link href="/career" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('about.career')}
+              <Link
+                href="/career"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("about.career")}
               </Link>
-              <Link href="/history" className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors">
-                {tNav('about.history')}
+              <Link
+                href="/history"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                {tNav("about.history")}
               </Link>
             </div>
           </div>
-        )
+        );
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   // Mobile submenu content renderer
   const renderMobileSubmenuContent = () => {
-    if (!isLoaded) return null
+    if (!isLoaded) return null;
 
     switch (activeMobileSubmenu) {
-      case 'products':
+      case "products":
         return (
           <div className="space-y-4">
-            <Link 
-              href="/benefits-for-patients" 
+            <Link
+              href="/benefits-for-patients"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('products.benefits_patients')}
+              {tNav("products.benefits_patients")}
             </Link>
-            <Link 
-              href="/benefits-for-dentists" 
+            <Link
+              href="/benefits-for-dentists"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('products.benefits_dentists')}
+              {tNav("products.benefits_dentists")}
             </Link>
-            <Link 
-              href="/product-lines" 
+            <Link
+              href="/product-lines"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('products.product_lines')}
+              {tNav("products.product_lines")}
             </Link>
-            <Link 
-              href="#" 
+            <Link
+              href="#"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('products.science')}
+              {tNav("products.science")}
             </Link>
-            <Link 
-              href="#" 
+            <Link
+              href="#"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('products.top_user')}
+              {tNav("products.top_user")}
             </Link>
-            <Link 
-              href="#" 
+            <Link
+              href="#"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('products.sscp')}
+              {tNav("products.sscp")}
             </Link>
           </div>
-        )
-      case 'service':
+        );
+      case "service":
         return (
           <div className="space-y-4">
-            <Link 
-              href="/service" 
+            <Link
+              href="/service"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('service.technical_support')}
+              {tNav("service.technical_support")}
             </Link>
-            <Link 
-              href="/documents" 
+            <Link
+              href="/documents"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('service.customer_service')}
+              {tNav("service.customer_service")}
             </Link>
-            <Link 
-              href="/sds-podcast" 
+            <Link
+              href="/sds-podcast"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('service.sds_podcast')}
+              {tNav("service.sds_podcast")}
             </Link>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('service.contact')}
+              {tNav("service.contact")}
             </Link>
           </div>
-        )
-      case 'about':
+        );
+      case "about":
         return (
           <div className="space-y-4">
-            <Link 
-              href="/company" 
+            <Link
+              href="/company"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('about.company')}
+              {tNav("about.company")}
             </Link>
-            <Link 
-              href="/career" 
+            <Link
+              href="/career"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('about.career')}
+              {tNav("about.career")}
             </Link>
-            <Link 
-              href="/history" 
+            <Link
+              href="/history"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav('about.history')}
+              {tNav("about.history")}
             </Link>
           </div>
-        )
+        );
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   const renderLanguageToggle = () => {
-    if (!isLoaded) return null
+    if (!isLoaded) return null;
 
     return (
       <Button
@@ -371,19 +480,19 @@ const Header: React.FC = () => {
         iconPosition="right"
         onClick={handleLanguageSwitch}
       >
-        <div className='flex items-center gap-0.5'>
+        <div className="flex items-center gap-0.5">
           <WordIcon />
           <div>
-            {currentLanguage === 'en' ? (
-              <>{tCommon('language.switch_to_turkish')}</>
+            {currentLanguage === "en" ? (
+              <>{tCommon("language.switch_to_turkish")}</>
             ) : (
-              <>{tCommon('language.switch_to_english')}</>
+              <>{tCommon("language.switch_to_english")}</>
             )}
           </div>
         </div>
       </Button>
-    )
-  }
+    );
+  };
 
   // Loading state - çeviriler yüklenene kadar basit header göster
   if (!isLoaded) {
@@ -392,17 +501,17 @@ const Header: React.FC = () => {
         <div className="header-logo h-[75px] lg:h-31 flex items-center">
           <div className="">
             <Link href="/">
-              <Image 
-                src="/logo.svg" 
-                alt="Logo" 
-                width={263} 
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={263}
                 height={35}
                 className="hidden lg:block"
               />
-              <Image 
-                src="/logo.svg" 
-                alt="Logo" 
-                width={165} 
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={165}
                 height={22}
                 className="block lg:hidden ml-[5px]"
               />
@@ -410,7 +519,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </header>
-    )
+    );
   }
 
   return (
@@ -420,17 +529,17 @@ const Header: React.FC = () => {
         <div className="header-logo h-[75px] lg:h-31 flex items-center">
           <div className="sm:ml-[-11px] ml-0">
             <Link href="/">
-              <Image 
-                src="/logo.svg" 
-                alt="Logo" 
-                width={263} 
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={263}
                 height={35}
                 className="hidden lg:block"
               />
-              <Image 
-                src="/logo.svg" 
-                alt="Logo" 
-                width={165} 
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={165}
                 height={22}
                 className="block lg:hidden ml-[5px]"
               />
@@ -447,64 +556,116 @@ const Header: React.FC = () => {
                 <div className="flex items-center space-x-8">
                   {/* Products */}
                   <div className="relative desktop-menu-item">
-                    <button 
-                      onClick={() => toggleDesktopSubmenu('products')}
+                    <button
+                      onClick={() => toggleDesktopSubmenu("products")}
                       className={`ml-[10px] flex items-center space-x-1 font-normal text-base transition-colors ${
-                        activeDesktopSubmenu === 'products' 
-                          ? 'text-primary-500' 
-                          : 'text-primary-600 hover:text-primary-600'
+                        activeDesktopSubmenu === "products"
+                          ? "text-primary-500"
+                          : "text-primary-600 hover:text-primary-600"
                       }`}
                     >
-                      <span className='mr-[5px]'>{tNav('main.products')}</span>
+                      <span className="mr-[5px]">{tNav("main.products")}</span>
                       <ChevronDownIcon />
                     </button>
                   </div>
 
                   {/* Service */}
                   <div className="relative desktop-menu-item">
-                    <button 
-                      onClick={() => toggleDesktopSubmenu('service')}
+                    <button
+                      onClick={() => toggleDesktopSubmenu("service")}
                       className={`flex items-center space-x-1 font-normal text-base transition-colors ${
-                        activeDesktopSubmenu === 'service' 
-                          ? 'text-primary-500' 
-                          : 'text-primary-600 hover:text-primary-500'
+                        activeDesktopSubmenu === "service"
+                          ? "text-primary-500"
+                          : "text-primary-600 hover:text-primary-500"
                       }`}
                     >
-                      <span className='mr-[5px]'>{tNav('main.service')}</span>
+                      <span className="mr-[5px]">{tNav("main.service")}</span>
                       <ChevronDownIcon />
                     </button>
                   </div>
 
                   {/* About SDS */}
                   <div className="relative desktop-menu-item">
-                    <button 
-                      onClick={() => toggleDesktopSubmenu('about')}
+                    <button
+                      onClick={() => toggleDesktopSubmenu("about")}
                       className={`flex items-center space-x-1 font-normal text-base transition-colors ${
-                        activeDesktopSubmenu === 'about' 
-                          ? 'text-primary-500' 
-                          : 'text-primary-600 hover:text-primary-600'
+                        activeDesktopSubmenu === "about"
+                          ? "text-primary-500"
+                          : "text-primary-600 hover:text-primary-600"
                       }`}
                     >
-                      <span className='mr-[5px]'>{tNav('main.about')}</span>
+                      <span className="mr-[5px]">{tNav("main.about")}</span>
                       <ChevronDownIcon />
                     </button>
                   </div>
+                </div>
+                <div className="flex items-center space-x-8">
+                  <Link
+                    href="https://portal.swissdentalsolutions.com/en/"
+                    className="flex text-[16px] items-center gap-2 px-[20px] py-[13px] border bg-[#f9f9f9] border-[#e0e0e0] text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="d-inline-block me-1 me-lg-0 me-xxl-1 mt-n1-4"
+                    >
+                      <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M17 17h-11v-14h-2"></path>
+                      <path d="M6 5l14 1l-1 7h-13"></path>
+                    </svg>
+                    Shop for dentists
+                  </Link>
+                  <Link
+                    href="https://education.swissdentalsolutions.com/"
+                    className="flex items-center gap-2 px-[20px] py-[13px] border bg-[#f9f9f9] border-[#e0e0e0] text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300  w-[152px]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="d-inline-block me-1 me-lg-0 me-xl-1 mt-n1-4 shrink-0"
+                    >
+                      <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                      <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                    </svg>
+                    Education
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Single Desktop Menu Container - Shared for all menus */}
-          <div className={`fixed top-30 right-0 w-[57.5%] 2xl:w-[55.5%] backdrop-filter backdrop-blur-[35px] bg-[#fafafae6] h-[calc(100vh-124px)] shadow-2xl transition-all duration-300 z-[-1] ${
-            activeDesktopSubmenu ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
-          }`}>
+          <div
+            className={`fixed top-30 right-0 w-[57.5%] 2xl:w-[55.5%] backdrop-filter backdrop-blur-[35px] bg-[#fafafae6] h-[calc(100vh-124px)] shadow-2xl transition-all duration-300 z-[-1] ${
+              activeDesktopSubmenu
+                ? "opacity-100 visible translate-y-0"
+                : "opacity-0 invisible -translate-y-4"
+            }`}
+          >
             <div className="p-8 h-full overflow-y-auto">
               {/* Content transition wrapper */}
-              <div className={`transition-all duration-300 ease-in-out ${
-                isTransitioning 
-                  ? 'opacity-0 transform -translate-y-4' 
-                  : 'opacity-100 transform translate-y-0'
-              }`}>
+              <div
+                className={`transition-all duration-300 ease-in-out ${
+                  isTransitioning
+                    ? "opacity-0 transform -translate-y-4"
+                    : "opacity-100 transform translate-y-0"
+                }`}
+              >
                 {!isTransitioning && renderMenuContent()}
                 {renderLanguageToggle()}
               </div>
@@ -517,7 +678,7 @@ const Header: React.FC = () => {
               <button
                 onClick={toggleMobileMenu}
                 className="p-2 text-primary-600 hover:text-primary-500 transition-colors mobile-menu-container"
-                aria-label={tCommon('buttons.menu')}
+                aria-label={tCommon("buttons.menu")}
               >
                 {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
               </button>
@@ -525,22 +686,28 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile Menu */}
-          <div className={`lg:hidden fixed lg:top-31 top-18 left-0 right-0 bg-[#f4f4f4] shadow-2xl transition-all duration-300 ease-in-out z-50 mobile-menu-container ${
-            isMobileMenuOpen ? 'h-[calc(100vh-0px)] opacity-100 visible' : 'h-0 opacity-0 invisible'
-          } overflow-hidden`}>
+          <div
+            className={`lg:hidden fixed lg:top-31 top-18 left-0 right-0 bg-[#f4f4f4] shadow-2xl transition-all duration-300 ease-in-out z-50 mobile-menu-container ${
+              isMobileMenuOpen
+                ? "h-[calc(100vh-0px)] opacity-100 visible"
+                : "h-0 opacity-0 invisible"
+            } overflow-hidden`}
+          >
             <div className="relative h-full">
               {/* Main Menu */}
-              <div className={`absolute inset-0 transition-transform duration-300 ease-in-out ${
-                activeMobileSubmenu ? '-translate-x-full' : 'translate-x-0'
-              }`}>
+              <div
+                className={`absolute inset-0 transition-transform duration-300 ease-in-out ${
+                  activeMobileSubmenu ? "-translate-x-full" : "translate-x-0"
+                }`}
+              >
                 <div className="p-6 space-y-6 h-full overflow-y-auto mt-[26px]">
                   {/* Products */}
                   <div className="border-gray-200 mb-[13px]">
                     <button
-                      onClick={() => toggleMobileSubmenu('products')}
+                      onClick={() => toggleMobileSubmenu("products")}
                       className="flex text-[32px] font-[300] items-center justify-between w-full text-left text-primary-600 hover:text-primary-500 transition-colors text-lg"
                     >
-                      <span>{tNav('main.products')}</span>
+                      <span>{tNav("main.products")}</span>
                       <ChevronLeftIcon />
                     </button>
                   </div>
@@ -548,10 +715,10 @@ const Header: React.FC = () => {
                   {/* Service */}
                   <div className="border-gray-200 mb-[13px]">
                     <button
-                      onClick={() => toggleMobileSubmenu('service')}
+                      onClick={() => toggleMobileSubmenu("service")}
                       className="flex text-[32px] font-[300] items-center justify-between w-full text-left text-primary-600 hover:text-primary-500 transition-colors text-lg"
                     >
-                      <span>{tNav('main.service')}</span>
+                      <span>{tNav("main.service")}</span>
                       <ChevronLeftIcon />
                     </button>
                   </div>
@@ -559,25 +726,72 @@ const Header: React.FC = () => {
                   {/* About SDS */}
                   <div className="border-gray-200 mb-[13px]">
                     <button
-                      onClick={() => toggleMobileSubmenu('about')}
+                      onClick={() => toggleMobileSubmenu("about")}
                       className="flex text-[32px] font-[300] items-center justify-between w-full text-left text-primary-600 hover:text-primary-500 transition-colors text-lg"
                     >
-                      <span>{tNav('main.about')}</span>
+                      <span>{tNav("main.about")}</span>
                       <ChevronLeftIcon />
                     </button>
                   </div>
 
-                  {/* Language Toggle for Mobile */}
-                  <div className="mt-8">
-                    {renderLanguageToggle()}
+                  <div className="flex mt-8 items-center space-x-4">
+                                      <Link
+                    href="https://portal.swissdentalsolutions.com/en/"
+                    className="flex text-[16px] items-center gap-2 px-[20px] py-[13px] border bg-[#f9f9f9] border-[#e0e0e0] text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="d-inline-block me-1 me-lg-0 me-xxl-1 mt-n1-4"
+                    >
+                      <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M17 17h-11v-14h-2"></path>
+                      <path d="M6 5l14 1l-1 7h-13"></path>
+                    </svg>
+                    Shop for dentists
+                  </Link>
+                  <Link
+                    href="https://education.swissdentalsolutions.com/"
+                    className="flex items-center gap-2 px-[20px] py-[13px] border bg-[#f9f9f9] border-[#e0e0e0] text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300  w-[152px]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="d-inline-block me-1 me-lg-0 me-xl-1 mt-n1-4 shrink-0"
+                    >
+                      <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                      <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                    </svg>
+                    Education
+                  </Link>
                   </div>
+
+                  {/* Language Toggle for Mobile */}
+                  <div className="mt-8">{renderLanguageToggle()}</div>
                 </div>
               </div>
 
               {/* Submenu */}
-              <div className={`absolute inset-0 transition-transform duration-300 ease-in-out ${
-                activeMobileSubmenu ? 'translate-x-0' : 'translate-x-full'
-              }`}>
+              <div
+                className={`absolute inset-0 transition-transform duration-300 ease-in-out ${
+                  activeMobileSubmenu ? "translate-x-0" : "translate-x-full"
+                }`}
+              >
                 <div className="p-6 h-full overflow-y-auto">
                   {/* Back Button */}
                   <div className="mb-6">
@@ -586,7 +800,9 @@ const Header: React.FC = () => {
                       className="flex items-center space-x-2 text-primary-600 hover:text-primary-500 transition-colors"
                     >
                       <BackIcon />
-                      <span className="text-lg font-medium">{tCommon('buttons.back')}</span>
+                      <span className="text-lg font-medium">
+                        {tCommon("buttons.back")}
+                      </span>
                     </button>
                   </div>
 
@@ -601,7 +817,7 @@ const Header: React.FC = () => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
