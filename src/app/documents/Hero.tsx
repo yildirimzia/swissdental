@@ -40,7 +40,7 @@ function Hero() {
                             <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-600">
                                 All important documents, such as catalogs, drilling protocols and instructions can be found here.
                             </p>
-                            <Link href={'/documents'} className="mx-auto font-[600] mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-500 flex justify-center items-center gap-2 underline cursor-pointer">
+                            <Link href={'/video-library'} className="mx-auto font-[600] mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-500 flex justify-center items-center gap-2 underline cursor-pointer">
                                 Video library
                                 <Image src={'/images/mdi_youtube.svg'} width={38} height={38} alt={''} />
                             </Link>

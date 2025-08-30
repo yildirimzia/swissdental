@@ -51,7 +51,7 @@ export default function TrainingCards() {
                 with ceramic implantology and benefit from our knowledge.
               </p>
 
-              <Link href="/supplements-ch">
+              <Link href="https://education.swissdentalsolutions.com/en/first-steps/">
                 <Button
                   variant="customOutline" // Yeni variant
                   size="custom16"
@@ -94,7 +94,7 @@ export default function TrainingCards() {
                 Biological Dentistry and Ceramic Implants’.
               </p>
 
-              <Link href="/supplements-ch">
+              <Link href="https://education.swissdentalsolutions.com/en/curriculum/">
                 <Button
                   variant="customOutline" // Yeni variant
                   size="custom16"

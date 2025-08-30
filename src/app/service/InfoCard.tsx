@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../components/Button";
+// Removed incorrect import of 'link' from 'fs'
 
 const TEAL = "#0F6F69";
 
@@ -11,6 +12,7 @@ const CARDS = [
     icon: "/images/service/dental.svg",
     title: "Product and System Presentation",
     button:"Request Demo",
+    link: "/demonstration",
     description: [
       "We're happy to visit your practice and present the possibilities and benefits of the SDS system. If you're interested in a specific topic, please let us know in your message, and we'll be glad to tailor our presentation to your needs.",
     ],
@@ -20,6 +22,7 @@ const CARDS = [
     icon: "/images/service/vaccine.svg",
     title: "Surgical Shadowing",
     button:"Request Shadowing",
+    link: "mailto:info@swissdentalsolutions.com?subject=Request: Shadowing",
     description: [
       "As a beginner in implantology, we support you during your first case with SDS ceramic implants in your practice, providing experienced personnel during the surgery. Please enter all available data and the X-ray image in the form below.",
     ],
@@ -29,6 +32,7 @@ const CARDS = [
     icon: "/images/service/bottomarow.svg",
     title: "Marketing material",
     button: "Download",
+    link: "https://sds.directus.app/assets/494c5a2a-c174-46f6-bbe5-31c9a852f593",
     description: [
       "Images, videos and further information for users",
     ],
@@ -38,6 +42,7 @@ const CARDS = [
     icon: "/images/service/Group.svg",
     title: "Media Package",
     button: "More Information",
+    link: "/media-package",
     description: [
       "Whether it's personalized patient flyers or roll-ups, this package provides everything you need to introduce your clients and team to the SDS world quickly and easily.",
     ],
@@ -47,6 +52,7 @@ const CARDS = [
     icon: "/images/service/help.svg",
     title: "Professional support",
     button:"Find support",
+    link: "/professional-support",
     description: [
       "We offer free services that go far beyond the normal customer service provided by your ceramic implant manufacturer",
     ],
@@ -56,6 +62,7 @@ const CARDS = [
     icon: "/images/service/bottomarow.svg",
     title: "Notification form",
     button: "Download",
+    link: "/https://sds.directus.app/assets/66fceb1e-ea40-4b26-a805-5e226e0cb399",
     description: [
       "In the event of a claim, please fill out the attached form",
     ],
@@ -65,6 +72,7 @@ const CARDS = [
     icon: "/images/service/bottomarow.svg",
     title: "Exchange form",
     button: "Download",
+    link: "/https://sds.directus.app/assets/37389f8d-a445-41e1-9ce5-8935b2798c45.pdfxw", 
     description: [
       "Here you will find the form for an exchange request",
     ],
@@ -75,8 +83,10 @@ function InfoCard({
   id,
   icon,
   title,
+  button,
   description,
   i,
+  link, // use the card's link property
 }: (typeof CARDS)[number] & { i: number }) {
   return (
     <article
@@ -109,7 +119,7 @@ function InfoCard({
         <div className="mt-10 flex justify-end">
           {/* Path'i düzelt - benefits-for-dentists kullan */}
           <Link
-            href={``} 
+            href={link || '#'}
             className="text-primary-600"
           >
             <Button
@@ -119,7 +129,7 @@ function InfoCard({
               className="!shadow-none mt-8 !font-[400]"
               iconPosition="right"
             >
-              More Details
+              {button}
             </Button>
           </Link>
         </div>

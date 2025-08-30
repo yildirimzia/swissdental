@@ -35,7 +35,7 @@ function LifetimeWarranty() {
             Claims processing for SDS implants and abutments
           </p>
 
-          <Link href="/implants">
+          <Link href="https://sds.directus.app/assets/64ab10ca-fbec-441d-a037-e5c96a49d1a6">
             <Button
               variant="primary"
               size="lg"

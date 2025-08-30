@@ -115,7 +115,7 @@ const HeroSection: React.FC = () => {
               {t('quicklinks.benefits.description')}
             </p>
             
-            <Link href="/benefits">
+            <Link href="/benefits-for-patients">
               <Button
                 variant="primary"
                 size="lg"
@@ -143,7 +143,7 @@ const HeroSection: React.FC = () => {
               {t('quicklinks.studies.description')}
             </p>
             
-            <Link href="/studies">
+            <Link href="/benefits-for-dentists/tissue-level">
               <Button
                 variant="primary"
                 size="lg"
@@ -172,7 +172,7 @@ const HeroSection: React.FC = () => {
             </p>
             
             <div className="space-y-4">
-              <Link href="/supplements-de">
+              <Link href="https://www.swiss-biohealth-vital.com/">
                 <Button
                   variant="primary"
                   size="lg"
@@ -185,7 +185,7 @@ const HeroSection: React.FC = () => {
                 </Button>
               </Link>
               
-              <Link href="/supplements-ch">
+              <Link href="https://www.swiss-biohealth-vital.ch/">
                 <Button
                 variant="customOutline" // Yeni variant
                 size="custom16"

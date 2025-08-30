@@ -33,12 +33,12 @@ export default function ServiceBlock() {
           </p>
 
   
-                        <Link href="/implants" className="">
+                        <Link href="mailto:info@swissdentalsolutions.com?subject=Request: Find dentist" className="">
                 <Button
                   variant="primary"
                   size="lg"
                   rounded="rounded-[100px]"
-                  className="text-[16px] font-[400]"
+                  className="text-[16px] font-[400] cursor-pointer"
                   icon={
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 

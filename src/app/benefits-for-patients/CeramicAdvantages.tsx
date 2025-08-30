@@ -2,7 +2,7 @@
 
 export default function CeramicAdvantages() {
   return (
-    <section className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#FEFEFE_25%,#FDFDFD_50%,#FCFCFC_75%,#FBFBFB_100%)] pb-24">
+    <section id="ceramic-advantages" className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#FEFEFE_25%,#FDFDFD_50%,#FCFCFC_75%,#FBFBFB_100%)] pb-24">
       <div className="container-dental max-w-[1320px] px-6 sm:px-8 mx-auto py-20">
         {/* Eyebrow */}
         <p className="text-center text-mint sm:text-[16px] font-[400] uppercase">

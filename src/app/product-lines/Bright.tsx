@@ -7,8 +7,9 @@ import React, { useState, useEffect, useRef } from "react";
 
 function Bright() {
   const { t: tProductLines } = useProductLinesTranslation();
+
   return (
-    <section className="relative overflow-hidden py-20 sm:py-24 lg:py-28">
+    <section id="bright" className="relative overflow-hidden py-20 sm:py-24 lg:py-28">
       <div className="container-dental text-center bg-[linear-gradient(180deg,#fff_58.33%,#fff0)] pb-[200px] pt-[200px]">
         {/* Eyebrow */}
         <p className="text-mint tracking-wide font-[400] text-sm sm:text-base">
@@ -44,7 +45,7 @@ function Bright() {
 
         {/* CTA buttons */}
         <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-          <Link href="/supplements-ch">
+          <Link href="https://sds.directus.app/assets/5b953073-c3b1-4bf0-8999-ce96df4b3821/BRIGHT-Product-Catalog.pdf">
             <Button
               variant="customOutline"
               size="custom16"
@@ -56,7 +57,7 @@ function Bright() {
             </Button>
           </Link>
 
-          <Link href="/supplements-ch">
+          <Link href="https://portal.swissdentalsolutions.com/en/">
             <Button
               variant="customOutline"
               size="custom16"

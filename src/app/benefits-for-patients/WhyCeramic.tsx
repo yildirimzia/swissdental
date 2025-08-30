@@ -30,25 +30,25 @@ export default function WhyCeramic() {
       icon: "/images/benefits-for-patients/Heart.svg",
       title: "Biocompatible",
       desc: "SDS implants are very easily tolerated and integrate securely into the bone.",
-      href: "/studies/biocompatible",
+      href: "https://pubmed.ncbi.nlm.nih.gov/37436947/",
     },
     {
       icon: "/images/benefits-for-patients/Weight.svg",
       title: "Durable and robust",
       desc: "Ceramic implants now surpass titanium implants in terms of stability and longevity.",
-      href: "/studies/durable",
+      href: "https://www.dginet.de/wp-content/uploads/sites/4/2024/02/20240130_LL_083-039_S3_Keramikimplantate_lang_2022_meta.pdf",
     },
     {
       icon: "/images/benefits-for-patients/Zahn.svg",
       title: "Aesthetic",
       desc: "Our implants are naturally white. The aesthetic solution for a beautiful smile.",
-      href: "/studies/aesthetic",
+      href: "https://pubmed.ncbi.nlm.nih.gov/35606734/",
     },
     {
       icon: "/images/benefits-for-patients/Rocket.svg",
       title: "Minimal radiation",
       desc: "Careful selection of raw materials ensures minimal radiation compared to titanium.",
-      href: "/studies/minimal-radiation",
+      href: "https://www.dinmedia.de/de/norm/din-en-iso-13356/232848189",
     },
   ];
 

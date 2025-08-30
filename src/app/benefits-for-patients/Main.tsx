@@ -4,6 +4,18 @@ import Link from "next/link";
 import Button from "../components/Button";
 
 export default function BenefitsBlock() {
+
+    const handleHeaderDownload = (e: React.MouseEvent) => {
+      const targetId = "ceramic-advantages";
+      const targetSection = document.getElementById(targetId);
+  
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      } else {
+        console.warn(`Element with id "${targetId}" not found`);
+      }
+    };
+
   return (
     <section className="">
       <div className="lg:max-w-[1380px] 2xl:max-w-[1620px] grid grid-cols-1 lg:grid-cols-[40%_60%] items-center ml-auto">
@@ -26,15 +38,16 @@ export default function BenefitsBlock() {
             intolerances.
           </p>
 
-          <Link href="/supplements-ch">
+          <Link href="#">
             <Button
               variant="customOutline"
               size="custom16"
               rounded="rounded-full"
               className="!shadow-none mt-8 !font-[400] cursor-pointer"
               iconPosition="right"
+              onClick={handleHeaderDownload}
             >
-              View all benefits
+              View all benefitss
             </Button>
           </Link>
         </div>

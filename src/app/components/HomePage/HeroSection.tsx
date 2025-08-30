@@ -233,7 +233,7 @@ const HeroSection: React.FC = () => {
               </p>
 
               <div className="pt-6 lg:translate-x-[120px] translate-x-0 mt-[1.2rem]">
-                <Link href="/implants" className="">
+                <Link href="/product-lines" className="">
                   <Button
                     variant="primary"
                     size="lg"
@@ -304,7 +304,7 @@ const HeroSection: React.FC = () => {
               </p>
 
               <div className="pt-6  lg:mt-[1.2rem] mt-0">
-                <Link href="/implants" className="">
+                <Link href="/product-lines" className="">
                   <Button
                     variant="primary"
                     size="lg"
@@ -392,7 +392,7 @@ const HeroSection: React.FC = () => {
               </ul>
 
               <div className="pt-6 lg:translate-x-[120px] translate-x-0 lg:mt-[1.2rem]">
-                <Link href="/implants" className="">
+                <Link href="/benefits-for-dentists" className="">
                   <Button
                     variant="primary"
                     size="lg"

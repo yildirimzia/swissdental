@@ -49,7 +49,7 @@ export default function TeamBehind() {
           </p>
 
 
-          <Link href="/career" className="">
+          <Link href="https://www.swiss-biohealth.com/en" className="">
             <Button
               variant="primary"
               size="lg"

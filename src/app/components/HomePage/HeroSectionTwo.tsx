@@ -165,7 +165,7 @@ const HeroSection: React.FC = () => {
             </p>
 
             <div className="pt-6 mt-[1.2rem]">
-              <Link href="/implants" className="">
+              <Link href="/service" className="">
                 <Button
                   variant="primary"
                   size="lg"

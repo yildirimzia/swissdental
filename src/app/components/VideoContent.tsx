@@ -183,7 +183,7 @@ export default function VideoContent() {
               Service, you get the components you need for your implantation.
             </p>
 
-            <Link href="/implants">
+            <Link href="https://sdsbox.swissdentalsolutions.com/home">
               <Button
                 variant="primary"
                 size="lg"

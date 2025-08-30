@@ -50,7 +50,7 @@ export default function TrainingCompany() {
 
               </p>
 
-              <Link href="/supplements-ch">
+              <Link href="https://education.swissdentalsolutions.com/en/first-steps/">
                 <Button
                   variant="customOutline" // Yeni variant
                   size="custom16"
@@ -89,7 +89,7 @@ export default function TrainingCompany() {
                 Our training courses offer experienced users the chance to advance their education and become experts in ceramic implantology. Upon successfully completing the curriculum, you can be appointed as a ‘Specialist in Biological Dentistry and Ceramic Implants.’
               </p>
 
-              <Link href="/supplements-ch">
+              <Link href="https://education.swissdentalsolutions.com/en/curriculum/">
                 <Button
                   variant="customOutline" // Yeni variant
                   size="custom16"

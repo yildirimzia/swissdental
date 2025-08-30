@@ -36,7 +36,7 @@ export default function PioneeringWork() {
             results.
           </p>
 
-          <Link href="/implants" className="">
+          <Link href="https://www.swiss-biohealth.com/en" className="">
             <Button
               variant="primary"
               size="lg"

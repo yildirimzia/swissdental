@@ -43,7 +43,7 @@ function ServiceHero() {
             cases.
           </p>
 
-          <Link href="/success-stories">
+          <Link href="/contact">
             <Button
               variant="customOutline"
               size="custom16"

@@ -8,6 +8,18 @@ import React, { useState, useEffect, useRef } from "react";
 function Main() {
   const { t: tProductLines } = useProductLinesTranslation();
   const { ref: scrollRef, isVisible } = useScrollAnimation(0.2);
+
+    const handleHeaderDownload = (e: React.MouseEvent) => {
+    const targetId = "bright";
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.warn(`Element with id "${targetId}" not found`);
+    }
+    };
+
   return (
     <>
       <main className="pb-[150px] p-[10px] bg-[linear-gradient(180deg,#EAF4F3_58.33%,rgba(255,255,255,0)_100%)]">
@@ -62,17 +74,16 @@ function Main() {
             <p className="text-primary-600 text-[16px] font-[200]">
               {tProductLines("product_lines.line_1.title")}
             </p>
-            <Link href="/supplements-ch">
               <Button
                 variant="customOutline"
                 size="custom16"
                 rounded="rounded-full"
                 className="!shadow-none mt-8 !font-[500]"
                 iconPosition="right"
+                onClick={handleHeaderDownload}
               >
                 {tProductLines("product_lines.line_1.button")}
               </Button>
-            </Link>
           </div>
         </div>
       </main>

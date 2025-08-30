@@ -62,7 +62,7 @@ function Main() {
             <p className="text-primary-600 text-[16px] font-[200]">
               {tProductLines("product_lines.line_1.title")}
             </p>
-            <Link href="/supplements-ch">
+            <Link href="/product-lines#bright">
               <Button
                 variant="customOutline"
                 size="custom16"

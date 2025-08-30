@@ -148,7 +148,7 @@ const HeroSection: React.FC = () => {
 
             {/* CTA Button */}
             <div className="pt-6">
-              <Link href="/education" target="_blank">
+              <Link href="https://education.swissdentalsolutions.com/" target="_blank">
                 <Button
                   variant="outline"
                   size="lg"

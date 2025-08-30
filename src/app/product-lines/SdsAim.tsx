@@ -76,7 +76,7 @@ export default function AimBlock() {
             Especially suitable for the use of SDS ceramic implants
           </h2>
 
-          <Link href="/implants">
+          <Link href="https://portal.swissdentalsolutions.com/en/">
             <Button
               variant="primary"
               size="lg"

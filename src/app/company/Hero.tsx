@@ -46,7 +46,7 @@ function ServiceHero() {
             the success of our work in ceramic implantology.
           </p>
 
-          <Link href="/success-stories">
+          <Link href="/history">
             <Button
               variant="customOutline"
               size="custom16"

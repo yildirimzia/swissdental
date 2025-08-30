@@ -16,6 +16,7 @@ type Testimonial = {
   country: string;
   quote: string;
   cta?: string;
+  href?: string;
 };
 
 const ExternalLinkIcon = () => (
@@ -45,6 +46,7 @@ const DATA: Testimonial[] = [
     quote:
       "Only four weeks after the operation I was able to participate in the `Engadiner Ski Marathon`",
     cta: "Read more",
+    href: "https://www.swiss-biohealth.com/en/testimonials/johannes-bergmann",
   },
   {
     imgSrc: "/images/benefits-for-patients/BerryMartha_600.jpg", // DEĞİŞTİR
@@ -53,6 +55,7 @@ const DATA: Testimonial[] = [
     quote:
       "I´ve resumed playing tennis (competitively) for the first time in even a year. I´ve returned to work fully and have resumed a full social life.",
     cta: "Read more",
+    href: "https://www.swiss-biohealth.com/en/testimonials/martha-berry",
   },
   {
     imgSrc: "/images/benefits-for-patients/King-Dana-768x768.jpg", // 3. slide ekledim
@@ -61,6 +64,7 @@ const DATA: Testimonial[] = [
     quote:
       "My new teeth and smile are absolutely beautiful. The precision are care that went into creating this perfect smile were nothing short of AMAZING!",
     cta: "Read more",
+    href: "https://www.swiss-biohealth.com/en/testimonials/catherine-stewart",
   },
   {
     imgSrc: "/images/benefits-for-patients/Catherine-Steward.jpg", // 3. slide ekledim
@@ -69,6 +73,7 @@ const DATA: Testimonial[] = [
     quote:
       "This is the most amazing medical care that I Have ever experienced from the surgeons to the adjucent therapies and even the food. It was an over all wonderful experience.",
     cta: "Read more",
+    href: "https://www.swiss-biohealth.com/en/testimonials/dana-king",
   },
 ];
 
@@ -215,8 +220,8 @@ export default function SatisfiedPatientsSlider() {
                         </h3>
 
                         {/* CTA */}
-                        {item.cta && (
-                          <Link href="/supplements-ch">
+                        {item.cta && item.href && (
+                          <Link href={item.href} className="">
                             <Button
                               variant="customOutline"
                               size="custom16"
