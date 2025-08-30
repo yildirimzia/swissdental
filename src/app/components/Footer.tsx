@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
     sections.push({
       title: t('navigation.products.title'),
       links: [
-        { href: '/benefits-patients', label: t('navigation.products.links.benefits_patients') },
-        { href: '/benefits-dentists', label: t('navigation.products.links.benefits_dentists') },
+        { href: '/benefits-for-patients', label: t('navigation.products.links.benefits_patients') },
+        { href: '/benefits-for-dentists', label: t('navigation.products.links.benefits_dentists') },
         { href: '/product-lines', label: t('navigation.products.links.product_lines') },
-        { href: '/science', label: t('navigation.products.links.science') },
+        { href: '/benefits-for-dentists/tissue-level', label: t('navigation.products.links.science') },
         { href: '/top-user', label: t('navigation.products.links.top_user') },
         { href: '/sscp', label: t('navigation.products.links.sscp') },
       ]
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
       links: [
         { href: '/service-support', label: t('navigation.service.links.service_support') },
         { href: '/documents', label: t('navigation.service.links.documents') },
-        { href: '/podcast', label: t('navigation.service.links.podcast') },
+        { href: '/sds-podcast', label: t('navigation.service.links.podcast') },
         { href: '/contact', label: t('navigation.service.links.contact') },
       ]
     });

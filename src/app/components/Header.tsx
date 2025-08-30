@@ -271,7 +271,7 @@ const Header: React.FC = () => {
                 {tNav("products.product_lines")}
               </Link>
               <Link
-                href="#"
+                href="/benefits-for-dentists/tissue-level"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                 {tNav("products.science")}
