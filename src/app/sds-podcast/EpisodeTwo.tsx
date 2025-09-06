@@ -33,15 +33,18 @@ export default function Episode() {
           {/* Eyebrow */}
           <p className="text-mint font-[400] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            Season 1, Episode 1
+            1. Sezon, 1. Bölüm
           </p>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[500] sm:font-[400] leading-[1.2] mb-6">
-            The Ceramic Implant Market with Dr. Karl Ulrich Volz
+            Dr. Karl Ulrich Volz ile Seramik İmplant Pazarı{" "}
           </h2>
 
-
-          <Link href="https://open.spotify.com/episode/4Ot0hFswaDYYFKrhRrad9U?si=A-k7XV7LSL-VGydRIr2OIQ" target="_blank" className="">
+          <Link
+            href="https://open.spotify.com/episode/4Ot0hFswaDYYFKrhRrad9U?si=A-k7XV7LSL-VGydRIr2OIQ"
+            target="_blank"
+            className=""
+          >
             <Button
               variant="primary"
               size="lg"

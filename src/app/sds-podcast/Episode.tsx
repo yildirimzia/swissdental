@@ -33,15 +33,18 @@ export default function Episode() {
           {/* Eyebrow */}
           <p className="text-mint font-[400] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            Season 1, Episode 7
+            1. Sezon, 7. Bölüm
           </p>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[500] sm:font-[400] leading-[1.2] mb-6">
-            Talk with Dr. Karl Ulrich Volz and Dr. Ken Serota
+            Dr. Karl Ulrich Volz ve Dr. Ken Serota ile söyleşi.
           </h2>
 
-
-          <Link href="https://open.spotify.com/episode/6sCtmcdy7xGhVSCwfMZpVW?si=wrOg8yL7Tz21_osC3yHfAg" target="_blank" className="">
+          <Link
+            href="https://open.spotify.com/episode/6sCtmcdy7xGhVSCwfMZpVW?si=wrOg8yL7Tz21_osC3yHfAg"
+            target="_blank"
+            className=""
+          >
             <Button
               variant="primary"
               size="lg"
@@ -50,7 +53,7 @@ export default function Episode() {
               icon={<ExternalLinkIcon />}
               iconPosition="right"
             >
-              Play
+              Dinle
             </Button>
           </Link>
         </div>

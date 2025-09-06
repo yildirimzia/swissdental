@@ -38,8 +38,8 @@ function SDSPod() {
           {/* Image container'ı düzelttik */}
           <div className="w-[280px] md:w-[362px] h-[280px] md:h-[362px] relative overflow-hidden ">
             <Image
-              src='/images/podcast/SDSPOD-EN-Small.jpg'
-              alt='SDSPOD-EN'
+              src="/images/podcast/SDSPOD-EN-Small.jpg"
+              alt="SDSPOD-EN"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 228px, 362px"
@@ -62,29 +62,32 @@ function SDSPod() {
         >
           {/* İsim / ülke */}
           <p className="text-[12px] tracking-[.15em] text-[#3aa194] uppercase mb-4 mt-11">
-           Season 1, Episode 6
+            1. Sezon, 6. Bölüm:
           </p>
 
           {/* Alıntı */}
           <h3 className="sm:min-h-[120px] min-h-[160px] text-primary-600 text-[20px] md:text-[34px] font-bold leading-[1.2]">
-            Prof. Dr. Etyene Schnurr, <br /> Dr. Kurt Mosetter
+            Prof. Dr. Etyene Schnurr, <br />
+            Dr. Kurt Mosetter.
           </h3>
 
           {/* CTA */}
 
-            <Link target="_blank" href="https://open.spotify.com/episode/1RPFvoWluoZYNWZwHxyWYT?si=ZCyj8ElEQUem633YxqqTIg">
-              <Button
-                variant="customOutline"
-                size="custom16"
-                rounded="rounded-full"
-                className="!shadow-none mt-8 !font-[400] cursor-pointer"
-                icon={<ExternalLinkIcon />}
-                iconPosition="right"
-              >
-                Play
-              </Button>
-            </Link>
-          
+          <Link
+            target="_blank"
+            href="https://open.spotify.com/episode/1RPFvoWluoZYNWZwHxyWYT?si=ZCyj8ElEQUem633YxqqTIg"
+          >
+            <Button
+              variant="customOutline"
+              size="custom16"
+              rounded="rounded-full"
+              className="!shadow-none mt-8 !font-[400] cursor-pointer"
+              icon={<ExternalLinkIcon />}
+              iconPosition="right"
+            >
+              Dinle
+            </Button>
+          </Link>
         </article>
       </div>
       <div className="relative flex sm:min-h-[220px] min-h-[220px] sm:pt-[90px] mb-[52px] p-0">
@@ -100,8 +103,8 @@ function SDSPod() {
           {/* Image container'ı düzelttik */}
           <div className="w-[280px] md:w-[362px] h-[280px] md:h-[362px] relative overflow-hidden ">
             <Image
-              src='/images/podcast/SDSPOD-EN-Small.jpg'
-              alt='SDSPOD-EN'
+              src="/images/podcast/SDSPOD-EN-Small.jpg"
+              alt="SDSPOD-EN"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 228px, 362px"
@@ -124,34 +127,35 @@ function SDSPod() {
         >
           {/* İsim / ülke */}
           <p className="text-[12px] tracking-[.15em] text-[#3aa194] uppercase mb-4 mt-11">
-           Season 1, Episode 4
+            1. Sezon, 4. Bölüm
           </p>
 
           {/* Alıntı */}
           <h3 className="sm:min-h-[120px] min-h-[160px] text-primary-600 text-[20px] md:text-[34px] font-bold leading-[1.2]">
-            Future Talks with<br />  Prof.  Dr. Florian Beuer, <br />President of the DGI
+            DGI Başkanı <br /> Prof. Dr. Florian Beuer ile Gelecek Sohbetleri
           </h3>
 
           {/* CTA */}
-          
-            <Link target="_blank" href="https://open.spotify.com/episode/3tEwiJvAXtaq0bjNWPMHt1?si=mQyKHwqzSM-TNeAcHKqtJQ&nd=1&dlsi=6e403740c26b43b4">
-              <Button
-                variant="customOutline"
-                size="custom16"
-                rounded="rounded-full"
-                className="!shadow-none mt-8 !font-[400] cursor-pointer"
-                icon={<ExternalLinkIcon />}
-                iconPosition="right"
-              >
-               Play
-              </Button>
-            </Link>
-          
+
+          <Link
+            target="_blank"
+            href="https://open.spotify.com/episode/3tEwiJvAXtaq0bjNWPMHt1?si=mQyKHwqzSM-TNeAcHKqtJQ&nd=1&dlsi=6e403740c26b43b4"
+          >
+            <Button
+              variant="customOutline"
+              size="custom16"
+              rounded="rounded-full"
+              className="!shadow-none mt-8 !font-[400] cursor-pointer"
+              icon={<ExternalLinkIcon />}
+              iconPosition="right"
+            >
+              Dinle
+            </Button>
+          </Link>
         </article>
-    
       </div>
-    
-    <div className="relative flex sm:min-h-[220px] min-h-[220px] mt-52 ">
+
+      <div className="relative flex sm:min-h-[220px] min-h-[220px] mt-52 ">
         {/* FOTOĞRAF – üstte, kartın dışına taşır */}
         <div
           className={[
@@ -164,8 +168,8 @@ function SDSPod() {
           {/* Image container'ı düzelttik */}
           <div className="w-[280px] md:w-[362px] h-[280px] md:h-[362px] relative overflow-hidden ">
             <Image
-              src='/images/podcast/SDSPOD-EN-Small.jpg'
-              alt='SDSPOD-EN'
+              src="/images/podcast/SDSPOD-EN-Small.jpg"
+              alt="SDSPOD-EN"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 228px, 362px"
@@ -188,29 +192,32 @@ function SDSPod() {
         >
           {/* İsim / ülke */}
           <p className="text-[12px] tracking-[.15em] text-[#3aa194] uppercase mb-4 mt-11">
-           Season 1, Episode 3
+            1. Sezon, 3. Bölüm
           </p>
 
           {/* Alıntı */}
           <h3 className="sm:min-h-[120px] min-h-[160px] text-primary-600 text-[20px] md:text-[34px] font-bold leading-[1.2]">
-            Dr. Rebekka Hueber on the advantages of ceramic implants, in particular SDS implants
+            Dr. Rebekka Hueber, seramik implantların, özellikle SDS
+            implantlarının avantajları hakkında konuşuyor.{" "}
           </h3>
 
           {/* CTA */}
-          
-            <Link target="_blank" href="https://open.spotify.com/episode/2Hi7nlxuKLjlmqBmcijZFu?si=Ke0B1qTOQei-NBqCDsNznw">
-              <Button
-                variant="customOutline"
-                size="custom16"
-                rounded="rounded-full"
-                className="!shadow-none mt-8 !font-[400] cursor-pointer"
-                icon={<ExternalLinkIcon />}
-                iconPosition="right"
-              >
-                Play
-              </Button>
-            </Link>
-          
+
+          <Link
+            target="_blank"
+            href="https://open.spotify.com/episode/2Hi7nlxuKLjlmqBmcijZFu?si=Ke0B1qTOQei-NBqCDsNznw"
+          >
+            <Button
+              variant="customOutline"
+              size="custom16"
+              rounded="rounded-full"
+              className="!shadow-none mt-8 !font-[400] cursor-pointer"
+              icon={<ExternalLinkIcon />}
+              iconPosition="right"
+            >
+              Dinle
+            </Button>
+          </Link>
         </article>
       </div>
       <div className="relative flex sm:min-h-[220px] min-h-[220px] sm:pt-[90px] p-0 mt-52 ">
@@ -226,8 +233,8 @@ function SDSPod() {
           {/* Image container'ı düzelttik */}
           <div className="w-[280px] md:w-[362px] h-[280px] md:h-[362px] relative overflow-hidden ">
             <Image
-              src='/images/podcast/SDSPOD-EN-Small.jpg'
-              alt='SDSPOD-EN'
+              src="/images/podcast/SDSPOD-EN-Small.jpg"
+              alt="SDSPOD-EN"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 228px, 362px"
@@ -250,29 +257,31 @@ function SDSPod() {
         >
           {/* İsim / ülke */}
           <p className="text-[12px] tracking-[.15em] text-[#3aa194] uppercase mb-4 mt-11">
-           Season 1, Episode 2
+            1. Sezon, 2. Bölüm
           </p>
 
           {/* Alıntı */}
           <h3 className="sm:min-h-[120px] min-h-[160px] text-primary-600 text-[20px] md:text-[34px] font-bold leading-[1.2]">
-            Dr. Dirk Duddeck talks about Implant Contamination
+            Dr. Dirk Duddeck, İmplant Kontaminasyonu hakkında konuşuyor9
           </h3>
 
           {/* CTA */}
-          
-            <Link target="_blank" href="https://open.spotify.com/episode/6lNxZo3TUmQXwQUuIVUpS3?si=-fSqK4IbT7immqjY9Lhjeg">
-              <Button
-                variant="customOutline"
-                size="custom16"
-                rounded="rounded-full"
-                className="!shadow-none mt-8 !font-[400] cursor-pointer"
-                icon={<ExternalLinkIcon />}
-                iconPosition="right"
-              >
-               Play
-              </Button>
-            </Link>
-          
+
+          <Link
+            target="_blank"
+            href="https://open.spotify.com/episode/6lNxZo3TUmQXwQUuIVUpS3?si=-fSqK4IbT7immqjY9Lhjeg"
+          >
+            <Button
+              variant="customOutline"
+              size="custom16"
+              rounded="rounded-full"
+              className="!shadow-none mt-8 !font-[400] cursor-pointer"
+              icon={<ExternalLinkIcon />}
+              iconPosition="right"
+            >
+              Dinle
+            </Button>
+          </Link>
         </article>
       </div>
     </section>

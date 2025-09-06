@@ -31,28 +31,22 @@ function Hero() {
               {/* Headline */}
               <h1 className="text-center font-extrabold leading-[0.95] text-primary-600">
                 <span className="block text-[clamp(40px,8.5vw,120px)]">
-                  A PODCAST BY SDS
+                  SDS'TEN BİR PODCAST
                 </span>
               </h1>
 
               {/* Supporting copy */}
               <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-600">
-                In recent years, podcasts have become increasingly popular, not
-                only because you can listen to them anywhere and anytime—be it
-                while cooking or commuting—but also because they are a personal
-                and authentic knowledge transfer platform.
+                Son yıllarda podcast'ler, yalnızca her yerde ve her zaman (yemek pişirirken veya işe gidip gelirken bile) dinlenebilmeleri nedeniyle değil, aynı zamanda kişisel ve otantik bir bilgi aktarım platformu olmaları nedeniyle de giderek daha popüler hale geldi1.
+
               </p>
               <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-600">
-                Various members of the SDS family will be inviting exciting
-                guests to our SDS PODCAST episodes, where you will gain insights
-                into the activities of different ceramic implant market players,
-                e.g. implantologists, company or industry representatives, as
-                well as the people driving research who want to jointly further
-                develop biological dentistry, making it safer and better.
+                SDS ailesinin çeşitli üyeleri, SDS PODCAST bölümlerine heyecan verici konuklar davet edecekler2. Bu podcast'lerde, biyolojik diş hekimliğini birlikte daha güvenli ve daha iyi hale getirmek isteyen implantologlar, şirket veya endüstri temsilcileri ve araştırmayı yürüten kişiler gibi seramik implant pazarındaki farklı aktörlerin faaliyetleri hakkında bilgiler edineceksiniz3.
+
               </p>
 
               <p className="mx-auto mb-8 mt-11 text-center text-[16px] sm:text-xs  text-primary-600 uppercase">
-                Follow us!
+                Bizi takip edin!
               </p>
 
               <div className="flex flex-row justify-center items-center ">
