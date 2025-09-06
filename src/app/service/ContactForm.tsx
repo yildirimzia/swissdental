@@ -89,13 +89,13 @@ function ContactForm() {
             {/* Sol Taraf - İletişim Bilgileri */}
             <div>
               <h2 className="text-3xl font-gotham font-bold text-primary-600 mb-4">
-                Contact
+                İletişim
               </h2>
               <p className="text-secondary-600 font-gotham mb-2">
-                Would you like us to call you back?
+                Size geri dönüş yapmamızı ister misiniz?
               </p>
               <p className="text-secondary-600 font-gotham mb-8">
-                Or have you not found an answer to your question on this page? Contact us using this form or give us a call.
+                Yoksa bu sayfada sorunuza bir cevap bulamadınız mı? Bu formu kullanarak bizimle iletişime geçin veya bize bir telefon açın.
               </p>
               
               <div className="space-y-4 mb-8">
@@ -139,7 +139,7 @@ function ContactForm() {
                         onFocus={() => handleFocus('userType')}
                         className="w-4 h-4 text-primary-600 border-secondary-300 focus:ring-primary-500"
                       />
-                      <span className="ml-2 text-secondary-700 font-gotham">Dentist</span>
+                      <span className="ml-2 text-secondary-700 font-gotham">Diş hekimi </span>
                     </label>
                     <label className="flex items-center">
                       <input
@@ -151,7 +151,7 @@ function ContactForm() {
                         onFocus={() => handleFocus('userType')}
                         className="w-4 h-4 text-primary-600 border-secondary-300 focus:ring-primary-500"
                       />
-                      <span className="ml-2 text-secondary-700 font-gotham">Patient</span>
+                      <span className="ml-2 text-secondary-700 font-gotham">Hasta</span>
                     </label>
                     <label className="flex items-center">
                       <input
@@ -163,7 +163,7 @@ function ContactForm() {
                         onFocus={() => handleFocus('userType')}
                         className="w-4 h-4 text-primary-600 border-secondary-300 focus:ring-primary-500"
                       />
-                      <span className="ml-2 text-secondary-700 font-gotham">Other</span>
+                      <span className="ml-2 text-secondary-700 font-gotham">Diğer</span>
                     </label>
                   </div>
                   {errors.userType && (
@@ -174,7 +174,7 @@ function ContactForm() {
                 {/* İsim */}
                 <div>
                   <label className="block text-sm font-gotham font-[400] text-primary-600 mb-2">
-                    First Name *
+                    Adı *
                   </label>
                   <input
                     type="text"
@@ -182,7 +182,7 @@ function ContactForm() {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     onFocus={() => handleFocus('firstName')}
-                    placeholder="First Name"
+                    placeholder="Adı"
                     className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-gotham transition-all duration-300 ${
                       errors.firstName ? 'border-red-500' : 'border-secondary-200'
                     }`}
@@ -195,7 +195,7 @@ function ContactForm() {
                 {/* Soyisim */}
                 <div>
                   <label className="block text-sm font-gotham font-[400] text-primary-600 mb-2">
-                    Last Name *
+                    Soyadı *
                   </label>
                   <input
                     type="text"
@@ -203,7 +203,7 @@ function ContactForm() {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     onFocus={() => handleFocus('lastName')}
-                    placeholder="Last Name"
+                    placeholder="Soyadı"
                     className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-gotham transition-all duration-300 ${
                       errors.lastName ? 'border-red-500' : 'border-secondary-200'
                     }`}
@@ -216,7 +216,7 @@ function ContactForm() {
                 {/* E-Mail */}
                 <div>
                   <label className="block text-sm font-gotham font-[400] text-primary-600 mb-2">
-                    E-Mail *
+                    E-posta *
                   </label>
                   <input
                     type="email"
@@ -224,7 +224,7 @@ function ContactForm() {
                     value={formData.email}
                     onChange={handleInputChange}
                     onFocus={() => handleFocus('email')}
-                    placeholder="E-Mail"
+                    placeholder="E-posta"
                     className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-gotham transition-all duration-300 ${
                       errors.email ? 'border-red-500' : 'border-secondary-200'
                     }`}
@@ -237,14 +237,14 @@ function ContactForm() {
                 {/* Telefon */}
                 <div>
                   <label className="block text-sm font-gotham font-[400] text-primary-600 mb-2">
-                    Phone Number
+                    Telefon Numarası
                   </label>
                   <input
                     type="tel"
                     name="phoneNumber"
                     value={formData.phoneNumber}
                     onChange={handleInputChange}
-                    placeholder="Phone Number"
+                    placeholder="Telefon Numarası"
                     className="w-full px-4 py-3 border border-secondary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-gotham transition-all duration-300"
                   />
                 </div>
@@ -252,13 +252,13 @@ function ContactForm() {
                 {/* Mesaj */}
                 <div>
                   <label className="block text-sm font-gotham font-[400] text-primary-600 mb-2">
-                    Message
+                    Mesaj
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Message"
+                    placeholder="Mesaj"
                     rows={5}
                     className="w-full px-4 py-3 border border-secondary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-gotham transition-all duration-300 resize-none"
                   />
@@ -277,8 +277,8 @@ function ContactForm() {
                         className="w-4 h-4 text-primary-600 border-secondary-300 rounded focus:ring-primary-500 mt-1 flex-shrink-0"
                       />
                       <span className="ml-2 text-sm text-secondary-700 font-gotham">
-                        I have taken note of the{' '}
-                        <a href="#" className="text-primary-600 hover:underline">privacy policy</a> *
+                        Gizlilik politikası{' '}
+                        <a href="#" className="text-primary-600 hover:underline">kabul edildi</a> *
                       </span>
                     </label>
                     {errors.privacyAccepted && (
@@ -295,7 +295,7 @@ function ContactForm() {
                       className="w-4 h-4 text-primary-600 border-secondary-300 rounded focus:ring-primary-500 mt-1 flex-shrink-0"
                     />
                     <span className="ml-2 text-sm text-secondary-700 font-gotham">
-                      Subscribe to our newsletter and receive regular information and offers about SDS and SDS Education.
+                      Bültenimize abone olun ve SDS ve SDS Eğitim hakkında düzenli bilgi ve teklifler alın.
                     </span>
                   </label>
                 </div>
@@ -306,14 +306,14 @@ function ContactForm() {
                     type="submit"
                     className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-gotham font-medium transition-all duration-300 shadow-md hover:shadow-lg"
                   >
-                    Submit
+                    Gönder
                   </button>
                 </div>
 
                 {/* Copyright */}
                 <div className="text-center pt-6">
                   <p className="text-xs text-secondary-500 font-gotham">
-                    © {new Date().getFullYear()} - All rights reserved.
+                    © {new Date().getFullYear()} - Tüm hakları saklıdır.
                   </p>
                 </div>
               </form>

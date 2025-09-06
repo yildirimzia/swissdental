@@ -98,7 +98,7 @@ export default function TrainingCompany() {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  Discover the Curriculum
+                  Eğitimleri Keşfedin 
                 </Button>
               </Link>
             </div>

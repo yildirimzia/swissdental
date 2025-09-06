@@ -14,7 +14,8 @@ function Sscp() {
               <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 py-24 sm:py-28 md:py-36">
                 {/* Overline */}
                 <p className="mx-auto mb-8 text-center text-[11px] sm:text-xs tracking-[0.25em] text-primary-500 uppercase">
-                 Summary of Safety and Clinical Performance
+                 Güvenlik ve Klinik Performans Özeti (SSCP)
+
 
                 </p>
                 {/* Headline */}
@@ -25,9 +26,8 @@ function Sscp() {
 
                 {/* Supporting copy */}
                 <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-600">
-                  The Summary of Safety and Clinical Performance (SSCP) is a legally mandated document providing a structured overview of clinical performance data and safety-related information for our ceramic implant portfolio.
-It primarily serves healthcare professionals as a reliable basis for assessing indications, clinical effectiveness, and potential risks.
-At the same time, patients may also find valuable insights regarding the safety and clinical evaluation of the implants used. We make the SSCP openly available to ensure maximum transparency – for informed, safe decision-making.
+                  Güvenlik ve Klinik Performans Özeti (SSCP), seramik implant portföyümüzün klinik performans verileri ve güvenlikle ilgili bilgilerini yapılandırılmış bir şekilde sunan, yasal olarak zorunlu bir belgedir. Bu belge, öncelikli olarak sağlık profesyonellerine endikasyonları, klinik etkinliği ve potansiyel riskleri değerlendirmeleri için güvenilir bir temel sağlar. Aynı zamanda, hastalar da kullanılan implantların güvenliği ve klinik değerlendirmesi hakkında değerli bilgiler bulabilirler. Bilinçli ve güvenli karar verme süreçleri için maksimum şeffaflığı sağlamak amacıyla, SSCP'yi açıkça erişilebilir hale getiriyoruz.
+
                 </p>
                 <div className="flex justify-center">
                   <Link target='_blank' href="https://sds.directus.app/assets/cc75ee61-e296-4a32-b2e9-2010bfc72a2d/SSCP-00324_Dental_Implant_Systems_v3.pdf">

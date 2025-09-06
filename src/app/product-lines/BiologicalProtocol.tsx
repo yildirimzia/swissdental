@@ -69,7 +69,7 @@ export default function AimBlock() {
         <div className="sm:mb-[193px] mb-0">
           <p className="text-mint tracking-wide font-[400] text-[16px] flex items-center gap-4  sm:p-0 pl-[24px] pr-[24px]">
             <span className=" w-[100px] h-[1px] bg-mint sm:inline-block hidden" />
-            HOW TO ...
+            Nasıl ...
           </p>
 
           <h2 className="text-primary-600 sm:pl-0 pl-[24px] pr-[24px] mt-2 text-[26px] sm:text-[40px] font-[700] leading-[1.2] tracking-[-0.01em]">

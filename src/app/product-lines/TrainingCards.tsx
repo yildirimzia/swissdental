@@ -103,7 +103,7 @@ export default function TrainingCards() {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  Discover the curriculum
+                 Eğitimleri Keşfedin 
                 </Button>
               </Link>
             </div>

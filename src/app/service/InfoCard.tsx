@@ -10,21 +10,21 @@ const CARDS = [
   {
     id: "tissue-level",
     icon: "/images/service/dental.svg",
-    title: "Product and System Presentation",
-    button:"Request Demo",
+    title: "Ürün ve Sistem Tanıtımı",
+    button:"Demo Talep Et",
     link: "/demonstration",
     description: [
-      "We're happy to visit your practice and present the possibilities and benefits of the SDS system. If you're interested in a specific topic, please let us know in your message, and we'll be glad to tailor our presentation to your needs.",
+      "Kliniğinizi ziyaret ederek SDS sisteminin sunduğu olanakları ve faydaları size sunmaktan memnuniyet duyarız. Belirli bir konuyla ilgileniyorsanız, lütfen mesajınızda belirtin, sunumumuzu ihtiyaçlarınıza göre uyarlamaktan memnuniyet duyarız. Bir demo talep edebilirsiniz.",
     ],
   },
   {
     id: "zirconium-dioxide",
     icon: "/images/service/vaccine.svg",
-    title: "Surgical Shadowing",
-    button:"Request Shadowing",
+    title: "Cerrahi Gözetmenlik (Surgical Shadowing):",
+    button:"Gözetmenlik Talep Et",
     link: "mailto:info@swissdentalsolutions.com?subject=Request: Shadowing",
     description: [
-      "As a beginner in implantology, we support you during your first case with SDS ceramic implants in your practice, providing experienced personnel during the surgery. Please enter all available data and the X-ray image in the form below.",
+      "İmplantolojide yeni başlayan biri olarak, kliniğinizde SDS seramik implantları ile yapacağınız ilk operasyonunuzda size deneyimli personelimizle destek oluyoruz. Bunun için, lütfen mevcut tüm verileri ve röntgen görüntüsünü aşağıdaki forma girin.",
     ],
   },
   {
@@ -40,41 +40,41 @@ const CARDS = [
   {
     id: "clean-sterile",
     icon: "/images/service/Group.svg",
-    title: "Media Package",
-    button: "More Information",
+    title: "Pazarlama Materyalleri",
+    button: "Daha Fazla Bilgi",
     link: "/media-package",
     description: [
-      "Whether it's personalized patient flyers or roll-ups, this package provides everything you need to introduce your clients and team to the SDS world quickly and easily.",
+      "Kullanıcılar için resimler, videolar ve daha fazla bilgiye erişim sağlayabilirsiniz. İndirme yapabileceğiniz bir medya paketi mevcuttur. Bu paket, kişiselleştirilmiş hasta broşürleri veya roll-up'lar gibi, müşterilerinizi ve ekibinizi SDS dünyasıyla hızlı ve kolay bir şekilde tanıştırmak için ihtiyacınız olan her şeyi sunar.",
     ],
   },
   {
     id: "implant-design",
     icon: "/images/service/help.svg",
-    title: "Professional support",
-    button:"Find support",
+    title: "Profesyonel Destek",
+    button:"Destek Bul",
     link: "/professional-support",
     description: [
-      "We offer free services that go far beyond the normal customer service provided by your ceramic implant manufacturer",
+      "Seramik implant üreticinizin sunduğu normal müşteri hizmetlerinin çok ötesine geçen ücretsiz hizmetler sunuyoruz. Destek bulmak için sayfaya göz atabilirsiniz.",
     ],
   },
   {
     id: "concept",
     icon: "/images/service/bottomarow.svg",
-    title: "Notification form",
-    button: "Download",
+    title: "Bildirim Formu",
+    button: "İndir ",
     link: "/https://sds.directus.app/assets/66fceb1e-ea40-4b26-a805-5e226e0cb399",
     description: [
-      "In the event of a claim, please fill out the attached form",
+      "Bir talep durumunda, ekteki formu doldurabilirsiniz.",
     ],
   },
     {
     id: "concept",
     icon: "/images/service/bottomarow.svg",
     title: "Exchange form",
-    button: "Download",
+    button: "İndir",
     link: "/https://sds.directus.app/assets/37389f8d-a445-41e1-9ce5-8935b2798c45.pdfxw", 
     description: [
-      "Here you will find the form for an exchange request",
+      "Değişim talebi için formu burada bulabilirsiniz.",
     ],
   },
 ] as const;

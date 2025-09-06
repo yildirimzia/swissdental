@@ -29,18 +29,17 @@ function ServiceHero() {
           {/* Eyebrow */}
           <p className="text-mint font-[300] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            SERVICE
+            Hizmet
           </p>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[600] sm:font-[400] leading-[1.2] mb-6">
-            Equally <br /> perfectionist in <br /> service
+            Aynı derecede <br /> hizmet konusunda <br /> mükemmeliyetçi
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-            SDS is much more than just a product provider. As a partner, we're
-            always available to help, offering valuable expertise, hosting
-            training sessions, and actively supporting you in planning your
-            cases.
+            Bir iş ortağı olarak, değerli uzmanlık sunmak, eğitimler düzenlemek
+            ve vakalarınızı planlarken size aktif destek sağlamak için her zaman
+            yanınızdayız.
           </p>
 
           <Link href="/contact">
@@ -52,7 +51,7 @@ function ServiceHero() {
               icon={<ArrowRightIcon />}
               iconPosition="right"
             >
-              Contact Us
+              Bize Ulaşın
             </Button>
           </Link>
         </div>
