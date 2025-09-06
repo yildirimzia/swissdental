@@ -95,8 +95,7 @@ function ContactForm() {
                 Size geri dönüş yapmamızı ister misiniz?
               </p>
               <p className="text-secondary-600 font-gotham mb-8">
-                Yoksa bu sayfada sorunuza bir cevap bulamadınız mı? Bu formu kullanarak bizimle iletişime geçin veya bize bir telefon açın.
-              </p>
+Ya da bu sayfada sorunuzun cevabını bulamadınız mı? Bu formu kullanarak bize ulaşabilir veya bizi arayabilirsiniz.              </p>
               
               <div className="space-y-4 mb-8">
                 <div>
@@ -126,7 +125,7 @@ function ContactForm() {
                 {/* Kullanıcı Tipi */}
                 <div>
                   <label className="text-sm font-gotham font-[400] text-primary-500 mb-3 block">
-                    I am *
+                    Ben *
                   </label>
                   <div className="space-y-2">
                     <label className="flex items-center">

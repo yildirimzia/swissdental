@@ -27,26 +27,28 @@ function Hero() {
                         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 py-24 sm:py-28 md:py-36">
                             {/* Overline */}
                             <p className="mx-auto mb-8 text-center text-[11px] sm:text-xs tracking-[0.25em] text-primary-500 uppercase">
-                                Downloads
+                                İndirilebilir Dosyalar
+
                             </p>
                             {/* Headline */}
                             <h1 className="text-center font-extrabold leading-[0.95] text-primary-600">
                                 <span className="block text-[clamp(40px,8.5vw,120px)]">
-                                    INFO TO GO
+                                    HAZIR BİLGİLER
+
                                 </span>
                             </h1>
 
                             {/* Supporting copy */}
                             <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-600">
-                                All important documents, such as catalogs, drilling protocols and instructions can be found here.
+Kataloglar, delme protokolleri ve kullanım talimatları gibi tüm önemli belgelere buradan ulaşabilirsiniz1.
                             </p>
                             <Link href={'/video-library'} className="mx-auto font-[600] mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-500 flex justify-center items-center gap-2 underline cursor-pointer">
-                                Video library
+                                Video kütüphanesi
                                 <Image src={'/images/mdi_youtube.svg'} width={38} height={38} alt={''} />
                             </Link>
 
                             <h3 onClick={handleHeaderDownload}  className="mx-auto font-[600] max-w-3xl mt-0 text-center text-base leading-relaxed text-primary-500 flex justify-center items-center gap-2 underline cursor-pointer">
-                                Downloads for patients
+                                Hastalar için İndirilebilir Dosyalar
                             </h3>
                         </div>
                     </div>

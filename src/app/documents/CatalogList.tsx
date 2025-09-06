@@ -35,10 +35,10 @@ function CatalogList() {
     <div className="mx-auto flex justify-left flex-col items-center text-left">
         <p className="text-mint font-[300] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            For dentists
+            Diş hekimleri için
         </p>
         <h1 className="text-[26px] sm:text-[40px] font-[600] sm:font-[400] text-primary-600 leading-[1.2] mb-6 text-center">
-            Documents and downloads
+           Belgeler ve indirilebilir dosyalar 
         </h1>
     </div>
       {renderSectionsWithCustomComponent()}

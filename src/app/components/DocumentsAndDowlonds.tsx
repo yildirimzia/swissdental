@@ -146,76 +146,76 @@ const DocumentSection: React.FC<DocumentSectionProps> = ({
 export const sampleData: DocumentSectionData[] = [
   {
     id: 'catalogs',
-    title: 'Catalogs & flyers',
-    description: 'The SDS Swiss Dental Solutions ceramic implant product range is divided into several catalogs. The catalogs each contain a list of the product groups, their descriptions as well as technical schematic drawings and the exact dimensions of the product. The drilling protocols are also included in the catalog. The individual catalogs can be found further down this page.',
+    title: 'Kataloglar ve Broşürler',
+    description: 'SDS Swiss Dental Solutions seramik implant ürün yelpazesi birkaç kataloğa ayrılmıştır6. Katalogların her biri, ürün gruplarının bir listesini, açıklamalarını, teknik şematik çizimlerini ve ürünün tam boyutlarını içerir7. Delme protokolleri de kataloğa dahildir',
     image:"/images/documents/Bright_2022.png",
     items: [
       {
         id: 'bright-catalog',
-        title: 'BRIGHT product catalog',
+        title: 'BRIGHT ürün kataloğu',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5b953073-c3b1-4bf0-8999-ce96df4b3821/BRIGHT-Product-Catalog.pdf',
         target: '_blank'
       },
       {
         id: 'value-catalog',
-        title: 'VALUE product catalog',
+        title: 'VALUE ürün kataloğu ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/8074b5e5-be63-41f1-b2fb-4ea0b9407615/Information-about-Dental-Hygiene.pdf',
         target: '_blank'
       },
       {
         id: 'usage-sds12-22',
-        title: 'Usage instructions for SDS1.2 & SDS2.2 Implants and regions',
+        title: 'SDS1.2 & SDS2.2 İmplantları ve bölgelerine ait kullanım talimatları',
         icon: 'download',
         link: 'https://sds.directus.app/assets/41491b06-adea-44dd-8ea1-62b798c0b6e5/Ozone-Therapy.pdf',
         target: '_blank'
       },
       {
         id: 'usage-special-shape',
-        title: 'Usage instructions for special shape Implants and regions',
+        title: 'Özel şekilli İmplantlar ve bölgelerine ait kullanım talimatları ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/aa908197-a9fe-40ad-bc0f-7875a52a6791/Dental-Prothesis-with-SDS-Ceramic-Implants.pdf',
         target: '_blank'
       },
       {
         id: 'usage-sds21',
-        title: 'Usage instructions for SDS2.1 Implants and regions',
+        title: 'SDS2.1 İmplantları ve bölgelerine ait kullanım talimatları',
         icon: 'download',
         link: 'https://sds.directus.app/assets/3121d4a6-bb2b-48f0-b7d7-174df8917a46/Vitamin-D3&Micronutrients.pdf',
         target: '_blank'
       },
       {
         id: 'baseline-boost',
-        title: 'BASELINE & BOOST - Micro-nutrients',
+        title: 'BASELINE & BOOST - Mikro besinler ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/f2bc2450-43e4-4dbb-ab87-d23dc4e28da0',
         target: '_blank'
       },
       {
         id: 'bigs-supplement',
-        title: 'BIGS Multi-nutrient supplement',
+        title: 'BIGS Çoklu besin takviyesi',
         icon: 'download',
         link: 'https://sds.directus.app/assets/fa47d00f-5fe8-4113-b84b-67a6fe1067a7/BIG5-Multi-nutrient-supplement.pdf',
         target: '_blank'
       },
       {
         id: 'sds-education',
-        title: 'SDS EDUCATION continuing education Program',
+        title: 'SDS EĞİTİM programı ',
         icon: 'download',
         link: 'https://education.swissdentalsolutions.com/media/cd/c2/fe/1741878392/SDS_Continuing_Education_Program_2025_EN%201.pdf?1741878392',
         target: '_blank'
       },
       {
         id: 'prosthodontics-manual',
-        title: 'Prosthodontics manual',
+        title: 'Protetik kılavuz ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/3ac9daad-7c79-48c6-8426-0fb262abcb4f/Prosthodontics-Manual.pdf',
         target: '_blank'
       },
       {
         id: 'dental-ozone',
-        title: 'Dental ozone therapy for users',
+        title: 'Kullanıcılar için dental ozon tedavisi',
         icon: 'download',
         link: 'https://sds.directus.app/assets/774a9697-eedf-453a-b1c0-61b8924db0fd/Dental-Ozone-therapy-for-users.pdf',
         target: '_blank'
@@ -224,20 +224,20 @@ export const sampleData: DocumentSectionData[] = [
   },
   {
     id: 'concepts',
-    title: 'Concepts',
-    description: 'Our biological dentistry treatment form is based on the two following elementary concepts: THE SWISS BIOHEALTH CONCEPT and THE ALL IN ONE CONCEPT. The former describes the approach of looking at individuals as a whole — and thus also their health.',
+    title: 'Konseptler',
+    description: 'Biyolojik diş hekimliği tedavi yöntemimiz, iki temel konsepte dayanmaktadır: SWISS BIOHEALTH KONSEPTİ ve HEPSİ BİR ARADA KONSEPTİ19. İlki, bireye bir bütün olarak ve dolayısıyla sağlığına bütünsel bir bakış açısıyla yaklaşmayı açıklar',
     image:"/images/documents/Swiss-Biohealth-Concept.png",
     items: [
       {
         id: 'swiss-biohealth',
-        title: 'THE SWISS BIOHEALTH CONCEPT',
+        title: 'SWISS BIOHEALTH KONSEPTİ ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/cffa87e3-cf65-491b-a3af-495b434c618b/THE-SWISS-BIOHEALTH-CONCEPT.pdf',
         target: '_blank'
       },
       {
         id: 'medical-protocol',
-        title: 'Medical protocol',
+        title: 'Tıbbi protokol l',
         icon: 'download',
         link: 'https://sds.directus.app/assets/fb0e92a1-3a91-40c7-a670-168d30c22d56/Medical-Protocol.pdf',
         target: '_blank'
@@ -246,27 +246,27 @@ export const sampleData: DocumentSectionData[] = [
   },
   {
     id: 'drilling-protocols',
-    title: 'Drilling protocols',
-    description: 'The drilling protocols provide precise instructions for the drilling procedure and selection of the correct drills, designed for four different bone classes.',
+    title: 'Delme Protokolleri',
+    description: 'Delme protokolleri, dört farklı kemik sınıfı için tasarlanmış delme prosedürü ve doğru delgilerin seçimi konusunda kesin talimatlar sunar',
     image:"/images/documents/Bohrprotokoll.png",
     items: [
       {
         id: 'drilling-sds12-22',
-        title: 'Drilling Protocol SDS1.2 & SDS2.2',
+        title: 'SDS1.2 & SDS2.2 için Delme Protokolü',
         icon: 'download',
         link: 'https://sds.directus.app/assets/2ff2b441-93d5-4547-a5d0-5a5f5c651329/Drilling-Protocol-SDS1.2&SDS2.2.pdf',
         target: '_blank'
       },
       {
         id: 'drilling-cycle',
-        title: 'Drilling cycle protocol',
+        title: 'Delme döngüsü protokolü',
         icon: 'download',
         link: 'https://sds.directus.app/assets/01a46c73-f880-4463-a99e-0422b52d676e/Drilling-cycle-protocol.pdf',
         target: '_blank'
       },
       {
         id: 'op-case-equipping',
-        title: 'OP case equipping',
+        title: 'OP vaka ekipmanı ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/e611d15b-9ca8-4c8d-ab73-567a0b13dec2/OP-Case-Equipping.pdf',
         target: '_blank'
@@ -275,88 +275,88 @@ export const sampleData: DocumentSectionData[] = [
   },
   {
     id: 'study-month',
-    title: 'Study of the month',
-    description: 'Here you can find our latest studies',
+    title: 'Ayın Çalışması',
+    description: 'En son çalışmalarımızı burada bulabilirsiniz',
     image:"/images/documents/Studien.png",
     items: [
       {
         id: 'may-2024',
-        title: 'May 2024 - Sofortbelastete Keramikimplantate: Eine kurz- und langfristige Nachuntersuchung',
+        title: 'ofortbelastete Keramikimplantate: Eine kurz- und langfristige Nachuntersuchung (Hemen Yüklenen Seramik İmplantlar: Kısa ve Uzun Vadeli Takip) ',
         icon: 'check'
       },
       {
         id: 'april-2024',
-        title: 'April 2024 - Interaction of Telomere Length and Inflammatory Biomarkers',
+        title: 'Nisan 2024 - Interaction of Telomere Length and Inflammatory Biomarkers (Telomer Uzunluğu ve Enflamatuar Biyobelirteçlerin Etkileşimi) ',
         icon: 'check'
       },
       {
         id: 'march-2024',
-        title: 'March 2024 - Interaction of Telomere Length and Inflammatory Biomarkers',
+        title: 'Mart 2024 - Interaction of Telomere Length and Inflammatory Biomarkers (Telomer Uzunluğu ve Enflamatuar Biyobelirteçlerin Etkileşimi) ',
         icon: 'check'
       },
       {
         id: 'january-2024',
-        title: 'January 2024 - Overheating due to friction',
+        title: 'Ocak 2024 - Overheating due to friction (Sürtünme nedeniyle aşırı ısınma) ',
         icon: 'check'
       },
       {
         id: 'may-2023-01',
-        title: 'May 2023 - Low temperature degradation of zirconia_01',
+        title: 'Mayıs 2023 -  Low temperature degradation of zirconia_01 (Zirkonyanın düşük sıcaklıkta bozulması)',
         icon: 'check'
       },
       {
         id: 'may-2023-02',
-        title: 'May 2023 - Low temperature degradation of zirconia_02',
+        title: 'Mayıs 2023 -  Low temperature degradation of zirconia_02 (Zirkonyanın düşük sıcaklıkta bozulması)',
         icon: 'check'
       },
       {
         id: 'may-2023-03',
-        title: 'May 2023 - Low temperature degradation of zirconia_03',
+        title: 'Mayıs 2023 - Low temperature degradation of zirconia_03 (Zirkonyanın düşük sıcaklıkta bozulması)',
         icon: 'check'
       },
       {
         id: 'may-2023-04',
-        title: 'May 2023 - Low temperature degradation of zirconia_04',
+        title: 'Mayıs 2023 - Low temperature degradation of zirconia_04 (Zirkonyanın düşük sıcaklıkta bozulması)',
         icon: 'check'
       },
       {
         id: 'february-2023-01',
-        title: 'February 2023 - FDOJ_01',
+        title: 'Şubat 2023 - FDOJ_01 (Çene Kemiğindeki Odaksal Enflamasyon Noktaları)',
         icon: 'check'
       },
             {
         id: 'february-2023-02',
-        title: 'February 2023 - FDOJ_02',
+        title: 'Şubat 2023 - FDOJ_02 (Çene Kemiğindeki Odaksal Enflamasyon Noktaları)',
         icon: 'check'
       },
       {
         id: 'february-2023-03',
-        title: 'February 2023 - FDOJ_03',
+        title: 'Şubat 2023 - FDOJ_03 (Çene Kemiğindeki Odaksal Enflamasyon Noktaları)',
         icon: 'check'
       },
       {
         id: 'january-2023-01',
-        title: 'January 2023 - BISS - Bone Stabilization System Ghanaati 2022',
+        title: 'Ocak 2023 - BISS - Bone Stabilization System Ghanaati 2022 (Kemik Stabilizasyon Sistemi Ghanaati)',
         icon: 'check'
       },
       {
         id: 'january-2023-02',
-        title: 'January 2023 - BISS - Bone Stabilization System Ghanaati 2020',
+        title: 'Ocak 2023 - BISS - Bone Stabilization System Ghanaati 2020 (Kemik Stabilizasyon Sistemi Ghanaati) ',
         icon: 'check'
       },
       {
         id: 'november-2023-01',
-        title: 'November 2022 - Metronomic Breathing',
+        title: 'Kasım 2022 - Metronomic Breathing (Metronomik Nefes) ',
         icon: 'check'
       },
       {
         id: 'november-2023-02',
-        title: 'November 2022 - VNS and Immune System',
+        title: 'Kasım 2022 - VNS and Immune System (VNS ve Bağışıklık Sistemi) 3',
         icon: 'check'
       },
       {
         id: 'october-2023-03',
-        title: 'October 2022 - Success and patient satisfaction',
+        title: 'Ekim 2022 - Success and patient satisfaction (Başarı ve hasta memnuniyeti)',
         icon: 'check'
       }
 
@@ -364,29 +364,29 @@ export const sampleData: DocumentSectionData[] = [
   },
   {
     id: 'additional-downloads',
-    title: 'Additional downloads',
-    description: 'Further links for you',
+    title: 'Ek İndirilebilir Dosyalar',
+    description: 'Sizin için diğer bağlantılar ',
     image:"/images/documents/SDS1 2.png",
     width:323,
     height:531,
     items: [
       {
         id: 'scientific-status',
-        title: 'Current scientific status',
+        title: 'Güncel bilimsel durum',
         icon: 'download',
         link: 'https://sds.directus.app/assets/6a691c7e-e7cc-4c0e-bc2e-20bffbc92745/Current-scientific-status.pdf',
         target: '_blank'
       },
       {
         id: 'complaint-form',
-        title: 'Complaint Form',
+        title: 'Şikayet Formu',
         icon: 'download',
         link: 'https://sds.directus.app/assets/66fceb1e-ea40-4b26-a805-5e226e0cb399',
         target: '_blank'
       },
       {
         id: 'cadcam-integration',
-        title: 'CADCAM Integration',
+        title: 'CADCAM Entegrasyonu ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
@@ -395,76 +395,76 @@ export const sampleData: DocumentSectionData[] = [
   },
   {
     id: 'patient-downloads',
-    title: 'Downloads for patients',
-    description: 'For patients information about NICO, root canal-treated teeth and vitamin D3 among others go to our patient downloads.',
+    title: 'Hastalar için İndirilebilir Dosyalar',
+    description: 'Hastalar için NICO, kanal tedavisi görmüş dişler ve D3 vitamini gibi konularda bilgi edinmek için hasta indirilebilir dosyalarımıza bakabilirsiniz',
     image:"/images/documents/SBC-Aktuelle-Ansicht.png",
     items: [
       {
         id: 'fdojs',
-        title: 'FDOJs - Focal Points of Inflammation in the Jawbone',
+        title: 'FDOJs - Çene Kemiğindeki Odaksal Enflamasyon Noktaları',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'dental-hygiene',
-        title: 'Information about dental hygiene',
+        title: 'Diş hijyeni hakkında bilgiler',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'ozone-therapy',
-        title: 'Ozone therapy',
+        title: 'Ozon tedavisi',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'dental-prothesis',
-        title: 'Dental Prothesis with SDS Ceramic Implants',
+        title: 'SDS Seramik İmplantlarla Diş Protezi',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'vitamin-d3',
-        title: 'Vitamin D3 & Micronutrients',
+        title: 'D3 Vitamini ve Mikro besinler ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'baseline-boost-patient',
-        title: 'Baseline & Boost',
+        title: 'Baseline & Boost ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'root-canal',
-        title: 'Root Canal Treated Teeth',
+        title: 'Kanal Tedavisi Görmüş Dişler',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'meridian-system',
-        title: 'Meridian system for self-analysis',
+        title: 'Kişisel analiz için meridyen sistemi',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'swiss-biohealth-patient',
-        title: 'THE SWISS BIOHEALTH CONCEPT',
+        title: 'SWISS BIOHEALTH KONSEPTİ',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
       },
       {
         id: 'safety-summary',
-        title: 'Summary of safety and clinical performance (SSCP)',
+        title: 'Güvenlik ve klinik performans özeti (SSCP)',
         icon: 'download',
         link: 'https://sds.directus.app/assets/5099cfa8-a40f-48fd-821e-cf2021014790/CADCAM%20Integration%20SDS.pdf',
         target: '_blank'
