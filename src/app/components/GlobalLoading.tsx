@@ -46,7 +46,7 @@ const GlobalLoading = () => {
     // Çeviriler yüklenmişse çeviri kullan
     return isLanguageLoading 
       ? tCommon("changeLanguage.language_one") 
-      : tCommon("changeLanguage.loading");
+      : 'Yükleniyor...'
   };
 
   if (!showLoading) return null;

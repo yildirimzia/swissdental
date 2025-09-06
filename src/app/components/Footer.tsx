@@ -3,61 +3,45 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useFooterTranslation } from '@/hooks/useTranslation';
 
 const Footer: React.FC = () => {
-  // Translation hook - footer namespace kullanıyoruz
-  const { t } = useFooterTranslation();
 
-
-
-  // Navigation sections - çevirilerden al
-  const getNavSections = () => {
-    const sections = [];
-    
-    // PRODUCTS section
-    sections.push({
-      title: t('navigation.products.title'),
+  // Navigation sections - statik Türkçe veriler
+  const navSections = [
+    {
+      title: "ÜRÜNLER",
       links: [
-        { href: '/benefits-for-patients', label: t('navigation.products.links.benefits_patients') },
-        { href: '/benefits-for-dentists', label: t('navigation.products.links.benefits_dentists') },
-        { href: '/product-lines', label: t('navigation.products.links.product_lines') },
-        { href: '/benefits-for-dentists/tissue-level', label: t('navigation.products.links.science') },
-        { href: '/top-user', label: t('navigation.products.links.top_user') },
-        { href: '/sscp', label: t('navigation.products.links.sscp') },
+        { href: '/benefits-for-patients', label: "Hastalar için Avantajlar" },
+        { href: '/benefits-for-dentists', label: "Diş Hekimleri için Avantajlar" },
+        { href: '/product-lines', label: "Ürün Serileri" },
+        { href: '/benefits-for-dentists/tissue-level', label: "Bilim" },
+        { href: '/top-user', label: "En İyi Kullanıcı" },
+        { href: '/sscp', label: "SSCP" },
       ]
-    });
-
-    // SERVICE section
-    sections.push({
-      title: t('navigation.service.title'),
+    },
+    {
+      title: "SERVİS",
       links: [
-        { href: '/service-support', label: t('navigation.service.links.service_support') },
-        { href: '/documents', label: t('navigation.service.links.documents') },
-        { href: '/sds-podcast', label: t('navigation.service.links.podcast') },
-        { href: '/contact', label: t('navigation.service.links.contact') },
+        { href: '/service-support', label: "Servis ve Destek" },
+        { href: '/documents', label: "Dökümanlar" },
+        { href: '/sds-podcast', label: "Podcast" },
+        { href: '/contact', label: "İletişim" },
       ]
-    });
-
-    // ABOUT SDS section
-    sections.push({
-      title: t('navigation.about.title'),
+    },
+    {
+      title: "SDS HAKKINDA",
       links: [
-        { href: '/company', label: t('navigation.about.links.company') },
-        { href: '/career', label: t('navigation.about.links.career') },
-        { href: '/history', label: t('navigation.about.links.history') },
+        { href: '/company', label: "Şirket" },
+        { href: '/career', label: "Kariyer" },
+        { href: '/history', label: "Tarihçe" },
       ]
-    });
-
-    return sections;
-  };
-
-  const navSections = getNavSections();
+    }
+  ];
 
   const footerLinks = [
-    { href: '/imprint', label: t('footer_links.imprint') },
-    { href: '/data-policy', label: t('footer_links.data_policy') },
-    { href: '/gtc', label: t('footer_links.terms_conditions') },
+    { href: '/imprint', label: "Künye" },
+    { href: '/data-policy', label: "Veri Politikası" },
+    { href: '/gtc', label: "Genel Şartlar ve Koşullar" },
   ];
   
   const socialIcons = [
@@ -97,7 +81,7 @@ const Footer: React.FC = () => {
                 <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
                 <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
               </svg>
-              {t('header_buttons.education')}
+              Eğitim
             </Link>
             <Link 
               href="/clinic" 
@@ -110,7 +94,7 @@ const Footer: React.FC = () => {
                 <path d="M10 9l4 0"></path>
                 <path d="M12 7l0 4"></path>
               </svg>
-              {t('header_buttons.clinic')}
+              Swiss Biohealth Kliniği
             </Link>
           </div>
         </div>

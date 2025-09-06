@@ -256,37 +256,37 @@ const Header: React.FC = () => {
                 href="benefits-for-patients"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("products.benefits_patients")}
+                Hastalar için faydalar
               </Link>
               <Link
                 href="/benefits-for-dentists"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("products.benefits_dentists")}
+                Diş hekimleri için faydalar
               </Link>
               <Link
                 href="/product-lines"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("products.product_lines")}
+                Ürün grupları
               </Link>
               <Link
                 href="/benefits-for-dentists/tissue-level"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("products.science")}
+                Bilim
               </Link>
               <Link
                 href="#"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("products.user")}
+                Kullanıcı
               </Link>
               <Link
                 href="/sscp"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("products.sscp")}
+                SSCP
               </Link>
             </div>
           </div>
@@ -299,25 +299,25 @@ const Header: React.FC = () => {
                 href="/service"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("service.technical_support")}
+                Servis ve destek
               </Link>
               <Link
                 href="/documents"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("service.customer_service")}
+                Müşteri Hizmetleri
               </Link>
               <Link
                 href="/sds-podcast"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("service.sds_podcast")}
+                SDS podcast
               </Link>
               <Link
                 href="/contact"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("service.contact")}
+                İletişim
               </Link>
             </div>
           </div>
@@ -330,19 +330,19 @@ const Header: React.FC = () => {
                 href="/company"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("about.company")}
+                Şirket
               </Link>
               <Link
                 href="/career"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("about.career")}
+                Kariyer
               </Link>
               <Link
                 href="/history"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                {tNav("about.history")}
+               Tarih
               </Link>
             </div>
           </div>
@@ -365,42 +365,42 @@ const Header: React.FC = () => {
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("products.benefits_patients")}
+             Hastalar için faydalar
             </Link>
             <Link
               href="/benefits-for-dentists"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("products.benefits_dentists")}
+              Diş hekimleri için faydalar
             </Link>
             <Link
               href="/product-lines"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("products.product_lines")}
+              Ürün grupları
             </Link>
             <Link
               href="#"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("products.science")}
+              Bilim
             </Link>
             <Link
               href="#"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("products.top_user")}
+             Kullanıcı
             </Link>
             <Link
               href="#"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("products.sscp")}
+              SSCP
             </Link>
           </div>
         );
@@ -412,28 +412,28 @@ const Header: React.FC = () => {
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("service.technical_support")}
+             Servis ve destek
             </Link>
             <Link
               href="/documents"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("service.customer_service")}
+              Müşteri Hizmetleri
             </Link>
             <Link
               href="/sds-podcast"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("service.sds_podcast")}
+              Dokümantasyon
             </Link>
             <Link
               href="/contact"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("service.contact")}
+              İletişim
             </Link>
           </div>
         );
@@ -445,21 +445,21 @@ const Header: React.FC = () => {
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("about.company")}
+              Şirket
             </Link>
             <Link
               href="/career"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("about.career")}
+              Kariyer
             </Link>
             <Link
               href="/history"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              {tNav("about.history")}
+             Tarih
             </Link>
           </div>
         );
@@ -563,7 +563,7 @@ const Header: React.FC = () => {
                           : "text-primary-600 hover:text-primary-600"
                       }`}
                     >
-                      <span className="mr-[5px]">{tNav("main.products")}</span>
+                      <span className="mr-[5px]">Ürünler</span>
                       <ChevronDownIcon />
                     </button>
                   </div>
@@ -578,7 +578,7 @@ const Header: React.FC = () => {
                           : "text-primary-600 hover:text-primary-500"
                       }`}
                     >
-                      <span className="mr-[5px]">{tNav("main.service")}</span>
+                      <span className="mr-[5px]">Hizmet</span>
                       <ChevronDownIcon />
                     </button>
                   </div>
@@ -593,7 +593,7 @@ const Header: React.FC = () => {
                           : "text-primary-600 hover:text-primary-600"
                       }`}
                     >
-                      <span className="mr-[5px]">{tNav("main.about")}</span>
+                      <span className="mr-[5px]">SDS Hakkında</span>
                       <ChevronDownIcon />
                     </button>
                   </div>
@@ -677,7 +677,7 @@ const Header: React.FC = () => {
               <button
                 onClick={toggleMobileMenu}
                 className="p-2 text-primary-600 hover:text-primary-500 transition-colors mobile-menu-container"
-                aria-label={tCommon("buttons.menu")}
+                aria-label={'Menü'}
               >
                 {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
               </button>
@@ -706,7 +706,7 @@ const Header: React.FC = () => {
                       onClick={() => toggleMobileSubmenu("products")}
                       className="flex text-[32px] font-[300] items-center justify-between w-full text-left text-primary-600 hover:text-primary-500 transition-colors text-lg"
                     >
-                      <span>{tNav("main.products")}</span>
+                      <span>Ürünler</span>
                       <ChevronLeftIcon />
                     </button>
                   </div>
@@ -717,7 +717,7 @@ const Header: React.FC = () => {
                       onClick={() => toggleMobileSubmenu("service")}
                       className="flex text-[32px] font-[300] items-center justify-between w-full text-left text-primary-600 hover:text-primary-500 transition-colors text-lg"
                     >
-                      <span>{tNav("main.service")}</span>
+                      <span>Hizmet</span>
                       <ChevronLeftIcon />
                     </button>
                   </div>
@@ -728,7 +728,7 @@ const Header: React.FC = () => {
                       onClick={() => toggleMobileSubmenu("about")}
                       className="flex text-[32px] font-[300] items-center justify-between w-full text-left text-primary-600 hover:text-primary-500 transition-colors text-lg"
                     >
-                      <span>{tNav("main.about")}</span>
+                      <span>SDS Hakkında</span>
                       <ChevronLeftIcon />
                     </button>
                   </div>
@@ -800,7 +800,7 @@ const Header: React.FC = () => {
                     >
                       <BackIcon />
                       <span className="text-lg font-medium">
-                        {tCommon("buttons.back")}
+                        Geri
                       </span>
                     </button>
                   </div>

@@ -154,7 +154,7 @@ const HeroSection: React.FC = () => {
               <h1 className="lg:text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),40px)] text-[clamp(26px,calc(-49.8461538462px+0.0865384615*100vw),26px)]  leading-[1.125] tracking-[-0.03em] text-primary-600 font-medium">
                 
               <strong className='font-bold text-[26px] lg:text-[40px] text-primary-600'>
-                Hizmet –
+                Hizmet – <br />
               </strong>
                 Ürünlerimiz kadar özel
               </h1>
