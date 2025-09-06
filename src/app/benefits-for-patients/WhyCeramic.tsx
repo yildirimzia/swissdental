@@ -91,7 +91,7 @@ export default function WhyCeramic() {
                 </p>
 
                 {/* CTA */}
-                <Link href={it.href} className="mt-6">
+                <Link href={it.href} target="_blank" className="mt-6">
                   <Button
                     variant="customOutline"
                     size="custom16"

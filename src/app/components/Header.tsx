@@ -278,7 +278,7 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 href="#"
-                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+                className="hidden block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                 Kullanıcı
               </Link>
@@ -390,7 +390,7 @@ const Header: React.FC = () => {
             </Link>
             <Link
               href="#"
-              className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
+              className="hidden block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
              Kullanıcı
