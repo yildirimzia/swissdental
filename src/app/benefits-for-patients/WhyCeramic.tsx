@@ -28,26 +28,26 @@ export default function WhyCeramic() {
   const items = [
     {
       icon: "/images/benefits-for-patients/Heart.svg",
-      title: "Biocompatible",
-      desc: "SDS implants are very easily tolerated and integrate securely into the bone.",
+      title: "Biyouyumlu",
+      desc: "SDS implantları çok kolay tolere edilir ve kemiğe güvenli bir şekilde entegre olur.",
       href: "https://pubmed.ncbi.nlm.nih.gov/37436947/",
     },
     {
       icon: "/images/benefits-for-patients/Weight.svg",
-      title: "Durable and robust",
-      desc: "Ceramic implants now surpass titanium implants in terms of stability and longevity.",
+      title: "Dayanıklı ve sağlam",
+      desc: "Seramik implantlar artık stabilite ve uzun ömürlülük açısından titanyum implantları geride bırakmıştır.",
       href: "https://www.dginet.de/wp-content/uploads/sites/4/2024/02/20240130_LL_083-039_S3_Keramikimplantate_lang_2022_meta.pdf",
     },
     {
       icon: "/images/benefits-for-patients/Zahn.svg",
-      title: "Aesthetic",
-      desc: "Our implants are naturally white. The aesthetic solution for a beautiful smile.",
+      title: "Estetik",
+      desc: "İmplantlarımız doğal olarak beyazdır. Güzel bir gülümseme için estetik çözüm sunar.",
       href: "https://pubmed.ncbi.nlm.nih.gov/35606734/",
     },
     {
       icon: "/images/benefits-for-patients/Rocket.svg",
-      title: "Minimal radiation",
-      desc: "Careful selection of raw materials ensures minimal radiation compared to titanium.",
+      title: "Minimal radyasyon",
+      desc: "Hammaddelerin özenle seçilmesi sayesinde, titanyuma kıyasla minimal radyasyon sağlar.",
       href: "https://www.dinmedia.de/de/norm/din-en-iso-13356/232848189",
     },
   ];
@@ -58,7 +58,7 @@ export default function WhyCeramic() {
         <div className="container-dental max-w-[1320px] mx-auto">
           {/* Eyebrow */}
           <p className="text-center text-mint tracking-[.2em] text-[12px] sm:text-[16px] font-[700] uppercase mb-12 leading-[.05em]">
-            Why ceramic?
+            NEDEN SERAMİK?
           </p>
 
           {/* Grid */}
@@ -100,7 +100,7 @@ export default function WhyCeramic() {
                     icon={<ExternalLinkIcon />}
                     iconPosition="right"
                   >
-                    See study
+                     Görüntüle
                   </Button>
                 </Link>
               </article>

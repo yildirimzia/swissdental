@@ -24,18 +24,18 @@ export default function BenefitsBlock() {
           {/* Eyebrow */}
           <p className="text-mint font-[300] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            Benefits
+            FAYDALAR
           </p>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[500] sm:font-[400] leading-[1.2] mb-6">
-            Ceramic implants <br /> as biological tooth <br /> replacements
+            Biyolojik diş yerine  <br /> geçen seramik implantlar
+
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-            Titanium alternatives made from zirconia are considered highly
-            compatible and hygienic. The implants enable optimal gum adhesion,
-            minimising tissue stress and making it ideal for allergies or
-            intolerances.
+            Zirkonyadan yapılmış titanyum alternatifleri yüksek derecede uyumlu ve hijyenik kabul edilmektedir.
+Bu implantlar, optimal diş eti yapışmasını sağlar, doku stresini en aza indirir ve alerji veya intoleranslar için ideal hale getirir.
+
           </p>
 
           <Link href="#">
@@ -47,7 +47,7 @@ export default function BenefitsBlock() {
               iconPosition="right"
               onClick={handleHeaderDownload}
             >
-              View all benefitss
+              Tüm faydaları görüntüle
             </Button>
           </Link>
         </div>

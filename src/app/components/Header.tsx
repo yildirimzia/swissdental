@@ -340,7 +340,7 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 href="/career"
-                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+                className="hidden py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                 Kariyer
               </Link>
@@ -455,7 +455,7 @@ const Header: React.FC = () => {
             </Link>
             <Link
               href="/career"
-              className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
+              className="hidden py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
               Kariyer
