@@ -125,7 +125,7 @@ const HeroSection: React.FC = () => {
               <div className="mb-3.5">
                 <Image
                   src="/images/SDSEducationLogo.png"
-                  alt={t("education.logo_alt")}
+                  alt='SDS Eğitim'
                   width={422}
                   height={32}
                   className="object-cover "
@@ -168,7 +168,7 @@ const HeroSection: React.FC = () => {
             <div className="relative">
               <Image
                 src="/images/SDSEducation.jpg"
-                alt={t("education.logo_alt")}
+                alt='SDS Eğitim'
                 width={830}
                 height={996}
                 className="object-cover lg:w-[830px] lg:h-[996px] w-[430px] h-[546px]"

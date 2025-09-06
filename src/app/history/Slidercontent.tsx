@@ -3,7 +3,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { useHomeTranslation } from '@/hooks/useTranslation';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -14,9 +13,6 @@ const CeramicTimeline = () => {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
-
-  // Translation hook
-  const { t, isLoaded } = useHomeTranslation();
 
   // Navigation fonksiyonları
   const handlePrevClick = () => {
@@ -72,41 +68,89 @@ const CeramicTimeline = () => {
     description: string;
   }
 
-  // Timeline data tipini tanımla
-  interface TimelineEvent {
-    year: string;
-    title: string;
-    description: string;
-  }
-
-  // Timeline data'yı çevirilerden al - her event'i ayrı ayrı çek
-  const getTimelineData = (): TimelineEvent[] => {
-    const events: TimelineEvent[] = [];
-    
-    // JSON dosyanızda 16 event var, onları tek tek çekelim
-    for (let i = 0; i < 16; i++) {
-      try {
-        const year = t(`timeline.events.${i}.year`);
-        const title = t(`timeline.events.${i}.title`);
-        const description = t(`timeline.events.${i}.description`);
-        
-        // Eğer çeviri bulunamadıysa (key'in kendisi dönerse) dur
-        if (year === `timeline.events.${i}.year` || !year) {
-          break;
-        }
-        
-        events.push({ year, title, description });
-      } catch (error) {
-        console.log(`Event ${i} could not be loaded`);
-        break;
-      }
+  // Statik timeline data - doğrudan Türkçe
+  const timelineData: TimelineEvent[] = [
+    {
+      year: "2004",
+      title: "Seramik implant için ilk CE sertifikasyonu",
+      description: "Devrimci seramik malzemeler tıbbi implantlar için düzenleyici onay alır"
+    },
+    {
+      year: "2004-2012", 
+      title: "İlk iki parçalı vidalı seramik implant SDS2.0'ın geliştirilmesi",
+      description: "İleri mühendislik modüler seramik implant sistemleri yaratır"
+    },
+    {
+      year: "2006",
+      title: "Polilaktid kaynak altında ultrason ile ilk implantların yerleştirilmesi",
+      description: "Yenilikçi cerrahi teknikler implant entegrasyonunu geliştirir"
+    },
+    {
+      year: "2007",
+      title: "Swiss Oral Implants (SOI) kuruluşu",
+      description: "Önder seramik implant üreticisinin kurulması"
+    },
+    {
+      year: "2009",
+      title: "PURE Seramik İmplant Sisteminin piyasaya sürülmesi",
+      description: "Ticari olarak mevcut ilk tek parça seramik implant sistemi"
+    },
+    {
+      year: "2011", 
+      title: "Doku seviyesinde seramik implantların tanıtımı",
+      description: "Yumuşak doku entegrasyonu için tasarlanmış implantların geliştirilmesi"
+    },
+    {
+      year: "2013",
+      title: "Seramik dental implantlar için FDA onayı",
+      description: "ABD düzenleyici onayı Amerikan pazarını açar"
+    },
+    {
+      year: "2014",
+      title: "Dr. Karl Ulrich Volz tarafından SCC Kısa Yol Konseptinin geliştirilmesi",
+      description: "Yenilikçi tedavi protokolü iyileşme süresini kısaltır ve hasta deneyimini geliştirir"
+    },
+    {
+      year: "2015",
+      title: "Dr. Volz Biyolojik Diş Hekimliği konseptinin oluşturulması",
+      description: "Biyouyumluluğu ve doğal iyileşmeyi vurgulayan diş bakımına bütüncül yaklaşım"
+    },
+    {
+      year: "2015",
+      title: "İleri yüzey işlem teknolojileri", 
+      description: "Geliştirilmiş yüzey modifikasyonları osseointegrasyonu iyileştirir"
+    },
+    {
+      year: "2016",
+      title: "SWISS BIOHEALTH KLİNİĞİ'nin kurulması ve ALL IN ONE konseptinin geliştirilmesi",
+      description: "Seramik implant tedavisi ve hasta bakımına kapsamlı yaklaşım"
+    },
+    {
+      year: "2017",
+      title: "SDS SWISS DENTAL SOLUTIONS AG EĞİTİM MERKEZİ'nin kurulması",
+      description: "Seramik implant prosedürleri için eğitim girişimleri ve eğitim programları"
+    },
+    {
+      year: "2019",
+      title: "Anında yükleme protokolleri kuruldu",
+      description: "Klinik protokoller aynı gün implant yerleştirilmesi ve yüklenmesini sağlar"
+    },
+    {
+      year: "2021",
+      title: "Yapay zekâ destekli implant tasarımı",
+      description: "Yapay zeka implant geometrisi ve yerleşimini optimize eder"
+    },
+    {
+      year: "2022",
+      title: "Biyoaktif seramik kaplamalar", 
+      description: "Yeni kaplama teknolojileri iyileşme ve entegrasyonu hızlandırır"
+    },
+    {
+      year: "2024",
+      title: "Akıllı implant izleme sistemleri",
+      description: "IoT entegrasyonu implant sağlığının gerçek zamanlı izlenmesine olanak tanır"
     }
-    
-    console.log(`Loaded ${events.length} timeline events from translations`);
-    return events;
-  };
-
-  const timelineData = getTimelineData();
+  ];
 
   return (
     <div className="bg-[#f6f6f6] pb-[100px] min-h-screen relative w-full overflow-hidden">
@@ -115,7 +159,7 @@ const CeramicTimeline = () => {
         {/* Header - başlık merkezde kalabilir */}
         <div className="text-center mt-[200px] lg:mt-[100px] lg:mb-24 px-4 md:px-8">
           <h2 className="text-teal-600 text-sm font-medium tracking-widest uppercase mb-4">
-            {t('timeline.category')}
+            TARİHÇE
           </h2>
         </div>
 

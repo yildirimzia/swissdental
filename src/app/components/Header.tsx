@@ -550,7 +550,7 @@ const Header: React.FC = () => {
           {/* Desktop Navigation Section - Right Half (Fixed) */}
           <div className="duration-30 hidden lg:flex items-center fixed top-0 right-0 bg-white h-31 w-[57.5%] 2xl:w-[55.5%]">
             <div className="container-dental w-full">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-6">
                 {/* Navigation Menu */}
                 <div className="flex items-center space-x-8">
                   {/* Products */}
@@ -599,29 +599,6 @@ const Header: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-8">
-                  <Link
-                    href="https://portal.swissdentalsolutions.com/en/"
-                    className="flex text-[16px] items-center gap-2 px-[20px] py-[13px] border bg-[#f9f9f9] border-[#e0e0e0] text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="d-inline-block me-1 me-lg-0 me-xxl-1 mt-n1-4"
-                    >
-                      <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                      <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                      <path d="M17 17h-11v-14h-2"></path>
-                      <path d="M6 5l14 1l-1 7h-13"></path>
-                    </svg>
-                    Shop for dentists
-                  </Link>
                   <Link
                     href="https://education.swissdentalsolutions.com/"
                     className="flex items-center gap-2 px-[20px] py-[13px] border bg-[#f9f9f9] border-[#e0e0e0] text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300  w-[152px]"

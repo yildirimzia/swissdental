@@ -40,7 +40,7 @@ const GlobalLoading = () => {
   const getLoadingText = () => {
     if (!isLoaded) {
       // Çeviriler yüklenmemişse fallback text
-      return isLanguageLoading ? "Changing Language..." : "Loading...";
+      return isLanguageLoading ? "Changing Language..." : "Yükleniyor...";
     }
     
     // Çeviriler yüklenmişse çeviri kullan
