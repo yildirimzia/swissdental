@@ -33,20 +33,19 @@ export default function TeamBehind() {
           {/* Eyebrow */}
           <p className="text-mint font-[400] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            THE TEAM BEHIND SDS
+            SDS'NİN ARKASINDAKİ EKİP
           </p>
 
           <h1 className="text-primary-600 text-[26px] sm:text-[40px] font-[500] sm:font-[700] leading-[1.2] mb-6">
-            Our motivation
+            Motivasyonumuz
           </h1>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[500] sm:font-[400] leading-[1.2] mb-6">
-            is to deliver the best product to you.
+           size en iyi ürünü sunmaktır
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-            The continuous feedback from our patients is a cornerstone in the evolution of SDS ceramic implants at Swiss Dental Solutions. Each member of our now over 180-strong team contributes their unique skills to ensure that our implants meet the highest standards and meet the needs of our patients. The positive feedback from our users and patients is our daily driving force.
-          </p>
+Hastalarımızdan gelen sürekli geri bildirimler, Swiss Dental Solutions'taki SDS seramik implantlarının gelişiminin temel taşlarından biridir6. Şu anda 180'den fazla kişiden oluşan ekibimizin her bir üyesi, implantlarımızın en yüksek standartları karşılamasını ve hastalarımızın ihtiyaçlarını gidermesini sağlamak için benzersiz becerileriyle katkıda bulunur7. Kullanıcılarımızdan ve hastalarımızdan gelen olumlu geri bildirimler, günlük itici gücümüzdür.          </p>
 
 
           <Link href="https://www.swiss-biohealth.com/en" className="">
@@ -58,7 +57,7 @@ export default function TeamBehind() {
               icon={<ArrowRightIcon />}
               iconPosition="right"
             >
-              Jobs at SDS
+              SDS'deki işler
             </Button>
           </Link>
         </div>

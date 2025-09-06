@@ -29,21 +29,16 @@ function ServiceHero() {
           {/* Eyebrow */}
           <p className="text-mint font-[300] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            COMPANY
+            ŞİRKET
           </p>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[600] sm:font-[400] leading-[1.2] mb-6">
-            World leader in <br /> ceramic implants
+            Seramik implantlarda  <br /> dünya lideri
+
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-            Our SDS team has over 20 years of experience as pioneers in ceramic
-            implant development. The successful use of thousands of implants in
-            our Swiss Biohealth Clinic allows us to gather comprehensive
-            expertise. This experience not only directly contributes to optimal
-            patient care but also drives the continuous advancement of our
-            products. Our commitment to innovation and highest quality shapes
-            the success of our work in ceramic implantology.
+            SDS ekibimiz, seramik implant geliştirme alanında 20 yılı aşkın öncü deneyime sahiptir1. İsviçre'deki Biohealth Kliniğimizde binlerce implantın başarılı bir şekilde kullanılması, kapsamlı uzmanlık kazanmamızı sağlamıştır2. Bu deneyim, sadece optimal hasta bakımına doğrudan katkıda bulunmakla kalmaz, aynı zamanda ürünlerimizin sürekli gelişimini de destekler3. İnovasyona ve en yüksek kaliteye olan bağlılığımız, seramik implantoloji alanındaki çalışmalarımızın başarısını şekillendirir.
           </p>
 
           <Link href="/history">

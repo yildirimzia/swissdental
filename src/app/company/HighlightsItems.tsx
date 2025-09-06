@@ -10,26 +10,26 @@ export default function HighlightsItems() {
           {/* 1 */}
           <AdvCard
             no=">100"
-            title="Employees"
-            subTitle="worldwide"
-            desc="Whether in product development, customer support, training, back office, marketing, or logistics, the areas of responsibility are very diverse."
+            title="Çalışan"
+            subTitle="Dünya çapında "
+            desc="Ürün geliştirme, müşteri desteği, eğitim, arka ofis, pazarlama veya lojistik gibi sorumluluk alanları oldukça çeşitlidir"
           />
 
           {/* 2 */}
           <AdvCard
             no=">30"
-            title="active"
-            subTitle="markets"
-            desc="Our sales for SDS ceramic dental implants operate in over 30 countries worldwide, and we place great importance on our international customer relationships."
+            title="Aktif "
+            subTitle="pazar"
+            desc="SDS seramik dental implantlarının satışı dünya çapında 30'dan fazla ülkede yapılmaktadır ve uluslararası müşteri ilişkilerimize büyük önem veriyoruz."
           />
 
           {/* 3 */}
           <AdvCard
             no="12"
-            title="nationalities"
-            subTitle="represented in the team
+            title="Millet"
+            subTitle="Ekipte temsil edilen 
 "
-            desc="The diversity of our team not only enhances our creativity and innovation, but also fosters an open and inclusive work environment where every employee has the opportunity to fulfill their full potential and succeed."
+            desc="Ekibimizin çeşitliliği, yalnızca yaratıcılığımızı ve inovasyonumuzu artırmakla kalmaz, aynı zamanda her çalışanın tam potansiyelini gerçekleştirmesi ve başarılı olması için fırsatlara sahip olduğu açık ve kapsayıcı bir çalışma ortamını teşvik eder"
           />
         </div>
       </div>

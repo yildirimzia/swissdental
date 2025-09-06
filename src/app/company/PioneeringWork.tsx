@@ -43,7 +43,7 @@ export default function PioneeringWork() {
         >
             <div className="absolute bottom-0 left-7 bg-[#ffffff80] backdrop-blur-sm flex flex-col p-4 ">
                 <span className="text-primary-600 text-[16px] font-[700]">Dr. Karl Ulrich Volz</span>
-                <span className="text-primary-600 text-[16px] font-[300]">Pionier der Keramik-Implantologie</span>
+                <span className="text-primary-600 text-[16px] font-[300]">Dr. Karl Ulrich Volz, Seramik İmplantoloji Öncüsü</span>
             </div>
         </div>
 
@@ -52,23 +52,19 @@ export default function PioneeringWork() {
           {/* Eyebrow */}
           <p className="text-mint font-[400] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            PIONEERING WORK
+            ÖNCÜ ÇALIŞMALAR
           </p>
 
           <h1 className="text-primary-600 text-[32px] sm:text-[48px] font-[700] leading-[1.2]">
-            SWISS BIOHEALTH CLINIC
+            SWISS BIOHEALTH KLİNİĞİ
           </h1>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[500] sm:font-[400] leading-[1.2] mb-6">
-            A pioneering medical philosophy
+            Öncü bir tıbbi felsefe 
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-            The SWISS BIOHEALTH CLINIC in Kreuzlingen is your centre of
-            excellence in biological dentistry. We offer top-notch dental
-            treatments, modern technologies, individual focus on your health,
-            excellent service, and continuous training and education for optimal
-            results.
+Kreuzlingen'deki SWISS BIOHEALTH KLİNİĞİ, biyolojik diş hekimliğinde mükemmeliyet merkezinizdir18. En iyi dental tedavileri, modern teknolojileri, sağlığınıza bireysel odaklanmayı, mükemmel hizmeti ve optimal sonuçlar için sürekli eğitim ve öğretimi sunuyoruz
           </p>
 
           <Link href="/implants" className="">
@@ -80,7 +76,7 @@ export default function PioneeringWork() {
               icon={<ExternalLinkIcon />}
               iconPosition="right"
             >
-              To the SWISS BIOHEALTH CLINIC
+              SWISS BIOHEALTH CLINIC'e
             </Button>
           </Link>
         </div>

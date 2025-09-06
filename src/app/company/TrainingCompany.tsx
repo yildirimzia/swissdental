@@ -41,12 +41,11 @@ export default function TrainingCompany() {
               </div>
 
               <h3 className="text-primary-600 text-[20px] sm:text-[32px] font-[400] leading-[1.2]">
-               First Steps at SDS
+              SDS'ye İlk Adım
               </h3>
 
               <p className="mt-6 text-primary-600 text-[16px] leading-7 font-extralight max-w-[560px]">
-                Through our wide range of courses, both online and in person, we support not only experienced dentists but also by providing beginners to familiarise themselves with ceramic implantology and benefit from our knowledge.
-
+Geniş çevrimiçi ve yüz yüze kurs yelpazemiz aracılığıyla, yalnızca deneyimli diş hekimlerini değil, aynı zamanda yeni başlayanları da seramik implantolojiye aşina olmaları ve bilgimizden faydalanmaları için destekliyoruz
 
               </p>
 
@@ -59,7 +58,7 @@ export default function TrainingCompany() {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  Get Started with SDS
+                  SDS ile Başlayın
                 </Button>
               </Link>
             </div>
@@ -82,11 +81,11 @@ export default function TrainingCompany() {
               </div>
 
               <h3 className="text-primary-600 text-[20px] sm:text-[32px] font-[400] leading-[1.2]">
-                Become a Specialist
+                Bir Uzman Olun
               </h3>
 
               <p className="mt-6 text-primary-600 text-[16px] leading-7 font-extralight max-w-[560px]">
-                Our training courses offer experienced users the chance to advance their education and become experts in ceramic implantology. Upon successfully completing the curriculum, you can be appointed as a ‘Specialist in Biological Dentistry and Ceramic Implants.’
+Eğitim kurslarımız, deneyimli kullanıcılara eğitimlerini ilerletme ve seramik implantoloji alanında uzman olma fırsatı sunar23. Müfredatı başarıyla tamamladığınızda, 'Biyolojik Diş Hekimliği ve Seramik İmplant Uzmanı' olarak atanabilirsiniz24.
               </p>
 
               <Link href="https://education.swissdentalsolutions.com/en/curriculum/">

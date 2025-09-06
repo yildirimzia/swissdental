@@ -23,6 +23,7 @@ export default function DoctorBlock() {
           <article className="flex flex-col self-center">
             <h2 className="text-primary-600 font-bold tracking-[-0.02em] leading-[1.05] text-[34px] sm:text-[42px] lg:text-[48px]">
               Germany
+              Almanya
             </h2>
 
             <ul className="text-primary-600 mt-4">
@@ -31,7 +32,7 @@ export default function DoctorBlock() {
             </ul>
 
             <div className="flex flex-row gap-4 mt-4">
-              <span className="text-primary-600">Telephone</span>
+              <span className="text-primary-600">Telefon</span>
               <Link
                 href="tel:+4975318916860"
                 className="text-primary-600 text-[16px] font-[300] cursor-pointer underline"
@@ -41,7 +42,7 @@ export default function DoctorBlock() {
             </div>
 
             <div className="flex flex-row gap-4 sm:gap-[45px] mt-4">
-              <span className="text-primary-600">E-mail</span>
+              <span className="text-primary-600">E-posta</span>
               <Link
                 href="mailto:info@swissdentalsolutions.de"
                 className="text-primary-600 text-[16px] font-[300] cursor-pointer underline"
@@ -78,7 +79,7 @@ export default function DoctorBlock() {
             </ul>
 
             <div className="flex flex-row gap-4 mt-4">
-              <span className="text-primary-600">Telephone</span>
+              <span className="text-primary-600">Telefon</span>
               <Link
                 href="tel:+18337947787"
                 className="text-primary-600 text-[16px] font-[300] cursor-pointer underline"
@@ -88,7 +89,7 @@ export default function DoctorBlock() {
             </div>
 
             <div className="flex flex-row gap-4 sm:gap-[45px] mt-4">
-              <span className="text-primary-600">E-mail</span>
+              <span className="text-primary-600">E-posta</span>
               <Link
                 href="mailto:info@swissdentalsolutions.com"
                 className="text-primary-600 text-[16px] font-[300] cursor-pointer underline"
