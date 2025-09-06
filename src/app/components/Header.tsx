@@ -370,7 +370,7 @@ const Header: React.FC = () => {
               href="/benefits-for-patients"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
-            >
+            > 
              Hastalar İçin Faydalar
             </Link>
             <Link
@@ -448,25 +448,25 @@ const Header: React.FC = () => {
           <div className="space-y-4">
               <Link
                 href="/company"
-                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+                className="block py-2 text-lg text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                 Şirket - SDS Switzerland
               </Link>
               <Link
                 href="/company-krea"
-                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+                className="block py-2 text-lg text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                SDS Türkiye Distribütörü - Krea
               </Link>
               <Link
                 href="/career"
-                className="hidden py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+                className="hidden py-2 text-lg text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                 Kariyer
               </Link>
               <Link
                 href="/history"
-                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+                className="block py-2 text-lg text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                Tarih
               </Link>
@@ -720,29 +720,6 @@ const Header: React.FC = () => {
                   </div>
 
                   <div className="flex mt-8 items-center space-x-4">
-                                      <Link
-                    href="https://portal.swissdentalsolutions.com/en/"
-                    className="flex text-[16px] items-center gap-2 px-[20px] py-[13px] border bg-[#f9f9f9] border-[#e0e0e0] text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="d-inline-block me-1 me-lg-0 me-xxl-1 mt-n1-4"
-                    >
-                      <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                      <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                      <path d="M17 17h-11v-14h-2"></path>
-                      <path d="M6 5l14 1l-1 7h-13"></path>
-                    </svg>
-                    Shop for dentists
-                  </Link>
                   <Link
                     href="https://education.swissdentalsolutions.com/"
                     className="flex items-center gap-2 px-[20px] py-[13px] border bg-[#f9f9f9] border-[#e0e0e0] text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300  w-[152px]"

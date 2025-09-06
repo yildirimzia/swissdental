@@ -11,29 +11,29 @@ const Footer: React.FC = () => {
     {
       title: "ÜRÜNLER",
       links: [
-        { href: '/benefits-for-patients', label: "Hastalar için Avantajlar" },
-        { href: '/benefits-for-dentists', label: "Diş Hekimleri için Avantajlar" },
-        { href: '/product-lines', label: "Ürün Serileri" },
-        { href: '/benefits-for-dentists/tissue-level', label: "Bilim" },
-        { href: '/top-user', label: "En İyi Kullanıcı" },
-        { href: '/sscp', label: "SSCP" },
+        { href: '/benefits-for-patients', label: "Hastalar İçin Faydalar" },
+        { href: '/benefits-for-dentists', label: "Diş Hekimleri İçin Faydalar" },
+        { href: '/product-lines', label: "Ürün Grupları" },
+        { href: '/benefits-for-dentists/tissue-level', label: "Bilimsel Çalışmalar" },
+        // { href: '/top-user', label: "En İyi Kullanıcı" },
+        { href: '/sscp', label: "Güvenlik ve Klinik Performans" },
       ]
     },
     {
       title: "SERVİS",
       links: [
         { href: '/service-support', label: "Servis ve Destek" },
-        { href: '/documents', label: "Dökümanlar" },
-        { href: '/sds-podcast', label: "Podcast" },
+        { href: '/documents', label: "Müşteri Hizmetleri" },
+        { href: '/sds-podcast', label: "SDS Podcast" },
         { href: '/contact', label: "İletişim" },
       ]
     },
     {
       title: "SDS HAKKINDA",
       links: [
-        { href: '/company', label: "Şirket" },
-        { href: '/career', label: "Kariyer" },
-        { href: '/history', label: "Tarihçe" },
+        { href: '/company', label: "Şirket - SDS Switzerland" },
+        { href: '/company-krea', label: "SDS Türkiye Distribütörü - Krea" },
+        { href: '/history', label: "Tarih" },
       ]
     }
   ];
