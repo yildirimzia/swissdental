@@ -30,7 +30,7 @@ export default async function RootLayout({
   const showComingSoon = isProdEnv && !isVercelPreview;
 
   return (
-    <html lang="en">
+    <html lang="tr">
       <body className="antialiased">
         <LanguageProvider>
           <LoadingProvider>

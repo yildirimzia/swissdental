@@ -7,14 +7,11 @@ function DifferentSpecial() {
       {/* Üst metin alanı */}
       <div className="container-dental max-w-[1320px]">
         <h3 className="text-center tracking-[.05em] font-bold text-primary-500  text-[12px] sm:text-[14px]">
-          DIFFERENT SPECIAL SHAPES
+          Özel Şekiller
         </h3>
 
         <p className="mb-16 mx-auto mt-6 max-w-[860px] text-center text-primary-600 text-[16px] leading-7 font-extralight  w-full sm:w-2/4">
-          With over 50 different special shapes, you can be sure that we have
-          the right implant for your treatment cases. This incredible variety is
-          unique in ceramic implantology and ensures optimal care for your
-          patients.
+          SDS, 50'den fazla farklı özel şekliyle tedavileriniz için doğru implanta sahip olmanızı sağlar. Bu çeşitlilik, seramik implantolojide benzersizdir ve hastalarınız için en uygun bakımı garanti eder.
         </p>
       </div>
 
@@ -34,16 +31,15 @@ function DifferentSpecial() {
             </div>
 
             <h4 className="mt-8 text-primary-600 font-bold text-[20px] sm:text-[32px]  leading-[1.2]">
-              Oval
+              Oval 
             </h4>
             <span className="mt-2 block text-primary-500 text-[16px] font-extralight">
-              Series
+              İmplant
             </span>
 
             <p className="mt-4 text-primary-600 text-[16px] leading-7 font-extralight w-full sm:max-w-[280px] mx-auto">
-              The implant series ‘Oval’ specifically aids in centrally supplying
-              the premolars maxillary/mandibular and molars
-              maxillary/mandibular.
+Özellikle maksiller/mandibular premolar ve maksiller/mandibular molar dişlerin merkezi olarak desteklenmesine yardımcı olur.
+
             </p>
           </article>
 
@@ -59,16 +55,15 @@ function DifferentSpecial() {
             </div>
 
             <h4 className="mt-8 text-primary-600 font-bold text-[20px] sm:text-[32px]  leading-[1.2]">
-              Balcony
+             Balkon 
             </h4>
             <span className="mt-2 block text-primary-500 text-[16px] font-extralight">
-              Series
+              İmplant
             </span>
 
             <p className="mt-4 text-primary-600 text-[16px] leading-7 font-extralight w-full sm:max-w-[280px] mx-auto">
-              The ‘Balcony’ enhances the emergence profile, facilitating
-              targeted provision for premolars, especially upper premolars, and
-              maxillary/mandibular molars.
+             Emerjans profilini geliştirir. Özellikle üst premolarlar ile maksiller/mandibular molarlar için hedefe yönelik destek sağlar.
+
             </p>
           </article>
 
@@ -84,15 +79,15 @@ function DifferentSpecial() {
             </div>
 
             <h4 className="mt-8 text-primary-600 font-bold text-[20px] sm:text-[32px]  leading-[1.2]">
-              Short
+              Kısa 
             </h4>
             <span className="mt-2 block text-primary-500 text-[16px] font-extralight">
-              Series
+              İmplant
             </span>
 
             <p className="mt-4 text-primary-600 text-[15px] leading-7 font-extralight w-full sm:max-w-[280px] mx-auto">
-              The ‘Short’ implant series is specifically designed to address
-              cases with reduced vertical bone availability.
+              Dikey kemik miktarının az olduğu vakalarda kullanılmak üzere özel olarak tasarlanmıştır.
+
             </p>
           </article>
 
@@ -108,15 +103,14 @@ function DifferentSpecial() {
             </div>
 
             <h4 className="mt-8 text-primary-600 font-bold text-[20px] sm:text-[32px]  leading-[1.2]">
-              Sinus
+             Sinüs 
             </h4>
             <span className="mt-2 block text-primary-500 text-[16px] font-extralight">
-              Series
+              İmplant
             </span>
 
             <p className="mt-4 text-primary-600 text-[16px] leading-7 font-extralight w-full sm:max-w-[280px] mx-auto">
-              Biological sinus lift without the use of bone replacement
-              material, specifically designed for external sinus lift.
+             Kemik yerine geçen malzeme kullanılmadan, harici sinüs lifting için özel olarak tasarlanmış biyolojik sinüs kaldırma prosedürü için kullanılır
             </p>
           </article>
         </div>

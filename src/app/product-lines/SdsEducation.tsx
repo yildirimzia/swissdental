@@ -134,16 +134,15 @@ const HeroSection: React.FC = () => {
               </div>
 
               <h3 className="lg:text-[40px] text-[26px] tracking-[-0.03em] leading-[1.2]  text-primary-600">
-                Become an expert <br /> with SDS Education
+                SDS eğitimleriyle bir uzman olun.
+
               </h3>
             </div>
 
             {/* Description */}
             <p className="text-lg leading-relaxed max-w-lg text-primary-600">
-              In our SDS Education courses, you have the opportunity to directly
-              benefit from the knowledge of our experienced dentists. Become an
-              expert and refine your skills with our specialized on-site or
-              online training sessions.
+              SDS eğitim kurslarında, deneyimli diş hekimlerinin bilgisinden doğrudan faydalanma fırsatınız vardır. Uzmanlaşmış yerinde veya çevrimiçi eğitim seanslarımızla uzmanlaşın ve becerilerinizi geliştirin.
+
             </p>
 
             {/* CTA Button */}
@@ -157,7 +156,7 @@ const HeroSection: React.FC = () => {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  To the SDS Education website
+                  SDS Eğitim web sitesine git
                 </Button>
               </Link>
             </div>

@@ -73,7 +73,8 @@ export default function AimBlock() {
           </p>
 
           <h2 className="mt-6 mb-11 sm:pl-0 pl-[24px] pr-[24px] sm:pr-18 text-primary-600 text-[26px] sm:text-[40px] font-[400] leading-[1.2] tracking-[-0.01em]">
-            Especially suitable for the use of SDS ceramic implants
+            Özellikle SDS seramik implantların kullanımı için uygundur
+
           </h2>
 
           <Link href="https://portal.swissdentalsolutions.com/en/">
@@ -102,7 +103,7 @@ export default function AimBlock() {
               }
               iconPosition="right"
             >
-              Buy Now
+              Şimdi al
             </Button>
           </Link>
         </div>
@@ -145,7 +146,7 @@ export default function AimBlock() {
               </span>
               <span className="text-left">
                 <span className="block font-semibold">SDS AIM</span>
-                <span className="block text-sm opacity-70">demonstration</span>
+                <span className="block text-sm opacity-70">gösteri</span>
               </span>
             </button>
           </div>

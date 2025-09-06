@@ -171,16 +171,14 @@ export default function VideoContent() {
               </p>
               <h1 className="lg:text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),40px)] text-[clamp(26px,calc(-49.8461538462px+0.0865384615*100vw),26px)]  leading-[1.2] tracking-[-0.03em] text-primary-600 font-[300]">
                 <strong className="font-bold block text-[26px] lg:text-[40px] text-primary-600">
-                  Ceramic implants
+                  SDSBOX ile seramik implant 
                 </strong>
-                as simple as ever.
+               uygulaması  her zamankinden daha kolay
               </h1>
             </div>
 
             <p className="lg:text-[16px] mb-[46px] text-[16px] font-[400] lg:w-[80%] w-full text-primary-600 mt-[2.875rem] max-w-[42rem]">
-              Get off to a smart and clear start with our implant solutions and
-              benefit from our SDS Planning Service. With the SDS Planning
-              Service, you get the components you need for your implantation.
+              SDS Planlama Hizmeti sayesinde akıllı ve net bir başlangıç yapabilirsiniz.
             </p>
 
             <Link href="https://sdsbox.swissdentalsolutions.com/home">

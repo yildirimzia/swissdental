@@ -142,23 +142,16 @@ function CleanestImplant() {
                     before:bg-[#3aa194]
                   `}
               >
-                Certified
+                Sertifikalı
               </p>
               <h1 className="lg:text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),40px)] text-[clamp(26px,calc(-49.8461538462px+0.0865384615*100vw),26px)]  leading-[1.2] tracking-[-0.03em] text-primary-600 font-[300]">
-                Cleanest Implant
-                <strong className="font-bold block text-[26px] lg:text-[40px] text-primary-600">
-                  Company in the World
-                </strong>
+                Temiz İmplant Sertifikası
               </h1>
             </div>
 
             <p className="lg:text-[16px] text-[16px] font-[400] lg:w-[80%] w-full text-primary-600 mt-[2.875rem] max-w-[42rem]">
-              Only implant systems that meet the highest standards of purity are
-              awarded the ‘Trusted Quality’ mark by the CleanImplant Foundation.
-              As the only implant manufacturer worldwide (as of 07/2022), SDS
-              SWISS DENTAL SOLUTIONS has earned this award for the BRIGHT
-              ceramic implant series, both at the production and manufacturer
-              levels.
+              Sadece en yüksek saflık standartlarını karşılayan implant sistemlerine CleanImplant Foundation tarafından 'Güvenilir Kalite' işareti verilir. Temmuz 2022 itibarıyla, SDS SWISS DENTAL SOLUTIONS, üretim ve üretici seviyelerinde BRIGHT seramik implantları için bu ödülü kazanan dünyadaki tek implant üreticisidir.
+
             </p>
           </div>
         </div>

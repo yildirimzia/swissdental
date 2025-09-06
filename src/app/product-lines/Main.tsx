@@ -24,10 +24,10 @@ function Main() {
     <>
       <main className="pb-[150px] p-[10px] bg-[linear-gradient(180deg,#EAF4F3_58.33%,rgba(255,255,255,0)_100%)]">
         <div className="pb-[100px] pt-[110px] w-full flex">
-          <p className="pt-[100px] text-[44px] sm:text-[100px] whitespace-nowrap inline-block text-[#3aa194] font-bold left-0 sm:tracking-[1.1em] sm:leading-[0.9] tracking-[0.3em] leading-[.9]  opacity-10 relative text-center uppercase top-0 sm:w-[calc(100%+0.8em)] w-[100%]">
-            Modeller
+          <p className="pt-[100px] text-[44px] sm:text-[100px] whitespace-nowrap inline-block text-[#3aa194] font-bold left-0 sm:tracking-[1.1em] sm:leading-[0.9] tracking-[0.3em] leading-[.9]  opacity-10 relative text-center top-0 sm:w-[calc(100%+0.8em)] w-[100%]">
+            MODEL
             <br />
-            SERİLER
+            SERİLERİ
           </p>
         </div>
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 pb-[100px]">
@@ -72,7 +72,7 @@ function Main() {
               BRIGHT
             </div>
             <p className="text-primary-600 text-[16px] font-[200]">
-              Premium seramik implantlar
+              BRIGHT, premium seramik implantları temsil eder.
             </p>
             <Button
               variant="customOutline"
@@ -109,12 +109,7 @@ function Main() {
           </p>
 
           <p className="leading-[1.4] tracking-[-.96px] font-extralight text-primary-600  mx-auto max-w-prose text-[clamp(20px,calc(-37.2307692308px_+_.0576923077_*_100vw),32px)]">
-            Seramik implantlarımız, tüm kemik sınıflarına uygun kanıtlanmış
-            Dynamic Thread® vida yapısıyla donatılmıştır. Abutment postu, tek
-            parçalı SDS1.2 implantların optimum iyileşmesini sağlar. İki parçalı
-            implant sistemimiz 18 yılı aşkın deneyime dayanmakta olup, molar
-            bölgeler için bile sağlam bir yapı sunar. Güvenli implant-abutment
-            bağlantısı implantın içinde değil, tulip kısmında yer alır.
+            BRIGHT, premium seramik implant serisidir. Bu seri, en son teknolojiye ve geniş bir özellik yelpazesine sahip olduğu için her duruma hazırlıklı olmanızı sağlar. Seramik implantlar, kanıtlanmış bir vida yapısına (Dynamic Thread®) sahiptir ve tüm kemik sınıflarına uygundur.
           </p>
         </div>
       </div>

@@ -29,10 +29,11 @@ function LifetimeWarranty() {
           `}
         >
           <h2 className="text-primary-600 text-[26px] mb-11 sm:text-[40px] font-[400] tracking-[-0.03em] leading-[1.2]">
-            Lifetime Warranty
+            Ömür Boyu Garanti
+
           </h2>
           <p className="mt-4 text-primary-600 text-[16px] font-extralight leading-7 mb-8">
-            Claims processing for SDS implants and abutments
+            SDS implantları ve abutmentları için ömür boyu garanti verilmektedir.
           </p>
 
           <Link href="https://sds.directus.app/assets/64ab10ca-fbec-441d-a037-e5c96a49d1a6">
@@ -61,7 +62,7 @@ function LifetimeWarranty() {
               }
               iconPosition="right"
             >
-              Warranty conditions
+              Garanti koşulları
             </Button>
           </Link>
         </div>

@@ -19,14 +19,13 @@ function SimpleFast() {
             </div>
 
             <h3 className="text-primary-600 text-[28px] sm:text-[34px] font-bold leading-[1.2]">
-              Simple
+              Basit
             </h3>
             <p className="mt-2 text-primary-500 text-[16px] font-extralight">
-              Just a few clicks
+             Sadece birkaç tıklama
             </p>
             <p className="mt-6 text-primary-600 text-[16px] leading-7 font-extralight max-w-[480px] mx-auto">
-              Plan your treatment online. The configurator helps you to put
-              together all the necessary components.
+Çevrimiçi olarak birkaç tıklamayla tedaviyi planlayın. Konfigüratör, gerekli tüm bileşenleri bir araya getirmenize yardımcı olur.
             </p>
           </article>
 
@@ -43,15 +42,13 @@ function SimpleFast() {
             </div>
 
             <h3 className="text-primary-600 text-[28px] sm:text-[34px] font-bold leading-[1.2]">
-              Fast
+              Hızlı
             </h3>
             <p className="mt-2 text-primary-500 text-[16px] font-extralight">
-              We handle the planning for you
+              Planlamayı sizin için SDS üstlenir.
             </p>
             <p className="mt-6 text-primary-600 text-[16px] leading-7 font-extralight max-w-[480px] mx-auto">
-              Thanks to the additional drilling template it contains, the
-              implants can be easily positioned perfectly.
-            </p>
+ Kutuya dahil edilen cerrahi şablon sayesinde implantlar kolayca ve mükemmel bir şekilde konumlandırılabilir.            </p>
           </article>
         </div>
       </div>

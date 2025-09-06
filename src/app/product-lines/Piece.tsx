@@ -28,18 +28,17 @@ function Piece() {
                   SDS 1.2
                 </strong>
                 <span className="text-[26px] sm:text-[40px] block text-sm text-primary-600">
-                  One-piece
+                  Tek Parça İmplantlar
                 </span>
                 <p className="text-[16px] mt-8 font-extralight text-primary-600">
-                  The one-piece dental implants are indicated for immediate
-                  loading when good primary stability is achieved and with
-                  appropriate occlusal loading.
+                 Bu dental implantlar, iyi bir birincil stabilite sağlandığında ve uygun oklüzal yükleme yapıldığında hemen yükleme için uygundur. Tek parçalı SDS1.2 implantlar, abutment postu ile optimum iyileşmeyi sağlar.
+
                 </p>
               </h2>
             </div>
             <div className="grid w-full grid-cols-[41%_59%] mt-8">
               <div className="text-[16px] font-bold text-primary-600">
-                Diameter
+                Çap
               </div>
               <div className="text-[16px] font-extralight text-primary-600">
                 <p>3.25 mm</p>
@@ -50,7 +49,7 @@ function Piece() {
             </div>
             <div className="grid w-full grid-cols-[41%_59%] mt-5">
               <div className="text-[16px] font-bold text-primary-600">
-                Lengths
+                Uzunluklar
               </div>
               <div className="text-[16px] font-extralight text-primary-600">
                 <p>8 mm</p>
@@ -86,19 +85,17 @@ function Piece() {
                   SDS 2.2
                 </strong>
                 <span className="text-[26px] sm:text-[40px] block text-sm text-primary-600">
-                  two-piece
+                  İki Parçalı İmplantlar
                 </span>
                 <p className="text-[16px] mt-8 font-extralight text-primary-600">
-                  The two-piece dental implants are indicated for transgingival
-                  healing. The implants are indicated for immediate loading when
-                  good primary stability is achieved and with appropriate
-                  occlusal loading.
+                  Bu implantlar, gingiva seviyesinde iyileşme için uygundur. İyi bir birincil stabilite ve uygun oklüzal yükleme sağlandığında hemen yükleme yapılabilir. İki parçalı implant sistemi, 18 yılı aşkın deneyime dayanır ve molar bölgeler için bile sağlam bir yapı sunar. İmplant-abutment bağlantısı, implantın içinde değil, tulip kısmında yer alır.
+
                 </p>
               </h2>
             </div>
             <div className="grid w-full grid-cols-[41%_59%] mt-8">
               <div className="text-[16px] font-bold text-primary-600">
-                Diameter
+                Çap
               </div>
               <div className="text-[16px] font-extralight text-primary-600">
                 <p>3.8 mm</p>
@@ -109,7 +106,7 @@ function Piece() {
             </div>
             <div className="grid w-full grid-cols-[41%_59%] mt-5">
               <div className="text-[16px] font-bold text-primary-600">
-                Lengths
+                Uzunluklar
               </div>
               <div className="text-[16px] font-extralight text-primary-600">
                 <p>6 mm</p>

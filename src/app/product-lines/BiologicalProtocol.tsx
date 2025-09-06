@@ -73,25 +73,30 @@ export default function AimBlock() {
           </p>
 
           <h2 className="text-primary-600 sm:pl-0 pl-[24px] pr-[24px] mt-2 text-[26px] sm:text-[40px] font-[700] leading-[1.2] tracking-[-0.01em]">
-            All ceramic <br /> throughout
-          </h2>
-          <h2 className="mt-6 mb-11 sm:pl-0 pl-[24px] pr-[24px] sm:pr-18 text-primary-600 text-[26px] sm:text-[40px] font-[400] leading-[1.2] tracking-[-0.01em]">
-            The tools as well
+            Tümü Seramik
           </h2>
 
           <p className="text-[16px] font-[200] leading-[1.6] text-primary-600 p-6 sm:p-0">
-            Metal-free implantation using fully ceramic drills made of
-            high-performance ceramic ATZ. All instruments that come into contact
-            with the patient are always made of ceramic. The rotating
-            instruments made of ATZ ceramic are characterised by very high
-            durability with consistently sharp cutting edges. The clearly
-            designed OP tray is structured according to bone classes
-            (IV-III-II-I), simplifying adherence to the different drilling
-            protocols. The tray is backward and forward compatible, for all
-            implants ever sold by SDS as well as for implants currently being
-            newly developed by SDS. The drills are laser-engraved (type and
-            diameter) and additionally color-coded, allowing you to easily track
-            the drilling sequences at any time.
+            SDS implantolojisinde kullanılan tüm aletler seramiktir. Tamamen
+            seramik olan yüksek performanslı seramik ATZ'den yapılmış delgilerle
+            metalsiz implantasyon yapılır. Hastayla temas eden tüm aletler
+            seramikten yapılmıştır. ATZ seramiğinden yapılan döner aletler,
+            sürekli keskin kenarlarıyla yüksek dayanıklılık gösterir.
+          </p>
+          <br />
+          <p className="text-[16px] font-[200] leading-[1.6] text-primary-600 p-6 sm:p-0">
+            Delme protokollerine uymayı basitleştiren ameliyat tepsisi, kemik
+            sınıflarına göre (IV-III-II-I) tasarlanmıştır.
+          </p>
+          <br />
+          <p className="text-[16px] font-[200] leading-[1.6] text-primary-600 p-6 sm:p-0">
+            Tepsi, SDS tarafından daha önce satılan tüm implantlar ve şu anda
+            geliştirilmekte olan implantlar için uyumludur.
+          </p>
+          <br />
+          <p className="text-[16px] font-[200] leading-[1.6] text-primary-600 p-6 sm:p-0">
+            Delgiler, lazerle gravürlenmiş (tip ve çap) ve renk kodludur, bu
+            sayede delme sekanslarını her zaman kolayca takip edebilirsiniz.
           </p>
         </div>
 

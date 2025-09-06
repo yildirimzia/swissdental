@@ -41,14 +41,14 @@ export default function TrainingCards() {
               </div>
 
               <h3 className="text-primary-600 text-[20px] sm:text-[32px] font-[400] leading-[1.2]">
-                First Steps with SDS
+                SDS ile İlk Adımlar
               </h3>
 
               <p className="mt-6 text-primary-600 text-[16px] leading-7 font-extralight max-w-[560px]">
-                Become a Specialist. Through our wide range of courses, both
-                online and on-site, we support not only experienced dentists but
-                also by offering them the opportunity to familiarise themselves
-                with ceramic implantology and benefit from our knowledge.
+                Uzman olun. Hem çevrimiçi hem de yerinde sunduğumuz geniş kurs yelpazesi ile
+                sadece deneyimli diş hekimlerini desteklemekle kalmıyor,
+                aynı zamanda onlara seramik implantolojiyi tanıma ve
+                bilgimizden yararlanma fırsatı da sunuyoruz.
               </p>
 
               <Link href="https://education.swissdentalsolutions.com/en/first-steps/">
@@ -60,7 +60,7 @@ export default function TrainingCards() {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  Start with SDS
+                  SDS ile başlayın
                 </Button>
               </Link>
             </div>
@@ -83,15 +83,15 @@ export default function TrainingCards() {
               </div>
 
               <h3 className="text-primary-600 text-[20px] sm:text-[32px] font-[400] leading-[1.2]">
-                Become a Specialist
+                Uzman Olun
               </h3>
 
               <p className="mt-6 text-primary-600 text-[16px] leading-7 font-extralight max-w-[560px]">
-                Our training programs also provide experienced users with the
-                opportunity to further their education and become experts in the
-                field of ceramic implantology. Upon successful completion of the
-                curriculum, you will even be appointed as a ‘Specialist in
-                Biological Dentistry and Ceramic Implants’.
+                Eğitim programlarımız, deneyimli kullanıcılara da
+                eğitimlerini ilerletme ve seramik implantoloji alanında uzman olma
+                fırsatı sunmaktadır. Müfredatı başarıyla tamamladığınızda,
+                “Biyolojik Diş Hekimliği ve Seramik İmplantlar Uzmanı”
+                unvanı ile atanacaksınız.
               </p>
 
               <Link href="https://education.swissdentalsolutions.com/en/curriculum/">
