@@ -30,23 +30,16 @@ function HistoryHero() {
           {/* Eyebrow */}
           <p className="text-mint font-[300] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            History
+            TARİH
           </p>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[600] sm:font-[400] leading-[1.2] mb-6">
-            Metal-free <br /> for over 25 years
+            25 yılı aşkın <br />  bir süredir metalsiz
+
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-            Dr. Ulrich Volz, a young dentist, envisioned revolutionizing
-            dentistry with metal-free implants that were well-tolerated, robust,
-            and durable. The current development of ceramic implants made from
-            zirconium dioxide, as offered by SDS SWISS DENTAL SOLUTIONS AG
-            today, began at the turn of the millennium. The first CE
-            certification for the one-piece implant was granted in 2004. Dr.
-            Ulrich Volz founded the company SDS SWISS DENTAL SOLUTIONS AG in
-            2007. How within just 10 years, an idea transformed into global
-            leadership in ceramic implant technology:
+           Genç bir diş hekimi olan Dr. Ulrich Volz, biyouyumlu, sağlam ve dayanıklı metal içermeyen implantlarla diş hekimliğinde devrim yaratmayı hayal etti2. Bugün SDS SWISS DENTAL SOLUTIONS AG'nin sunduğu zirkonyum dioksitten yapılmış seramik implantların bugünkü gelişimi, milenyumun başında başladı3. Tek parçalı implant için ilk CE sertifikası 2004 yılında verildi444. Dr. Ulrich Volz, 2007 yılında SDS SWISS DENTAL SOLUTIONS AG şirketini kurdu5. 10 yıl gibi kısa bir sürede bir fikrin seramik implant teknolojisinde küresel bir liderliğe nasıl dönüştüğünü gösteren bir video da izleyebilirsiniz
           </p>
 
           <Link href="/implants" className="">
@@ -58,7 +51,7 @@ function HistoryHero() {
               icon={<ExternalLinkIcon />}
               iconPosition="right"
             >
-              Watch Video
+              Videoyu izle
             </Button>
           </Link>
         </div>

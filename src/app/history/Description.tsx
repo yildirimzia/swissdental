@@ -8,86 +8,93 @@ function Description() {
           Vita
         </h1>
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          Born in 1964, Dr. Karl Ulrich Volz completed his dental studies at Ulm
-          University, where he concluded his dissertation on detecting
-          components of dental amalgam in the dental pulp of individuals with
-          amalgam fillings. He then spent his assistantship at the "Süddeutsches
-          Zentrum für Orale Implantologie" before founding a purely private
-          practice in 1991, becoming Germany's youngest dentist at the time.
+          1964 yılında doğan Dr. Karl Ulrich Volz, Ulm Üniversitesi'nde diş
+          hekimliği eğitimini tamamladı. Amalgam dolgusu olan kişilerin diş
+          pulpasında diş amalgamının bileşenlerini tespit etme konusunda tezini
+          tamamladı. Amalgam dolgusu olan kişilerin diş pulpasında diş
+          amalgamının bileşenlerini tespit etme konusunda tezini tamamladı.
+          Amalgam dolgusu olan kişilerin diş pulpasında diş amalgamının
+          bileşenlerini tespit etme konusunda te Daha sonra "Süddeutsches
+          Zentrum für Orale Implantologie"de asistanlık yaptıktan sonra 1991
+          yılında tamamen özel bir muayenehane kurarak o dönem Almanya'nın en
+          genç diş hekimi oldu.
         </p>
 
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          In 1998, he obtained certifications in Biological Dentistry, followed
-          by Implantology in 1999. A year later, Dr. Volz founded the BODENSEE
-          ZAHNKLINIK with up to 12 dentists and inpatient care. From 2001 to
-          2004, he developed the Z-Look zirconia implant, one of the first
-          approved ceramic implants, leading to the establishment of Z-Systems
-          in 2004.
+          1998 yılında Biyolojik Diş Hekimliği sertifikası aldı, ardından 1999
+          yılında İmplantoloji sertifikası aldı. Bir yıl sonra Dr. Volz, 12 diş
+          hekimi ve yataklı tedavi hizmetleri sunan BODENSEE ZAHNKLINIK'i kurdu.
+          2001'den 2004'e kadar, ilk onaylanan seramik implantlardan biri olan
+          Z-Look zirkonya implantını geliştirdi ve bu, 2004 yılında Z-Systems'ın
+          kurulmasına yol açtı. 2004 yılında
         </p>
 
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-12">
-          Continuing his pioneering efforts, he introduced ultrasound implants
-          in 2006, followed by ultrasound-assisted membrane technology for bone
-          augmentation in 2007 (Sonic Weld).
+          Öncü çabalarına devam ederek, 2006 yılında ultrason implantlarını ve
+          ardından 2007 yılında kemik augmentasyonu için ultrason destekli
+          membran teknolojisini (Sonic Weld) tanıttı.
         </p>
 
         <h2 className="text-primary-600 text-[32px] sm:text-[48px] font-[700] leading-[1.2] mb-8">
-          Founding of SDS
+          SDS'nin kuruluşu
         </h2>
 
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          Since 2007, he has been at the forefront of developing the latest
-          generation of immediate ceramic implants, leading to the founding of
-          SDS Swiss Dental Solutions AG, which is now the world leader among
-          ceramic implant manufacturers.
+          2007 yılından bu yana, en yeni nesil acil seramik implantların
+          geliştirilmesinde öncü rol oynamış ve şu anda seramik implant
+          üreticileri arasında dünya lideri olan SDS Swiss Dental Solutions AG
+          şirketinin kurulmasına öncülük etmiştir. .
         </p>
 
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          From 2002 to 2012, Dr. Volz developed the first two-part ceramic
-          implants, now with higher strength values than comparable titanium
-          implants. Further innovations include the development of the latest
-          generation of single-piece hybrid implants in 2013–2014.
+          2002'den 2012'ye kadar Dr. Volz, ilk iki parçalı seramik implantları
+          geliştirdi; bu implantlar, benzer titanyum implantlara göre daha
+          yüksek mukavemet değerlerine sahiptir. Diğer yenilikler arasında,
+          2013–2014'te en yeni nesil tek parça hibrit implantların
+          geliştirilmesi yer almaktadır.
         </p>
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          In 2014, he assumed the role of founding president of the renowned
-          International Society of Metal-Free Implantology (ISMI). The next
-          logical step came in 2016 with the founding of the SWISS BIOHEALTH
-          CLINIC for biological dentistry and medicine in Kreuzlingen, as well
-          as the SWISS BIOHEALTH EDUCATION CENTERS in 2017, attracting over
-          4,000 participants annually.{" "}
+          2014 yılında, ünlü Uluslararası Metal İçermeyen İmplantoloji
+          Derneği'nin (ISMI) kurucu başkanlığını üstlendi. Bir sonraki mantıklı
+          adım, 2016 yılında Kreuzlingen'de biyolojik diş hekimliği ve tıp için
+          SWISS BIOHEALTH CLINIC'in kurulması ve 2017 yılında SWISS BIOHEALTH
+          EDUCATION CENTERS'ın kurulmasıyla geldi. Bu merkezler, yılda 4.000'den
+          fazla katılımcıyı çekmektedir.{""}
         </p>
 
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          From 2017 to 2019, Dr. Volz dedicated himself to the development of
-          Bone Growing Implants and the BISS Bone Implant Stabilization System.
-          Seamlessly, he proceeded with the development and introduction of the
-          ad-hoc navigation system Anatomical Implant Method (AIM) and the
-          Aesthetic Reconstruction Procedure (RAP), and published the Guided
-          Augmentation Procedures (GAP) manual with his surgeons at the Swiss
-          Biohealth Clinic, along with corresponding training courses with
-          hands-on and live surgeries. In 2021, he published his LONGEVITY FAST
-          TRACK GUIDE in German and English.{" "}
+          2017'den 2019'a kadar Dr. Volz, Kemik Büyüme İmplantları ve BISS Kemik
+          İmplant Stabilizasyon Sisteminin geliştirilmesine kendini adadı.
+          Sorunsuz bir şekilde, ad-hoc navigasyon sistemi Anatomik İmplant
+          Yöntemi (AIM) ve Estetik Rekonstrüksiyon Prosedürü (RAP) geliştirmeye
+          ve tanıtmaya devam etti ve İsviçre Biohealth Clinic'teki cerrahlarıyla
+          birlikte Guided Augmentation Procedures (GAP) kılavuzunu yayınladı.
+          2021 yılında, LONGEVITY FAST TRACK GUIDE adlı kitabını Almanca ve
+          İngilizce olarak yayınladı.{" "}
         </p>
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          In 2022, the most precise Fully Guided Navigation system, SDSBOX, was
-          developed and accredited by the CleanImplant Foundation as the first
-          navigation system ever. Additionally, both the SDSAIM ad hoc
-          navigation system and the 1.2_BRIGHT_2.2 ceramic implant system
-          received CleanImplant accreditation, with the implant system being the
-          first in the world to receive dual CleanImplant certification
-          (production and manufacturing).{" "}
+          2022 yılında, en hassas Tam Kılavuzlu Navigasyon sistemi olan SDSBOX,
+          CleanImplant Vakfı tarafından ilk navigasyon sistemi olarak
+          geliştirildi ve akredite edildi. Ayrıca, SDSAIM ad hoc navigasyon
+          sistemi ve 1.2_BRIGHT_2.2 seramik implant sistemi CleanImplant
+          akreditasyonu aldı ve implant sistemi dünyada çift CleanImplant
+          sertifikası (üretim ve imalat) alan ilk sistem oldu..{" "}
         </p>
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          At the end of 2023, Dr. Volz welcomed one of the leading PE investors
-          in the medical industry, "Gilde Healthcare," as well as leading
-          industry experts as partners in his company, SDS Swiss Dental
-          Solutions, to further accelerate and professionalize the development
-          of the implant company.{" "}
+          2023 yılının sonunda Dr. Volz, implant şirketinin gelişimini daha da
+          hızlandırmak ve profesyonelleştirmek amacıyla, tıp sektörünün önde
+          gelen özel sermaye yatırımcılarından biri olan “Gilde Healthcare”yi ve
+          sektörün önde gelen uzmanlarını şirketi SDS Swiss Dental Solutions'ın
+          ortakları olarak karşıladı. Dr. Volz, 2023 yılının sonunda, implant
+          şirketinin gelişimini daha da hızlandırmak ve profesyonelleştirmek
+          amacıyla, tıp sektörünün önde gelen özel sermaye yatırımcılarından
+          biri olan “Gilde Healthcare”yi ve sektörün önde gelen uzmanlarını
+          şirketi SDS Swiss Dental Solutions'ın ortakları olarak{" "}
         </p>
         <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-          With a remarkable track record, Dr. Volz has placed over 30,000
-          ceramic implants since 2001, establishing himself as a leader in his
-          field.
+          Olağanüstü bir başarı geçmişine sahip olan Dr. Volz, 2001 yılından bu
+          yana 30.000'den fazla seramik implant yerleştirerek, alanında lider
+          konumuna gelmiştir. alanında.
         </p>
       </div>
     </section>

@@ -27,7 +27,7 @@ export default function Founder() {
           {/* Eyebrow */}
           <p className="text-mint font-[400] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            FOUNDER
+            KURUCU
           </p>
 
           <h1 className="text-primary-600 text-[32px] sm:text-[48px] font-[700] leading-[1.2]">
@@ -40,11 +40,10 @@ export default function Founder() {
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-            In 2020, Dr. Karl Ulrich Volz was once again elected as the President of the ISMI (International Society of Metal-free Implantology e.V.). As the founder and owner of the SWISS BIOHEALTH CLINIC in Kreuzlingen and the SDS SWISS DENTAL SOLUTIONS AG, he is recognized as the most experienced and renowned biological dentist globally due to his pioneering work in ceramic implantology and biological dentistry.
-          </p>
+            2020 yılında Dr. Karl Ulrich Volz, ISMI (Uluslararası Metal İçermeyen İmplantoloji Derneği) başkanlığına yeniden seçildi. Kreuzlingen'deki SWISS BIOHEALTH CLINIC ve SDS SWISS DENTAL SOLUTIONS AG'nin kurucusu ve sahibi olan Dr. Volz, seramik implantoloji ve biyolojik diş hekimliği alanındaki öncü çalışmalarıyla dünya çapında en deneyimli ve tanınmış biyolojik diş hekimi olarak kabul edilmektedir.          </p>
 
                     <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-Dr. Karl Ulrich Volz heads the biological dental department at the SWISS BIOHEALTH CLINIC. With over 30,000 ceramic implants placed, he is a world leader in his field.
+Dr. Karl Ulrich Volz, SWISS BIOHEALTH CLINIC'in biyolojik diş hekimliği bölümünün başındadır. 30.000'den fazla seramik implant yerleştirmiş olan Dr. Volz, alanında dünya lideridir.
 
           </p>
         </div>

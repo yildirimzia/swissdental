@@ -7,18 +7,18 @@ import Button from "../components/Button";
 export default function FounderAndPioneer() {
   const items = [
     {
-      title: "Years of Experience",
-      desc: "In biological dentistry",
+      title: "Yılların Deneyimi",
+      desc: "Biyolojik diş hekimliğinde",
       number: "25",
     },
     {
       icon: "/images/benefits-for-patients/Zahn.svg",
-      title: "Founder and pioneer",
+      title: "Kurucu ve öncü",
       desc: "Swiss Dental Solutions AG & Swiss Biohealth Clinic",
     },
     {
-      title: "Implants",
-      desc: "placed",
+      title: "İmplantlar",
+      desc: "yerleştirildi",
       number: "> 30.000",
     },
   ];
@@ -68,16 +68,16 @@ export default function FounderAndPioneer() {
         </div>
         <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8 pb-[100px]">
           <h1 className="text-primary-600 text-[32px] sm:text-[38px] font-[700] leading-[1.2] mb-8">
-            Focus on Continuing Education
+            Sürekli Eğitime Odaklanma
           </h1>
           <p className="text-primary-600 text-[16px] font-[300] max-w-[600px] mb-6">
-            Since 2017, Dr. Ulrich Volz, along with other renowned speakers and
-            experts, has been sharing his knowledge on Biological Dentistry,
-            Ceramic Implants, and Blood Concentrates at the SWISS BIOHEALTH
-            EDUCATION CENTRE in Kreuzlingen. They offer an exceptional modern
-            training program subject to continuous optimization. The unique
-            treatment methods and the unique worldwide surgical approach form
-            the core of all training opportunities.
+            2017 yılından bu yana Dr. Ulrich Volz, diğer tanınmış konuşmacılar ve
+            uzmanlarla birlikte Kreuzlingen'deki SWISS BIOHEALTH
+            EDUCATION CENTRE'da Biyolojik Diş Hekimliği,
+            Seramik İmplantlar ve Kan Konsantreleri konularındaki bilgilerini paylaşmaktadır. Sürekli iyileştirilen olağanüstü modern bir
+            eğitim programı sunmaktadırlar. Eşsiz
+            tedavi yöntemleri ve dünya çapında benzersiz cerrahi yaklaşım,
+            tüm eğitim fırsatlarının temelini oluşturmaktadır.
           </p>
         </div>
       </section>
