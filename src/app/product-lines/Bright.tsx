@@ -55,7 +55,7 @@ function Bright() {
             </Button>
           </Link>
 
-          <Link href="https://portal.swissdentalsolutions.com/en/">
+          {/* <Link href="https://portal.swissdentalsolutions.com/en/">
             <Button
               variant="customOutline"
               size="custom16"
@@ -64,7 +64,7 @@ function Bright() {
             >
               İmplant mağazası
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
