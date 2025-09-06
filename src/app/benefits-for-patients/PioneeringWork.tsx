@@ -17,7 +17,7 @@ export default function PioneeringWork() {
           {/* Eyebrow */}
           <p className="text-mint font-[400] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            PIONEERING WORK
+            ÖNCÜ ÇALIŞMA
           </p>
 
           <h1 className="text-primary-600 text-[32px] sm:text-[48px] font-[700] leading-[1.2]">
@@ -25,15 +25,15 @@ export default function PioneeringWork() {
           </h1>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[500] sm:font-[400] leading-[1.2] mb-6">
-            A pioneering medical philosophy
+            Öncü bir tıbbi felsefe
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-            The SWISS BIOHEALTH CLINIC in Kreuzlingen is your centre of
-            excellence in biological dentistry. We offer top-notch dental
-            treatments, modern technologies, individual focus on your health,
-            excellent service, and continuous training and education for optimal
-            results.
+            Kreuzlingen’deki SWISS BIOHEALTH CLINIC, biyolojik diş hekimliği alanında mükemmeliyet merkezinizdir.
+Birinci sınıf diş tedavileri, modern teknolojiler, sağlığınıza bireysel odak, mükemmel hizmet ve sürekli eğitim ile en iyi sonuçları sunuyoruz.
+Dr. Karl Ulrich Volz
+SDS SWISS DENTAL SOLUTIONS AG ve Kreuzlingen’deki SWISS BIOHEALTH CLINIC’in kurucusu ve sahibi olarak, yaklaşık 30.000 seramik implant yerleştirmiştir.
+Seramik implantoloji ve biyolojik diş hekimliği alanında küresel bir lider olarak tanınmaktadır.
           </p>
 
           <Link href="https://www.swiss-biohealth.com/en" className="">

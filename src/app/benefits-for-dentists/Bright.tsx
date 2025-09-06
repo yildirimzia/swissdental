@@ -60,7 +60,8 @@ function Main() {
               BRIGHT
             </div>
             <p className="text-primary-600 text-[16px] font-[200]">
-              Premium seramik implantlar
+              BRIGHT, premium seramik implantları temsil eder.
+
             </p>
             <Link href="/product-lines#bright">
               <Button

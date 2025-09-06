@@ -6,12 +6,15 @@ export default function CeramicAdvantages() {
       <div className="container-dental max-w-[1320px] px-6 sm:px-8 mx-auto py-20">
         {/* Ana başlık */}
         <h2 className="mt-4 text-center text-primary-600 font-bold leading-[1.15] text-[26px] sm:text-[40px]">
-          SIMPLE ENTRY
+          SDS'e Kolay Giriş
         </h2>
 
         {/* Intro paragraf */}
         <p className="mx-auto mt-6 max-w-[615px] text-center text-primary-600 text-[16px] leading-7 font-[300]">
-Entering the world of SDS is made easy through a straightforward, three-step process designed to teach newcomers the basics and qualify them for the practical application of SDS implants.
+          SDS dünyasına giriş, yeni başlayanlara temel bilgileri öğretmek ve
+          onları SDS implantlarının pratik uygulaması için nitelikli hale
+          getirmek üzere tasarlanmış basit, üç adımlı bir süreçle
+          kolaylaştırılmıştır.
         </p>
 
         {/* 1. satır (1–3) */}
@@ -19,22 +22,22 @@ Entering the world of SDS is made easy through a straightforward, three-step pro
           {/* 1 */}
           <AdvCard
             no="1."
-            title="Enroll in a Course"
-            desc="Enroll in one of our listed First Steps courses. These are especially suitable for starting your journey into the world of SDS and will introduce you to the fundamentals.."
+            title="Bir kursa kaydolun"
+            desc="Sunulan İlk Adım (First Steps) kurslarından birine kaydolun. Bu kurslar, SDS dünyasına yolculuğunuza başlamak için özellikle uygundur ve sizi temel bilgilerle tanıştırır."
           />
 
           {/* 2 */}
           <AdvCard
             no="2."
-            title="Receive an SDS Account"
-            desc="After successfully completing the first course, you will gain access to our B2B shop and SDSBOX. You are ready to install your first SDS implant."
+            title="Bir SDS hesabı alın"
+            desc="İlk kursu başarıyla tamamladıktan sonra, B2B mağazasına ve SDSBOX'a erişim kazanırsınız. Artık ilk SDS implantınızı uygulamaya hazırsınız."
           />
 
           {/* 3 */}
           <AdvCard
             no="3."
-            title="Apply SDS Implants"
-            desc="Depending on the course you choose, you can independently plan and apply implants, or you can use our SDSBOX, which comes with case planning and drilling assistance."
+            title="SDS implantlarını uygulayın"
+            desc="Seçtiğiniz kursa bağlı olarak, implantları bağımsız olarak planlayabilir ve uygulayabilirsiniz ya da vaka planlama ve delme asistanı ile birlikte gelen SDSBOX'ı kullanabilirsiniz."
           />
         </div>
       </div>

@@ -44,8 +44,8 @@ const DATA: Testimonial[] = [
     name: "JOHANNES BERGMANN",
     country: "GERMANY",
     quote:
-      "Only four weeks after the operation I was able to participate in the `Engadiner Ski Marathon`",
-    cta: "Read more",
+      "Ameliyattan sadece dört hafta sonra `Engadin Kayak Maratonu`na katılabildim.",
+    cta: "Devamını oku",
     href: "https://www.swiss-biohealth.com/en/testimonials/johannes-bergmann",
   },
   {
@@ -53,8 +53,8 @@ const DATA: Testimonial[] = [
     name: "MARTHA BERRY",
     country: "USA",
     quote:
-      "I´ve resumed playing tennis (competitively) for the first time in even a year. I´ve returned to work fully and have resumed a full social life.",
-    cta: "Read more",
+      "Bir yıldan uzun süre sonra ilk defa yeniden tenis müsabakasında oynamaya başladım. Tam zamanlı işe geri döndüm ve sosyal hayatıma tamamen geri döndüm.",
+    cta: "Devamını oku",
     href: "https://www.swiss-biohealth.com/en/testimonials/martha-berry",
   },
   {
@@ -62,8 +62,8 @@ const DATA: Testimonial[] = [
     name: "Catherine Stewart",
     country: "SWITZERLAND",
     quote:
-      "My new teeth and smile are absolutely beautiful. The precision are care that went into creating this perfect smile were nothing short of AMAZING!",
-    cta: "Read more",
+      "Yeni dişlerim ve gülüşüm kesinlikle harika. Bu mükemmel gülüşü yaratmak için gösterilen hassasiyet ve özen gerçekten inanılmazdı",
+    cta: "Devamını oku",
     href: "https://www.swiss-biohealth.com/en/testimonials/catherine-stewart",
   },
   {
@@ -71,8 +71,8 @@ const DATA: Testimonial[] = [
     name: "Dana King",
     country: "USA",
     quote:
-      "This is the most amazing medical care that I Have ever experienced from the surgeons to the adjucent therapies and even the food. It was an over all wonderful experience.",
-    cta: "Read more",
+      "Bu, şimdiye kadar yaşadığım en şaşırtıcı tıbbi deneyimdi. Cerrahlardan tamamlayıcı tedavilere ve hatta yemeğe kadar her şey olağanüstüydü. Genel olarak harika bir deneyimdi.",
+    cta: "Devamını oku",
     href: "https://www.swiss-biohealth.com/en/testimonials/dana-king",
   },
 ];
@@ -134,7 +134,7 @@ export default function SatisfiedPatientsSlider() {
 
         <div className="relative max-w-[1500px] mx-auto px-4 sm:px-6">
           <h2 className="text-center text-[16px]  text-teal-600 font-[300] uppercase mb-10">
-            Satisfied Patients
+            MEMNUN HASTALAR
           </h2>
 
           {/* Swiper container'a overflow visible ekledik */}
@@ -230,7 +230,7 @@ export default function SatisfiedPatientsSlider() {
                               icon={<ExternalLinkIcon />}
                               iconPosition="right"
                             >
-                              Read More
+                             Devamını oku
                             </Button>
                           </Link>
                         )}
