@@ -37,16 +37,16 @@ const HeroSection: React.FC = () => {
   const doctors: Doctor[] =  [
     {
       id: 1,
-      name: t('success_stories.doctors.0.name'),
-      title: t('success_stories.doctors.0.title'),
-      implantsPerYear: t('success_stories.doctors.0.implants_count'),
+      name: 'Dr. Thore Santel',
+      title: 'DR. THORE SANTEL',
+      implantsPerYear: '500+',
       image: "/images/Thore-Santel.jpg"
     },
     {
       id: 2,
-      name: t('success_stories.doctors.1.name'),
-      title: t('success_stories.doctors.1.title'), 
-      implantsPerYear: t('success_stories.doctors.1.implants_count'),
+      name: 'Dr. Mario Parra',
+      title: 'DR. MARIO PARRA',
+      implantsPerYear: '400+',
       image: "/images/Mario-Parra.jpg"
     }
   ];
@@ -103,10 +103,10 @@ const HeroSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16 mt-[-80px] lg-[0]">
           <p className="text-primary-500 font-[200] text-[16px] tracking-wide uppercase mb-4">
-            {t('success_stories.subtitle')}
+            SDS Kullanıcılar
           </p>
           <h2 className="lg:text-[40px] text-[26px] font-[400] text-primary-600">
-            {t('success_stories.title')}
+            Başarı hikayeleri
           </h2>
         </div>
 
@@ -138,7 +138,7 @@ const HeroSection: React.FC = () => {
                   </p>
                   
                   <h3 className="text-2xl lg:text-3xl font-bold text-primary-600">
-                    {t('success_stories.implants_per_year')}
+                    Yılda implant sayısı:
                   </h3>
                   
                   <div className="text-4xl lg:text-5xl font-bold text-primary-600">
@@ -156,7 +156,7 @@ const HeroSection: React.FC = () => {
                         icon={<ArrowRightIcon />}
                         iconPosition="right"
                       >
-                        {t('success_stories.button')}
+                        Daha fazla başarı hikayesi
                       </Button>
                       </Link>
                   </div>
@@ -190,7 +190,7 @@ const HeroSection: React.FC = () => {
                   </p>
                   
                   <h3 className="text-2xl lg:text-3xl font-bold text-primary-600">
-                    {t('success_stories.implants_per_year')}
+                    Yılda implant sayısı:
                   </h3>
                   
                   <div className="text-4xl lg:text-5xl font-bold text-primary-600">
@@ -208,7 +208,7 @@ const HeroSection: React.FC = () => {
                         icon={<ArrowRightIcon />}
                         iconPosition="right"
                       >
-                        {t('success_stories.button')}
+                       Daha fazla başarı hikayesi
                       </Button>
                       </Link>
                   </div>
@@ -240,7 +240,7 @@ const HeroSection: React.FC = () => {
               </p>
               
               <h3 className="text-xl font-bold text-primary-600">
-                {t('success_stories.implants_per_year')}
+                Yılda implant sayısı:
               </h3>
               
               <div className="text-3xl font-bold text-primary-600">
@@ -258,7 +258,7 @@ const HeroSection: React.FC = () => {
                     icon={<ArrowRightIcon />}
                     iconPosition="right"
                   >
-                    {t('success_stories.button')}
+                    Daha fazla başarı hikayesi
                   </Button>
                 </Link>
               </div>
@@ -270,7 +270,7 @@ const HeroSection: React.FC = () => {
             <button 
               onClick={prevSlide}
               className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-primary-500 transition-colors"
-              aria-label={t('success_stories.navigation.previous')}
+              aria-label='Önceki doktor'
             >
               <LeftArrow />
             </button>
@@ -278,7 +278,7 @@ const HeroSection: React.FC = () => {
             <button 
               onClick={nextSlide}
               className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-primary-500 transition-colors"
-              aria-label={t('success_stories.navigation.next')}
+              aria-label='Sonraki doktor'
             >
               <RightArrow />
             </button>

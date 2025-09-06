@@ -117,7 +117,7 @@ const HeroSection: React.FC = () => {
               <div>
                 <Image
                   src="/images/SDSEducationLogo.png"
-                  alt={t('education.logo_alt')}
+                  alt='SDS Eğitim'
                   width={422}
                   height={32}
                   className="object-cover "
@@ -126,13 +126,13 @@ const HeroSection: React.FC = () => {
               </div>
               
               <h3 className="lg:text-[40px] text-[26px] tracking-[-0.03em] leading-[1.2]  text-primary-600">
-                {t('education.title')}
+                SDS Eğitim ile uzman olun
               </h3>
             </div>
 
             {/* Description */}
             <p className="text-lg leading-relaxed max-w-lg text-primary-600">
-              {t('education.description')}
+              SDS Eğitim kurslarımızda deneyimli diş hekimlerimizin bilgisinden doğrudan faydalanma fırsatınız var. Seramik implant konusunda uzman olmanız için gerekli İsviçrede ve Türkiye’deki fiziki ve çevrimiçi eğitim oturumlarımızla becerilerinizi geliştirin.
             </p>
 
             {/* CTA Button */}
@@ -146,7 +146,7 @@ const HeroSection: React.FC = () => {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  {t('education.button')}
+                  SDS Eğitim web sitesine git
                 </Button>
               </Link>
             </div>
@@ -160,7 +160,7 @@ const HeroSection: React.FC = () => {
             <div className="relative">
               <Image
                 src="/images/SDSEducation.jpg"
-                alt={t('education.logo_alt')}
+                alt='SDS Eğitim'
                 width={830}
                 height={996}
                 className="object-cover lg:w-[830px] lg:h-[996px] w-[430px] h-[546px]"

@@ -478,16 +478,15 @@ const Header: React.FC = () => {
         rounded="rounded-full"
         className="!shadow-none mt-8 !font-[400] flex cursor-pointer" // Shadow'u kaldır ve cursor eklendi
         iconPosition="right"
-        onClick={handleLanguageSwitch}
       >
         <div className="flex items-center gap-0.5">
           <WordIcon />
           <div>
-            {currentLanguage === "en" ? (
-              <>{tCommon("language.switch_to_turkish")}</>
-            ) : (
-              <>{tCommon("language.switch_to_english")}</>
-            )}
+            <Link target="_blank" href="https://www.swissdentalsolutions.com/en">
+              <span className="">
+                 EN/English
+              </span>
+            </Link>
           </div>
         </div>
       </Button>

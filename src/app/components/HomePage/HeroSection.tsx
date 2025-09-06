@@ -28,11 +28,11 @@ const HeroSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   // Benefits array'ini çeviri dosyasından al
-  const benefits = [
-    t('standards_section.benefits.0'),
-    t('standards_section.benefits.1'), 
-    t('standards_section.benefits.2')
-  ];
+  const benefits = {
+      "0": "Yüksek derecede biyouyumlu",
+      "1": "Dayanıklı ve sağlam",
+      "2": "Anında implantasyon imkanı",
+  };
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -221,15 +221,15 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                  {t('hero.company_name')}
+                  SDS SWISS DENTAL SOLUTIONS
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125]  tracking-[-0.03em]  text-primary-600  font-light">
-                  {t('hero.main_title')}
+                 Seramik dental implantlarda dünya pazar lideri
                 </h1>
               </div>
 
               <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-[0] leading-8  mt-[2.875rem] max-w-[42rem]">
-                {t('hero.main_description')}
+                Beyaz zirkonyum dioksitten üretilen SDS seramik dental implantlar biyouyumluluk, tolerans, sağlık ve estetik açısından en yüksek standartları karşılar.
               </p>
 
               <div className="pt-6 lg:translate-x-[120px] translate-x-0 mt-[1.2rem]">
@@ -240,7 +240,7 @@ const HeroSection: React.FC = () => {
                     rounded="rounded-[100px]"
                     className="text-[16px]"
                   >
-                    {t('hero.main_button')}
+                    İmplantlara Git
                   </Button>
                 </Link>
               </div>
@@ -292,15 +292,15 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                  {t('bright_section.category')}
+                  Ürün
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125] uppercase  tracking-[-0.03em] font-[700]  text-primary-600  ">
-                  {t('bright_section.title')}
+                  BRIGHT
                 </h1>
               </div>
 
               <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600  leading-8  mt-[2.875rem] max-w-[42rem]">
-                {t('bright_section.description')}
+                BRIGHT premium implant serisi diş çekimi sonrası anında yerleştime için en optimal malzeme ve tasarım dikkate alınarak tasarlanmıştır.
               </p>
 
               <div className="pt-6  lg:mt-[1.2rem] mt-0">
@@ -311,7 +311,7 @@ const HeroSection: React.FC = () => {
                     rounded="rounded-[100px]"
                     className="text-[16px]"
                   >
-                    {t('bright_section.button')}
+                    BRIGHT Ürün Serisine Gitb.
                   </Button>
                 </Link>
               </div>
@@ -376,17 +376,17 @@ const HeroSection: React.FC = () => {
                     before:bg-[#3aa194]
                 `}
                 >
-                  {t('standards_section.category')}
+                  Neden SDS?
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125]  tracking-[-0.03em]  text-primary-600  font-light">
-                  {t('standards_section.title')}
+                  Uyumluluk, sağlık ve estetikte en yüksek standartlar!
                 </h1>
               </div>
 
               <ul className="list-decimal text-[18px] ml-[10px] lg:ml-0	 lg:text-[20px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-0 leading-8  mt-[2.875rem] max-w-[42rem]">
-                {benefits.map((benefit: string, index: number) => (
-                  <li key={index} className="mb-2">
-                    {benefit}
+                {Object.entries(benefits).map(([key, value]) => (
+                  <li key={key} className="mb-2">
+                    {value}
                   </li>
                 ))}
               </ul>
@@ -399,7 +399,7 @@ const HeroSection: React.FC = () => {
                     rounded="rounded-[100px]"
                     className="text-[16px]"
                   >
-                    {t('standards_section.button')}
+                    Avantajları Keşfet
                   </Button>
                 </Link>
               </div>
@@ -411,7 +411,7 @@ const HeroSection: React.FC = () => {
       {/* Scroll Indicator */}
       <div className="fixed bottom-8 right-8 z-30">
         <div className="writing-vertical text-white/70 text-sm font-light tracking-wider">
-          {t('scroll_indicator')}
+         Kaydırın
         </div>
       </div>
 

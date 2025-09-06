@@ -149,19 +149,19 @@ const HeroSection: React.FC = () => {
                   before:bg-[#3aa194]
                 `}
               >
-                {t('service_hero.category')}
+                SDS Destek
               </p>
               <h1 className="lg:text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),40px)] text-[clamp(26px,calc(-49.8461538462px+0.0865384615*100vw),26px)]  leading-[1.125] tracking-[-0.03em] text-primary-600 font-medium">
                 
               <strong className='font-bold text-[26px] lg:text-[40px] text-primary-600'>
-                {t('service_hero.title_highlight')}
+                Hizmet –
               </strong>
-                {t('service_hero.title_text')}
+                Ürünlerimiz kadar özel
               </h1>
             </div>
 
             <p className="lg:text-[20px] text-[15px] font-[400] lg:w-[80%] w-full text-primary-600 mt-[2.875rem] max-w-[42rem]">
-              {t('service_hero.description')}
+              SDS yalnızca bir ürün sağlayıcısı değil. Biz sürekli irtibat noktanız olarak seramik implantlar hakkında sizlere bilgiler sunuyor, eğitim etkinlikleri düzenliyor ve vaka planlamanızda aktif destek sağlıyoruz.
             </p>
 
             <div className="pt-6 mt-[1.2rem]">
@@ -190,7 +190,7 @@ const HeroSection: React.FC = () => {
                   }
                   iconPosition="right"
                 >
-                  {t('service_hero.button')}
+                  SDS Destek
                 </Button>
               </Link>
             </div>

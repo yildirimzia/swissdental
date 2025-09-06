@@ -24,12 +24,11 @@ const HeroSection: React.FC = () => {
     return () => window.removeEventListener('resize', checkScreenSize)
   }, [])
 
-  // Icon components - artık Image kullanacağız
   const CheckIcon = () => (
     <div className="  flex items-center justify-center mb-8">
       <Image
-        src="/images/Check.png" // Kendi check icon resminizi koyun
-        alt={t('quicklinks.benefits.title')}
+        src="/images/Check.png" 
+        alt='Hızlı Bağlantılar'
         width={180}
         height={180}
         className="object-contain"
@@ -41,7 +40,7 @@ const HeroSection: React.FC = () => {
     <div className="  flex items-center justify-center mb-8">
       <Image
         src="/images/hut.png" 
-        alt={t('quicklinks.studies.title')}
+        alt='Çalışmalar'
         width={180}
         height={180}
         className="object-contain"
@@ -53,7 +52,7 @@ const HeroSection: React.FC = () => {
     <div className=" flex items-center justify-center mb-8" style={{borderRadius: '12px'}}>
       <Image
         src="/images/heart.png" 
-        alt={t('quicklinks.supplements.title')}
+        alt='Takviyeler'
         width={180}
         height={180}
         className="object-contain"
@@ -91,10 +90,10 @@ const HeroSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-primary-500 tracking-[0.05em]  mb-2 font-bold text-[12px] lg:text-sm">
-            {t('quicklinks.subtitle')}
+           HIZLI BAĞLANTILAR
           </p>
           <h2 className="text-[clamp(26px,calc(-49.8461538462px+0.0865384615*100vw),40px)]  text-primary-600">
-            <span className="text-primary-600 font-bold ">{t('quicklinks.title')}</span> {t('quicklinks.title_suffix')}
+            <span className="text-primary-600 font-bold ">Hızlı Bağlantılar</span> hastalar için
           </h2>
         </div>
 
@@ -106,13 +105,13 @@ const HeroSection: React.FC = () => {
             <CheckIcon />
             
             <h3 className="text-[clamp(20px,calc(-49.8461538462px+0.0865384615*100vw),32px)] font-bold text-primary-600 lg:mb-4 mb-1">
-              {t('quicklinks.benefits.title')}
+              Avantajlar
             </h3>
             <p className="text-primary-500  text-[16px] font-[200] mt-0 lg:mt-2 mb-4">
-              {t('quicklinks.benefits.subtitle')}
+              Seramiğin Faydaları
             </p>
             <p className="text-primary-600 max-h-[75px] h-[75px] font-[300] text-base  mb-8 max-w-sm mx-auto">
-              {t('quicklinks.benefits.description')}
+             Titanyuma alternatif olarak seramik implantlar alerjiye neden olmaz, daha estetik ve doğal dişe daha yakındır.
             </p>
             
             <Link href="/benefits-for-patients">
@@ -124,7 +123,7 @@ const HeroSection: React.FC = () => {
                 icon={<ArrowRightIcon />}
                 iconPosition="right"
               >
-                {t('quicklinks.benefits.button')}
+                Tüm avantajları görüntüle
               </Button>
             </Link>
           </div>
@@ -134,13 +133,13 @@ const HeroSection: React.FC = () => {
             <GraduationCapIcon />
             
             <h3 className="text-[clamp(20px,calc(-49.8461538462px+0.0865384615*100vw),32px)] font-bold text-primary-600 lg:mb-4 mb-1">
-              {t('quicklinks.studies.title')}
+              Çalışmalar
             </h3>
             <p className="text-primary-500  text-[16px] font-[200] mt-0 lg:mt-2 mb-4">
-              {t('quicklinks.studies.subtitle')}
+              bilimsel olarak kanıtlanmış
             </p>
             <p className="text-primary-600 max-h-[75px] h-[75px] font-[300] text-base  mb-8 max-w-sm mx-auto">
-              {t('quicklinks.studies.description')}
+              Seramik implantoloji alanındaki güncel araştırmalar ve çalışma bulguları
             </p>
             
             <Link href="/benefits-for-dentists/tissue-level">
@@ -152,7 +151,7 @@ const HeroSection: React.FC = () => {
                 icon={<ArrowRightIcon />}
                 iconPosition="right"
               >
-                {t('quicklinks.studies.button')}
+                Çalışmaları görüntüle
               </Button>
             </Link>
           </div>
@@ -162,13 +161,13 @@ const HeroSection: React.FC = () => {
             <HeartIcon />
             
             <h3 className="text-[clamp(20px,calc(-49.8461538462px+0.0865384615*100vw),32px)] font-bold text-primary-600 lg:mb-4 mb-1">
-              {t('quicklinks.supplements.title')}
+              Takviyeler
             </h3>
             <p className="text-primary-500  text-[16px] font-[200] mt-0 lg:mt-2 mb-4">
-              {t('quicklinks.supplements.subtitle')}
+              optimal beslenme desteği
             </p>
             <p className="text-primary-600 max-h-[75px] h-[75px] font-[300] text-base  mb-8 max-w-sm mx-auto">
-              {t('quicklinks.supplements.description')}
+              Tedavi başarısını en üst düzeye çıkarmak ve bağışıklık sistemini güçlendirmek için geliştirilmiş besin takviyeleri
             </p>
             
             <div className="space-y-4">
@@ -181,20 +180,20 @@ const HeroSection: React.FC = () => {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  {t('quicklinks.supplements.button_de')}
+                  Takviye Satın Al DE
                 </Button>
               </Link>
               
               <Link href="https://www.swiss-biohealth-vital.ch/">
                 <Button
-                variant="customOutline" // Yeni variant
+                variant="customOutline"
                 size="custom16"
                 rounded="rounded-full"
-                className="!shadow-none mt-8 !font-[400]" // Shadow'u kaldır
+                className="!shadow-none mt-8 !font-[400]"
                 icon={<ExternalLinkIcon />}
                 iconPosition="right"
               >
-                {t('quicklinks.supplements.button_ch')}
+                Takviye Satın Al CH
               </Button>
               </Link>
             </div>

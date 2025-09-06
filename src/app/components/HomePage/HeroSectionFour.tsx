@@ -35,15 +35,15 @@ const HeroSection: React.FC = () => {
   // Testimonials data with images - çeviriler JSON'dan gelecek
   const testimonials: Testimonial[] = [
     {
-      name: t('testimonials.data.0.name'),
-      location: t('testimonials.data.0.location'),
-      text: t('testimonials.data.0.text'),
+      name: 'Jacqueline Bussard',
+      location: 'Almanya',
+      text: 'Sağlığım için bu yatırımı yaptığıma sevindim ve şimdi çok daha iyi hissediyorum. Tedavim sırasında aldığım birçok tavsiyeye uymaya devam edeceğim.',
       image: "/images/testimonial-1.jpg",
     },
     {
-      name: t('testimonials.data.1.name'),
-      location: t('testimonials.data.1.location'),
-      text: t('testimonials.data.1.text'),
+      name: 'Catherine Stewart',
+      location: 'ABD',
+      text: 'Yeni dişlerim ve gülüşüm kesinlikle muhteşem. Bu mükemmel gülüşü yaratmak için gösterilen hassasiyet ve özen gerçekten İNANILMAZDI!',
       image: "/images/testimonial-2.jpg",
     },
   ];
@@ -309,7 +309,7 @@ const HeroSection: React.FC = () => {
                       ? "bg-primary-500 scale-125"
                       : "bg-gray-300 hover:bg-gray-400"
                   } ${isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
-                  aria-label={`${t('testimonials.navigation.slide')} ${index + 1}`}
+                  aria-label={`Slayda git ${index + 1}`}
                 />
               ))}
             </div>
@@ -344,7 +344,7 @@ const HeroSection: React.FC = () => {
             <div className="lg:flex hidden items-center">
               <h3 className="text-[72px] text-primary-500 mt-[25px]">"</h3>
               <span className="text-primary-500 font-medium text-sm tracking-wide uppercase ml-[36px]">
-                {t('testimonials.title')}
+                Hasta Yorumları
               </span>
             </div>
 
@@ -363,7 +363,7 @@ const HeroSection: React.FC = () => {
                     ? "opacity-50 cursor-not-allowed"
                     : "cursor-pointer hover:opacity-70"
                 } transition-opacity duration-200`}
-                aria-label={t('testimonials.navigation.previous')}
+                aria-label={'Önceki Yorum'}
               >
                 <LeftArrow />
               </button>
@@ -378,7 +378,7 @@ const HeroSection: React.FC = () => {
                     ? "opacity-50 cursor-not-allowed"
                     : "cursor-pointer hover:opacity-70"
                 } transition-opacity duration-200`}
-                aria-label={t('testimonials.navigation.next')}
+                aria-label={'Sonraki Yorum'}
               >
                 <RightArrow />
               </button>
