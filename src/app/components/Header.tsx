@@ -330,7 +330,7 @@ const Header: React.FC = () => {
                 href="/company"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                Şirket - SDS Switzerland
+               SDS Switzerland
               </Link>
               <Link
                 href="/company-krea"
@@ -448,24 +448,28 @@ const Header: React.FC = () => {
           <div className="space-y-4">
               <Link
                 href="/company"
+                onClick={toggleMobileMenu}
                 className="block py-2 text-lg text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                Şirket - SDS Switzerland
+                SDS Switzerland
               </Link>
               <Link
                 href="/company-krea"
+                onClick={toggleMobileMenu}
                 className="block py-2 text-lg text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                SDS Türkiye Distribütörü - Krea
               </Link>
               <Link
                 href="/career"
+                onClick={toggleMobileMenu}
                 className="hidden py-2 text-lg text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                 Kariyer
               </Link>
               <Link
                 href="/history"
+                onClick={toggleMobileMenu}
                 className="block py-2 text-lg text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                Tarih
