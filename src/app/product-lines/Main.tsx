@@ -9,7 +9,7 @@ function Main() {
   const { t: tProductLines } = useProductLinesTranslation();
   const { ref: scrollRef, isVisible } = useScrollAnimation(0.2);
 
-    const handleHeaderDownload = (e: React.MouseEvent) => {
+  const handleHeaderDownload = (e: React.MouseEvent) => {
     const targetId = "bright";
     const targetSection = document.getElementById(targetId);
 
@@ -18,16 +18,16 @@ function Main() {
     } else {
       console.warn(`Element with id "${targetId}" not found`);
     }
-    };
+  };
 
   return (
     <>
       <main className="pb-[150px] p-[10px] bg-[linear-gradient(180deg,#EAF4F3_58.33%,rgba(255,255,255,0)_100%)]">
         <div className="pb-[100px] pt-[110px] w-full flex">
           <p className="pt-[100px] text-[44px] sm:text-[100px] whitespace-nowrap inline-block text-[#3aa194] font-bold left-0 sm:tracking-[1.1em] sm:leading-[0.9] tracking-[0.3em] leading-[.9]  opacity-10 relative text-center uppercase top-0 sm:w-[calc(100%+0.8em)] w-[100%]">
-            {tProductLines("product_lines.line_1.modelsInfo_1")}
+            Modeller
             <br />
-            {tProductLines("product_lines.line_1.modelsInfo_2")}
+            SERİLER
           </p>
         </div>
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 pb-[100px]">
@@ -72,18 +72,18 @@ function Main() {
               BRIGHT
             </div>
             <p className="text-primary-600 text-[16px] font-[200]">
-              {tProductLines("product_lines.line_1.title")}
+              Premium seramik implantlar
             </p>
-              <Button
-                variant="customOutline"
-                size="custom16"
-                rounded="rounded-full"
-                className="!shadow-none mt-8 !font-[500]"
-                iconPosition="right"
-                onClick={handleHeaderDownload}
-              >
-                {tProductLines("product_lines.line_1.button")}
-              </Button>
+            <Button
+              variant="customOutline"
+              size="custom16"
+              rounded="rounded-full"
+              className="!shadow-none mt-8 !font-[500]"
+              iconPosition="right"
+              onClick={handleHeaderDownload}
+            >
+              BRIGHT'e git
+            </Button>
           </div>
         </div>
       </main>
@@ -105,11 +105,16 @@ function Main() {
             before:bg-[#3aa194] lg:before:block before:hidden
           `}
           >
-            {tProductLines("product_lines.line_1.modelLines")}
+            SDS Model Serileri
           </p>
 
           <p className="leading-[1.4] tracking-[-.96px] font-extralight text-primary-600  mx-auto max-w-prose text-[clamp(20px,calc(-37.2307692308px_+_.0576923077_*_100vw),32px)]">
-            {tProductLines("product_lines.line_1.modelLinesDescription")}
+            Seramik implantlarımız, tüm kemik sınıflarına uygun kanıtlanmış
+            Dynamic Thread® vida yapısıyla donatılmıştır. Abutment postu, tek
+            parçalı SDS1.2 implantların optimum iyileşmesini sağlar. İki parçalı
+            implant sistemimiz 18 yılı aşkın deneyime dayanmakta olup, molar
+            bölgeler için bile sağlam bir yapı sunar. Güvenli implant-abutment
+            bağlantısı implantın içinde değil, tulip kısmında yer alır.
           </p>
         </div>
       </div>

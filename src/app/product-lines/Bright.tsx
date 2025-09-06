@@ -13,7 +13,7 @@ function Bright() {
       <div className="container-dental text-center bg-[linear-gradient(180deg,#fff_58.33%,#fff0)] pb-[200px] pt-[200px]">
         {/* Eyebrow */}
         <p className="text-mint tracking-wide font-[400] text-sm sm:text-base">
-          {tProductLines("product_lines.line_1.premiumCeramicImplants")}
+          Premium seramik implantlar
         </p>
 
         {/* Heading */}
@@ -38,9 +38,7 @@ function Bright() {
           mt-6 px-[32px]
         "
         >
-          {tProductLines(
-            "product_lines.line_1.premiumCeramicImplantsDescription"
-          )}
+          BRIGHT, premium model serisi olarak en yeni teknoloji ve geniş özellik yelpazesiyle donatılmıştır. Böylece her durumda hazırlıklı olabilirsiniz.
         </p>
 
         {/* CTA buttons */}
@@ -53,7 +51,7 @@ function Bright() {
               className="!font-[400]"
               iconPosition="right"
             >
-              {tProductLines("product_lines.line_1.brightCatalog")}
+              BRIGHT ürün kataloğu
             </Button>
           </Link>
 
@@ -64,7 +62,7 @@ function Bright() {
               rounded="rounded-full"
               className="!font-[400]"
             >
-              {tProductLines("product_lines.line_1.implantShop")}
+              İmplant mağazası
             </Button>
           </Link>
         </div>

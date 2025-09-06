@@ -13,9 +13,9 @@ function Main() {
       <main className="pb-[150px] p-[10px]">
         <div className="pb-[100px] pt-[110px] w-full flex">
           <p className="pt-[100px] text-[44px] sm:text-[100px] whitespace-nowrap inline-block text-[#3aa194] font-bold left-0 sm:tracking-[1.1em] sm:leading-[0.9] tracking-[0.3em] leading-[.9]  opacity-10 relative text-center uppercase top-0 sm:w-[calc(100%+0.8em)] w-[100%]">
-            {tProductLines("product_lines.line_1.modelsInfo_1")}
+            Modeller
             <br />
-            {tProductLines("product_lines.line_1.modelsInfo_2")}
+            SERİLER
           </p>
         </div>
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 pb-[100px]">
@@ -60,7 +60,7 @@ function Main() {
               BRIGHT
             </div>
             <p className="text-primary-600 text-[16px] font-[200]">
-              {tProductLines("product_lines.line_1.title")}
+              Premium seramik implantlar
             </p>
             <Link href="/product-lines#bright">
               <Button
@@ -70,7 +70,7 @@ function Main() {
                 className="!shadow-none mt-8 !font-[500]"
                 iconPosition="right"
               >
-                {tProductLines("product_lines.line_1.button")}
+                BRIGHT'e git
               </Button>
             </Link>
           </div>
