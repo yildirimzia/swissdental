@@ -28,11 +28,7 @@ export default function DoctorBlock() {
             </p>
 
             <p className="mt-8 text-primary-600/90 text-[16px] leading-7 font-[300] max-w-[780px]">
-              SDS SWISS DENTAL SOLUTIONS AG ve Kreuzlingen'deki SWISS BIOHEALTH CLINIC'in kurucusu ve sahibi olarak,
-              seramik implantoloji ve biyolojik diş hekimliği alanında
-              küresel bir lider olarak tanınmaktadır.
-              Yaklaşık 30.000 seramik implant yerleştirerek, bu alandaki
-              öncü katkılarını sergilemiştir.
+SDS SWISS DENTAL SOLUTIONS AG ve Kreuzlingen'deki SWISS BIOHEALTH CLINIC'in kurucusu ve sahibi olarak, yerleştirdiği yaklaşık 30.000 seramik implant ile seramik implantoloji ve biyolojik diş hekimliği alanında dünya lideri olarak kabul edilmektedir.
             </p>
           </article>
         </div>

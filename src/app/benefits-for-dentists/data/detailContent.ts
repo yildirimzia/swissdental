@@ -39,12 +39,12 @@ interface DetailContent {
 export const DETAIL_CONTENT: Record<string, DetailContent> = {
   "tissue-level": {
     hero: {
-      title: "LATEST STUDIES",
-      subtitle: "SCIENCE",
+      title: "En Son Çalışmalar ve Bilim",
+      subtitle: "BİLİM",
       description:
-        "To substantiate the efficacy, safety, and long-term effects of ceramic dental implants, we rely on various studies by reputable researchers and institutes, whose findings we publish here.",
-      button: "Download study brochure ",
-      confirmTitle: "STUDIES CONFIRM",
+        "Seramik dental implantların etkinliğini, güvenliğini ve uzun vadeli etkilerini kanıtlamak için, bulgularını yayınladığımız saygın araştırmacılar ve enstitüler tarafından yapılan çeşitli çalışmalara güveniyoruz.",
+      button: "Çalışma broşürünü indirin",
+      confirmTitle: "Çalışmalar Onaylıyor",
     },
     confirm: [
       {
@@ -53,32 +53,32 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
       },
       {
         number: "241",
-        subtitle: "Success and survival",
+        subtitle: "Başarı ve Sağkalım",
       },
       {
         number: "300",
-        subtitle: "Esthetic outcomes",
+        subtitle: "Estetik Sonuçlar",
       },
     ],
     level: [
       {
-        title: "Tissue level",
-        subtitle: "Confirmed by, among others:",
+        title: "Doku Seviyesi",
+        subtitle: "Diğerleri arasında şunlar tarafından onaylanmıştır:",
         image: "/images/benefits-for-patients/SDS12.png",
         list: [
           {
             listTitle:
-              "Clinical Oral Implants Research Systematic Review and Meta-Analysis",
+            "Clinical Oral Implants Research Sistematik İnceleme ve Meta-Analiz ",
           },
           {
             listTitle:
-              "The international journal of oral & maxillofacial implants Clinical Study or Randomized Clinical Trial",
+              "The international journal of oral & maxillofacial implants Klinik Çalışma veya Randomize Klinik Çalışma",
           },
           {
             listTitle:
-              "DGI – Deutsche Gesellschaft für Implantologie im Zahn-, Mund- und Kieferbereich e.V. Guidelines and consensus",
+              "DGI – Deutsche Gesellschaft für Implantologie im Zahn-, Mund- und Kieferbereich e.V. Kılavuzlar ve konsensüs ",
           },
-          { listTitle: "BMC Oral Health SDS Study Publication" },
+          { listTitle: "BMC Oral Health SDS Çalışma Yayını " },
         ],
       },
     ],
@@ -116,12 +116,12 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
 
   "zirconium-dioxide": {
     hero: {
-      title: "LATEST STUDIES",
-      subtitle: "SCIENCE",
+      title: "En Son Çalışmalar ve Bilim",
+      subtitle: "BİLİM",
       description:
-        "To substantiate the efficacy, safety, and long-term effects of ceramic dental implants, we rely on various studies by reputable researchers and institutes, whose findings we publish here.",
+        "Seramik dental implantların etkinliğini, güvenliğini ve uzun vadeli etkilerini kanıtlamak için, bulgularını yayınladığımız saygın araştırmacılar ve enstitüler tarafından yapılan çeşitli çalışmalara güveniyoruz.",
       button: "Download study brochure",
-      confirmTitle: "STUDIES CONFIRM",
+      confirmTitle: "Çalışmalar Onaylıyor",
     },
     confirm: [
       {
@@ -130,39 +130,39 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
       },
       {
         number: "241",
-        subtitle: "Success and survival",
+        subtitle: "Başarı ve Sağkalım",
       },
       {
         number: "300",
-        subtitle: "Esthetic outcomes",
+        subtitle: "Estetik Sonuçlar",
       },
     ],
     level: [
       {
-        title: "Zirconium dioxide",
-        subtitle: "Confirmed by, among others:",
+        title: "Zirkonyum Dioksit",
+        subtitle: "Diğerleri arasında şunlar tarafından onaylanmıştır:",
         image: "/images/benefits-for-patients/SDS12.png",
 
         list: [
           {
             listTitle:
-              "The international journal of oral & maxillofacial implants Systematic Review and Meta-Analysis",
+              "The international journal of oral & maxillofacial implants Sistematik İnceleme ve Meta-Analiz ",
           },
           {
             listTitle:
-              "International journal of oral implantology (Berlin, Germany) Clinical Study or Randomized Clinical Trial",
+              "International journal of oral implantology (Berlin, Germany) Klinik Çalışma veya Randomize Klinik Çalışma ",
           },
           {
             listTitle:
-              "Clinical Oral Implants Research Guidelines and consensus",
+              "Clinical Oral Implants Research Kılavuzlar ve konsensüs ",
           },
-          { listTitle: "Journal of clinical medicine SDS Study Publication" },
+          { listTitle: "Journal of clinical medicine SDS Çalışma Yayını " },
         ],
       },
     ],
     sections: [
       {
-        title: "Material Science",
+        title: "Material BİLİM",
         content:
           "Zirconium dioxide represents the pinnacle of biocompatible implant materials. Its unique crystalline structure provides exceptional strength while maintaining complete biological neutrality.",
         features: [
@@ -193,12 +193,12 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
 
   "dynamic-thread": {
     hero: {
-      title: "LATEST STUDIES",
-      subtitle: "SCIENCE",
+      title: "En Son Çalışmalar ve Bilim",
+      subtitle: "BİLİM",
       description:
-        "To substantiate the efficacy, safety, and long-term effects of ceramic dental implants, we rely on various studies by reputable researchers and institutes, whose findings we publish here.",
+        "Seramik dental implantların etkinliğini, güvenliğini ve uzun vadeli etkilerini kanıtlamak için, bulgularını yayınladığımız saygın araştırmacılar ve enstitüler tarafından yapılan çeşitli çalışmalara güveniyoruz.",
       button: "Download study brochure",
-      confirmTitle: "STUDIES CONFIRM",
+      confirmTitle: "Çalışmalar Onaylıyor",
     },
     confirm: [
       {
@@ -207,33 +207,33 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
       },
       {
         number: "241",
-        subtitle: "Success and survival",
+        subtitle: "Başarı ve Sağkalım",
       },
       {
         number: "300",
-        subtitle: "Esthetic outcomes",
+        subtitle: "Estetik Sonuçlar",
       },
     ],
     level: [
       {
-        title: "Dynamic thread",
-        subtitle: "Confirmed by, among others:",
+        title: "Dinamik Diş Yapısı (Dynamic Thread)",
+        subtitle: "Diğerleri arasında şunlar tarafından onaylanmıştır:",
         image: "/images/benefits-for-patients/SDS12.png",
 
         list: [
           {
             listTitle:
-              "Journal of clinical and experimental dentistry Systematic Review and Meta-Analysis",
+              "Journal of clinical and experimental dentistry Sistematik İnceleme ve Meta-Analiz ",
           },
           {
             listTitle:
-              "The international journal of oral & maxillofacial implants Clinical Study or Randomized Clinical Trial",
+              "The international journal of oral & maxillofacial implants Klinik Çalışma veya Randomize Klinik Çalışma ",
           },
           {
             listTitle:
-              "Clinical Oral Implants Research Guidelines and consensus",
+              "Clinical Oral Implants Research Kılavuzlar ve konsensüs ",
           },
-          { listTitle: "The journal of oral implantology SDS Study Publication" },
+          { listTitle: "TThe journal of oral implantology SDS Çalışma Yayını " },
         ],
       },
     ],
@@ -270,12 +270,12 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
 
   "clean-sterile": {
     hero: {
-      title: "LATEST STUDIES",
-      subtitle: "SCIENCE",
+      title: "En Son Çalışmalar ve Bilim",
+      subtitle: "BİLİM",
       description:
-        "To substantiate the efficacy, safety, and long-term effects of ceramic dental implants, we rely on various studies by reputable researchers and institutes, whose findings we publish here.",
-      button: "Download study brochure ",
-      confirmTitle: "STUDIES CONFIRM",
+        "Seramik dental implantların etkinliğini, güvenliğini ve uzun vadeli etkilerini kanıtlamak için, bulgularını yayınladığımız saygın araştırmacılar ve enstitüler tarafından yapılan çeşitli çalışmalara güveniyoruz.",
+      button: "Çalışma broşürünü indirin.",
+      confirmTitle: "Çalışmalar Onaylıyor",
     },
     confirm: [
       {
@@ -284,33 +284,33 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
       },
       {
         number: "241",
-        subtitle: "Success and survival",
+        subtitle: "Başarı ve Sağkalım",
       },
       {
         number: "300",
-        subtitle: "Esthetic outcomes",
+        subtitle: "Estetik Sonuçlar",
       },
     ],
     level: [
       {
-        title: "Clean & sterile",
-        subtitle: "Confirmed by, among others:",
+        title: "Temiz ve Steril",
+        subtitle: "Diğerleri arasında şunlar tarafından onaylanmıştır:",
         image: "/images/benefits-for-patients/SDS12.png",
 
         list: [
           {
             listTitle:
-              "Frontiers in Immunology Systematic Review and Meta-Analysis",
+              "Frontiers in Immunology Sistematik İnceleme ve Meta-Analiz ",
           },
           {
             listTitle:
-              "The international journal of oral & maxillofacial implants Clinical Study or Randomized Clinical Trial",
+              "The international journal of oral & maxillofacial implants Klinik Çalışma veya Randomize Klinik Çalışma ",
           },
           {
             listTitle:
-              "Clinical Oral Implants Research Guidelines and consensus",
+              "Clinical Oral Implants Research Kılavuzlar ve konsensüs ",
           },
-          { listTitle: "The Magazine of the Digital Dentistry Society International SDS Study Publication" },
+          { listTitle: "The Magazine of the Digital Dentistry Society International SDS Çalışma Yayını " },
         ],
       },
     ],
@@ -347,12 +347,12 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
 
   "implant-design": {
     hero: {
-      title: "LATEST STUDIES",
-      subtitle: "SCIENCE",
+      title: "En Son Çalışmalar ve Bilim",
+      subtitle: "BİLİM",
       description:
-        "To substantiate the efficacy, safety, and long-term effects of ceramic dental implants, we rely on various studies by reputable researchers and institutes, whose findings we publish here.",
-      button: "Download study brochure ",
-      confirmTitle: "STUDIES CONFIRM",
+        "Seramik dental implantların etkinliğini, güvenliğini ve uzun vadeli etkilerini kanıtlamak için, bulgularını yayınladığımız saygın araştırmacılar ve enstitüler tarafından yapılan çeşitli çalışmalara güveniyoruz.",
+      button: "Çalışma broşürünü indirin.",
+      confirmTitle: "Çalışmalar Onaylıyor",
     },
     confirm: [
       {
@@ -361,33 +361,33 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
       },
       {
         number: "241",
-        subtitle: "Success and survival",
+        subtitle: "Başarı ve Sağkalım",
       },
       {
         number: "300",
-        subtitle: "Esthetic outcomes",
+        subtitle: "Estetik Sonuçlar",
       },
     ],
     level: [
       {
-        title: "Implant design",
-        subtitle: "Confirmed by, among others:",
+        title: "İmplant Tasarımı",
+        subtitle: "Diğerleri arasında şunlar tarafından onaylanmıştır:",
         image: "/images/benefits-for-patients/SDS12.png",
 
         list: [
           {
             listTitle:
-              "Journal of dentistry Systematic Review and Meta-Analysis",
+              "Journal of dentistry Sistematik İnceleme ve Meta-Analiz",
           },
           {
             listTitle:
-              "Clinical Oral Implants Research Clinical Study or Randomized Clinical Trial",
+              "Clinical Oral Implants Research Klinik Çalışma veya Randomize Klinik Çalışma ",
           },
           {
             listTitle:
-              "The international journal of oral & maxillofacial implants Guidelines and consensus",
+              "The international journal of oral & maxillofacial implants Kılavuzlar ve konsensüs",
           },
-          { listTitle: "Dentale Implantologie & Paradontologie SDS Study Publication" },
+          { listTitle: "Dentale Implantologie & Paradontologie SDS Çalışma Yayını" },
         ],
       },
     ],
@@ -424,12 +424,12 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
 
   "concept": {
     hero: {
-      title: "LATEST STUDIES",
-      subtitle: "SCIENCE",
+      title: "En Son Çalışmalar ve Bilim",
+      subtitle: "BİLİM",
       description:
-        "To substantiate the efficacy, safety, and long-term effects of ceramic dental implants, we rely on various studies by reputable researchers and institutes, whose findings we publish here.",
-      button: "Download study brochure ",
-      confirmTitle: "STUDIES CONFIRM",
+        "Seramik dental implantların etkinliğini, güvenliğini ve uzun vadeli etkilerini kanıtlamak için, bulgularını yayınladığımız saygın araştırmacılar ve enstitüler tarafından yapılan çeşitli çalışmalara güveniyoruz.",
+      button: "Çalışma broşürünü indirin.",
+      confirmTitle: "Çalışmalar Onaylıyor",
     },
     confirm: [
       {
@@ -438,31 +438,31 @@ export const DETAIL_CONTENT: Record<string, DetailContent> = {
       },
       {
         number: "241",
-        subtitle: "Success and survival",
+        subtitle: "Başarı ve Sağkalım",
       },
       {
         number: "300",
-        subtitle: "Esthetic outcomes",
+        subtitle: "Estetik Sonuçlar",
       },
     ],
     level: [
       {
-        title: "Concept",
-        subtitle: "Confirmed by, among others:",
+        title: "Konsept",
+        subtitle: "Diğerleri arasında şunlar tarafından onaylanmıştır:",
         image: "/images/benefits-for-patients/SDS12.png",
 
         list: [
           {
             listTitle:
-              "Herausgeber 2 Clinical Study or Randomized Clinical Trial",
+              "Herausgeber 2 Klinik Çalışma veya Randomize Klinik Çalışma ",
           },
           {
             listTitle:
-              "International journal of implant dentistry Guidelines and consensus",
+              "International journal of implant dentistry Kılavuzlar ve konsensüs",
           },
           {
             listTitle:
-              "DDS Magazine MAG, SDS Study Publication",
+              "DDS Magazine MAG SDS Çalışma Yayını ",
           },
         ],
       },
