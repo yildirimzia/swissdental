@@ -278,7 +278,7 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 href="#"
-                className="hidden block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+                className="hidden py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
                 Kullanıcı
               </Link>
@@ -330,7 +330,13 @@ const Header: React.FC = () => {
                 href="/company"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                Şirket
+                 Şirket - SDS Switzerland
+              </Link>
+              <Link
+                href="/company-krea"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+               Krea - SDS Türkiye
               </Link>
               <Link
                 href="/career"
@@ -390,7 +396,7 @@ const Header: React.FC = () => {
             </Link>
             <Link
               href="#"
-              className="hidden block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
+              className="hidden py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
              Kullanıcı
