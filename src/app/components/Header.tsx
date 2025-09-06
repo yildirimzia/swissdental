@@ -256,25 +256,25 @@ const Header: React.FC = () => {
                 href="benefits-for-patients"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                Hastalar için faydalar
+                Hastalar İçin Faydalar
               </Link>
               <Link
                 href="/benefits-for-dentists"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                Diş hekimleri için faydalar
+                Diş Hekimleri İçin Faydalar
               </Link>
               <Link
                 href="/product-lines"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                Ürün grupları
+                Ürün Grupları
               </Link>
               <Link
                 href="/benefits-for-dentists/tissue-level"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                Bilim
+                Bilimsel Çalışmalar
               </Link>
               <Link
                 href="#"
@@ -286,7 +286,7 @@ const Header: React.FC = () => {
                 href="/sscp"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                SSCP
+                Güvenlik ve Klinik Performans
               </Link>
             </div>
           </div>
@@ -299,7 +299,7 @@ const Header: React.FC = () => {
                 href="/service"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                Servis ve destek
+                Servis ve Destek
               </Link>
               <Link
                 href="/documents"
@@ -311,7 +311,7 @@ const Header: React.FC = () => {
                 href="/sds-podcast"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                SDS podcast
+                SDS Podcast
               </Link>
               <Link
                 href="/contact"
@@ -330,13 +330,13 @@ const Header: React.FC = () => {
                 href="/company"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-                 Şirket - SDS Switzerland
+                Şirket - SDS Switzerland
               </Link>
               <Link
                 href="/company-krea"
                 className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
               >
-               Krea - SDS Türkiye
+               SDS Türkiye Distribütörü - Krea
               </Link>
               <Link
                 href="/career"
@@ -371,28 +371,28 @@ const Header: React.FC = () => {
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-             Hastalar için faydalar
+             Hastalar İçin Faydalar
             </Link>
             <Link
               href="/benefits-for-dentists"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              Diş hekimleri için faydalar
+              Diş Hekimleri İçin Faydalar
             </Link>
             <Link
               href="/product-lines"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              Ürün grupları
+              Ürün Grupları
             </Link>
             <Link
               href="#"
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              Bilim
+              Bilimsel Çalışmalar
             </Link>
             <Link
               href="#"
@@ -406,7 +406,7 @@ const Header: React.FC = () => {
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-              SSCP
+              Güvenlik ve Klinik Performans
             </Link>
           </div>
         );
@@ -418,7 +418,7 @@ const Header: React.FC = () => {
               className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
               onClick={() => toggleMobileMenu()}
             >
-             Servis ve destek
+             Servis ve Destek
             </Link>
             <Link
               href="/documents"
@@ -446,28 +446,31 @@ const Header: React.FC = () => {
       case "about":
         return (
           <div className="space-y-4">
-            <Link
-              href="/company"
-              className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => toggleMobileMenu()}
-            >
-              Şirket
-            </Link>
-            <Link
-              href="/career"
-              className="hidden py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => toggleMobileMenu()}
-            >
-              Kariyer
-            </Link>
-            <Link
-              href="/history"
-              className="block py-3 text-primary-600 hover:text-primary-500 transition-colors text-lg"
-              onClick={() => toggleMobileMenu()}
-            >
-             Tarih
-            </Link>
-          </div>
+              <Link
+                href="/company"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                Şirket - SDS Switzerland
+              </Link>
+              <Link
+                href="/company-krea"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+               SDS Türkiye Distribütörü - Krea
+              </Link>
+              <Link
+                href="/career"
+                className="hidden py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+                Kariyer
+              </Link>
+              <Link
+                href="/history"
+                className="block py-2 text-[45px] text-primary-600 hover:text-primary-500 font-light transition-colors"
+              >
+               Tarih
+              </Link>
+            </div>
         );
       default:
         return null;

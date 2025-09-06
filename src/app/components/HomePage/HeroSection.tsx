@@ -311,7 +311,7 @@ const HeroSection: React.FC = () => {
                     rounded="rounded-[100px]"
                     className="text-[16px]"
                   >
-                    BRIGHT Ürün Serisine Gitb.
+                    BRIGHT Ürün Serisine Git
                   </Button>
                 </Link>
               </div>

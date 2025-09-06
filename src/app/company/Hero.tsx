@@ -50,7 +50,7 @@ function ServiceHero() {
               icon={<ArrowRightIcon />}
               iconPosition="right"
             >
-              Explore History
+              Tarihi Keşfedin
             </Button>
           </Link>
         </div>
