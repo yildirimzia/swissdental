@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
               Çalışmalar
             </h3>
             <p className="text-primary-500  text-[16px] font-[200] mt-0 lg:mt-2 mb-4">
-              bilimsel olarak kanıtlanmış
+              Bilimsel olarak kanıtlanmış
             </p>
             <p className="text-primary-600 max-h-[75px] h-[75px] font-[300] text-base  mb-8 max-w-sm mx-auto">
               Seramik implantoloji alanındaki güncel araştırmalar ve çalışma bulguları
@@ -164,7 +164,7 @@ const HeroSection: React.FC = () => {
               Takviyeler
             </h3>
             <p className="text-primary-500  text-[16px] font-[200] mt-0 lg:mt-2 mb-4">
-              optimal beslenme desteği
+              Optimal beslenme desteği
             </p>
             <p className="text-primary-600 max-h-[75px] h-[75px] font-[300] text-base  mb-8 max-w-sm mx-auto">
               Tedavi başarısını en üst düzeye çıkarmak ve bağışıklık sistemini güçlendirmek için geliştirilmiş besin takviyeleri
@@ -180,21 +180,8 @@ const HeroSection: React.FC = () => {
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
                 >
-                  Takviye Satın Al DE
+                  Takviye Satın Al
                 </Button>
-              </Link>
-              
-              <Link href="https://www.swiss-biohealth-vital.ch/">
-                <Button
-                variant="customOutline"
-                size="custom16"
-                rounded="rounded-full"
-                className="!shadow-none mt-8 !font-[400]"
-                icon={<ExternalLinkIcon />}
-                iconPosition="right"
-              >
-                Takviye Satın Al CH
-              </Button>
               </Link>
             </div>
           </div>
