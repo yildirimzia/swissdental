@@ -60,7 +60,7 @@ function Main() {
               BRIGHT
             </div>
             <p className="text-primary-600 text-[16px] font-[200]">
-              BRIGHT, premium seramik implantları temsil eder.
+              BIRHGT, premium seramik implant
 
             </p>
             <Link href="/product-lines#bright">
@@ -71,7 +71,7 @@ function Main() {
                 className="!shadow-none mt-8 !font-[500]"
                 iconPosition="right"
               >
-                BRIGHT'e git
+                BRIGHT’a Git
               </Button>
             </Link>
           </div>

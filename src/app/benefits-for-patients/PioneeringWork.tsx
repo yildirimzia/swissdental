@@ -61,7 +61,7 @@ Seramik implantoloji ve biyolojik diş hekimliği alanında küresel bir lider o
               }
               iconPosition="right"
             >
-              To the SWISS BIOHEALTH CLINIC
+              SWISS BIOHEALTH CLINIC
             </Button>
           </Link>
         </div>

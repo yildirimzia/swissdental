@@ -134,7 +134,7 @@ function Card({
               className="!shadow-none mt-8 !font-[400]"
               iconPosition="right"
             >
-              More Details
+              Daha Fazla
             </Button>
           </Link>
         </div>

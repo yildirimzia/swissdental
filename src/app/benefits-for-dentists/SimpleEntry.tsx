@@ -22,21 +22,21 @@ export default function CeramicAdvantages() {
           {/* 1 */}
           <AdvCard
             no="1."
-            title="Bir kursa kaydolun"
+            title="Bir Kursa Kaydolun"
             desc="Sunulan İlk Adım (First Steps) kurslarından birine kaydolun. Bu kurslar, SDS dünyasına yolculuğunuza başlamak için özellikle uygundur ve sizi temel bilgilerle tanıştırır."
           />
 
           {/* 2 */}
           <AdvCard
             no="2."
-            title="Bir SDS hesabı alın"
-            desc="İlk kursu başarıyla tamamladıktan sonra, B2B mağazasına ve SDSBOX'a erişim kazanırsınız. Artık ilk SDS implantınızı uygulamaya hazırsınız."
+            title="Bir SDS Hesabı Oluşturun"
+            desc="İlk kursu başarıyla tamamladıktan sonra SDS implantları uygulamaya hazırsınız. Bizimle iletişime geçip ilk vakanızı planlayabiliriz."
           />
 
           {/* 3 */}
           <AdvCard
             no="3."
-            title="SDS implantlarını uygulayın"
+            title="SDS İmplantlarını Uygulayın"
             desc="Seçtiğiniz kursa bağlı olarak, implantları bağımsız olarak planlayabilir ve uygulayabilirsiniz ya da vaka planlama ve delme asistanı ile birlikte gelen SDSBOX'ı kullanabilirsiniz."
           />
         </div>

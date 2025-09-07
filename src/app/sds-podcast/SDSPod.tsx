@@ -68,7 +68,7 @@ function SDSPod() {
           {/* Alıntı */}
           <h3 className="sm:min-h-[120px] min-h-[160px] text-primary-600 text-[20px] md:text-[34px] font-bold leading-[1.2]">
             Prof. Dr. Etyene Schnurr, <br />
-            Dr. Kurt Mosetter.
+            Dr. Kurt Mosetter
           </h3>
 
           {/* CTA */}
@@ -198,7 +198,7 @@ function SDSPod() {
           {/* Alıntı */}
           <h3 className="sm:min-h-[120px] min-h-[160px] text-primary-600 text-[20px] md:text-[34px] font-bold leading-[1.2]">
             Dr. Rebekka Hueber, seramik implantların, özellikle SDS
-            implantlarının avantajları hakkında konuşuyor.{" "}
+            implantlarının avantajları hakkında konuşuyor{" "}
           </h3>
 
           {/* CTA */}
@@ -262,7 +262,7 @@ function SDSPod() {
 
           {/* Alıntı */}
           <h3 className="sm:min-h-[120px] min-h-[160px] text-primary-600 text-[20px] md:text-[34px] font-bold leading-[1.2]">
-            Dr. Dirk Duddeck, İmplant Kontaminasyonu hakkında konuşuyor9
+            Dr. Dirk Duddeck, İmplant Kontaminasyonu hakkında konuşuyor
           </h3>
 
           {/* CTA */}

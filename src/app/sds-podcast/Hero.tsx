@@ -37,12 +37,11 @@ function Hero() {
 
               {/* Supporting copy */}
               <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-600">
-                Son yıllarda podcast'ler, yalnızca her yerde ve her zaman (yemek pişirirken veya işe gidip gelirken bile) dinlenebilmeleri nedeniyle değil, aynı zamanda kişisel ve otantik bir bilgi aktarım platformu olmaları nedeniyle de giderek daha popüler hale geldi1.
-
+Son yıllarda podcast'ler, yalnızca her yerde ve her zaman (yemek pişirirken veya işe gidip gelirken bile) dinlenebilmeleri nedeniyle değil, aynı zamanda kişisel ve otantik bir bilgi aktarım platformu olmaları nedeniyle de giderek daha popüler hale geldi.
               </p>
               <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-primary-600">
-                SDS ailesinin çeşitli üyeleri, SDS PODCAST bölümlerine heyecan verici konuklar davet edecekler2. Bu podcast'lerde, biyolojik diş hekimliğini birlikte daha güvenli ve daha iyi hale getirmek isteyen implantologlar, şirket veya endüstri temsilcileri ve araştırmayı yürüten kişiler gibi seramik implant pazarındaki farklı aktörlerin faaliyetleri hakkında bilgiler edineceksiniz3.
 
+SDS ailesinin üyeleri olarak, SDS PODCAST bölümlerine heyecan verici konuklar davet edeceğiz. Bu podcast'lerde, biyolojik diş hekimliğini birlikte daha güvenli ve daha iyi hale getirmek isteyen implantologlar, şirket veya endüstri temsilcileri ve araştırma görevlileri gibi seramik implant pazarındaki farklı aktörlerin faaliyetleri hakkında bilgiler edineceksiniz.
               </p>
 
               <p className="mx-auto mb-8 mt-11 text-center text-[16px] sm:text-xs  text-primary-600 uppercase">

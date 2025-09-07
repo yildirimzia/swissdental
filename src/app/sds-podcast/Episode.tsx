@@ -37,7 +37,7 @@ export default function Episode() {
           </p>
 
           <h2 className="text-primary-600 text-[26px] sm:text-[40px] font-[500] sm:font-[400] leading-[1.2] mb-6">
-            Dr. Karl Ulrich Volz ve Dr. Ken Serota ile söyleşi.
+            Dr. Karl Ulrich Volz ve Dr. Ken Serota ile söyleşi
           </h2>
 
           <Link
