@@ -542,16 +542,16 @@ const Header: React.FC = () => {
           <div className="sm:ml-[-11px] ml-0">
             <Link href="/">
               <Image
-                src="/logo.svg"
+                src="/images/turkey-logo.svg"
                 alt="Logo"
-                width={263}
+                width={390}
                 height={35}
                 className="hidden lg:block"
               />
               <Image
-                src="/logo.svg"
+                src="/images/turkey-logo.svg"
                 alt="Logo"
-                width={165}
+                width={265}
                 height={22}
                 className="block lg:hidden ml-[5px]"
               />

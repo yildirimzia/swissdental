@@ -23,7 +23,7 @@ export default function Contact() {
           <article className="px-6 sm:px-12 lg:px-20 py-10 lg:py-16 ">
                    <p className="text-mint font-[300] text-[16px] tracking-[.05em] uppercase mb-4 relative flex items-center">
             <span className="hidden sm:inline-block w-[100px] h-[1px] bg-mint mr-4" />
-            Merkez
+            KREA - TÜRKİYE
         </p>
             <h2 className="text-primary-600 font-bold tracking-[-0.02em] leading-[1.05] text-[34px] sm:text-[42px] lg:text-[48px]">
               İstanbul
