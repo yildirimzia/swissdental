@@ -34,7 +34,7 @@ export default function WhyCeramic() {
     },
     {
       icon: "/images/benefits-for-patients/Weight.svg",
-      title: "Dayanıklı ve sağlam",
+      title: "Dayanıklı ve Sağlam",
       desc: "Seramik implantlar artık stabilite ve uzun ömürlülük açısından titanyum implantları geride bırakmıştır.",
       href: "https://www.dginet.de/wp-content/uploads/sites/4/2024/02/20240130_LL_083-039_S3_Keramikimplantate_lang_2022_meta.pdf",
     },
@@ -46,7 +46,7 @@ export default function WhyCeramic() {
     },
     {
       icon: "/images/benefits-for-patients/Rocket.svg",
-      title: "Minimal radyasyon",
+      title: "Minimal Radyasyon",
       desc: "Hammaddelerin özenle seçilmesi sayesinde, titanyuma kıyasla minimal radyasyon sağlar.",
       href: "https://www.dinmedia.de/de/norm/din-en-iso-13356/232848189",
     },

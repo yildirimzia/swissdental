@@ -29,9 +29,9 @@ const HeroSection: React.FC = () => {
 
   // Benefits array'ini çeviri dosyasından al
   const benefits = {
-      "0": "Yüksek derecede biyouyumlu",
-      "1": "Dayanıklı ve sağlam",
-      "2": "Anında implantasyon imkanı",
+      "0": "Yüksek Derecede Biyouyumlu",
+      "1": "Dayanıklı ve Sağlam",
+      "2": "Anında İmplantasyon İmkanı",
   };
 
   useEffect(() => {

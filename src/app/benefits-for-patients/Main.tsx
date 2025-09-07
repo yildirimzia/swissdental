@@ -5,16 +5,20 @@ import Button from "../components/Button";
 
 export default function BenefitsBlock() {
 
-    const handleHeaderDownload = (e: React.MouseEvent) => {
-      const targetId = "ceramic-advantages";
-      const targetSection = document.getElementById(targetId);
+const handleHeaderDownload = (e: React.MouseEvent) => {
+  const targetId = "ceramic-advantages";
   
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      } else {
-        console.warn(`Element with id "${targetId}" not found`);
-      }
-    };
+  // Kısa bir gecikme ekleyerek DOM'un hazır olmasını sağlayın
+  setTimeout(() => {
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.warn(`Element with id "${targetId}" not found`);
+    }
+  }, 100); // 100ms gecikme
+};
 
   return (
     <section className="">

@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
     {
       title: "SDS HAKKINDA",
       links: [
-        { href: '/company', label: "Şirket - SDS Switzerland" },
+        { href: '/company', label: "SDS Switzerland" },
         { href: '/company-krea', label: "SDS Türkiye Distribütörü - Krea" },
         { href: '/history', label: "Tarih" },
       ]

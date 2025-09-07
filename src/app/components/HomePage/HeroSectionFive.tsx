@@ -147,7 +147,7 @@ const HeroSection: React.FC = () => {
                   
                   {/* More Success Stories Link */}
                   <div className="pt-6">
-                     <Link href="/success-stories">
+                     <Link target="_blank" href="https://www.swissdentalsolutions.com/en/top-user">
                         <Button
                         variant="customOutline"
                         size="custom16"
@@ -199,7 +199,7 @@ const HeroSection: React.FC = () => {
                   
                   {/* More Success Stories Link */}
                   <div className="pt-6">
-                      <Link href="/success-stories">
+                      <Link target="_blank" href="https://www.swissdentalsolutions.com/en/top-user">
                         <Button
                         variant="customOutline"
                         size="custom16"
@@ -249,7 +249,7 @@ const HeroSection: React.FC = () => {
               
               {/* More Success Stories Link */}
               <div className="pt-4">
-                <Link href="/success-stories">
+                <Link target="_blank" href="https://www.swissdentalsolutions.com/en/top-user">
                   <Button
                     variant="customOutline"
                     size="custom16"
