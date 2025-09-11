@@ -37,8 +37,8 @@ export default function Contact() {
 
             <div className="flex flex-row gap-4 mt-4">
                 <span className="text-primary-600">Telefon</span>
-                <Link href="tel:+05056434343" className="text-primary-600 text-[16px] font-[300] cursor-pointer underline">
-                0505 643 43 43
+                <Link href="tel:+90540099737" className="text-primary-600 text-[16px] font-[300] cursor-pointer underline">
+                 +90 54 00 99 737
                 </Link>
             </div>
 
