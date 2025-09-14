@@ -9,7 +9,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 
 export const metadata: Metadata = {
-  title: "Swiss Dental Solutions - SDS tarafından üretilen seramik implantlar | Biyouyumlu",
+  title: "SDS Türkiye | Seramik İmplantlarda Biyolojik Çözümler",
   description: "SDS Seramik İmplantları keşfedin: Biyouyumlu, dayanıklı ve hemen implante edilebilir. En yüksek uyumluluk ve estetik için en uygun titanyum alternatifi.",
   icons: {
     icon: "/public/favicon.ico",
