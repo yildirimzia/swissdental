@@ -21,7 +21,7 @@ export default async function RootLayout({
   const host = hdrs.get("host") || "";
 
   // ENV (Vercel > Project Settings > Environment Variables)
-  const isProdEnv = process.env.NEXT_PUBLIC_ENV === "production";
+  const isProdEnv = process.env.NEXT_PUBLIC_ENV !== "production";
 
   // vercel preview domainlerini ayıkla
   const isVercelPreview = host.endsWith(".vercel.app"); // örn: swissdental.vercel.app
