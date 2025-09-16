@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "SDS Swiss Dental Solutions tarafından geliştirilen seramik implantların gelişimini keşfedin – Dr. Ulrich Volz'un vizyonundan sadece 10 yıl içinde küresel pazar liderliğine uzanan yolculuk.",
   canonical: "/sds-tarihcesi",
-  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
+  ogImage: `/api/og?title=${encodeURIComponent("SDS – Seramik İmplantlarda Tarih ve Yenilikler")}`,
 });
 
 

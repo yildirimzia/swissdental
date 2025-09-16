@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "Tüm uygulamalar için ürün serilerimiz: BRIGHT - tek parça ve iki parçalı, 50'ye kadar özel şekil ve VALUE - uygun maliyetli hibrit sistem.",
   canonical: "/seramik-implant-urun-serileri",
-  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
+  ogImage: `/api/og?title=${encodeURIComponent("SDS Seramik İmplantlar: PARLAK & DEĞER Ürün Serileri Genel Bakış")}`,
 });
 
 gsap.registerPlugin(ScrollTrigger);

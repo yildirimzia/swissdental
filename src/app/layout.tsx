@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "SDS Seramik İmplantları keşfedin: Biyouyumlu, dayanıklı ve hemen implante edilebilir. En yüksek uyumluluk ve estetik için en uygun titanyum alternatifi.",
   canonical: "/",
-  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
+  ogImage: `/api/og?title=${encodeURIComponent("Swiss Dental Solutions Türkiye")}`,
 });
 
 export default async function RootLayout({

@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "Diş hekimlerinin işini kolaylaştıran ve müşteri memnuniyetine katkıda bulunan SDS Box ve diğer hizmetlerimizi tanıyın.",
   canonical: "/hizmetler",
-  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
+  ogImage: `/api/og?title=${encodeURIComponent("Hizmetlerimiz")}`,
 });
 
 
@@ -25,7 +25,7 @@ function Service() {
      <ServiceHero />
      <InfoCard />
      <SdsEducation/>
-     <VideoContent />
+    <VideoContent />
      <Questions />
      <ContactForm />
    </>

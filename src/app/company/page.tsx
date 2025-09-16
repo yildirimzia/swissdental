@@ -9,7 +9,8 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "İmplantoloji alanında 20 yılı aşkın deneyime sahip, biyouyumlu seramik implantlarda dünya lideri olan SWISS DENTAL SOLUTIONS hakkında daha fazla bilgi edinin.",
   canonical: "/kurumsal",
-  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
+  ogImage: `/api/og?title=${encodeURIComponent("SDS Seramik İmplantlar – Yenilik ve Kalite")}`,
+
 });
 
 function page() {
