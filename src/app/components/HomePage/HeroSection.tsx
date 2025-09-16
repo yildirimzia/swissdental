@@ -328,8 +328,9 @@ const HeroSection: React.FC = () => {
                   alt="Ceramic Dental Implant 2"
                   width={381}
                   height={600}
+                  loading="lazy"
+                  fetchPriority="low"
                   className="object-contain transform translate-x-[30%] translate-y-[16.9%] "
-                  priority
                 />
               </div>
               <div
@@ -344,6 +345,7 @@ const HeroSection: React.FC = () => {
                   height={1200}
                   className="object-contain"
                   priority
+                  fetchPriority="high"
                 />
               </div>
             </div>

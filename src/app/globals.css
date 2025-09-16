@@ -1,63 +1,14 @@
 /* Tailwind CSS v4 Import */
 @import "tailwindcss";
 
-/* Gotham Font Import */
-@import url('https://fonts.cdnfonts.com/css/gotham');
 
-/* Gotham Font Definitions - CDN ile yedek olarak lokal */
-
-@font-face {
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 200;
-    src: url('https://fonts.cdnfonts.com/s/14898/GothamLight.woff') format('woff'),
-         url('/fonts/GothamLight.woff') format('woff');
-    font-display: swap;
+:root {
+  /* hem body hem heading için aynı aileyi kullanıyoruz */
+  --font-body: var(--font-gotham), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: var(--font-gotham), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-@font-face {
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 300;
-    src: url('https://fonts.cdnfonts.com/s/14898/GothamLight.woff') format('woff'),
-         url('/fonts/GothamLight.woff') format('woff');
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://fonts.cdnfonts.com/s/14898/GothamBook.woff') format('woff'),
-         url('/fonts/GothamBook.woff') format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    font-style: italic;
-    font-weight: 400;
-    src: url('https://fonts.cdnfonts.com/s/14898/GothamBookItalic.woff') format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 500;
-    src: url('https://fonts.cdnfonts.com/s/14898/GothamMedium.woff') format('woff'),
-         url('/fonts/GothamMedium.woff') format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://fonts.cdnfonts.com/s/14898/GothamBold.woff') format('woff'),
-         url('/fonts/GothamBold.woff') format('woff');
-    font-display: swap;
-}
 @layer base {
   body {
     font-family: var(--font-body);
@@ -159,11 +110,6 @@
   --spacing-18: 4.5rem;
   --spacing-88: 22rem;
   --spacing-128: 32rem;
-  
-  /* Custom Font Families */
-  --font-heading: "Gotham",  sans-serif;
-  --font-body: "Gotham",  sans-serif;
-  --font-gotham: "Gotham",  sans-serif;
   
   /* Custom Breakpoints */
   --breakpoint-3xl: 1920px;
