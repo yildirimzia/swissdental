@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
-import { useLoading } from "@/contexts/LoadingContext";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

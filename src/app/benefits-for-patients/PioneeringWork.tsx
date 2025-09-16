@@ -1,15 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import Button from "../components/Button"; // kendi butonun
+import Button from "../components/Button"; 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function PioneeringWork() {
   return (
-    // ÖNEMLİ: overflow-visible ki görsel yukarı taşabilsin
     <section className="bg-white sm:mt-[200px] mt-[50px]   overflow-visible">
       <div className="lg:max-w-[1380px] 2xl:max-w-[1620px] grid grid-cols-1 lg:grid-cols-[40%_60%] items-center ml-auto">
         {/* Sol: Metin */}

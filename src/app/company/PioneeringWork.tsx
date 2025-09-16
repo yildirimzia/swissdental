@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import Button from "../components/Button"; // kendi butonun
+import Button from "../components/Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

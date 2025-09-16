@@ -9,7 +9,6 @@ import Image from "next/image";
 import Button from "../components/Button";
 import Link from "next/link";
 
-// Bu örnek veri yapısı – sen kendi kaynaklarından doldurabilirsin
 type Testimonial = {
   imgSrc: string;
   name: string;

@@ -1,4 +1,3 @@
-// ❌ "use client" KALDIR
 import { notFound } from "next/navigation";
 import { DETAIL_CONTENT } from "../data/detailContent";
 import Link from "next/link";
@@ -10,7 +9,6 @@ import DoctorBlock from "@/app/components/DoctorBlock";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/seo/config";
 
-// ---- SEO yardımcı: slug -> title/desc
 const CARD_INFO = {
   "tissue-level": { title: "Doku seviyesi", icon: "/images/benefits-for-patients/tissueLevel.svg" },
   "zirconium-dioxide": { title: "Zirkonyum dioksit", icon: "/images/benefits-for-patients/tabler_affiliate.svg" },
@@ -22,7 +20,6 @@ const CARD_INFO = {
 
 type Params = { slug: string };
 
-// ✅ Dinamik SEO
 export async function generateMetadata(
   { params }: { params: Promise<Params> }
 ): Promise<Metadata> {

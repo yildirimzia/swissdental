@@ -1,4 +1,3 @@
-// ScrollHandler.tsx (yeni dosya)
 "use client";
 
 import { useEffect } from "react";

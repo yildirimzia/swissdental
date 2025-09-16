@@ -1,25 +1,3 @@
-import React from "react";
-import Link from "next/link";
-import Button from "../components/Button";
-
-const ArrowRightIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="ml-2"
-  >
-    <path d="M5 12l14 0"></path>
-    <path d="M13 18l6 -6"></path>
-    <path d="M13 6l6 6"></path>
-  </svg>
-);
 function ServiceHero() {
   return (
     <section className="">

@@ -1,12 +1,10 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import Button from "../components/Button";
 type VideoModalProps = {
   open: boolean;
   onClose: () => void;
-  youtubeId: string; // ör: "dQw4w9WgXcQ"
+  youtubeId: string;
 };
 
 function VideoModal({ open, onClose, youtubeId }: VideoModalProps) {

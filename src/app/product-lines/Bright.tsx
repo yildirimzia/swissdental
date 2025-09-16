@@ -2,12 +2,9 @@
 import Image from "next/image";
 import Button from "../components/Button";
 import Link from "next/link";
-import { useProductLinesTranslation } from "@/hooks/useTranslation";
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
 function Bright() {
-  const { t: tProductLines } = useProductLinesTranslation();
-
   return (
     <section id="bright" className="relative overflow-hidden py-20 sm:py-24 lg:py-28">
       <div className="container-dental text-center bg-[linear-gradient(180deg,#fff_58.33%,#fff0)] pb-[200px] pt-[200px]">

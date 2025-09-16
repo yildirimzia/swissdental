@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Button from "../components/Button";
 import Link from "next/link";
-import { useProductLinesTranslation } from "@/hooks/useTranslation";
-import { useScrollAnimation } from "../components/useScrollAnimation";
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
 function Main() {
-  const { t: tProductLines } = useProductLinesTranslation();
 
   return (
     <>

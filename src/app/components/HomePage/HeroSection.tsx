@@ -7,7 +7,6 @@ import Button from "../Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// GSAP plugin'ini register et
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -15,7 +14,6 @@ if (typeof window !== "undefined") {
 const HeroSection: React.FC = () => {
   const [removeHidden, setRemoveHidden] = useState(false);
 
-  // Translation hook
   const bgRef = useRef<HTMLDivElement>(null);
 
   // GSAP animasyonları için ref

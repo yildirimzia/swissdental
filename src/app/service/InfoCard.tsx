@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../components/Button";
-// Removed incorrect import of 'link' from 'fs'
 
 const TEAL = "#0F6F69";
 
