@@ -6,9 +6,10 @@ import ComingSoon from "./components/ComingSoon";
 import GlobalLoading from "./components/GlobalLoading";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { LoadingProvider } from "@/contexts/LoadingContext";
+import { JsonLd } from "@/seo/jsonld";
 
 import type { Metadata } from "next";
-import { buildMetadata } from "@/seo/config";
+import { buildMetadata , SITE} from "@/seo/config";
 
 export const metadata: Metadata = buildMetadata({
   path: "/",
@@ -34,9 +35,25 @@ export default async function RootLayout({
   // sadece prod ortam + vercel preview DEĞİLSE coming soon göster
   const showComingSoon = isProdEnv && !isVercelPreview;
 
+  const logoUrl = new URL("/images/turkey-logo.svg", SITE.baseUrl).toString();
+
   return (
     <html lang="tr">
       <body className="antialiased">
+        <JsonLd
+          id="org"
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: SITE.name,
+            url: SITE.baseUrl,
+            logo: logoUrl,
+            sameAs: [
+              "https://www.instagram.com/swissdentalsolutionsturkiye",
+              "https://www.linkedin.com/company/swissdentalsolutions/"
+            ],
+          }}
+        />
         <LanguageProvider>
           <LoadingProvider>
             <div>
