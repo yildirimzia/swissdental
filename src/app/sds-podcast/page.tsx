@@ -13,6 +13,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "SDS Podcast'te heyecan verici konuklar: seramik implantlar ve diş hekimliği alanında içgörüler ve gelişmelerle uzmanlar, implantologlar ve araştırmacılar.",
   canonical: "/sds-podcast",
+  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
 });
 
 

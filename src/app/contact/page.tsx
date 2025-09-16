@@ -9,6 +9,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "SDS veya seramik implantlarımız hakkında sorularınız mı var? Uzmanlarımızla doğrudan iletişim kurmak için iletişim seçeneklerimizi kullanın!",
   canonical: "/iletisim",
+  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
 });
 
 

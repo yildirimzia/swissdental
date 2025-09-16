@@ -46,7 +46,7 @@ export async function generateMetadata(
     titleOverride: title,
     descriptionOverride: description,
     canonical: `/benefits-for-patients/${slug}`,    // dinamik canonical
-    ogImage: content?.hero?.ogImage ?? "/og-default.png",
+    ogImage: content?.hero?.ogImage ?? "/public/images/SDS-SwissdentalsolutionsTR.jpg",
   });
 }
 

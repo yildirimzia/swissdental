@@ -8,6 +8,7 @@ export const metadata: Metadata = buildMetadata({
   titleOverride: "Diş Hekimleri İçin Seramik İmplant Avantajları",
   descriptionOverride:
     "Seramik implantların avantajlarını deneyimleyin: üstün estetik, zaman kazandıran anında implantasyon, minimal peri-implantit riski ve memnun hastalar.",
+  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
 });
 
 export default function Page() {

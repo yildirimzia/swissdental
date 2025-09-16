@@ -10,6 +10,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "SDS seramik implantlarla ilgili materyallerin bulunduğu video kütüphanemizi ve indirme alanımızı keşfedin: videolar, kataloglar, delme protokolleri ve kullanım talimatları.",
   canonical: "/dokumanlar",
+  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
 });
 
 

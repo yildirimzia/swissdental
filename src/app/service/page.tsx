@@ -15,6 +15,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "Diş hekimlerinin işini kolaylaştıran ve müşteri memnuniyetine katkıda bulunan SDS Box ve diğer hizmetlerimizi tanıyın.",
   canonical: "/hizmetler",
+  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
 });
 
 

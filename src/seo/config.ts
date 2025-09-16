@@ -4,10 +4,16 @@ import type { Metadata } from "next";
 export const SITE = {
   name: "Swiss Dental Solutions Türkiye",
   domain: "www.swissdentalsolutions.com.tr",
-  baseUrl: "https://swissdentalsolutions.com.tr/",
+  baseUrl: "https://swissdentalsolutions.com.tr", // ❗ sondaki / kaldırıldı
   locale: "tr_TR",
-  defaultOg: "/src/app/favicon.ico",
+  // ❗ OG için favicon kullanma; 1200x630 bir görsel koy (public/og-default.png)
+  defaultOg: "/og-default.png",
+  // twitter: "@sdsturkiye", // varsa aç
 };
+
+// Yardımcı: görece URL'leri absolute yap
+const absUrl = (url: string) =>
+  url.startsWith("http") ? url : `${SITE.baseUrl}${url.startsWith("/") ? "" : "/"}${url}`;
 
 export const DEFAULT_METADATA: Metadata = {
   title: {
@@ -25,12 +31,13 @@ export const DEFAULT_METADATA: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    // site: SITE.twitter, // handle varsa aç
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
 };
 
-// Route bazlı varsayılanlar (title & description)
+// Route bazlı varsayılanlar
 export const ROUTE_SEO: Record<
   string,
   { title: string; description: string; ogImage?: string }
@@ -119,19 +126,22 @@ export function buildMetadata(params: {
   descriptionOverride?: string;
   ogImage?: string;             // absolute veya public path
   noIndex?: boolean;            // true ise robots noindex
-  canonical?: string;           // absolute ya da path
+  canonical?: string;           // absolute ya da path (örn: "/hizmetler")
 }): Metadata {
   const base = ROUTE_SEO[params.path] ?? ROUTE_SEO["/"];
-  const title = params.titleOverride ?? base?.title ?? DEFAULT_METADATA.title;
+  const title = params.titleOverride ?? base?.title ?? (DEFAULT_METADATA.title as any)?.default ?? "";
   const description =
-    params.descriptionOverride ?? base?.description ?? DEFAULT_METADATA.description;
+    params.descriptionOverride ?? base?.description ?? DEFAULT_METADATA.description ?? "";
 
-  const ogImageUrl = params.ogImage ?? base?.ogImage ?? SITE.defaultOg;
+  const ogImageUrl = absUrl(params.ogImage ?? base?.ogImage ?? SITE.defaultOg);
   const canonicalUrl = params.canonical
     ? params.canonical.startsWith("http")
       ? params.canonical
-      : `${SITE.baseUrl}${params.canonical}`
+      : absUrl(params.canonical)
     : `${SITE.baseUrl}${params.path}`;
+
+    const ogAlt = `${title} – ${SITE.name}`;
+
 
   return {
     ...DEFAULT_METADATA,
@@ -142,7 +152,7 @@ export function buildMetadata(params: {
       title,
       description,
       url: canonicalUrl,
-      images: [{ url: ogImageUrl, width: 1200, height: 630 }],
+      images: [{ url: ogImageUrl, alt: ogAlt, width: 1200, height: 630, type: "image/png" }],
     },
     twitter: {
       ...DEFAULT_METADATA.twitter,

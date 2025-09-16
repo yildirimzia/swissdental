@@ -8,6 +8,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "Seramik implantolojinin öncüsü ve dünya lideri SWISS DENTAL SOLUTIONS'ın bir parçası olun. Diş hekimliğinde kariyer fırsatlarını keşfedin.",
   canonical: "/kariyer", 
+  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
 });
 
 export default function Page() {

@@ -9,6 +9,7 @@ export const metadata: Metadata = buildMetadata({
   descriptionOverride:
     "Seramik implantlar: biyouyumlu, alerjiye karşı ideal, dayanıklı ve estetik. Titanyum implantlara sağlıklı, düşük radyasyonlu bir alternatif.",
   canonical: "/seramik-implant-urun-serileri",
+  ogImage: "/images/SDS-SwissdentalsolutionsTR.jpg",
 });
 
 export default function Page() {
