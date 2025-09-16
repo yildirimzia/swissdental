@@ -1,10 +1,10 @@
-// app/api/og/route.tsx
+// src/app/api/og/route.tsx
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
-import Image from "next/image";
+
+const WIDTH = 1200;
+const HEIGHT = 630;
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -14,8 +14,8 @@ export async function GET(req: Request) {
     (
       <div
         style={{
-          width: size.width,
-          height: size.height,
+          width: WIDTH,
+          height: HEIGHT,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -30,6 +30,6 @@ export async function GET(req: Request) {
         {title}
       </div>
     ),
-    size
+    { width: WIDTH, height: HEIGHT }
   );
 }
