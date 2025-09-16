@@ -1,30 +1,16 @@
-"use client";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import  Main  from "./Main";
-import WhyCeramic from "./WhyCeramic";
-import WhyCeramixText from "./WhyCeramixText";
-import SectionImage from "./SectionImage";
-import CeramicAdvantages from "./CeramicAdvantages";
-import ServiceBlock from "./ServiceBlock";
-import SliderContent from "./SliderContent";
-import PioneeringWork from "./PioneeringWork";
-import DoctorBlock from "../components/DoctorBlock";
+// app/product-lines/page.tsx (SERVER COMPONENT)
+import type { Metadata } from "next";
+import { buildMetadata } from "@/seo/config";
+import BenefitsForPatientsView from "./BenefitsForPatientsView"
 
+export const metadata: Metadata = buildMetadata({
+  path: "/product-lines",
+  titleOverride: "Bir Bakışta: Hastalar İçin Seramik İmplantların Avantajları",
+  descriptionOverride:
+    "Seramik implantlar: biyouyumlu, alerjiye karşı ideal, dayanıklı ve estetik. Titanyum implantlara sağlıklı, düşük radyasyonlu bir alternatif.",
+  canonical: "/seramik-implant-urun-serileri",
+});
 
-gsap.registerPlugin(ScrollTrigger);
-export default function ProductLinesPage() {
-  return (
-    <>
-    <Main />
-    <WhyCeramic />
-    <WhyCeramixText />
-    <SectionImage />
-    <CeramicAdvantages />
-    <ServiceBlock />
-    <SliderContent />
-    <PioneeringWork />
-    <DoctorBlock />
-    </>
-  );
+export default function Page() {
+  return <BenefitsForPatientsView />;
 }

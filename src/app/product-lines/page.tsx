@@ -1,42 +1,20 @@
-"use client";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SdsAim from "./SdsAim";
-import SdsEducation from "./SdsEducation";
-import TrainingCards from "./TrainingCards";
-import SdsBiologicalProtocol from "./BiologicalProtocol";
-import DoctorBlock from "../components/DoctorBlock";
-import VideoContent from "../components/VideoContent";
-import SimpleFast from "./SimpleFast";
-import CleanestImplant from "./CleanestImplant";
-import LifetimeWarranty from "./LifetimeWarranty";
-import DifferentSpecial from "./DifferentSpecial";
-import Piece from "./Piece";
-import Bright from "./Bright";
-import Main from "./Main";
+import ProductLinesView from "./ProductLinesView";
+import type { Metadata } from "next";
+import { buildMetadata } from "@/seo/config";
+
+export const metadata: Metadata = buildMetadata({
+  path: "/product-lines",
+  titleOverride: "SDS Seramik İmplantlar: PARLAK & DEĞER Ürün Serileri Genel Bakış",
+  descriptionOverride:
+    "Tüm uygulamalar için ürün serilerimiz: BRIGHT - tek parça ve iki parçalı, 50'ye kadar özel şekil ve VALUE - uygun maliyetli hibrit sistem.",
+  canonical: "/seramik-implant-urun-serileri",
+});
 
 gsap.registerPlugin(ScrollTrigger);
 export default function ProductLinesPage() {
   return (
-    <>
-      <Main />
-      <Bright />
-      <Piece />
-
-      <DifferentSpecial />
-
-      <LifetimeWarranty />
-
-      <CleanestImplant />
-
-      <VideoContent />
-      <SimpleFast />
-
-      <SdsAim />
-      <SdsEducation />
-      <TrainingCards />
-      <SdsBiologicalProtocol />
-      <DoctorBlock />
-    </>
+    <ProductLinesView />
   );
 }

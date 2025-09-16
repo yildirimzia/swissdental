@@ -1,21 +1,15 @@
-"use client";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import BenefitsForDentistsHero from "./BenefitsForDentistsHero";
-import DentalFeatureCards from "./DentalFeatureCards";
-import SimpleEntry from "./SimpleEntry";
-import SdsEdutaciton from "../components/SdsEdutaciton";
-import Bright from "./Bright";
+import type { Metadata } from "next";
+import { buildMetadata } from "@/seo/config";
+import BenefitsForDentistsView from "./BenefitsForDentistsView";
 
-gsap.registerPlugin(ScrollTrigger);
-export default function ProductLinesPage() {
-  return (
-    <>
-    <BenefitsForDentistsHero /> 
-    <DentalFeatureCards />
-    <SimpleEntry />
-    <SdsEdutaciton />
-    <Bright />
-    </>
-  );
+export const metadata: Metadata = buildMetadata({
+  path: "/benefits-for-dentists",
+  canonical: "/dis-hekimleri-icin-seramik-implant-faydalari",
+  titleOverride: "Diş Hekimleri İçin Seramik İmplant Avantajları",
+  descriptionOverride:
+    "Seramik implantların avantajlarını deneyimleyin: üstün estetik, zaman kazandıran anında implantasyon, minimal peri-implantit riski ve memnun hastalar.",
+});
+
+export default function Page() {
+  return <BenefitsForDentistsView />;
 }

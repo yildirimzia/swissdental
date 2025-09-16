@@ -1,23 +1,19 @@
 import React from 'react'
-import ServiceHero from './Hero'
-import TeamBehind from './TeamBehind'
-import HighlightsItems from './HighlightsItems'
-import PioneeringWork from './PioneeringWork'
-import TrainingCompany from './TrainingCompany'
-import Contact from '../components/Contact'
-import TrainingCountry from './TrainingCountry'
+import type { Metadata } from "next";
+import { buildMetadata } from "@/seo/config";
+import CompanyView from "./CompanyView";
+
+export const metadata: Metadata = buildMetadata({
+  path: "/company",
+  titleOverride: "SDS Seramik İmplantlar – Yenilik ve Kalite",
+  descriptionOverride:
+    "İmplantoloji alanında 20 yılı aşkın deneyime sahip, biyouyumlu seramik implantlarda dünya lideri olan SWISS DENTAL SOLUTIONS hakkında daha fazla bilgi edinin.",
+  canonical: "/kurumsal",
+});
 
 function page() {
   return (
-   <>
-     <ServiceHero />
-     <TeamBehind/>
-     <HighlightsItems />
-     <PioneeringWork />
-     <TrainingCompany />
-     <Contact />
-     <TrainingCountry />
-   </>
+    <CompanyView />
   )
 }
 

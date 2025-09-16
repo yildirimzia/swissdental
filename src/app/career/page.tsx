@@ -1,16 +1,15 @@
-import React from 'react'
-import Hero from './Hero'
-import AnEmployer from './AnEmployer'
-import Application from './Application'
+import type { Metadata } from "next";
+import { buildMetadata } from "@/seo/config";
+import CareerView from "./CareerView"; // client component olacak
 
-function Career() {
-  return (
-    <>
-      <Hero />
-      <AnEmployer />
-      <Application />
-    </>
-  )
+export const metadata: Metadata = buildMetadata({
+  path: "/career",
+  titleOverride: "SDS'de Kariyer – Seramik İmplantların Önde Gelen Tedarikçisi",
+  descriptionOverride:
+    "Seramik implantolojinin öncüsü ve dünya lideri SWISS DENTAL SOLUTIONS'ın bir parçası olun. Diş hekimliğinde kariyer fırsatlarını keşfedin.",
+  canonical: "/kariyer", 
+});
+
+export default function Page() {
+  return <CareerView />;
 }
-
-export default Career

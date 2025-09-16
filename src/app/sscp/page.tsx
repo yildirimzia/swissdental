@@ -2,6 +2,18 @@ import React from 'react'
 import Link from 'next/link'
 import Button from '../components/Button'
 
+import type { Metadata } from "next";
+import { buildMetadata } from "@/seo/config";
+
+export const metadata: Metadata = buildMetadata({
+  path: "/sscp",
+  titleOverride: "SDS İmplantları için Güvenlik ve Klinik Performans Özeti (SSCP)",
+  descriptionOverride:
+    "Seramik implant portföyümüz için yasal olarak gerekli olan Güvenlik ve Klinik Performans Özeti'ne (SSCP) erişin. Diş hekimleri için temel klinik ve güvenlik bilgileri.",
+  canonical: "/guvenlik-klinik-performans-ozeti",
+});
+
+
 function Sscp() {
   return (
           <section className="relative isolate">
