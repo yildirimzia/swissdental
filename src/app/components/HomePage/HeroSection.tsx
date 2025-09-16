@@ -296,6 +296,7 @@ const HeroSection: React.FC = () => {
                     size="lg"
                     rounded="rounded-[100px]"
                     className="text-[16px]"
+                    ariaLabel="BRIGHT Ürün Serisine Git"
                   >
                     BRIGHT Ürün Serisine Git
                   </Button>
@@ -391,6 +392,7 @@ const HeroSection: React.FC = () => {
                     size="lg"
                     rounded="rounded-[100px]"
                     className="text-[16px]"
+                    ariaLabel="Avantajları Keşfet"
                   >
                     Avantajları Keşfet
                   </Button>

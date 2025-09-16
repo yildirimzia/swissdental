@@ -173,6 +173,7 @@ const HeroSection: React.FC = () => {
                   size="lg"
                   rounded="rounded-[100px]"
                   className="text-[16px] font-[400]"
+                  ariaLabel="SDS Destek Hizmetine Git"
                   icon={
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 

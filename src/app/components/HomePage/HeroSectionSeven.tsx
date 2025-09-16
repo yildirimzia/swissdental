@@ -254,6 +254,7 @@ const CeramicTimeline = () => {
               onClick={handlePrevClick}
               className="cursor-pointer hover:opacity-80 transition-opacity"
               type="button"
+              aria-label='Önceki Yıl'
             >
               <LeftArrow />
             </button>
@@ -263,6 +264,7 @@ const CeramicTimeline = () => {
               onClick={handleNextClick}
               className="cursor-pointer hover:opacity-80 transition-opacity"
               type="button"
+              aria-label='Sonraki Yıl'
             >
               <RightArrow />
             </button>

@@ -145,6 +145,7 @@ const HeroSection: React.FC = () => {
                   className="!text-red-500 !border-red-500 hover:!bg-red-500 hover:!text-white !font-[400] px-8  "
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
+                  ariaLabel="SDS Eğitim web sitesine git"
                 >
                   SDS Eğitim web sitesine git
                 </Button>

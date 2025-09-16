@@ -122,6 +122,7 @@ const HeroSection: React.FC = () => {
                 className="!text-[16px] !font-[400]"
                 icon={<ArrowRightIcon />}
                 iconPosition="right"
+                ariaLabel="Tüm avantajları görüntüle"
               >
                 Tüm avantajları görüntüle
               </Button>
@@ -150,6 +151,7 @@ const HeroSection: React.FC = () => {
                 className="!text-[16px] !font-[400]"
                 icon={<ArrowRightIcon />}
                 iconPosition="right"
+                ariaLabel="Çalışmaları görüntüle"
               >
                 Çalışmaları görüntüle
               </Button>
@@ -179,6 +181,7 @@ const HeroSection: React.FC = () => {
                   className="!text-[16px] !font-[400]"
                   icon={<ExternalLinkIcon />}
                   iconPosition="right"
+                  ariaLabel="Takviye Satın Al"
                 >
                   Takviye Satın Al
                 </Button>

@@ -155,6 +155,7 @@ const HeroSection: React.FC = () => {
                         className="!shadow-none mt-8 !font-[400]"
                         icon={<ArrowRightIcon />}
                         iconPosition="right"
+                        ariaLabel="Daha fazla başarı hikayesi"
                       >
                         Daha fazla başarı hikayesi
                       </Button>
@@ -207,6 +208,7 @@ const HeroSection: React.FC = () => {
                         className="!shadow-none mt-8 !font-[400]"
                         icon={<ArrowRightIcon />}
                         iconPosition="right"
+                        ariaLabel="Daha fazla başarı hikayesi"
                       >
                        Daha fazla başarı hikayesi
                       </Button>
@@ -257,6 +259,7 @@ const HeroSection: React.FC = () => {
                     className="!shadow-none !font-[400]"
                     icon={<ArrowRightIcon />}
                     iconPosition="right"
+                    ariaLabel="Daha fazla başarı hikayesi"
                   >
                     Daha fazla başarı hikayesi
                   </Button>
