@@ -140,7 +140,7 @@ const HeroSection: React.FC = () => {
                   text-[16px]
                   tracking-wide 
                   uppercase
-                  text-mint
+                  text-primary-500
                   before:content-none lg:before:content-[""]
                   before:absolute
                   before:left-0
