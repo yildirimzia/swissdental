@@ -121,7 +121,7 @@ const HeroSection: React.FC = () => {
                   width={422}
                   height={32}
                   className="object-cover "
-                  priority
+                  loading="lazy"
                 />
               </div>
               

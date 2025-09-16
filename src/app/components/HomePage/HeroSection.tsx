@@ -315,7 +315,6 @@ const HeroSection: React.FC = () => {
                   width={381}
                   height={600}
                   loading="lazy"
-                  fetchPriority="low"
                   className="object-contain transform translate-x-[30%] translate-y-[16.9%] "
                   onLoadingComplete={() => ScrollTrigger.refresh()}
                 />
@@ -330,9 +329,8 @@ const HeroSection: React.FC = () => {
                   width={1200}
                   {...(!removeHidden && { hidden: true })}
                   height={1200}
+                  loading="lazy"
                   className="object-contain"
-                  priority
-                  fetchPriority="low"
                   style={{
                     opacity: removeHidden ? 1 : 0,
                     visibility: removeHidden ? "visible" : "hidden",

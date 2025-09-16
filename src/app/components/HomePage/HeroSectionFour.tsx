@@ -293,7 +293,7 @@ const HeroSection: React.FC = () => {
                   width={502}
                   height={610}
                   className="object-cover w-full h-[610px]"
-                  priority
+                  loading="lazy"
                 />
               </div>
             </div>

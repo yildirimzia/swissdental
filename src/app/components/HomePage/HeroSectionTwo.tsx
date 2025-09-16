@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import Button from '../Button'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useHomeTranslation } from '@/contexts/LanguageContext'
+
 
 const HeroSection: React.FC = () => {
   // Animation refs
@@ -106,6 +106,8 @@ const HeroSection: React.FC = () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
   }, [isMobile])
+
+  
 
   return (
     <section ref={sectionRef} className="bg-white text-black relative overflow-hidden">

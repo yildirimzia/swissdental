@@ -514,14 +514,14 @@ const Header: React.FC = () => {
           <div className="">
             <Link href="/">
               <Image
-                src="/logo.svg"
+                src="/images/turkey-logo.svg"
                 alt="Logo"
                 width={263}
                 height={35}
                 className="hidden lg:block"
               />
               <Image
-                src="/logo.svg"
+                 src="/images/turkey-logo.svg"
                 alt="Logo"
                 width={165}
                 height={22}

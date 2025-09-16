@@ -126,7 +126,7 @@ const HeroSection: React.FC = () => {
                   width={400}
                   height={300}
                   className="object-cover lg:w-[462px] lg:h-[362px] shadow-lg"
-                  priority
+                  loading="lazy"
                 />
               </div>
 
@@ -178,7 +178,7 @@ const HeroSection: React.FC = () => {
                   width={400}
                   height={300}
                   className="object-cover w-[462px] h-[362px] shadow-lg"
-                  priority
+                  loading="lazy"
                 />
               </div>
 
@@ -230,7 +230,7 @@ const HeroSection: React.FC = () => {
                 width={300}
                 height={250}
                 className="object-cover  h-[228px] w-[228px] "
-                priority
+                loading="lazy"
               />
             </div>
             {/* Doctor Info */}

@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                 width={263} 
                 height={35}
                 className="hidden lg:block"
-                priority
+                loading='lazy'
               />
             </Link>
           </div>
@@ -168,6 +168,7 @@ const Footer: React.FC = () => {
                   width={24} 
                   height={24}
                   className=""
+                  loading='lazy'
                 />
                 </Link>
               ))}
