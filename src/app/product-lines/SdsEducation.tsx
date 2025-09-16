@@ -6,13 +6,10 @@ import Link from "next/link";
 import Button from "../components/Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useHomeTranslation } from "@/hooks/useTranslation";
 
 const HeroSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  // Translation hook
-  const { t, isLoaded } = useHomeTranslation();
 
   // Refs for GSAP animations
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -36,8 +33,7 @@ const HeroSection: React.FC = () => {
     if (
       !sectionRef.current ||
       !imageRef.current ||
-      !textRef.current ||
-      !isLoaded
+      !textRef.current
     )
       return;
 
@@ -86,7 +82,7 @@ const HeroSection: React.FC = () => {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [isMobile, isLoaded]);
+  }, [isMobile]);
 
   // External Link Icon
   const ExternalLinkIcon = () => (

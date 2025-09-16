@@ -6,13 +6,10 @@ import Link from "next/link";
 import Button from '../Button'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useHomeTranslation } from '@/hooks/useTranslation';
 
 const HeroSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  // Translation hook
-  const { t, isLoaded } = useHomeTranslation();
 
   // Refs for GSAP animations
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -33,7 +30,7 @@ const HeroSection: React.FC = () => {
 
   // GSAP Scroll Animation
   useEffect(() => {
-    if (!sectionRef.current || !imageRef.current || !textRef.current || !isLoaded) return
+    if (!sectionRef.current || !imageRef.current || !textRef.current) return
 
     // Başlangıç pozisyonları
     gsap.set(imageRef.current, {
@@ -76,7 +73,7 @@ const HeroSection: React.FC = () => {
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
-  }, [isMobile, isLoaded])
+  }, [isMobile])
 
 
   // External Link Icon
@@ -165,7 +162,7 @@ const HeroSection: React.FC = () => {
                 width={830}
                 height={996}
                 className="object-cover lg:w-[830px] lg:h-[996px] w-[430px] h-[546px]"
-                priority
+                loading="lazy"
               />
             </div>
           </div>

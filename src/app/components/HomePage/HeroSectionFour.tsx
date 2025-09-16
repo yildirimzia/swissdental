@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useHomeTranslation } from "@/hooks/useTranslation";
 
 // GSAP plugin'ini register et
 if (typeof window !== "undefined") {
@@ -24,8 +23,6 @@ const HeroSection: React.FC = () => {
   const [activate, setActivate] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Translation hook
-  const { t, isLoaded } = useHomeTranslation();
 
   // Refs for GSAP animations
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -62,7 +59,7 @@ const HeroSection: React.FC = () => {
 
   // GSAP Scroll Animation - İlk yüklenme
   useEffect(() => {
-    if (!sectionRef.current || !imageRef.current || !textRef.current || !isLoaded) return;
+    if (!sectionRef.current || !imageRef.current || !textRef.current ) return;
 
     // Başlangıç pozisyonları
     gsap.set(imageRef.current, {
@@ -109,7 +106,7 @@ const HeroSection: React.FC = () => {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [isMobile, isLoaded]);
+  }, [isMobile]);
 
   // Slide transition animation
   const slideTransition = (direction: "next" | "prev") => {

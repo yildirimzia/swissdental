@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from '../Button'
-import { useHomeTranslation } from '@/hooks/useTranslation';
 
 interface Doctor {
   id: number;
@@ -17,9 +16,6 @@ interface Doctor {
 const HeroSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Translation hook
-  const { t, isLoaded } = useHomeTranslation();
 
   // Mobil kontrol
   useEffect(() => {

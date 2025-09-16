@@ -5,18 +5,14 @@ import Link from 'next/link'
 import Button from '../Button'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useHomeTranslation } from '@/contexts/LanguageContext'
-
 
 const HeroSection: React.FC = () => {
   // Animation refs
   const sectionRef = useRef<HTMLDivElement>(null)
-  const imageRef = useRef<HTMLDivElement>(null) // Sol taraftaki background image
-  const textRef = useRef<HTMLDivElement>(null) // Sağ taraftaki text content
+  const imageRef = useRef<HTMLDivElement>(null)
+  const textRef = useRef<HTMLDivElement>(null)
   const [isMobile, setIsMobile] = useState(false)
-
-  // Translation hook - home namespace kullanıyoruz çünkü service_hero orada
-  const { t } = useHomeTranslation()
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   // Mobil kontrol
   useEffect(() => {
@@ -30,9 +26,45 @@ const HeroSection: React.FC = () => {
     return () => window.removeEventListener('resize', checkScreenSize)
   }, [])
 
+  // Lazy Loading için Intersection Observer
+  useEffect(() => {
+    if (!imageRef.current) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !imageLoaded) {
+            // Background image'i yükle
+            const img = new Image()
+            img.onload = () => {
+              setImageLoaded(true)
+            }
+            img.src = '/images/Unser_SDS_Service.png'
+            
+            // Observer'ı durdur
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        rootMargin: '50px', // 50px önceden yüklemeye başla
+        threshold: 0.1
+      }
+    )
+
+    observer.observe(imageRef.current)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [imageLoaded])
+
   // GSAP Animasyon
   useEffect(() => {
     if (!sectionRef.current || !imageRef.current || !textRef.current) return
+
+    // GSAP plugins'ini register et
+    gsap.registerPlugin(ScrollTrigger)
 
     // Başlangıç pozisyonları - mobilde farklı
     if (isMobile) {
@@ -107,25 +139,34 @@ const HeroSection: React.FC = () => {
     }
   }, [isMobile])
 
-  
-
   return (
     <section ref={sectionRef} className="bg-white text-black relative overflow-hidden">
       <div className="relative z-20 min-h-screen">
         <div className="flex items-center justify-between flex-col md:flex-row ">
           
-          {/* Left Content - Background Image */}
+          {/* Left Content - Background Image with Lazy Loading */}
           <div 
             ref={imageRef}
-            className="order-2 lg:order-1 lg:h-[940px] lg:w-[610px] h-[546px] w-[430px]" 
+            className={`
+              order-2 lg:order-1 lg:h-[940px] lg:w-[610px] h-[546px] w-[430px]
+              transition-all duration-500 ease-in-out
+              ${imageLoaded ? 'bg-loaded' : 'bg-gray-200'}
+            `}
             style={{
-              backgroundImage: "url(/images/Unser_SDS_Service.png)",
+              backgroundImage: imageLoaded ? "url(/images/Unser_SDS_Service.png)" : "none",
               backgroundSize: "cover",
               backgroundPosition: "50%",
               backgroundRepeat: "no-repeat",
               zIndex: 1,
             }}
-          />
+          >
+            {/* Loading placeholder */}
+            {!imageLoaded && (
+              <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
+              </div>
+            )}
+          </div>
 
           {/* Right Content - Text */}
           <div 

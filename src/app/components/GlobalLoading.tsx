@@ -3,22 +3,23 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLoading } from '@/contexts/LoadingContext';
-import { useCommonTranslation } from '@/hooks/useTranslation';
 
 const GlobalLoading = () => {
   const [isPageLoading, setIsPageLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const pathname = usePathname();
   const { isLanguageLoading } = useLoading();
-  const { t: tCommon, isLoaded } = useCommonTranslation();
 
   // Sayfa yüklenme loading'i
   useEffect(() => {
     const handleLoad = () => {
       setIsPageLoading(false);
+      setIsLoaded(true);
     };
 
     if (document.readyState === 'complete') {
       setIsPageLoading(false);
+      setIsLoaded(true);
     } else {
       window.addEventListener('load', handleLoad);
     }
@@ -72,16 +73,18 @@ const GlobalLoading = () => {
         return false;
       };
       
-      // Event listener'ları ekle
-      window.addEventListener('scroll', preventScroll, { passive: false });
-      window.addEventListener('wheel', preventScroll, { passive: false });
-      window.addEventListener('touchmove', preventScroll, { passive: false });
-      window.addEventListener('keydown', (e) => {
+      const preventKeyScroll = (e: KeyboardEvent) => {
         // Arrow keys, Page Up/Down, Home, End, Space bar'ı engelle
         if ([32, 33, 34, 35, 36, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
           e.preventDefault();
         }
-      });
+      };
+      
+      // Event listener'ları ekle
+      window.addEventListener('scroll', preventScroll, { passive: false });
+      window.addEventListener('wheel', preventScroll, { passive: false });
+      window.addEventListener('touchmove', preventScroll, { passive: false });
+      window.addEventListener('keydown', preventKeyScroll);
       
       // Cleanup: Loading bittiğinde scroll'u geri aç
       return () => {
@@ -89,6 +92,7 @@ const GlobalLoading = () => {
         window.removeEventListener('scroll', preventScroll);
         window.removeEventListener('wheel', preventScroll);
         window.removeEventListener('touchmove', preventScroll);
+        window.removeEventListener('keydown', preventKeyScroll);
         
         // Stilleri geri yükle
         htmlElement.style.overflow = originalHtmlOverflow;
@@ -105,17 +109,14 @@ const GlobalLoading = () => {
     }
   }, [showLoading]);
 
-  // Fallback text fonksiyonu
+  // Loading text fonksiyonu
   const getLoadingText = () => {
     if (!isLoaded) {
       // Çeviriler yüklenmemişse fallback text
       return isLanguageLoading ? "Changing Language..." : "Yükleniyor...";
     }
-    
-    // Çeviriler yüklenmişse çeviri kullan
-    return isLanguageLoading 
-      ? tCommon("changeLanguage.language_one") 
-      : 'Yükleniyor...'
+    // Çeviriler yüklenmişse buraya i18n çevirilerini ekleyebilirsiniz
+    return isLanguageLoading ? "Changing Language..." : "Yükleniyor...";
   };
 
   if (!showLoading) return null;

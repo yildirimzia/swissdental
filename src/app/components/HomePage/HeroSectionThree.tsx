@@ -4,15 +4,11 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Button from '../Button'
 import Image from 'next/image'
-import { useHomeTranslation } from '@/hooks/useTranslation'
 
 const HeroSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false)
 
-  // Translation hook
-  const { t, isLoaded } = useHomeTranslation()
 
-  // Mobil kontrol
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 1024)

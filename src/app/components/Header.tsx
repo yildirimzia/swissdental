@@ -4,10 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
-import {
-  useNavigationTranslation,
-  useCommonTranslation,
-} from "@/hooks/useTranslation";
 import { useLoading } from "@/contexts/LoadingContext";
 
 const Header: React.FC = () => {
@@ -20,18 +16,14 @@ const Header: React.FC = () => {
     string | null
   >(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // Translation hooks for different namespaces
-  const {
-    t: tNav,
-    currentLanguage,
-    changeLanguage,
-    isLoaded,
-  } = useNavigationTranslation();
-  const { t: tCommon } = useCommonTranslation();
 
-  // Loading context
-  const { setLanguageLoading } = useLoading();
+  // Component yüklenme kontrolü
+  useEffect(() => {
+    // Component mount edildiğinde isLoaded'i true yap
+    setIsLoaded(true);
+  }, []);
 
   // Body scroll lock effect - mobile menü açıldığında
   useEffect(() => {
@@ -84,27 +76,6 @@ const Header: React.FC = () => {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, [activeDesktopSubmenu]);
-
-  // Language switch handler with loading
-  const handleLanguageSwitch = () => {
-    const newLanguage = currentLanguage === "en" ? "tr" : "en";
-
-    // Loading'i başlat
-    setLanguageLoading(true);
-
-    // Dil değiştir
-    changeLanguage(newLanguage);
-
-    // Mobile menüyü kapat (eğer açıksa)
-    if (isMobileMenuOpen) {
-      toggleMobileMenu();
-    }
-
-    // Loading'i bitir (çeviriler yüklendikten sonra)
-    setTimeout(() => {
-      setLanguageLoading(false);
-    }, 800); // Çevirilerin yüklenmesi için yeterli süre
-  };
 
   // Mobile menu toggle function
   const toggleMobileMenu = () => {

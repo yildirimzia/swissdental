@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
                 width={263} 
                 height={35}
                 className="block  lg:hidden"
-                priority
+                loading='lazy'
               />
             </Link>
         </div>

@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ComingSoon from "./components/ComingSoon";
 import GlobalLoading from "./components/GlobalLoading";
-import { LanguageProvider } from "@/contexts/LanguageContext";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import { JsonLd } from "@/seo/jsonld";
 import { gotham } from "@/app/fonts";
@@ -51,7 +50,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        <LanguageProvider>
           <LoadingProvider>
             <div>
               <GlobalLoading />
@@ -66,7 +64,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               )}
             </div>
           </LoadingProvider>
-        </LanguageProvider>
       </body>
     </html>
   );
