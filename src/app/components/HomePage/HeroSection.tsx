@@ -27,9 +27,9 @@ const HeroSection: React.FC = () => {
 
   // Benefits array'ini çeviri dosyasından al
   const benefits = {
-      "0": "Yüksek Derecede Biyouyumlu",
-      "1": "Dayanıklı ve Sağlam",
-      "2": "Anında İmplantasyon İmkanı",
+    "0": "Yüksek Derecede Biyouyumlu",
+    "1": "Dayanıklı ve Sağlam",
+    "2": "Anında İmplantasyon İmkanı",
   };
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
   useEffect(() => {
     const st = ScrollTrigger.create({
       trigger: document.body,
-      start: "top+=2200 top",           // 2200px sonra “detach”
+      start: "top+=2200 top", // 2200px sonra “detach”
       onEnter: () => bgRef.current?.classList.add("detach"),
       onLeaveBack: () => bgRef.current?.classList.remove("detach"),
     });
@@ -56,25 +56,30 @@ const HeroSection: React.FC = () => {
   useEffect(() => {
     if (implantRef.current) {
       // Başlangıç değerlerini ayarla
-        gsap.set(implantRef.current, {
-          rotation: 15.2201, xPercent: -8, yPercent: -10, x: -0.0002, y: 0.0003, z: 0,
-          force3D: true,
-        });
+      gsap.set(implantRef.current, {
+        rotation: 15.2201,
+        xPercent: -8,
+        yPercent: -10,
+        x: -0.0002,
+        y: 0.0003,
+        z: 0,
+        force3D: true,
+      });
 
       // İlk timeline - Hero'dan BRIGHT'a kadar
-        const heroTimeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: document.body,
-            start: "top top",
-            end: isMobile ? "+=1047" : "+=870",
-            scrub: true,
-            pin: implantRef.current,
-            pinType: "transform",
-            anticipatePin: 1,
-            toggleActions: "play none none reverse",
-            invalidateOnRefresh: true,
-          },
-        });
+      const heroTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top",
+          end: isMobile ? "+=1047" : "+=870",
+          scrub: true,
+          pin: implantRef.current,
+          pinType: "transform",
+          anticipatePin: 1,
+          toggleActions: "play none none reverse",
+          invalidateOnRefresh: true,
+        },
+      });
 
       // Container'ı hareket ettir
       heroTimeline.to(implantRef.current, {
@@ -134,18 +139,18 @@ const HeroSection: React.FC = () => {
         },
       });
 
-    const img = brightImageRef.current.querySelector("img");
-    if (img) {
-      gsap.set(img, { force3D: true });
-      tl.to(img, {
-        duration: 1,
-        scale: isMobile ? 1.8 : 3,
-        rotation: isMobile ? -42 : -14,
-        x: isMobile ? 100.5 : 330.5,
-        y: 0,
-        ease: "linear",
-      });
-    }
+      const img = brightImageRef.current.querySelector("img");
+      if (img) {
+        gsap.set(img, { force3D: true });
+        tl.to(img, {
+          duration: 1,
+          scale: isMobile ? 1.8 : 3,
+          rotation: isMobile ? -42 : -14,
+          x: isMobile ? 100.5 : 330.5,
+          y: 0,
+          ease: "linear",
+        });
+      }
     }
 
     // Cleanup function
@@ -153,8 +158,6 @@ const HeroSection: React.FC = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, [isMobile]);
-
- 
 
   return (
     <section className="relative min-h-screen overflow-hidden lg:pb-[275px] pb-[0]">
@@ -201,12 +204,14 @@ const HeroSection: React.FC = () => {
                   SDS SWISS DENTAL SOLUTIONS
                 </p>
                 <h1 className="text-[clamp(36px,calc(-49.8461538462px+0.0865384615*100vw),54px)] leading-[1.125]  tracking-[-0.03em]  text-primary-600  font-light">
-                 Seramik dental implantlarda dünya pazar lideri
+                  Seramik dental implantlarda dünya pazar lideri
                 </h1>
               </div>
 
               <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600 transform lg:translate-x-[120px] translate-x-[0] leading-8  mt-[2.875rem] max-w-[42rem]">
-                Beyaz zirkonyum dioksitten üretilen SDS seramik dental implantlar biyouyumluluk, tolerans, sağlık ve estetik açısından en yüksek standartları karşılar.
+                Beyaz zirkonyum dioksitten üretilen SDS seramik dental
+                implantlar biyouyumluluk, tolerans, sağlık ve estetik açısından
+                en yüksek standartları karşılar.
               </p>
 
               <div className="pt-6 lg:translate-x-[120px] translate-x-0 mt-[1.2rem]">
@@ -279,7 +284,9 @@ const HeroSection: React.FC = () => {
               </div>
 
               <p className="lg:text-[20px] text-[18px] font-[400] lg:w-[80%] w-full text-primary-600  leading-8  mt-[2.875rem] max-w-[42rem]">
-                BRIGHT premium implant serisi diş çekimi sonrası anında yerleştime için en optimal malzeme ve tasarım dikkate alınarak tasarlanmıştır.
+                BRIGHT premium implant serisi diş çekimi sonrası anında
+                yerleştime için en optimal malzeme ve tasarım dikkate alınarak
+                tasarlanmıştır.
               </p>
 
               <div className="pt-6  lg:mt-[1.2rem] mt-0">
@@ -399,7 +406,7 @@ const HeroSection: React.FC = () => {
       {/* Scroll Indicator */}
       <div className="fixed bottom-8 right-8 z-30">
         <div className="writing-vertical text-white/70 text-sm font-light tracking-wider">
-         Kaydırın
+          Kaydırın
         </div>
       </div>
 
