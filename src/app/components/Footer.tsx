@@ -45,11 +45,11 @@ const Footer: React.FC = () => {
   ];
   
   const socialIcons = [
-    { href: '#', label: 'LinkedIn', icon: '/logo-linkedin.svg' },
-    { href: '#', label: 'Instagram', icon: '/logo-instagram.svg' },
-    { href: '#', label: 'YouTube', icon: '/mdi_youtube.svg' },
-    { href: '#', label: 'Spotify', icon: '/Spotify-Logo.svg' },
-    { href: '#', label: 'Apple', icon: '/Apple-Logo.svg' },
+    { href: 'https://www.linkedin.com/company/swissdentalsolutions/', label: 'LinkedIn', icon: '/logo-linkedin.svg' },
+    { href: 'https://www.instagram.com/swissdentalsolutionsturkiye', label: 'Instagram', icon: '/logo-instagram.svg' },
+    { href: 'https://www.youtube.com/@SwissDentalSolutionsTurkiye', label: 'YouTube', icon: '/mdi_youtube.svg' },
+    { href: 'https://open.spotify.com/show/20LitDYAFxk8QropA2EugL?si=1e25f70026b140cd&_ga=2.28110901.809342170.1710162415-283821518.1707122006&nd=1&dlsi=ad321ae23cda4129', label: 'Spotify', icon: '/Spotify-Logo.svg' },
+    { href: 'https://podcasts.apple.com/de/podcast/der-sds-podcast/id1610124883', label: 'Apple', icon: '/Apple-Logo.svg' },
   ];
 
   return (

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   async redirects() {
     return [
       { source: "/benefits-for-patients", destination: "/hastalar-icin-seramik-implant-faydalari", permanent: true },
@@ -37,6 +38,22 @@ const nextConfig: NextConfig = {
       { source: "/krea-sds-turkiye", destination: "/company-krea" },
       { source: "/sds-tarihcesi", destination: "/history" },
       { source: "/dis-hekimleri-icin-seramik-implant-faydalari/doku-seviyesi", destination: "/benefits-for-dentists/tissue-level" },
+    ];
+  },
+
+    async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          // Basit bir CSP örneği (ihtiyaca göre daralt)
+          { key: "Content-Security-Policy", value: "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:;" },
+        ],
+      },
     ];
   },
 };

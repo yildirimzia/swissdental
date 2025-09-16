@@ -22,7 +22,6 @@ export default function DoctorBlock() {
           {/* SAĞ */}
           <article className="flex flex-col self-center">
             <h2 className="text-primary-600 font-bold tracking-[-0.02em] leading-[1.05] text-[34px] sm:text-[42px] lg:text-[48px]">
-              Germany
               Almanya
             </h2>
 

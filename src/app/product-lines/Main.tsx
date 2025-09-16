@@ -82,7 +82,7 @@ function Main() {
               iconPosition="right"
               onClick={handleHeaderDownload}
             >
-              BRIGHT'e git
+              BRIGHT'a git
             </Button>
           </div>
         </div>
