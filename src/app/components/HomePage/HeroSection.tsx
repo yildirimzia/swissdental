@@ -257,6 +257,7 @@ const HeroSection: React.FC = () => {
                   alt="Ceramic Dental Implant 1"
                   width={381}
                   height={600}
+                  fetchPriority="high"
                   className="object-contain "
                   {...(removeHidden && { hidden: true })}
                   priority
