@@ -229,7 +229,7 @@ const HeroSection: React.FC = () => {
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div
                 ref={implantRef}
-                className="relative w-[182px] h-[310px] lg:w-full lg:max-w-lg lg:h-auto transform will-transform contain-layout contain-paint"
+                className="relative w-[182px] h-[310px] lg:w-full lg:max-w-lg lg:h-auto transform will-transform"
               >
                 <Image
                   src="/images/implant-img.png"
