@@ -14,16 +14,14 @@ if (typeof window !== "undefined") {
 }
 
 const HeroSection: React.FC = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [shouldDetach, setShouldDetach] = useState(false);
   const [removeHidden, setRemoveHidden] = useState(false);
 
   // Translation hook
-  const { t, isLoaded } = useHomeTranslation();
+  const bgRef = useRef<HTMLDivElement>(null);
 
   // GSAP animasyonları için ref
   const implantRef = useRef<HTMLDivElement>(null);
-  const secondImplantRef = useRef<HTMLImageElement>(null);
+  const secondImplantRef = useRef<HTMLDivElement>(null);
   const brightImageRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -46,44 +44,37 @@ const HeroSection: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
-
-      // Background attachment'ın kalkması gereken nokta
-      const detachPoint = 2200;
-      setShouldDetach(currentScrollY > detachPoint);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const st = ScrollTrigger.create({
+      trigger: document.body,
+      start: "top+=2200 top",           // 2200px sonra “detach”
+      onEnter: () => bgRef.current?.classList.add("detach"),
+      onLeaveBack: () => bgRef.current?.classList.remove("detach"),
+    });
+    return () => st.kill();
   }, []);
 
   useEffect(() => {
     if (implantRef.current) {
       // Başlangıç değerlerini ayarla
-      gsap.set(implantRef.current, {
-        rotation: 15.2201,
-        xPercent: -8, // translate-x-[2%]
-        yPercent: -10, // translate-y-[-29%]
-        x: -0.0002, // translate3d x değeri
-        y: 0.0003, // translate3d y değeri
-        z: 0, // translate3d z değeri
-      });
+        gsap.set(implantRef.current, {
+          rotation: 15.2201, xPercent: -8, yPercent: -10, x: -0.0002, y: 0.0003, z: 0,
+          force3D: true,
+        });
 
       // İlk timeline - Hero'dan BRIGHT'a kadar
-      const heroTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: document.body,
-          start: "top top",
-          end: isMobile ? "+=1047" : "+=870", // 850px scroll boyunca
-          scrub: true,
-          pin: implantRef.current,
-          anticipatePin: 1,
-          toggleActions: "play none none reverse",
-          invalidateOnRefresh: true,
-        },
-      });
+        const heroTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: document.body,
+            start: "top top",
+            end: isMobile ? "+=1047" : "+=870",
+            scrub: true,
+            pin: implantRef.current,
+            pinType: "transform",
+            anticipatePin: 1,
+            toggleActions: "play none none reverse",
+            invalidateOnRefresh: true,
+          },
+        });
 
       // Container'ı hareket ettir
       heroTimeline.to(implantRef.current, {
@@ -128,46 +119,33 @@ const HeroSection: React.FC = () => {
     }
 
     if (brightImageRef.current) {
-      const brightImageTimeline = gsap.timeline({
+      const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: brightImageRef.current, // İkinci section
+          trigger: brightImageRef.current,
           start: "top 10%",
           end: isMobile ? "+=1200" : "+=700",
           scrub: true,
-          pin: brightImageRef.current, // BRIGHT resminin kapsayıcı div'ini sabitle
+          pin: brightImageRef.current,
+          pinType: "transform",
           pinSpacing: false,
-          toggleActions: "play none none reverse",
           invalidateOnRefresh: true,
-          onEnter: () => {
-            setRemoveHidden(true);
-            console.log("2 bölüme geçildi");
-          },
-          onLeaveBack: () => {
-            setRemoveHidden(false);
-            console.log("1 bölüme geçildi");
-          },
+          onEnter: () => setRemoveHidden(true),
+          onLeaveBack: () => setRemoveHidden(false),
         },
       });
 
-      // Asıl Bright Image etiketini yakalıyoruz
-      const actualBrightImageElement =
-        brightImageRef.current.querySelector("img");
-      if (!actualBrightImageElement) {
-        // img etiketi bulunamazsa bu bloğu çalıştırma
-        console.warn(
-          "GSAP: brightImageRef içinde img etiketi bulunamadı! BRIGHT animasyonu başlatılamıyor."
-        );
-        return;
-      }
-
-      brightImageTimeline.to(actualBrightImageElement, {
-        duration: 1, // scrub olduğu için göreceli süre
-        scale: isMobile ? 1.8 : 3, // Hedef ölçek (4 kat büyüt)
-        rotation: isMobile ? -42 : -14, // Hedef rotasyon (-18 derece)
-        x: isMobile ? 100.5 : 330.5, // Hedef X translate
-        y: 0, // Hedef Y translate
+    const img = brightImageRef.current.querySelector("img");
+    if (img) {
+      gsap.set(img, { force3D: true });
+      tl.to(img, {
+        duration: 1,
+        scale: isMobile ? 1.8 : 3,
+        rotation: isMobile ? -42 : -14,
+        x: isMobile ? 100.5 : 330.5,
+        y: 0,
         ease: "linear",
       });
+    }
     }
 
     // Cleanup function
@@ -182,9 +160,8 @@ const HeroSection: React.FC = () => {
     <section className="relative min-h-screen overflow-hidden lg:pb-[275px] pb-[0]">
       {/* Background with CSS background-attachment */}
       <div
-        className={`lg:block hidden  inset-0 w-full h-full transition-all duration-500 ${
-          shouldDetach ? "bg-scroll absolute" : "bg-fixed fixed"
-        }`}
+        ref={bgRef}
+        className="lg:block hidden bg-fixed-el inset-0 w-full h-full transition-all duration-500"
         style={{
           backgroundImage: "url(/images/mesh.png)",
           backgroundSize: "cover",
@@ -250,7 +227,7 @@ const HeroSection: React.FC = () => {
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div
                 ref={implantRef}
-                className="relative w-[182px] h-[310px] lg:w-full  lg:max-w-lg lg:h-auto transform"
+                className="relative w-[182px] h-[310px] lg:w-full lg:max-w-lg lg:h-auto transform will-transform contain-layout contain-paint"
               >
                 <Image
                   src="/images/implant-img.png"
@@ -261,6 +238,7 @@ const HeroSection: React.FC = () => {
                   className="object-contain "
                   {...(removeHidden && { hidden: true })}
                   priority
+                  onLoadingComplete={() => ScrollTrigger.refresh()}
                 />
               </div>
             </div>
@@ -332,6 +310,7 @@ const HeroSection: React.FC = () => {
                   loading="lazy"
                   fetchPriority="low"
                   className="object-contain transform translate-x-[30%] translate-y-[16.9%] "
+                  onLoadingComplete={() => ScrollTrigger.refresh()}
                 />
               </div>
               <div
@@ -346,7 +325,13 @@ const HeroSection: React.FC = () => {
                   height={1200}
                   className="object-contain"
                   priority
-                  fetchPriority="high"
+                  fetchPriority="low"
+                  style={{
+                    opacity: removeHidden ? 1 : 0,
+                    visibility: removeHidden ? "visible" : "hidden",
+                    pointerEvents: "none",
+                  }}
+                  onLoadingComplete={() => ScrollTrigger.refresh()}
                 />
               </div>
             </div>

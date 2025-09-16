@@ -131,72 +131,7 @@
   .btn-dental-primary:hover {
     box-shadow: var(--shadow-hover-small);
   }
-  
-  .btn-dental-secondary {
-    @apply bg-secondary-600 hover:bg-secondary-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md;
-  }
-  
-  .btn-dental-secondary:hover {
-    box-shadow: var(--shadow-hover-small);
-  }
-  
-  .btn-dental-outline {
-    @apply bg-transparent border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300;
-  }
-  
-  /* Card with contained shadow - taşmaz */
-  .card-dental {
-    @apply bg-white rounded-xl shadow-md p-6 border border-gray-200 transition-all duration-300;
-    /* Extra padding to contain shadow */
-    margin: 8px;
-  }
-  
-  .card-dental:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
-  }
-  
-  /* Card with inner shadow - kesinlikle taşmaz */
-  .card-dental-contained {
-    @apply bg-white rounded-xl shadow-md p-6 border border-gray-200 transition-all duration-300 overflow-hidden;
-  }
-  
-  .card-dental-contained:hover {
-    box-shadow: var(--shadow-hover-contained);
-    transform: translateY(-2px);
-  }
-  
-  .hero-dental {
-    @apply bg-gradient-to-br from-primary-500 to-primary-600 text-white py-16 px-8 rounded-2xl text-center;
-  }
-  
-  .text-gradient-dental {
-    @apply bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent;
-  }
-  
-  .feature-card {
-    @apply bg-white rounded-lg p-6 shadow-md transition-all duration-300 text-center;
-    margin: 8px; /* Shadow için extra alan */
-  }
-  
-  .feature-card:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-4px);
-  }
-  
-  /* Contained version - hiç taşmaz */
-  .feature-card-contained {
-    @apply bg-white rounded-lg p-6 shadow-md transition-all duration-300 text-center overflow-hidden;
-  }
-  
-  .feature-card-contained:hover {
-    box-shadow: var(--shadow-hover-contained);
-    transform: translateY(-4px);
-  }
-  
-  .section-spacing {
-    @apply py-16 px-4;
-  }
+
   
   .container-dental {
     max-width: 1320px !important;
@@ -225,78 +160,28 @@
   }
 }
 
-/* Custom Utility Classes */
 @layer utilities {
-  /* Orijinal Swiss Dental hover shadow */
-  .shadow-hover {
-    box-shadow: var(--shadow-hover);
-  }
-  
+  .bg-fixed-el { position: fixed; }
+  .bg-fixed-el.detach { position: absolute; }
+  .will-transform { will-change: transform; }
+  .contain-layout { contain: layout; }
+  .contain-paint { contain: paint; }
+}
+
+/* Custom Utility Classes */
+@layer utilities {  
   /* Küçültülmüş versiyon - daha az taşar */
   .shadow-hover-small {
     box-shadow: var(--shadow-hover-small);
   }
-  
-  /* İçeride kalan versiyon - hiç taşmaz */
-  .shadow-hover-contained {
-    box-shadow: var(--shadow-hover-contained);
-  }
-  
-  .shadow-dental {
-    box-shadow: var(--shadow-dental);
-  }
-  
-  .shadow-inner {
-    box-shadow: var(--shadow-inner);
-  }
-  
-  .shadow-subtle {
-    box-shadow: var(--shadow-subtle);
-  }
+
   
   .font-heading {
     font-family: var(--font-heading);
   }
-  
-  .font-body {
-    font-family: var(--font-body);
-  }
-  
-  /* Container with padding for shadows */
-  .shadow-container {
-    padding: 8px;
-  }
-  
-  /* Container with more padding for large shadows */
-  .shadow-container-lg {
-    padding: 16px;
-  }
-  
-  /* Hover effects with controlled overflow */
-  .hover-with-shadow {
-    margin: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .hover-with-shadow:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
-  }
-  
-  /* Completely contained hover effect */
-  .hover-contained-shadow {
-    overflow: hidden;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  
-  .hover-contained-shadow:hover {
-    box-shadow: var(--shadow-hover-contained);
-    transform: translateY(-2px);
-  }
 
-    *, :after, :before {
-    box-sizing: border-box;
+  *, :after, :before {
+  box-sizing: border-box;
 }
 
   body{
