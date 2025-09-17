@@ -7,7 +7,7 @@ import { LoadingProvider } from "@/contexts/LoadingContext";
 import { JsonLd } from "@/seo/jsonld";
 import { gotham } from "@/app/fonts";
 import GlobalAnalytics from "./GlobalAnalytics";
-import Script from "next/script"; 
+import InteractionGTM from "./components/InteractionGTM";
 
 import type { Metadata } from "next";
 import { buildMetadata, SITE } from "@/seo/config";
@@ -24,39 +24,23 @@ export const metadata: Metadata = buildMetadata({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const GA_ID = process.env.NEXT_PUBLIC_GA4_ID;
-
-  // Vercel otomatik env'leri:
-  const isVercel = process.env.VERCEL === "1"; // sadece Vercel deploylarında "1"
-  const vercelEnv = process.env.VERCEL_ENV;     // 'production' | 'preview' | 'development'
+  const isVercel = process.env.VERCEL === "1";
+  const vercelEnv = process.env.VERCEL_ENV;
   const isProd = vercelEnv === "production";
   const isPreview = vercelEnv === "preview";
   const logoUrl = new URL("/images/turkey-logo.svg", SITE.baseUrl).toString();
 
-
-  // 🔒 GA sadece Vercel preview/prod'da yüklensin (lokal/ci'de yüklenmesin)
   const shouldLoadGA = !!GA_ID && isVercel && (isProd || isPreview);
 
   return (
     <html lang="tr" className={gotham.className}>
       <body>
+        {/* Lazy GTM Component - mobilde gecikmiş yükleme */}
         {shouldLoadGA && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}', { send_page_view: false });
-              `}
-            </Script>
-            <Suspense fallback={null}>
-              <GlobalAnalytics />
-            </Suspense>
-          </>
+          <Suspense fallback={null}>
+            <InteractionGTM gaId={GA_ID} />
+            <GlobalAnalytics />
+          </Suspense>
         )}
 
         <JsonLd
@@ -74,15 +58,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-
-                <LoadingProvider>
+        <LoadingProvider>
           <div>
             <GlobalLoading />
             <>
-                <Header />
-                {children}
-                <Footer />
-              </>
+              <Header />
+              {children}
+              <Footer />
+            </>
           </div>
         </LoadingProvider>
       </body>
