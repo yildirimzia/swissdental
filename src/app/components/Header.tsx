@@ -453,26 +453,21 @@ const Header: React.FC = () => {
 
   const renderLanguageToggle = () => {
     if (!isLoaded) return null;
-
     return (
-      <Button
-        variant="customOutline" // Yeni variant
-        size="custom16"
-        rounded="rounded-full"
-        className="!shadow-none mt-8 !font-[400] flex cursor-pointer" // Shadow'u kaldır ve cursor eklendi
-        iconPosition="right"
-      >
-        <div className="flex items-center gap-0.5">
-          <WordIcon />
-          <div>
-            <Link target="_blank" href="https://www.swissdentalsolutions.com/en">
-              <span className="">
-                 EN/English
-              </span>
-            </Link>
-          </div>
-        </div>
-      </Button>
+      <>
+        <Link href="https://swissdentalsolutions.com.tr" className="ml-4" target="_blank" rel="noopener noreferrer">
+          <Button
+            variant="customOutline"
+            size="custom16"
+            rounded="rounded-full"
+            className="!shadow-none mt-8 !font-[400] flex cursor-pointer"
+            iconPosition="right"
+            icon={<WordIcon />}
+          >
+          EN/English
+        </Button>
+        </Link>
+      </>
     );
   };
 
