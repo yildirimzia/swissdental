@@ -14,6 +14,7 @@ const csp = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  productionBrowserSourceMaps: true,
   async redirects() {
     return [
       { source: "/benefits-for-patients", destination: "/hastalar-icin-seramik-implant-faydalari", permanent: true },

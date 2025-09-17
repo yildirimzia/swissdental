@@ -2,7 +2,8 @@
 module.exports = {
   siteUrl: 'https://swissdentalsolutions.com.tr',           // ana domain (slashesiz)
   generateRobotsTxt: true,                                   // robots.txt üret
-  generateIndexSitemap: false,                                // index sitemap (sitemap.xml → sitemap-0.xml…)
+  generateIndexSitemap: false,       
+  productionBrowserSourceMaps: true,                        // index sitemap (sitemap.xml → sitemap-0.xml…)
   outDir: 'public',                                          // dosyaları public/ altına yaz
   changefreq: 'weekly',
   priority: 0.7,
