@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Suspense } from "react"; 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ComingSoon from "./components/ComingSoon";
@@ -6,11 +7,11 @@ import GlobalLoading from "./components/GlobalLoading";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import { JsonLd } from "@/seo/jsonld";
 import { gotham } from "@/app/fonts";
+import GlobalAnalytics from "./GlobalAnalytics";
+import Script from "next/script"; 
 
 import type { Metadata } from "next";
 import { buildMetadata, SITE } from "@/seo/config";
-
-// (opsiyonel) SSG’yi zorlamak istersen: export const dynamic = 'force-static';
 
 export const metadata: Metadata = buildMetadata({
   path: "/",
@@ -23,17 +24,38 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // ✅ Sadece env ile belirle (headers() yok → statik kalır)
-  const vercelEnv = process.env.VERCEL_ENV; // 'production' | 'preview' | 'development' (Vercel)
+  const vercelEnv = process.env.VERCEL_ENV; 
   const isProd = vercelEnv === "production" || process.env.NEXT_PUBLIC_ENV === "production";
   const isPreview = vercelEnv === "preview";
-  const showComingSoon = !(isProd || isPreview); // prod/preview dışı ortamda göster
+  const showComingSoon = !(isProd || isPreview);
 
   const logoUrl = new URL("/images/turkey-logo.svg", SITE.baseUrl).toString();
+  const GA_ID = process.env.NEXT_PUBLIC_GA4_ID;
 
   return (
     <html lang="tr" className={gotham.variable}>
       <body className="antialiased">
+        {GA_ID && (isProd || isPreview) && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}', { send_page_view: false });
+              `}
+            </Script>
+
+            <Suspense fallback={null}>
+              <GlobalAnalytics />
+            </Suspense>
+          </>
+        )}
+
         {/* Organization JSON-LD */}
         <JsonLd
           id="org"
@@ -50,20 +72,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-          <LoadingProvider>
-            <div>
-              <GlobalLoading />
-              {showComingSoon ? (
-                <ComingSoon />
-              ) : (
-                <>
-                  <Header />
-                  {children}
-                  <Footer />
-                </>
-              )}
-            </div>
-          </LoadingProvider>
+        <LoadingProvider>
+          <div>
+            <GlobalLoading />
+            {showComingSoon ? (
+              <ComingSoon />
+            ) : (
+              <>
+                <Header />
+                {children}
+                <Footer />
+              </>
+            )}
+          </div>
+        </LoadingProvider>
       </body>
     </html>
   );
