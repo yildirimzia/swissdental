@@ -1,5 +1,17 @@
 import type { NextConfig } from "next";
 
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https:",
+  "style-src 'self' 'unsafe-inline' https:",
+  "img-src 'self' data: https:",
+  "font-src 'self' data:",
+  // ⬇️ GA4 ve DoubleClick için ağ isteklerine izin ver
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net",
+  // (GTM kullanırsan iframe’ler için gerekebilir)
+  // "frame-src https://www.googletagmanager.com",
+].join("; ");
+
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   async redirects() {
@@ -50,8 +62,7 @@ const nextConfig: NextConfig = {
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          // Basit bir CSP örneği (ihtiyaca göre daralt)
-          { key: "Content-Security-Policy", value: "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:;" },
+          { key: "Content-Security-Policy", value: csp },
         ],
       },
     ];
