@@ -1,4 +1,3 @@
-// @ts-expect-error: Global CSS side-effect import handled by Next.js
 import "./globals.css";
 import { Suspense } from "react"; 
 import Header from "./components/Header";
