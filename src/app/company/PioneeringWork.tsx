@@ -63,7 +63,7 @@ export default function PioneeringWork() {
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-Kreuzlingen'deki SWISS BIOHEALTH KLİNİĞİ, biyolojik diş hekimliğinde mükemmeliyet merkezinizdir18. En iyi dental tedavileri, modern teknolojileri, sağlığınıza bireysel odaklanmayı, mükemmel hizmeti ve optimal sonuçlar için sürekli eğitim ve öğretimi sunuyoruz
+Kreuzlingen'deki SWISS BIOHEALTH KLİNİĞİ, biyolojik diş hekimliğinde mükemmeliyet merkezinizdir. En iyi dental tedavileri, modern teknolojileri, sağlığınıza bireysel odaklanmayı, mükemmel hizmeti ve optimal sonuçlar için sürekli eğitim ve öğretimi sunuyoruz
           </p>
 
           <Link href="/implants" className="">

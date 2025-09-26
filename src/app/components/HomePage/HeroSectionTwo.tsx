@@ -141,7 +141,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section ref={sectionRef} className="bg-white text-black relative overflow-hidden">
-      <div className="relative z-20 min-h-screen">
+      <div className="relative z-20 min-h-screen dasdasd">
         <div className="flex items-center justify-between flex-col md:flex-row ">
           
           {/* Left Content - Background Image with Lazy Loading */}

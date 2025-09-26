@@ -6,6 +6,8 @@ const csp = [
   "style-src 'self' 'unsafe-inline' https:",
   "img-src 'self' data: https:",
   "font-src 'self' data:",
+  "media-src 'self' https://sds.directus.app",
+  "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://youtube.com",
   // ⬇️ GA4 ve DoubleClick için ağ isteklerine izin ver
   "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net",
   // (GTM kullanırsan iframe’ler için gerekebilir)

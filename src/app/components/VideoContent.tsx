@@ -5,6 +5,9 @@ import Button from "./Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
+gsap.registerPlugin(ScrollTrigger); // 👈 ÖNEMLİ
+
 export default function VideoContent() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoSectionRef = useRef<HTMLDivElement>(null);
@@ -81,7 +84,7 @@ export default function VideoContent() {
     const videoTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: videoSectionRef.current,
-        start: "top 60%", // Daha geç tetiklenir
+        start: "top 90%", // Daha geç tetiklenir
         end: "bottom 20%",
         toggleActions: "play none none reverse",
       },

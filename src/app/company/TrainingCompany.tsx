@@ -85,7 +85,7 @@ Geniş çevrimiçi ve yüz yüze kurs yelpazemiz aracılığıyla, yalnızca den
               </h3>
 
               <p className="mt-6 text-primary-600 text-[16px] leading-7 font-extralight max-w-[560px]">
-Eğitim kurslarımız, deneyimli kullanıcılara eğitimlerini ilerletme ve seramik implantoloji alanında uzman olma fırsatı sunar23. Müfredatı başarıyla tamamladığınızda, 'Biyolojik Diş Hekimliği ve Seramik İmplant Uzmanı' olarak atanabilirsiniz24.
+Eğitim kurslarımız, deneyimli kullanıcılara eğitimlerini ilerletme ve seramik implantoloji alanında uzman olma fırsatı sunar. Müfredatı başarıyla tamamladığınızda, 'Biyolojik Diş Hekimliği ve Seramik İmplant Uzmanı' olarak atanabilirsiniz.
               </p>
 
               <Link href="https://education.swissdentalsolutions.com/en/curriculum/">

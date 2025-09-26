@@ -44,7 +44,7 @@ export default function TeamBehind() {
           </h2>
 
           <p className="text-primary-600 text-[16px] font-[300] max-w-[420px] mb-8">
-Hastalarımızdan gelen sürekli geri bildirimler, Swiss Dental Solutions'taki SDS seramik implantlarının gelişiminin temel taşlarından biridir6. Şu anda 180'den fazla kişiden oluşan ekibimizin her bir üyesi, implantlarımızın en yüksek standartları karşılamasını ve hastalarımızın ihtiyaçlarını gidermesini sağlamak için benzersiz becerileriyle katkıda bulunur7. Kullanıcılarımızdan ve hastalarımızdan gelen olumlu geri bildirimler, günlük itici gücümüzdür.          </p>
+Hastalarımızdan gelen sürekli geri bildirimler, Swiss Dental Solutions'taki SDS seramik implantlarının gelişiminin temel taşlarından biridir6. Şu anda 180'den fazla kişiden oluşan ekibimizin her bir üyesi, implantlarımızın en yüksek standartları karşılamasını ve hastalarımızın ihtiyaçlarını gidermesini sağlamak için benzersiz becerileriyle katkıda bulunur. Kullanıcılarımızdan ve hastalarımızdan gelen olumlu geri bildirimler, günlük itici gücümüzdür.          </p>
 
 
           <Link href="https://www.swiss-biohealth.com/en" className="">

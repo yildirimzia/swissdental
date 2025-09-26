@@ -103,7 +103,7 @@ function CleanestImplant() {
       ref={sectionRef}
       className="bg-white text-black relative overflow-hidden"
     >
-      <div className="relative z-20 min-h-screen">
+      <div className="relative z-20 min-h-screen dasdasd">
         <div className="flex items-center flex-col md:flex-row md:justify-between 2xl:justify-around ">
           {/* Left Content - Background Image */}
           <div

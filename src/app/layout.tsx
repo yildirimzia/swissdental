@@ -1,3 +1,4 @@
+// @ts-expect-error: Global CSS side-effect import handled by Next.js
 import "./globals.css";
 import { Suspense } from "react"; 
 import Header from "./components/Header";
@@ -43,18 +44,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Suspense>
         )}
 
+        {/* Website Schema */}
         <JsonLd
-          id="org"
+          id="website"
+          data={{
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            name: "Swiss Dental Solutions Türkiye",
+            url: "https://swissdentalsolutions.com.tr/",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "{search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }}
+        />
+
+        {/* Corporation Schema */}
+        <JsonLd
+          id="corporation"
           data={{
             "@context": "https://schema.org",
-            "@type": "Organization",
-            name: SITE.name,
-            url: SITE.baseUrl,
-            logo: logoUrl,
-            sameAs: [
-              "https://www.instagram.com/swissdentalsolutionsturkiye",
-              "https://www.linkedin.com/company/swissdentalsolutions/",
-            ],
+            "@type": "Corporation",
+            name: "Swiss Dental Solutions Türkiye",
+            alternateName: "SDS Türkiye",
+            url: "https://swissdentalsolutions.com.tr/",
+            logo: "https://swissdentalsolutions.com.tr/images/turkey-logo.svg",
+            sameAs: "https://www.instagram.com/swissdentalsolutionsturkiye/"
           }}
         />
 
